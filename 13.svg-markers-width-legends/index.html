@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin="" />
+    <script src="../dist/leaflet-src.js"></script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      html,
+      body,
+      #map {
+        height: 100%;
+      }
+
+      .legend {
+        background: #fff;
+        padding: 8px;
+        border-radius: 5px;
+      }
+
+      .legend .row {
+        display: flex;
+        line-height: 30px;
+      }
+
+      .legend i {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
