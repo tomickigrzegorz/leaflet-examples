@@ -18,3 +18,5 @@ Suggestions welcome :bulb:.
 12. controling-polygons
 13. svg-markers-width-legends
 14. dragable-markers
+15. geoJson-simple
+16. geoJson-extended-action
