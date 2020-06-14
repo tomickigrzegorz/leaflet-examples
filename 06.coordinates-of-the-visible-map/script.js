@@ -27,15 +27,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let southWest = map.getBounds().getSouthWest().toString();
 let northEast = map.getBounds().getNorthEast().toString();
 
-console.log(southWest, northEast)
+console.log('show Bounds onLoad', southWest, northEast)
 
 // second option, by dragging the map
 let sn = [];
 map.on('dragend', function onDragEnd() {
   Object.entries(map.getBounds()).forEach(item => {
-    console.log(item);
     const array = [item[1].lat, item[1].lng];
     sn.push(array);
   });
+  console.clear();
   console.table(sn);
 });

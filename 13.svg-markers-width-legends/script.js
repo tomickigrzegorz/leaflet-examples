@@ -1,5 +1,5 @@
 /**
- * XXXXXXXXXXXX
+ * svg markers width legends
  */
 
 // config map

@@ -1,5 +1,5 @@
 /**
- * XXXXXXXXXXXX
+ * Controling polygons
  */
 
 // config map

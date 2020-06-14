@@ -24,6 +24,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // obtaining coordinates after clicking on the map
 map.on('click', function (e) {
-  console.log(e.latlng)
-  alert(e.latlng)
+  const markerPlace = document.querySelector('.marker-position');
+  markerPlace.textContent = e.latlng;
 })

@@ -17,3 +17,4 @@ Suggestions welcome :bulb:.
 11. controlling-the-map-from-outside-the-map
 12. controling-polygons
 13. svg markers width legends
+14. dragable markers
