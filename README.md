@@ -1,7 +1,8 @@
 # A collection of examples of leaflet map usage
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> Work in progress :smiley: Suggestions welcome :bulb:.
+> Work in progress :smiley: 
+> Suggestions welcome :bulb:.
 
 1. simple-map
 2. changing-locate-zoom-control
