@@ -4,7 +4,7 @@
 
 // config map
 let config = {
-  minZoom: 7,
+  minZoom: 4,
   maxZomm: 18,
 };
 // magnification with which the map will start
@@ -30,7 +30,6 @@ function addTextToDiv(text) {
 
 // showing the name of the province
 function getVoivodeshipName(feature, layer) {
-  console.log(feature.properties.nazwa);
   if (feature.properties && feature.properties.nazwa) {
     layer.bindPopup(feature.properties.nazwa);
   }

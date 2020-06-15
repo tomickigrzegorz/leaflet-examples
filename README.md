@@ -20,3 +20,4 @@ Suggestions welcome :bulb:.
 14. dragable-markers
 15. geoJson-simple
 16. geoJson-extended-action
+17. TileLayer
