@@ -21,4 +21,4 @@ Suggestions welcome :bulb:.
 15. geoJson-simple
 16. geoJson-extended-action
 17. TileLayer
-18. Add move and delete marker
+18. Add-move-and-delete-marker
