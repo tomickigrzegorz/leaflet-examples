@@ -30,12 +30,13 @@ let northEast = map.getBounds().getNorthEast().toString();
 console.log('show Bounds onLoad', southWest, northEast)
 
 // second option, by dragging the map
+map.on('dragend', onDragEnd);
+
 let sn = [];
-map.on('dragend', function onDragEnd() {
+function onDragEnd() {
   Object.entries(map.getBounds()).forEach(item => {
     const array = [item[1].lat, item[1].lng];
     sn.push(array);
   });
-  console.clear();
   console.table(sn);
-});
+}
