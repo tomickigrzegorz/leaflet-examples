@@ -47,7 +47,9 @@ fetch('./wojewodztwa-medium.geojson')
       // created Feature, after it has been created and styled
       onEachFeature: function (feature, layer) {
         layer.on('mouseover', function (e) {
+          // bindPopup
           getVoivodeshipName(feature, layer);
+          // show voivodeship
           addTextToDiv(feature.properties.nazwa);
           this.openPopup();
           // style
