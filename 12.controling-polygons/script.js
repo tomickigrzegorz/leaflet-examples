@@ -74,7 +74,7 @@ L.control.layers(null, overlayMaps, {
 map.on('overlayadd', function (e) {
   const lastCheckboxs = document.querySelectorAll('.leaflet-control-layers-selector');
   e.layer.eachLayer(function (pol) {
-    console.log(pol)
+    // console.log(pol)
     map.fitBounds(pol.getBounds());
     lastCheckboxs[lastCheckboxs.length - 1].checked = false;
   });
