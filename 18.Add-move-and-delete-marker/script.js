@@ -1,5 +1,5 @@
 /**
- * Add move and delete marker
+ * add move and delete marker
  */
 
 // config map
@@ -36,10 +36,10 @@ function addMarker(e) {
     .addTo(map)
     .bindPopup(buttonRemove);
 
-  // remove marker
+  // event remove marker
   marker.on("popupopen", removeMarker);
 
-  // draged marker
+  // event draged marker
   marker.on('dragend', dragedMaker);
 }
 
