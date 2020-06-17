@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin="" />
+    <script src="../dist/leaflet-src.js"></script>
+    <style>
+      body {
+        position: relative;
+        padding: 0;
+        margin: 0;
+      }
+
+      html,
+      body,
+      #map {
+        height: 100%;
+      }
+
+      .rotate {
+        overflow: hidden;
+        animation: spin 4s linear forwards;
+      }
+
+      @-webkit-keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+
+        }
+      }
+
+      @keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      .rotate .pooooo {
+        position: fixed;
+        display: flex !important;
+        align-items: center;
+        top: 0;
+        width: 100% !important;
+        height: 100% !important;
+        border: 1px solid red;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 12rem !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
