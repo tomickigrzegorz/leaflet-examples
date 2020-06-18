@@ -23,3 +23,4 @@ Suggestions welcome :bulb:.
 17. TileLayer
 18. add-move-and-delete-marker
 19. custom-button
+20. maxBound-map-restricts-the-view
