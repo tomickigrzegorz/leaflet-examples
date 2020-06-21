@@ -1,6 +1,5 @@
 /**
  * Simple map
- * Config is used to limit the zoom in/out of the map and is not required
  */
 
 // config map

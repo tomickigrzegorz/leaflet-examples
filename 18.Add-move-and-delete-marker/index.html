@@ -5,38 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>simple map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-      crossorigin="" />
-    <script src="../dist/leaflet-src.js"></script>
-    <style>
-      body {
-        padding: 0;
-        margin: 0;
-        position: relative;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      }
-
-      html,
-      body,
-      #map {
-        height: 100%;
-      }
-
-      .marker-position {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 999;
-        padding: 10px;
-        font-weight: 700;
-        background-color: #fff;
-      }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../dist/global.css">
   </head>
 
   <body>
-    <div class="marker-position"></div>
+    <div class="marker-position">click on the map, move the marker, click on the marker</div>
     <div id="map"></div>
     <script src="script.js"></script>
   </body>
