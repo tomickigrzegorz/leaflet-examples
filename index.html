@@ -12,14 +12,42 @@
       }
 
       section {
-        width: 50%;
+        width: 70%;
         margin: 30px auto;
+      }
+
+      h1 {
+        width: 100%;
+        font-size: 64px;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 32px;
+        text-align: center;
       }
 
       iframe {
         margin: 30px auto;
         box-shadow: 0 0 40px 10px rgba(3, 169, 244, 0.2);
         border: 1px solid #03a9f4;
+      }
+
+      .all-examples {
+        max-width: 70%;
+        margin: auto;
+        text-align: center;
+      }
+
+      .all-examples a {
+        display: inline-block;
+        text-decoration: none;
+        color: gray;
+      }
+
+      .all-examples a:hover {
+        text-decoration: underline;
+        color: black;
       }
     </style>
   </head>
@@ -28,17 +56,120 @@
     <div class="container">
       <h1>examples</h1>
     </div>
-    <!-- <section id="simple-map">
+    <div class="all-examples">
+      <a href="#simple-map">simple map</a>
+      <a href="#changing-locate-zoom-control">changing locate zoom control</a>
+      <a href="#adding-one-marker">adding one marker</a>
+      <a href="#many-markers">many markers</a>
+      <a href="#coordinates-after-clicking-on-the-map">coordinates after clicking on the map</a>
+      <a href="#coordinates-of-the-visible-map">coordinates of the visible map</a>
+      <a href="#image-instead-of-map">image instead of map</a>
+      <a href="#controlling-different-groups-of-markers">controlling different groups of markers</a>
+      <a href="#marker-grouping-markercluster-plugin">marker grouping markercluster plugin</a>
+      <a href="#matching-all-markers-to-the-map-view">matching all markers to the map view</a>
+      <a href="#controlling-the-map-from-outside-the-map">controlling the map from outside the map</a>
+      <a href="#controling-polygons">controling polygons</a>
+      <a href="#svg-markers-width-legends">svg markers width legends</a>
+      <a href="#dragable-markers">dragable markers</a>
+      <a href="#geoJson-simple">geoJson simple</a>
+      <a href="#geoJson-extended-action">geoJson extended action</a>
+      <a href="#tileLayer">tileLayer</a>
+      <a href="#add-move-and-delete-marker">add move and delete marker</a>
+      <a href="#custom-button">custom button</a>
+      <a href="#maxBound-map-restricts-the-view">maxBound map restricts the view</a>
+      <a href="#geocoding-addresses-search-engine-outside-the-map">geocoding addresses search engine outside the map</a>
+    </div>
+    <section id="simple-map">
       <h2>Simple map</h2>
       <iframe src="./01.simple-map/index.html" frameborder="0" width="100%" height="400px;"></iframe>
     </section>
     <section id="changing-locate-zoom-control">
       <h2>Changing locate zoom control</h2>
       <iframe src="./02.changing-locate-zoom-control/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-    </section> -->
+    </section>
+    <section id="adding-one-marker">
+      <h2>adding-one-marker</h2>
+      <iframe src="./03.adding-one-marker/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="many-markers">
+      <h2>Many markers</h2>
+      <iframe src="./04.many-markers/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="coordinates-after-clicking-on-the-map">
+      <h2>Coordinates after clicking on the map</h2>
+      <iframe src="./05.coordinates-after-clicking-on-the-map/index.html" frameborder="0" width="100%"
+        height="400px;"></iframe>
+    </section>
+    <section id="coordinates-of-the-visible-map">
+      <h2>Coordinates of the visible map</h2>
+      <iframe src="./06.coordinates-of-the-visible-map/index.html" frameborder="0" width="100%"
+        height="400px;"></iframe>
+    </section>
+    <section id="image-instead-of-map">
+      <h2>Image instead of map</h2>
+      <iframe src="./07.image-instead-of-map/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="controlling-different-groups-of-markers">
+      <h2>Controlling different groups of markers</h2>
+      <iframe src="./08.controlling-different-groups-of-markers/index.html" frameborder="0" width="100%"
+        height="400px;"></iframe>
+    </section>
+    <section id="marker-grouping-markercluster-plugin">
+      <h2>Mmarker grouping markercluster plugin</h2>
+      <iframe src="./09.marker-grouping-markercluster-plugin/index.html" frameborder="0" width="100%"
+        height="400px;"></iframe>
+    </section>
+    <section id="matching-all-markers-to-the-map-view">
+      <h2>Matching all markers to the map view</h2>
+      <iframe src="./10.matching-all-markers-to-the-map-view/index.html" frameborder="0" width="100%"
+        height="400px;"></iframe>
+    </section>
+    <section id="controlling-the-map-from-outside-the-map">
+      <h2>Controlling the map from outside the map</h2>
+      <iframe src="./11.controlling-the-map-from-outside-the-map/index.html" frameborder="0" width="100%"
+        height="400px;"></iframe>
+    </section>
     <section id="controling-polygons">
       <h2>Controling polygons</h2>
       <iframe src="./12.controling-polygons/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="svg-markers-width-legends">
+      <h2>SVG markers width legends</h2>
+      <iframe src="./13.svg-markers-width-legends/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="dragable-markers">
+      <h2>Dragable-markers</h2>
+      <iframe src="./14.dragable-markers/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="geoJson-simple">
+      <h2>GeoJson simple</h2>
+      <iframe src="./15.geoJson-simple/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="geoJson-extended-action">
+      <h2>GeoJson extended action</h2>
+      <iframe src="./16.geoJson-extended-action/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="tileLayer">
+      <h2>TileLayer</h2>
+      <iframe src="./17.TileLayer/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="add-move-and-delete-marker">
+      <h2>Add move and delete marker</h2>
+      <iframe src="./18.add-move-and-delete-marker/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="custom-button">
+      <h2>Custom button</h2>
+      <iframe src="./19.custom-button/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+    </section>
+    <section id="maxBound-map-restricts-the-view">
+      <h2>MaxBound map restricts the view</h2>
+      <iframe src="./20.maxBound-map-restricts-the-view/index.html" frameborder="0" width="100%"
+        height="400px;"></iframe>
+    </section>
+    <section id="geocoding-addresses-search-engine-outside-the-map">
+      <h2>Geocoding addresses search engine outside the map</h2>
+      <iframe src="./21.geocoding-addresses-search-engine-outside-the-map/index.html" frameborder="0" width="100%"
+        height="500px;"></iframe>
     </section>
   </body>
 
