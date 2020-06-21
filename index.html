@@ -306,24 +306,24 @@
 
         if ("IntersectionObserver" in window) {
           const lazyIframe = document.querySelectorAll("iframe");
-          const vidObserver = new IntersectionObserver(function (entries, observer) {
+          const iframeObserver = new IntersectionObserver(function (entries, observer) {
             entries.forEach(function (entry) {
               if (entry.isIntersecting && entry.target.src.length == 0) {
                 entry.target.src = entry.target.dataset.src;
-                vidObserver.unobserve(entry.target);
+                iframeObserver.unobserve(entry.target);
               }
             });
           });
 
-          lazyIframe.forEach(function (vid) {
-            vidObserver.observe(vid);
+          lazyIframe.forEach(function (ifr) {
+            iframeObserver.observe(ifr);
           });
         } else {
           const lazyIframe = document.getElementsByTagName('iframe');
 
           for (let i = 0; i < lazyIframe.length; i++) {
-            if (lazyVids[i].getAttribute('data-src')) {
-              lazyVids[i].setAttribute('src', lazyVids[i].getAttribute('data-src'));
+            if (lazyIframe[i].getAttribute('data-src')) {
+              lazyIframe[i].setAttribute('src', lazyIframe[i].getAttribute('data-src'));
             }
           }
         }
