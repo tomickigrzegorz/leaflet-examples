@@ -26,3 +26,4 @@ Suggestions welcome :bulb:.
 18. add-move-and-delete-marker
 19. custom-button
 20. maxBound-map-restricts-the-view
+21. geocoding-addresses-search-engine-outside-the-map
