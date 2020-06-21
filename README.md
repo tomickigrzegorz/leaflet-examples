@@ -22,7 +22,7 @@ Suggestions welcome :bulb:.
 14. [dragable-markers](https://tomik23.github.io/leaflet-examples/#dragable-markers)
 15. [geoJson-simple](https://tomik23.github.io/leaflet-examples/#geoJson-simple)
 16. [geoJson-extended-action](https://tomik23.github.io/leaflet-examples/#geoJson-extended-action)
-17. [TileLayer](https://tomik23.github.io/leaflet-examples/#TileLayer)
+17. [TileLayer](https://tomik23.github.io/leaflet-examples/#tileLayer)
 18. [add-move-and-delete-marker](https://tomik23.github.io/leaflet-examples/#add-move-and-delete-marker)
 19. [custom-button](https://tomik23.github.io/leaflet-examples/#custom-button)
 20. [maxBound-map-restricts-the-view](https://tomik23.github.io/leaflet-examples/#maxBound-map-restricts-the-view)
