@@ -1,6 +1,8 @@
 # A collection of examples of leaflet map usage
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+[Live DEMO](https://tomik23.github.io/leaflet-examples/)
+
 >Work in progress :smiley:  
 Suggestions welcome :bulb:.
 

@@ -40,6 +40,7 @@
       }
 
       .all-examples a {
+        position: relative;
         display: inline-block;
         text-decoration: none;
         color: gray;
@@ -48,6 +49,14 @@
       .all-examples a:hover {
         text-decoration: underline;
         color: black;
+      }
+
+      .all-examples a:not(:last-child):after {
+        position: absolute;
+        content: " · ";
+        width: 20px;
+        height: 20px;
+        padding-right: 15px;
       }
     </style>
   </head>
