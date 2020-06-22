@@ -1,0 +1,94 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  justify-content: normal;
+}
+
+section {
+  position: relative;
+  width: 50%;
+  margin: 30px auto;
+}
+
+h1 {
+  width: 100%;
+  font-size: 64px;
+  text-align: center;
+}
+
+h2 {
+  position: relative;
+  font-size: 32px;
+  text-align: center;
+  line-height: 100%;
+  padding: 0 30px;
+}
+
+.iframe-wrapper {
+  margin: 30px auto;
+  box-shadow: 0 0 40px 10px rgba(3, 169, 244, 0.2);
+  border: 2px solid #03a9f4;
+  overflow: hidden;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.all-examples {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.all-examples a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: gray;
+  padding-right: 17px;
+}
+
+.all-examples a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.all-examples a:not(:last-child):after {
+  position: absolute;
+  content: " · ";
+  top: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 3rem;
+  line-height: 30%;
+}
+
+.icon {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+  stroke-width: 0;
+  right: 0;
+  stroke: currentColor;
+  fill: #03a9f4;
+  top: 7px;
+}
+
+.icon:hover {
+  fill: #f40303;
+}
+
+@media (max-width: 1200px) {
+
+  section,
+  .all-examples {
+    width: 90%;
+  }
+}
