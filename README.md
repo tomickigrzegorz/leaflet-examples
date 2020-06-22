@@ -28,3 +28,5 @@ Suggestions welcome :bulb:.
 20. [maxBound-map-restricts-the-view](https://tomik23.github.io/leaflet-examples/#maxBound-map-restricts-the-view)
 21. [geocoding-addresses-search-engine-outside-the-map](https://tomik23.github.io/leaflet-examples/#geocoding-addresses-search-engine-outside-the-map)
 22. [center-map-when-click-marker](https://tomik23.github.io/leaflet-examples/#center-map-when-click-marker)
+23. [custom-marker-and-popup](https://tomik23.github.io/leaflet-examples/#custom-marker-and-popup)
+24. [polyline](https://tomik23.github.io/leaflet-examples/#polyline)
