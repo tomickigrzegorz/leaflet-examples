@@ -14,10 +14,10 @@ window.addEventListener('DOMContentLoaded', function () {
       // nominatim
       // https://nominatim.org/release-docs/latest/api/Search/
       searchLike: true,
-      path: 'https://nominatim.openstreetmap.org/search?format=geojson&city=',
+      path: 'https://nominatim.openstreetmap.org/search?format=geojson&limit=5&q=',
     },
     // nominatim
-    specificOutput: function (matches) {
+    htmlTemplate: function (matches) {
       const regex = new RegExp(matches.searchText, 'i');
       return matches.features.map((element, index) => {
         if (index < 5) {

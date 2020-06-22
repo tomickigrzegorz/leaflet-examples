@@ -145,6 +145,15 @@ small {
   margin-top: -8px;
 }
 
+small a {
+  text-decoration: none;
+  color: #2094f3;
+}
+
+small a:hover {
+  text-decoration: underline;
+}
+
 .marker-position {
   position: absolute;
   bottom: 0;
@@ -213,4 +222,10 @@ small {
 
 .container>a+a {
   padding-left: 20px;
+}
+
+.customPopup .leaflet-popup-content-wrapper,
+.customPopup .leaflet-popup-tip {
+  background: #000;
+  color: #fff;
 }
