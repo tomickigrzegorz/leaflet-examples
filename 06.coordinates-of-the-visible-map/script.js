@@ -27,7 +27,9 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let southWest = map.getBounds().getSouthWest().toString();
 let northEast = map.getBounds().getNorthEast().toString();
 
-console.log('show Bounds onLoad', southWest, northEast)
+
+const markerPlace = document.querySelector('.marker-position');
+markerPlace.textContent = `SouthWest: ${southWest}, NorthEast: ${northEast}`;
 
 // second option, by dragging the map
 map.on('dragend', onDragEnd);
@@ -38,5 +40,18 @@ function onDragEnd() {
     const array = [item[1].lat, item[1].lng];
     sn.push(array);
   });
-  console.table(sn);
+  markerPlace.textContent = `SouthWest: ${sn[0]}, NorthEast: ${sn[1]}`;
+  var bounds = [sn[0], sn[1]];
+  // create an orange rectangle
+  L.rectangle(bounds, {
+    color: `#${Math.floor(Math.random() * 16777215).toString(16)}`, weight: 20, fillOpacity: 0.1
+  }).addTo(map);
+  // zoom the map to the rectangle bounds
+  map.fitBounds(bounds);
 }
+
+// second option, by dragging the map
+map.on('dragstart', function () {
+  sn.length = 0;
+  markerPlace.textContent = 'We are moving the map...';
+});
