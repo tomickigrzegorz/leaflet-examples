@@ -45,12 +45,13 @@ function addMarker(e) {
 
 const buttonRemove = '<button type="button" class="remove">delte marker 💔</button>';
 
+const markerPlace = document.querySelector('.marker-position');
+
 // remove marker
 function removeMarker() {
   const marker = this;
   const btn = document.querySelector('.remove');
   btn.addEventListener('click', function () {
-    const markerPlace = document.querySelector('.marker-position');
     markerPlace.textContent = 'goodbye marker 💩'
     map.removeLayer(marker);
   })
@@ -58,6 +59,5 @@ function removeMarker() {
 
 // draged
 function dragedMaker() {
-  const markerPlace = document.querySelector('.marker-position');
   markerPlace.textContent = `change position: ${this.getLatLng().lat}, ${this.getLatLng().lng}`;
 };
