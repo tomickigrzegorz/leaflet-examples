@@ -33,12 +33,7 @@ function getBounds() {
 };
 
 // set maxBounds
-const onViewReset = function (e) {
-  map.setMaxBounds(map.getBounds());
-};
-
-// add mapBounds to map
-map.on('viewreset', onViewReset);
+map.setMaxBounds(map.getBounds());
 
 // zoom the map to the polyline
 map.fitBounds(getBounds(), { reset: true });
