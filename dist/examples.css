@@ -8,7 +8,7 @@ body {
 
 section {
   position: relative;
-  width: 50%;
+  width: 90%;
   margin: 30px auto;
 }
 
@@ -40,7 +40,7 @@ iframe {
 }
 
 .all-examples {
-  width: 50%;
+  width: 90%;
   margin: auto;
   text-align: center;
 }
@@ -85,10 +85,10 @@ iframe {
   fill: #f40303;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
 
   section,
   .all-examples {
     width: 90%;
   }
-}
+} */
