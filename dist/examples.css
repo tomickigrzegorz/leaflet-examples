@@ -9,6 +9,7 @@ body {
 section {
   position: relative;
   width: 90%;
+  max-width: 900px;
   margin: 30px auto;
 }
 
@@ -41,6 +42,7 @@ iframe {
 
 .all-examples {
   width: 90%;
+  max-width: 900px;
   margin: auto;
   text-align: center;
 }
@@ -84,11 +86,3 @@ iframe {
 .icon:hover {
   fill: #f40303;
 }
-
-/* @media (max-width: 1200px) {
-
-  section,
-  .all-examples {
-    width: 90%;
-  }
-} */
