@@ -30,3 +30,4 @@ Suggestions welcome :bulb:.
 22. [center-map-when-click-marker](https://tomik23.github.io/leaflet-examples/#center-map-when-click-marker)
 23. [custom-marker-and-popup](https://tomik23.github.io/leaflet-examples/#custom-marker-and-popup)
 24. [polyline](https://tomik23.github.io/leaflet-examples/#polyline)
+25. [fitBounds-with-padding](https://tomik23.github.io/leaflet-examples/#fitBounds-with-padding)
