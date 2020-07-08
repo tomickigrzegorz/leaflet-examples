@@ -242,4 +242,17 @@ small a:hover {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px 10px rgba(0, 140, 255, 0.2);
+  overflow: hidden;
+}
+
+.resize-h {
+  resize: horizontal;
+}
+
+.resize-v {
+  resize: vertical;
+}
+
+.resize {
+  resize: both;
 }
