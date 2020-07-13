@@ -141,8 +141,9 @@ body {
 }
 
 small {
-  display: block;
+  display: inline-block;
   margin-top: -8px;
+  line-height: 20px;
 }
 
 small a {
@@ -152,6 +153,11 @@ small a {
 
 small a:hover {
   text-decoration: underline;
+}
+
+small+small {
+  border-left: 1px solid #2094f3;
+  padding-left: 5px;
 }
 
 .marker-position {
