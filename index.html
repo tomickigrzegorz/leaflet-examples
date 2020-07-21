@@ -49,6 +49,7 @@
       <a href="#custom-marker-and-popup">custom marker and popup</a>
       <a href="#polyline">polyline</a>
       <a href="#fitBounds-with-padding">fitBounds with padding</a>
+      <a href="#markers-60K">markers 60K</a>
     </div>
 
     <section id="simple-map">
@@ -371,6 +372,20 @@
       <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/25.fitBounds-with-padding/script.js"
           target="_blank">source</a></small>
       <small>Grab the bottom right corner and change the size of the frame or change the window size.</small>
+    </section>
+
+    <section id="markers-60K">
+      <h2>markers 60K</h2>
+      <svg class="icon icon-arrow-up">
+        <use xlink:href="#icon-arrow-up"></use>
+      </svg>
+      <div class="iframe-wrapper resize-h">
+        <iframe data-src="./26.markers-60K/index.html" frameborder="0" width="100%" height="400px;"></iframe>
+      </div>
+      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/26.markers-60K/script.js"
+          target="_blank">source</a></small>
+      <small>60 thousand markers. For better optimization change the map to canvas + use markerCluster plugin + and
+        change the marker to circleMarker (canvas)</small>
     </section>
 
     <script>
