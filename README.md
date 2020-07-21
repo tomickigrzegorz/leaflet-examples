@@ -31,3 +31,4 @@ Suggestions welcome :bulb:.
 23. [custom-marker-and-popup](https://tomik23.github.io/leaflet-examples/#custom-marker-and-popup)
 24. [polyline](https://tomik23.github.io/leaflet-examples/#polyline)
 25. [fitBounds-with-padding](https://tomik23.github.io/leaflet-examples/#fitBounds-with-padding)
+26. [markers-60K](https://tomik23.github.io/leaflet-examples/#markers-60K)
