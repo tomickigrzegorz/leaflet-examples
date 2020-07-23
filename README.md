@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Demo
-## Here is a working live demo : https://tomik23.github.io/leaflet-examples/
+Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 ![Screenshot1](https://github.com/tomik23/leaflet-examples/blob/master/static/leaflet.png)
 
