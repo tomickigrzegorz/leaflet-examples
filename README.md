@@ -1,10 +1,14 @@
-# A collection of examples of leaflet map usage [Live DEMO](https://tomik23.github.io/leaflet-examples/)
+# :maple_leaf: leaflet-examples
+**leaflet-examples** a collection of examples of leaflet map usage
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-[Live DEMO](https://tomik23.github.io/leaflet-examples/)
+## Demo
+## Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
->Work in progress :smiley:  
-Suggestions welcome :bulb:.
+![Screenshot1](https://github.com/tomik23/leaflet-examples/blob/master/static/leaflet.png)
+
+> Work in progress :smiley: Suggestions welcome :bulb:.
 
 1. [simple-map](https://tomik23.github.io/leaflet-examples/#simple-map)
 2. [changing-locate-zoom-control](https://tomik23.github.io/leaflet-examples/#changing-locate-zoom-control)
