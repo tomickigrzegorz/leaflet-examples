@@ -7,6 +7,7 @@
     <title>Geocoding addresses search engine outside the map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomik23/autosuggest@master/docs/autosuggest.min.js"></script>
     <link rel="stylesheet" href="../static/global.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomik23/autosuggest@master/docs/autosuggest.min.css">
   </head>
@@ -14,8 +15,8 @@
   <body>
     <!-- search container -->
     <div class="container">
-      <div class="search">
-        <input type="text" id="search" class="full-width" placeholder="enter the city name">
+      <div class="search loupe">
+        <input type="text" autocomplete="off" id="search" class="full-width" placeholder="enter the city name">
       </div>
     </div>
 
@@ -24,7 +25,7 @@
 
     <script src="script.js"></script>
     <!-- https://github.com/tomik23/autosuggest -->
-    <script src="https://cdn.jsdelivr.net/gh/tomik23/autosuggest@master/docs/autosuggest.min.js"></script>
+
   </body>
 
 </html>

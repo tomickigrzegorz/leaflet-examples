@@ -1,12 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Lato&display=swap);
 
-* {
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  padding: 0
 }
 
 html {
-  height: 100%
+  height: 100%;
 }
 
 body,
@@ -14,7 +17,7 @@ html,
 #map {
   height: 100%;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 body {
@@ -27,34 +30,34 @@ body {
   min-height: 100%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
   background-color: #f1f1f1;
 }
 
 @-webkit-keyframes spinner {
   to {
     -webkit-transform: rotate(1turn);
-    transform: rotate(1turn)
+    transform: rotate(1turn);
   }
 }
 
 @keyframes spinner {
   to {
     -webkit-transform: rotate(1turn);
-    transform: rotate(1turn)
+    transform: rotate(1turn);
   }
 }
 
 .container {
   width: 100%;
   max-width: 400px;
-  margin: 20px auto
+  margin: 20px auto;
 }
-
 
 .label {
   display: block;
-  font-size: 80%
+  font-size: 80%;
 }
 
 .search {
@@ -62,82 +65,185 @@ body {
   display: block;
   margin: 10px auto;
   width: 100%;
-  max-width: 400px;
+}
+
+.search input {
+  font-size: 16px;
 }
 
 .search input::-ms-clear {
-  display: none
+  display: none;
 }
 
 .search ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  border: 1px solid #2196f3;
+  border: 1px solid #858585;
   border-top: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 8px 8px;
   overflow: hidden;
-  box-shadow: 0 8px 5px -4px rgba(158, 158, 158, 0.35)
+  box-shadow: 0 2.8px 2.2px hsla(0, 0%, 87.5%, 0.034), 0 6.7px 5.3px hsla(0, 0%, 75.3%, 0.048),
+    0 1.5px 1px hsla(0, 0%, 56.5%, 0.06), 0 2.3px 1.9px rgba(92, 92, 92, 0.072), 0 2.8px 1px rgba(63, 63, 63, 0.086);
 }
 
 .search ul li {
   position: relative;
   cursor: pointer;
   margin: 0;
-  padding: 10px
-}
-
-.search ul li:before {
-  position: absolute;
-  content: "";
-  top: 0;
-  width: 100%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border-top: 1px solid #e4e4e4
+  padding: 10px;
 }
 
 .search ul li:not(:last-child) {
-  border-top: none
+  border-top: none;
 }
 
-.search ul li p {
-  margin: 5px;
+.search .expanded {
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #858585;
+  outline: none;
 }
 
-.search a {
-  text-decoration: none;
-  color: #000
+.search.loupe:before {
+  -webkit-filter: invert(20%);
+  filter: invert(20%);
 }
 
-.search:before {
+.search.auto-is-loading:after {
+  content: "";
+  box-sizing: border-box;
   position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border-color: #d9d9d9 #008cff #008cff #d9d9d9;
+  border-style: solid;
+  border-width: 2px;
+  -webkit-animation: spinner 0.6s linear infinite;
+  animation: spinner 0.6s linear infinite;
+}
+
+.search.auto-is-loading .auto-clear {
+  display: none;
+}
+
+.loupe .full-width {
+  padding: 6px 45px 6px 40px;
+}
+
+.loupe:before {
   content: "";
   width: 20px;
   height: 20px;
-  top: 0;
-  bottom: 0;
   left: 10px;
-  margin: auto;
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"%3E%3Cpath fill="lightgrey" d="M31.008 27.231l-7.58-6.447c-.784-.705-1.622-1.029-2.299-.998a11.954 11.954 0 002.87-7.787c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12c2.972 0 5.691-1.081 7.787-2.87-.031.677.293 1.515.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007.23s.997-2.903-.23-4.007zM12 20a8 8 0 110-16 8 8 0 010 16z"/%3E%3C/svg%3E%0A');
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23d3d3d3' d='M31.008 27.231l-7.58-6.447c-.784-.705-1.622-1.029-2.299-.998a11.954 11.954 0 002.87-7.787c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12c2.972 0 5.691-1.081 7.787-2.87-.031.677.293 1.515.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007.23s.997-2.903-.23-4.007zM12 20a8 8 0 110-16 8 8 0 010 16z'/%3E%3C/svg%3E");
 }
 
-.search .full-width {
-  width: 100%;
-  height: 40px;
-  padding: 6px 45px 6px 40px;
+.auto-clear,
+.loupe:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.auto-clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.autocomplete-item.loupe {
+  padding-left: 40px;
+}
+
+.auto-clear:before {
+  content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.984 6.422L13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z'/%3E%3C/svg%3E");
+  line-height: 100%;
+  height: 24px;
+  width: 24px;
+}
+
+.auto-clear span {
+  display: none;
+}
+
+.auto-output-search {
+  display: none;
   background-color: #fff;
-  border: 1px solid #2196f3;
-  border-radius: 5px;
+}
+
+.auto-output-search.auto-is-active {
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin-top: -1px;
+  z-index: 99999;
+}
+
+.selected {
+  background-color: #e6e6e6;
+  transition: background-color 0.2s ease-out;
+}
+
+.selected + li:before {
+  border-top: none;
+}
+
+.init-instruction {
+  display: none;
+}
+
+.auto-error {
+  border: 1px solid #f33 !important;
+}
+
+.auto-error::-webkit-input-placeholder {
+  color: #f66;
+  opacity: 1;
+}
+
+.auto-error:-ms-input-placeholder {
+  color: #f66;
+  opacity: 1;
+}
+
+.auto-error::-ms-input-placeholder {
+  color: #f66;
+  opacity: 1;
+}
+
+.auto-error::placeholder {
+  color: #f66;
+  opacity: 1;
+}
+
+.full-width {
+  width: 100%;
+  height: 48px;
+  padding: 6px 45px 6px 10px;
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
   box-shadow: none;
   box-sizing: border-box;
 }
 
-.search .full-width:focus {
+.full-width:focus {
+  border: 1px solid #858585;
   outline: none;
-  border: 1px solid #2094f3;
-  box-shadow: 0px 0px 20px 1px rgba(32, 148, 243, .1);
+}
+
+.hidden {
+  display: none;
 }
 
 small {
@@ -155,7 +261,7 @@ small a:hover {
   text-decoration: underline;
 }
 
-small+small {
+small + small {
   border-left: 1px solid #2094f3;
   padding-left: 5px;
   line-height: 120%;
@@ -179,7 +285,6 @@ small+small {
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
-
   }
 }
 
@@ -227,7 +332,7 @@ small+small {
   padding: 5px;
 }
 
-.container>a+a {
+.container > a + a {
   padding-left: 20px;
 }
 

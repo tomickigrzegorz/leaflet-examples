@@ -6,20 +6,45 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // AUTOSUGGEST  
   new Autosuggest('search', {
-    howManyCharacters: 2,
-    delay: 500,
-    placeholderError: 'something went wrong...',
+    delay: 1000,
     clearButton: true,
-    dataAPI: {
-      // nominatim
-      // https://nominatim.org/release-docs/latest/api/Search/
-      searchLike: true,
-      path: 'https://nominatim.openstreetmap.org/search?format=geojson&limit=5&q=',
+    selectFirst: true,
+    howManyCharacters: 2,
+    onSearch: function (input) {
+      const api = `https://nominatim.openstreetmap.org/search?format=geojson&limit=5&q=${encodeURI(input)}`;
+
+      /**
+       * axios
+       * If you want to use axios you have to add the
+       * axios library to head html
+       * https://cdnjs.com/libraries/axios
+       */
+      // return axios.get(api)
+      //   .then((response) => {
+      //     return response.data;
+      //   })
+      //   .catch(error => {
+      //     console.log(error);
+      //   });
+
+      /**
+       * Promise
+       */
+      return new Promise((resolve) => {
+        fetch(api)
+          .then(response => response.json())
+          .then(data => {
+            resolve(data.features)
+          })
+          .catch(error => {
+            console.error(error);
+          })
+      })
     },
     // nominatim
-    htmlTemplate: function (matches) {
-      const regex = new RegExp(matches.searchText, 'i');
-      return matches.features.map((element, index) => {
+    onResults: (matches, input) => {
+      const regex = new RegExp(input, 'i');
+      return matches.map((element, index) => {
         if (index < 5) {
           const { geometry, properties } = element;
           const [lat, lng] = geometry.coordinates;
@@ -28,14 +53,47 @@ window.addEventListener('DOMContentLoaded', function () {
             pinlng: lng,
             name: properties.display_name
           }
-          const json = JSON.stringify(jsonData);
-          return `<li data-elements='${json}'>
+
+          return `
+          <li class="autocomplete-item" data-elements='${JSON.stringify(jsonData).replace(/[\/\(\)\']/g, "&apos;")}' role="option" aria-selected="false">
             <p>
-              ${properties.display_name.replace(regex, (str) => `<b>${str}</b>`)}
+              ${properties.display_name.replace(regex, (str) => `<b>${str}</b>`)}}
             </p>
-          </li > `;
+        </li > `;
         }
       }).join('');
+    },
+    onSubmit: (matches) => {
+
+      // console.log('onSubmit', matches);
+
+      setTimeout(() => {
+        const dataElements = document
+          .querySelector('#search')
+          .getAttribute('data-elements');
+
+        const { pinlat, pinlng, name } = JSON.parse(dataElements);
+        // custom id for marker
+        const customId = Math.random();
+
+        const marker = L.marker([pinlng, pinlat], {
+          title: name,
+          id: customId
+        })
+          .addTo(map)
+          .bindPopup(name);
+
+        map.setView([pinlng, pinlat], 8);
+
+        map.eachLayer(function (layer) {
+          if (layer.options && layer.options.pane === "markerPane") {
+            if (layer.options.id !== customId) {
+              map.removeLayer(layer);
+            }
+          }
+        });
+
+      }, 500);
     }
   });
 
@@ -61,54 +119,4 @@ window.addEventListener('DOMContentLoaded', function () {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
 
-  // set new marker and remove previous
-  const markers = [];
-  function setNewMarkerAndRemoveOlder() {
-    setTimeout(() => {
-      const dataElements = document
-        .querySelector('#search')
-        .getAttribute('data-elements');
-
-      const { pinlat, pinlng, name } = JSON.parse(dataElements);
-
-      const marker = L.marker([pinlng, pinlat], {
-        title: name,
-      })
-        .addTo(map)
-        .bindPopup(name);
-
-      markers.push(marker);
-      map.setView([pinlng, pinlat], 8);
-
-      if (markers.length > 1) {
-        for (let i = 0; i < markers.length - 1; i++) {
-          map.removeLayer(markers[i]);
-        }
-      }
-    }, 500);
-  }
-
-  // events
-  function handleEvent(event) {
-    event.stopPropagation();
-    switch (event.type) {
-      case 'click':
-      case 'keyup': {
-        setNewMarkerAndRemoveOlder();
-        break;
-      }
-      default:
-        break;
-    }
-  }
-
-  // trigger events click or keyup
-  const coordinates = document.querySelector('.auto-output-search');
-  coordinates.addEventListener('click', handleEvent);
-  document.addEventListener('keyup', function (e) {
-    e.preventDefault();
-    if (e.keyCode === 13 && e.target.id === 'search') {
-      handleEvent(e);
-    }
-  });
 });
