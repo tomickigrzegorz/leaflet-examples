@@ -13,6 +13,28 @@ window.addEventListener('DOMContentLoaded', function () {
     onSearch: function (input) {
       const api = `https://nominatim.openstreetmap.org/search?format=geojson&limit=5&q=${encodeURI(input)}`;
 
+      // You can also use static files
+      // const api = './search.json'
+
+      /**
+       * jquery
+       * If you want to use jquery you have to add the
+       * jquery library to head html
+       * https://cdnjs.com/libraries/jquery
+       */
+      // return $.ajax({
+      //   url: api,
+      //   method: 'GET',
+      // })
+      //   .done(function (data) {
+      //     return data
+      //   })
+      //   .fail(function (xhr) {
+      //     console.error(xhr);
+      //   });
+
+      // OR ----------------------------------
+
       /**
        * axios
        * If you want to use axios you have to add the
@@ -26,6 +48,8 @@ window.addEventListener('DOMContentLoaded', function () {
       //   .catch(error => {
       //     console.log(error);
       //   });
+
+      // OR ----------------------------------
 
       /**
        * Promise
@@ -44,56 +68,38 @@ window.addEventListener('DOMContentLoaded', function () {
     // nominatim
     onResults: (matches, input) => {
       const regex = new RegExp(input, 'i');
-      return matches.map((element, index) => {
-        if (index < 5) {
-          const { geometry, properties } = element;
-          const [lat, lng] = geometry.coordinates;
-          const jsonData = {
-            pinlat: lat,
-            pinlng: lng,
-            name: properties.display_name
-          }
-
-          return `
-          <li class="autocomplete-item loupe" data-elements='${JSON.stringify(jsonData).replace(/[\/\(\)\']/g, "&apos;")}' role="option" aria-selected="false">
+      return matches.map((element) => {
+        return `
+          <li class="autocomplete-item loupe" role="option" aria-selected="false">
             <p>
-              ${properties.display_name.replace(regex, (str) => `<b>${str}</b>`)}
+              ${element.properties.display_name.replace(regex, (str) => `<b>${str}</b>`)}
             </p>
-        </li > `;
-        }
+          </li> `;
       }).join('');
     },
-    onSubmit: (matches) => {
+    onSubmit: (matches, input) => {
+      console.log(matches);
+      const { display_name } = matches.properties;
+      const cord = matches.geometry.coordinates;
+      // custom id for marker
+      const customId = Math.random();
 
-      // console.log('onSubmit', matches);
+      const marker = L.marker([cord[1], cord[0]], {
+        title: display_name,
+        id: customId
+      })
+        .addTo(map)
+        .bindPopup(display_name);
 
-      setTimeout(() => {
-        const dataElements = document
-          .querySelector('#search')
-          .getAttribute('data-elements');
+      map.setView([cord[1], cord[0]], 8);
 
-        const { pinlat, pinlng, name } = JSON.parse(dataElements);
-        // custom id for marker
-        const customId = Math.random();
-
-        const marker = L.marker([pinlng, pinlat], {
-          title: name,
-          id: customId
-        })
-          .addTo(map)
-          .bindPopup(name);
-
-        map.setView([pinlng, pinlat], 8);
-
-        map.eachLayer(function (layer) {
-          if (layer.options && layer.options.pane === "markerPane") {
-            if (layer.options.id !== customId) {
-              map.removeLayer(layer);
-            }
+      map.eachLayer(function (layer) {
+        if (layer.options && layer.options.pane === "markerPane") {
+          if (layer.options.id !== customId) {
+            map.removeLayer(layer);
           }
-        });
-
-      }, 500);
+        }
+      });
     }
   });
 
