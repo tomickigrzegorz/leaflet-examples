@@ -248,8 +248,6 @@ body {
 
 small {
   display: inline-block;
-  margin-top: -8px;
-  line-height: 20px;
 }
 
 small a {
@@ -263,8 +261,8 @@ small a:hover {
 
 small + small {
   border-left: 1px solid #2094f3;
-  padding-left: 5px;
-  line-height: 120%;
+  margin-left: 10px;
+  padding-left: 10px;
 }
 
 .marker-position {
@@ -367,4 +365,49 @@ small + small {
 
 .resize {
   resize: both;
+}
+
+.flex {
+  display: flex;
+}
+
+.description {
+  width: 250px;
+  font-size: 16px;
+  color: #333;
+  padding: 10px 14px;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.highlight {
+  background-color: black;
+  color: #fff;
+}
+
+#map-linked {
+  width: 75%;
+  height: 100%;
+}
+
+#voivodeship {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  margin: 0;
+  width: 25%;
+  z-index: 999;
+  overflow-y: auto;
+  background: #fff;
+  padding: 10px 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#voivodeship li {
+  cursor: pointer;
+  padding: 2px;
 }
