@@ -29,7 +29,7 @@ function onEachFeature(feature, layer) {
 
 // adding geojson by fetch
 // of course you can use jquery, axios etc.
-fetch('./wojewodztwa-medium.geojson')
+fetch('../static/wojewodztwa-medium.geojson')
   .then(function (response) {
     return response.json();
   })
