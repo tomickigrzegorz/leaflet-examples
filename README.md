@@ -36,3 +36,6 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 24. [polyline](https://tomik23.github.io/leaflet-examples/#polyline)
 25. [fitBounds-with-padding](https://tomik23.github.io/leaflet-examples/#fitBounds-with-padding)
 26. [markers-60K](https://tomik23.github.io/leaflet-examples/#markers-60K)
+27. [fullscreen](https://tomik23.github.io/leaflet-examples/#fullscreen)
+28. [adding-map-description](https://tomik23.github.io/leaflet-examples/#adding-map-description)
+29. [linked-view](https://tomik23.github.io/leaflet-examples/#linked-view)
