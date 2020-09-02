@@ -36,6 +36,7 @@ fetch('../static/wojewodztwa-medium.geojson')
   })
   .then(function (data) {
     // Load GeoJSON on map & construct list HTML code
+    console.log(data);
 
     const dataSort = data.features.sort((a, b) => a.properties.nazwa.localeCompare(b.properties.nazwa));
 
@@ -47,16 +48,14 @@ fetch('../static/wojewodztwa-medium.geojson')
     // Bind event listeners to list items
     let el = document.querySelectorAll("#voivodeship li");
     for (let i = 0; i < el.length; i++) {
+
       el[i].addEventListener("mouseover", function (e) {
         const hoveredItem = e.target;
-        const hoveredId = hoveredItem.id;
-
         const layer = geoJson.getLayers();
 
-        layer[hoveredId - 1].setStyle(highlightStyle);
+        layer[i].setStyle(highlightStyle);
 
         hoveredItem.classList.add("highlight");
-
       });
       el[i].addEventListener("mouseout", function (e) {
         const hoveredItem = e.target;
@@ -84,7 +83,7 @@ const normalStyle = {
 // Function applied on each polygon load
 function onEachFeature(feature, layer) {
   const { id, nazwa } = feature.properties;
-
+  // console.log(id, nazwa)
   html += `<li id="${id}">${nazwa}</li>`;
   layer.leafletId = id;
 
@@ -94,6 +93,7 @@ function onEachFeature(feature, layer) {
     hoveredFeature.setStyle(highlightStyle);
     hoveredFeature.bringToFront();
 
+    // console.log(layer.leafletId);
     let el = document.getElementById(hoveredFeature.leafletId);
 
     el.scrollIntoView({
