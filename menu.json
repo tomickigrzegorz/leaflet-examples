@@ -1,0 +1,121 @@
+[
+  {
+    "link": "01.simple-map",
+    "text": "simple map"
+  },
+  {
+    "link": "02.changing-locate-zoom-control",
+    "text": "changing locate zoom control"
+  },
+  {
+    "link": "03.adding-one-marker",
+    "text": "adding one marker"
+  },
+  {
+    "link": "04.many-markers",
+    "text": "many markers"
+  },
+  {
+    "link": "05.coordinates-after-clicking-on-the-map",
+    "text": "coordinates after clicking on the map"
+  },
+  {
+    "link": "06.coordinates-of-the-visible-map",
+    "text": "coordinates of the visible map"
+  },
+  {
+    "link": "07.image-instead-of-map",
+    "text": "image instead of map"
+  },
+  {
+    "link": "08.controlling-different-groups-of-markers",
+    "text": "controlling different groups of markers"
+  },
+  {
+    "link": "09.marker-grouping-markercluster-plugin",
+    "text": "marker grouping markercluster plugin"
+  },
+  {
+    "link": "10.matching-all-markers-to-the-map-view",
+    "text": "matching all markers to the map view"
+  },
+  {
+    "link": "11.controlling-the-map-from-outside-the-map",
+    "text": "controlling the map from outside the map"
+  },
+  {
+    "link": "12.controling-polygons",
+    "text": "controling polygons"
+  },
+  {
+    "link": "13.svg-markers-width-legends",
+    "text": "svg markers width legends"
+  },
+  {
+    "link": "14.dragable-markers",
+    "text": "dragable markers"
+  },
+  {
+    "link": "15.geoJson-simple",
+    "text": "geoJson simple"
+  },
+  {
+    "link": "16.geoJson-extended-action",
+    "text": "geoJson extended action"
+  },
+  {
+    "link": "17.tileLayer",
+    "text": "tileLayer"
+  },
+  {
+    "link": "18.add-move-and-delete-marker",
+    "text": "add move and delete marker"
+  },
+  {
+    "link": "19.custom-button",
+    "text": "custom button"
+  },
+  {
+    "link": "20.maxBound-map-restricts-the-view",
+    "text": "maxBound map restricts the view"
+  },
+  {
+    "link": "21.geocoding-addresses-search-engine-outside-the-map",
+    "text": "geocoding addresses search engine outside the map",
+    "info": "the example uses the autosuggest"
+  },
+  {
+    "link": "22.center-map-when-click-marker",
+    "text": "center map when click marker"
+  },
+  {
+    "link": "23.custom-marker-and-popup",
+    "text": "custom marker and popup"
+  },
+  {
+    "link": "24.polyline",
+    "text": "24.polyline"
+  },
+  {
+    "link": "25.fitBounds-with-padding",
+    "text": "fitBounds with padding",
+    "info": "Grab the bottom right corner and change the size of the frame or change the window size"
+  },
+  {
+    "link": "26.markers-60K",
+    "text": "markers 60K",
+    "info": "60 thousand markers. For better optimization change the map to canvas + use markerCluster plugin + and change the marker to circleMarker (canvas)"
+  },
+  {
+    "link": "27.fullscreen",
+    "text": "fullscreen"
+  },
+  {
+    "link": "28.adding-map-description",
+    "text": "adding map description"
+  },
+  {
+    "link": "29.linked-view",
+    "text": "linked view"
+  }
+]
