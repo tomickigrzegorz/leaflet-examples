@@ -43,7 +43,7 @@ function addMarker(e) {
   marker.on('dragend', dragedMaker);
 }
 
-const buttonRemove = '<button type="button" class="remove">delte marker 💔</button>';
+const buttonRemove = '<button type="button" class="remove">delete marker 💔</button>';
 
 const markerPlace = document.querySelector('.marker-position');
 

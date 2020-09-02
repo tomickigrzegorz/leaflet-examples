@@ -23,35 +23,47 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-// first option
-let southWest = map.getBounds().getSouthWest().toString();
-let northEast = map.getBounds().getNorthEast().toString();
-
-
 const markerPlace = document.querySelector('.marker-position');
-markerPlace.textContent = `SouthWest: ${southWest}, NorthEast: ${northEast}`;
+
+// on drag end
+map.on('dragend', setRentacle);
 
 // second option, by dragging the map
-map.on('dragend', onDragEnd);
+map.on('dragstart', updateInfo);
 
-let sn = [];
-function onDragEnd() {
-  Object.entries(map.getBounds()).forEach(item => {
-    const array = [item[1].lat, item[1].lng];
-    sn.push(array);
-  });
-  markerPlace.textContent = `SouthWest: ${sn[0]}, NorthEast: ${sn[1]}`;
-  var bounds = [sn[0], sn[1]];
-  // create an orange rectangle
+// on zoom end
+map.on('zoomend', setRentacle);
+
+// update info about bounds when site loaded
+document.addEventListener('DOMContentLoaded', function () {
+  const bounds = map.getBounds();
+  updateInfo(bounds._northEast, bounds._southWest);
+});
+
+// set rentacle function
+function setRentacle() {
+  const bounds = map.getBounds();
+
+  // update info about bounds
+  updateInfo(bounds._northEast, bounds._southWest);
+
+  // set rentacle
   L.rectangle(bounds, {
-    color: `#${Math.floor(Math.random() * 16777215).toString(16)}`, weight: 20, fillOpacity: 0.1
+    color: randomColor(), weight: 20, fillOpacity: 0.1
   }).addTo(map);
-  // zoom the map to the rectangle bounds
+
+  // set map
   map.fitBounds(bounds);
 }
 
-// second option, by dragging the map
-map.on('dragstart', function () {
-  sn.length = 0;
-  markerPlace.textContent = 'We are moving the map...';
-});
+// generate random color
+function randomColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
+function updateInfo(north, south) {
+
+  markerPlace.textContent = (south === undefined)
+    ? 'We are moving the map...'
+    : `SouthWest: ${north}, NorthEast: ${south}`;
+}
