@@ -1,3 +1,11 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,7 +23,7 @@ section {
 
 h1 {
   width: 100%;
-  font-size: 64px;
+  font-size: 60px;
   text-align: center;
 }
 
@@ -40,34 +48,97 @@ iframe {
   border: 0;
 }
 
-.all-examples {
-  width: 90%;
-  max-width: 900px;
-  margin: auto;
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "nav head"
+    "nav main";
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 100px;
+  gap: 30px;
+}
+
+header {
+  grid-area: head;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+  max-width: 1000px;
+  width: 100%;
+  padding-right: 30px;
+  margin: 0 auto;
+}
+
+.title {
   text-align: center;
 }
 
-.all-examples a {
+nav {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+nav a {
   position: relative;
-  display: inline-block;
+  display: block;
   text-decoration: none;
-  color: gray;
-  padding-right: 17px;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 16px;
 }
 
-.all-examples a:hover {
-  text-decoration: underline;
-  color: black;
+nav a:hover {
+  background: #d6d6d6;
+  text-decoration: none;
 }
 
-.all-examples a:not(:last-child):after {
-  position: absolute;
-  content: " · ";
-  top: 0;
-  width: 20px;
-  height: 20px;
-  font-size: 3rem;
-  line-height: 30%;
+.active-menu {
+  background: #333 !important;
+}
+
+a.active-menu {
+  color: #e2e2e2;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-rows: 70px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "nav"
+      "main";
+  }
+
+  nav {
+    height: auto;
+    text-align: center;
+    padding: 0 20px;
+    background-color: #f1f1f1;
+  }
+
+  nav a {
+    display: inline-block;
+    width: auto;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin: 1px 2px;
+  }
+  nav a:hover {
+    background: #d6d6d6;
+  }
+  main {
+    padding: 20px;
+  }
 }
 
 .icon {

@@ -10,471 +10,131 @@
   </head>
 
   <body>
-    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
-      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <defs>
-        <symbol id="icon-arrow-up" viewBox="0 0 32 32">
-          <path
-            d="M27.414 12.586l-10-10c-0.781-0.781-2.047-0.781-2.828 0l-10 10c-0.781 0.781-0.781 2.047 0 2.828s2.047 0.781 2.828 0l6.586-6.586v19.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-19.172l6.586 6.586c0.39 0.39 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586c0.781-0.781 0.781-2.047 0-2.828z">
-          </path>
-        </symbol>
-      </defs>
-    </svg>
-    <div class="container">
-      <h1>examples</h1>
+    <div class="grid">
+      <nav class="all-examples"></nav>
+
+      <header class="top-container">
+        <h1>examples</h1>
+      </header>
+
+      <main id="section-example">
+        <h2>simple map</h2>
+        <div class="iframe-wrapper">
+          <iframe src="./01.simple-map/index.html" frameborder="0" width="100%" height="400px" ;></iframe>
+        </div>
+        <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/01.simple-map/script.js"
+            target="_blank">source</a></small>
+      </main>
     </div>
-    <div class="all-examples">
-      <a href="#simple-map">simple map</a>
-      <a href="#changing-locate-zoom-control">changing locate zoom control</a>
-      <a href="#adding-one-marker">adding one marker</a>
-      <a href="#many-markers">many markers</a>
-      <a href="#coordinates-after-clicking-on-the-map">coordinates after clicking on the map</a>
-      <a href="#coordinates-of-the-visible-map">coordinates of the visible map</a>
-      <a href="#image-instead-of-map">image instead of map</a>
-      <a href="#controlling-different-groups-of-markers">controlling different groups of markers</a>
-      <a href="#marker-grouping-markercluster-plugin">marker grouping markercluster plugin</a>
-      <a href="#matching-all-markers-to-the-map-view">matching all markers to the map view</a>
-      <a href="#controlling-the-map-from-outside-the-map">controlling the map from outside the map</a>
-      <a href="#controling-polygons">controling polygons</a>
-      <a href="#svg-markers-width-legends">svg markers width legends</a>
-      <a href="#dragable-markers">dragable markers</a>
-      <a href="#geoJson-simple">geoJson simple</a>
-      <a href="#geoJson-extended-action">geoJson extended action</a>
-      <a href="#tileLayer">tileLayer</a>
-      <a href="#add-move-and-delete-marker">add move and delete marker</a>
-      <a href="#custom-button">custom button</a>
-      <a href="#maxBound-map-restricts-the-view">maxBound map restricts the view</a>
-      <a href="#geocoding-addresses-search-engine-outside-the-map">geocoding addresses search engine outside the map</a>
-      <a href="#center-map-when-click-marker">center map when click marker</a>
-      <a href="#custom-marker-and-popup">custom marker and popup</a>
-      <a href="#polyline">polyline</a>
-      <a href="#fitBounds-with-padding">fitBounds with padding</a>
-      <a href="#markers-60K">markers 60K</a>
-      <a href="#fullscreen">fullscreen</a>
-      <a href="#adding-map-description">adding map description</a>
-      <a href="#linked-view">linked view</a>
-    </div>
-
-    <section id="simple-map">
-      <h2>Simple map</h2>
-      <div class="iframe-wrapper">
-        <iframe data-src="./01.simple-map/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/01.simple-map/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="changing-locate-zoom-control">
-      <h2>Changing locate zoom control</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./02.changing-locate-zoom-control/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/02.changing-locate-zoom-control/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="adding-one-marker">
-      <h2>Adding one marker</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./03.adding-one-marker/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/03.adding-one-marker/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="many-markers">
-      <h2>Many markers</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./04.many-markers/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/04.many-markers/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="coordinates-after-clicking-on-the-map">
-      <h2>Coordinates after clicking on the map</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./05.coordinates-after-clicking-on-the-map/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a
-          href="https://github.com/tomik23/leaflet-examples/blob/master/05.coordinates-after-clicking-on-the-map/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="coordinates-of-the-visible-map">
-      <h2>Coordinates of the visible map</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./06.coordinates-of-the-visible-map/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a
-          href="https://github.com/tomik23/leaflet-examples/blob/master/06.coordinates-of-the-visible-map/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="image-instead-of-map">
-      <h2>Image instead of map</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./07.image-instead-of-map/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/07.image-instead-of-map/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="controlling-different-groups-of-markers">
-      <h2>Controlling different groups of markers</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./08.controlling-different-groups-of-markers/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a
-          href="https://github.com/tomik23/leaflet-examples/blob/master/08.controlling-different-groups-of-markers/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="marker-grouping-markercluster-plugin">
-      <h2>Marker grouping markercluster plugin</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./09.marker-grouping-markercluster-plugin/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a
-          href="https://github.com/tomik23/leaflet-examples/blob/master/09.marker-grouping-markercluster-plugin/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="matching-all-markers-to-the-map-view">
-      <h2>Matching all markers to the map view</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./10.matching-all-markers-to-the-map-view/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a
-          href="https://github.com/tomik23/leaflet-examples/blob/master/10.matching-all-markers-to-the-map-view/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="controlling-the-map-from-outside-the-map">
-      <h2>Controlling the map from outside the map</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./11.controlling-the-map-from-outside-the-map/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a
-          href="https://github.com/tomik23/leaflet-examples/blob/master/11.controlling-the-map-from-outside-the-map/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="controling-polygons">
-      <h2>Controling polygons</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./12.controling-polygons/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/12.controling-polygons/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="svg-markers-width-legends">
-      <h2>SVG markers width legends</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./13.svg-markers-width-legends/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/13.svg-markers-width-legends/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="dragable-markers">
-      <h2>Dragable markers</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./14.dragable-markers/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/14.dragable-markers/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="geoJson-simple">
-      <h2>GeoJson simple</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./15.geoJson-simple/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/15.geoJson-simple/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="geoJson-extended-action">
-      <h2>GeoJson extended action</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./16.geoJson-extended-action/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/16.geoJson-extended-action/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="tileLayer">
-      <h2>TileLayer</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./17.TileLayer/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/17.TileLayer/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="add-move-and-delete-marker">
-      <h2>Add move and delete marker</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./18.add-move-and-delete-marker/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/18.add-move-and-delete-marker/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="custom-button">
-      <h2>Custom button</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./19.custom-button/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/19.custom-button/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="maxBound-map-restricts-the-view">
-      <h2>MaxBound map restricts the view</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./20.maxBound-map-restricts-the-view/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a
-          href="https://github.com/tomik23/leaflet-examples/blob/master/20.maxBound-map-restricts-the-view/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="geocoding-addresses-search-engine-outside-the-map">
-      <h2>Geocoding addresses search engine outside the map</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./21.geocoding-addresses-search-engine-outside-the-map/index.html" frameborder="0"
-          width="100%" height="500px;"></iframe>
-      </div>
-      <div class="flex">
-        <small><a
-            href="https://github.com/tomik23/leaflet-examples/blob/master/21.geocoding-addresses-search-engine-outside-the-map/script.js"
-            target="_blank">source</a></small>
-        <small><a href="https://github.com/tomik23/autosuggest" target="_blank">the example uses the autosuggest
-            plugin</a></small>
-      </div>
-    </section>
-
-    <section id="center-map-when-click-marker">
-      <h2>Center map when click marker</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./22.center-map-when-click-marker/index.html" frameborder="0" width="100%"
-          height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/22.center-map-when-click-marker/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="custom-marker-and-popup">
-      <h2>Custom marker and popup</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./23.custom-marker-and-popup/index.html" frameborder="0" width="100%"
-          height="500px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/23.custom-marker-and-popup/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="polyline">
-      <h2>Polyline</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper">
-        <iframe data-src="./24.polyline/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/24.polyline/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="fitBounds-with-padding">
-      <h2>fitBounds with padding</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper resize-h">
-        <iframe data-src="./25.fitBounds-with-padding/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <div class="flex">
-        <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/25.fitBounds-with-padding/script.js"
-            target="_blank">source</a></small>
-        <small>Grab the bottom right corner and change the size of the frame or change the window size.</small>
-      </div>
-    </section>
-
-    <section id="markers-60K">
-      <h2>Markers 60K</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper resize-h">
-        <iframe data-src="./26.markers-60K/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <div class="flex">
-        <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/26.markers-60K/script.js"
-            target="_blank">source</a></small>
-        <small>60 thousand markers. For better optimization change the map to canvas + use markerCluster plugin + and
-          change the marker to circleMarker (canvas)</small>
-      </div>
-    </section>
-
-    <section id="fullscreen">
-      <h2>Fullscreen</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper resize-h">
-        <iframe data-src="./27.fullscreen/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/27.fullscreen/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="adding-map-description">
-      <h2>Adding map description</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper resize-h">
-        <iframe data-src="./28.adding-map-description/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/28.adding-map-description/script.js"
-          target="_blank">source</a></small>
-    </section>
-
-    <section id="linked-view">
-      <h2>Linked view</h2>
-      <svg class="icon icon-arrow-up">
-        <use xlink:href="#icon-arrow-up"></use>
-      </svg>
-      <div class="iframe-wrapper resize-h">
-        <iframe data-src="./29.linked-view/index.html" frameborder="0" width="100%" height="400px;"></iframe>
-      </div>
-      <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/29.linked-view/script.js"
-          target="_blank">source</a></small>
-    </section>
-
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", () => {
+        const place = document.getElementById('section-example');
+        const subTitle = document.querySelector('h2');
+        const nav = document.querySelector('.all-examples');
 
-        const icons = document.querySelectorAll('.icon-arrow-up');
-        icons.forEach(icon => {
-          icon.addEventListener('click', () => {
-            window.scrollTo({
-              top: 0,
-              left: 0,
-              behavior: 'smooth'
-            });
-          })
-        });
-
-        if ("IntersectionObserver" in window) {
-          const lazyIframe = document.querySelectorAll("iframe");
-          const iframeObserver = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting && entry.target.src.length == 0) {
-                entry.target.src = entry.target.dataset.src;
-                iframeObserver.unobserve(entry.target);
+        fetch('./menu.json')
+          .then(response => response.json())
+          .then(data => {
+            data.forEach(({ link, text, info }, index) => {
+              const element = document.createElement('a');
+              element.className = 'item';
+              if (index == 0) {
+                element.classList.add('active-menu');
               }
-            });
-          });
+              element.href = `#${link}`;
+              element.setAttribute('data-iframe', link);
+              if (info) {
+                element.setAttribute('data-info', info);
+              }
+              element.textContent = text;
+              nav.appendChild(element)
+            })
 
-          lazyIframe.forEach(function (ifr) {
-            iframeObserver.observe(ifr);
-          });
-        } else {
-          const lazyIframe = document.getElementsByTagName('iframe');
 
-          for (let i = 0; i < lazyIframe.length; i++) {
-            if (lazyIframe[i].getAttribute('data-src')) {
-              lazyIframe[i].setAttribute('src', lazyIframe[i].getAttribute('data-src'));
+            const examples = document.querySelectorAll('.item');
+            examples.forEach(example => {
+              example.addEventListener('click', (event) => {
+                renderIframe(example);
+              })
+            })
+
+
+            const hash = location.hash;
+            if (hash) {
+              renderIframe(hash.replace('#', ''));
             }
+
+          });
+
+        function renderIframe(example) {
+
+          // check if object or stirng
+          const check = typeof example === 'object';
+
+
+          const activeMenu = document.querySelector('.active-menu');
+          activeMenu.classList.remove('active-menu')
+
+          const style = check ? example : document.querySelector(`a[data-iframe="${example}"`);
+          style.classList.add('active-menu');
+
+          const dataIframe = check
+            ? example.getAttribute('data-iframe')
+            : example;
+
+          // h2 title
+          const title = document.createElement('h3');
+          title.className = 'title';
+          const createText = document.createTextNode(check
+            ? example.textContent
+            : document.querySelector(`a[data-iframe="${example}"`).textContent);
+
+          // adding text to h2
+          title.appendChild(createText);
+
+          // create iframe
+          const iframe = document.createElement('iframe');
+          iframe.src = `./${dataIframe}/index.html`;
+          iframe.className = 'iframe-wrapper';
+          if (dataIframe === '25.fitBounds-with-padding') {
+            iframe.classList.add('resize-h');
           }
+          iframe.frameBorder = 0;
+          iframe.width = '100%';
+          iframe.height = '550px';
+
+          // get data-info
+          const dataInfo = check
+            ? example.getAttribute('data-info')
+            : document.querySelector(`a[data-iframe="${example}"`).getAttribute('data-info');
+
+          const dataInfoTeamplte = dataInfo === 'the example uses the autosuggest'
+            ? `<small><a href="https://github.com/tomik23/autosuggest" target="_blank">${dataInfo}</a></small>`
+            : dataInfo
+              ? `<small>${dataInfo}</small>`
+              : '';
+
+          const flex = document.createElement('div');
+          flex.className = 'flex';
+
+          const template = `
+              <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/${dataIframe}/script.js"
+          target="_blank">source</a></small>
+                ${dataInfoTeamplte}
+              </div>`;
+
+          flex.innerHTML = template;
+
+          place.innerHTML = '';
+          subTitle.innerHTML = '';
+          place.insertAdjacentElement('afterbegin', title);
+          place.insertAdjacentElement('beforeend', iframe);
+          iframe.insertAdjacentElement('afterend', flex);
         }
-      })
 
+      });
     </script>
-
   </body>
 
 </html>
