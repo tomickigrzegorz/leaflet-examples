@@ -69,7 +69,6 @@
           });
 
         function renderIframe(example) {
-
           // check if object or stirng
           const check = typeof example === 'object';
 
@@ -87,6 +86,7 @@
           // h2 title
           const title = document.createElement('h2');
           title.className = 'title';
+          title.id = dataIframe;
           const createText = document.createTextNode(check
             ? example.textContent
             : document.querySelector(`a[data-iframe="${example}"`).textContent);
