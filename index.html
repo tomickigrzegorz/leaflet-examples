@@ -110,11 +110,7 @@
             ? example.getAttribute('data-info')
             : document.querySelector(`a[data-iframe="${example}"`).getAttribute('data-info');
 
-          const dataInfoTeamplte = dataInfo === 'the example uses the autosuggest'
-            ? `<small><a href="https://github.com/tomik23/autosuggest" target="_blank">${dataInfo}</a></small>`
-            : dataInfo
-              ? `<small>${dataInfo}</small>`
-              : '';
+          const dataInfoTeamplte = dataInfo ? `<small>${dataInfo}</small>` : '';
 
           const flex = document.createElement('div');
           flex.className = 'flex';

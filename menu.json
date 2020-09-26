@@ -82,7 +82,7 @@
   {
     "link": "21.geocoding-addresses-search-engine-outside-the-map",
     "text": "geocoding addresses search engine outside the map",
-    "info": "the example uses the autosuggest"
+    "info": "<a href='https://github.com/tomik23/autosuggest' target='_blank'>the example uses the autosuggest</a>"
   },
   {
     "link": "22.center-map-when-click-marker",
@@ -108,7 +108,8 @@
   },
   {
     "link": "27.fullscreen",
-    "text": "fullscreen"
+    "text": "fullscreen",
+    "info": "<a href='https://github.com/Leaflet/Leaflet.fullscreen' target='_blank'>the example uses the fullscreen plugin</a>"
   },
   {
     "link": "28.adding-map-description",
@@ -117,5 +118,10 @@
   {
     "link": "29.linked-view",
     "text": "linked view"
+  },
+  {
+    "link": "30.mini-map",
+    "text": "miniMap plugin",
+    "info": "<a href='https://github.com/Norkart/Leaflet-MiniMap' target='_blank'>the example uses the minimap plugin</a>"
   }
 ]
