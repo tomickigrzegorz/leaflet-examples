@@ -84,7 +84,7 @@ nav {
   height: 100vh;
   background: #fff;
   overflow-y: auto;
-  max-height: 100vh;
+  min-height: 100%;
 }
 
 nav a {

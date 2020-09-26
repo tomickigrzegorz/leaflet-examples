@@ -32,11 +32,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // loop that adds many markers to the map
 for (let i = 0; i < points.length; i++) {
-  const [lat, lng, popupText] = points[i];
+  const [lat, lng, title] = points[i];
 
   marker = new L.marker([lat, lng])
     .addTo(map)
-    .bindPopup(popupText)
+    .bindPopup(title)
     .on('click', clickZoom);
 }
 

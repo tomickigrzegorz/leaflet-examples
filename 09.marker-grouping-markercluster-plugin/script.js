@@ -44,9 +44,9 @@ let markers = L.markerClusterGroup();
 
 // Add markers to the layer
 for (let i = 0; i < points.length; i++) {
-  let cord = points[i];
-  let title = cord[2];
-  let marker = L.marker(new L.LatLng(cord[0], cord[1]))
+  const [lat, lng, title] = points[i];
+
+  let marker = L.marker(new L.LatLng(lat, lng))
     .bindPopup(title);
   markers.addLayer(marker);
 }

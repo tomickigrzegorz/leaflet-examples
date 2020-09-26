@@ -33,7 +33,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // adding all markers to the featureGroups array
 let featureGroups = [];
 for (let i = 0; i < points.length; i++) {
-  featureGroups.push(L.marker([points[i][0], points[i][1]]).bindPopup(points[i][2]));
+  const [lat, lng, title] = points[i];
+  featureGroups.push(L.marker([lat, lng]).bindPopup(title));
 }
 
 // adding all markers to the map

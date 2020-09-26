@@ -35,7 +35,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // of course this could be another parameter
 const featureGroups = [];
 for (let i = 0; i < points.length; i++) {
-  featureGroups.push(L.marker([points[i][0], points[i][1]], { title: points[i][2] }).bindPopup(points[i][3]));
+  const [lat, lng, title] = points[i];
+  featureGroups.push(L.marker([lat, lng], { title: title }).bindPopup(title));
 }
 
 // we add markers to the map
