@@ -16,28 +16,28 @@ const lon = 21.0117800;
 // coordinate array with popup text
 let points = [
   {
-    "lat": "52.230020586193795",
-    "lng": "21.01083755493164",
+    "lat": 52.230020586193795,
+    "lng": 21.01083755493164,
     "text": "point 1",
-    "flag": "1"
+    "flag": 1
   },
   {
-    "lat": "52.22924516170657",
-    "lng": "21.011320352554325",
+    "lat": 52.22924516170657,
+    "lng": 21.011320352554325,
     "text": "point 2",
-    "flag": "0"
+    "flag": 0
   },
   {
-    "lat": "52.229511304688444",
-    "lng": "21.01270973682404",
+    "lat": 52.229511304688444,
+    "lng": 21.01270973682404,
     "text": "point 3",
-    "flag": "2"
+    "flag": 2
   },
   {
-    "lat": "52.23040500771883",
-    "lng": "21.012146472930908",
+    "lat": 52.23040500771883,
+    "lng": 21.012146472930908,
     "text": "point 4",
-    "flag": "3"
+    "flag": 3
   }
 ];
 
@@ -54,16 +54,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 function colors(flag) {
   let colorMarker = '';
   switch (flag) {
-    case "0":
+    case 0:
       colorMarker = 'pink';
       break;
-    case "1":
+    case 1:
       colorMarker = 'red';
       break;
-    case "2":
+    case 2:
       colorMarker = 'blue';
       break;
-    case "3":
+    case 3:
       colorMarker = 'green';
       break;
     default:
