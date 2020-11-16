@@ -40,4 +40,4 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 28. [adding-map-description](https://tomik23.github.io/leaflet-examples/#28.adding-map-description)
 29. [linked-view](https://tomik23.github.io/leaflet-examples/#29.linked-view)
 30. [mini-map](https://tomik23.github.io/leaflet-examples/#30.mini-map)
-31. [mini-map](https://tomik23.github.io/leaflet-examples/#31.Leaflet.awesome-markers)
+31. [awesome-markers](https://tomik23.github.io/leaflet-examples/#31.Leaflet.awesome-markers)
