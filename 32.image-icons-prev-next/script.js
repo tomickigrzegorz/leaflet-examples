@@ -19,7 +19,7 @@ const points = [
     'lat': 52.228785157729114,
     'lng': 21.006867885589603,
     'title': 'Lviv',
-    'image': 'https://grzegorztomicki.pl/images/lwow/576/IMG_0202.jpg"'
+    'image': 'https://grzegorztomicki.pl/images/lwow/576/IMG_0202.jpg'
   },
   {
     'lat': 52.22923201880194,
@@ -56,22 +56,37 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const featureGroups = [];
 for (let i = 0; i < points.length; i++) {
   const { lat, lng, title, image } = points[i];
-  const myIcon = L.divIcon({
+
+  const myIcon = L.icon({
+    iconUrl: image,
     className: 'image-icon',
-    html: `<div style='border: 4px solid #fff; box-shadow: 0 0 10px rgba(0,0,0,.4);'><img src="${image}" style="display: block; width: 100%; height: auto;"></div>`,
-    iconSize: new L.Point(100, 50),
+    iconSize: [100, 60],
     iconAnchor: [50, 50],
     popupAnchor: [0, -40]
   });
 
-  const marker = L.marker([lat, lng], { title: title, icon: myIcon });
+  let markers = L.marker([lat, lng], { title: title, icon: myIcon });
 
-  featureGroups.push(marker.bindPopup(title).on('click', centerOnMarker));
+  featureGroups.push(markers.bindPopup(`
+    <div style="text-align: center;">
+      <div style="text-transform: uppercase; font-weight: bold;">${title}<div>
+    </div>
+  `).on('click', centerOnMarker));
+
+  // generate menu
+  generateMenu(title);
 }
 
 // we add markers to the map
 for (let i = 0; i < featureGroups.length; i++) {
   featureGroups[i].addTo(map);
+}
+
+// generate menu
+function generateMenu(title) {
+  const city = document.querySelector('.city');
+  const hrefElement = `<a id="${title}" class="marker-click" href="#">${title}</a>`;
+  city.insertAdjacentHTML('beforeend', hrefElement);
 }
 
 // function that opens a popup with text at the marker
@@ -111,10 +126,10 @@ function centerOnMarker(e) {
 
 // active bottom menu
 function activeControls(index) {
-  if (index === countMarker) {
-    next.classList.add('disabled');
-    prev.classList.remove('disabled');
-  } else if (index > 0 && index < countMarker) {
+  next.classList.add('disabled');
+  prev.classList.remove('disabled');
+
+  if (index > 0 && index < countMarker) {
     next.classList.remove('disabled');
     prev.classList.remove('disabled');
   } else if (index === 0) {
@@ -124,12 +139,12 @@ function activeControls(index) {
 }
 
 // remove active menu
-function removeActiveMenu(element) {
-  const curentActive = document.querySelector('.active');
-  if (curentActive) {
-    curentActive.classList.remove('active');
+function removeActiveMenu(el) {
+  const active = document.querySelector('.active');
+  if (active) {
+    active.classList.remove('active');
   }
-  element.classList.add('active')
+  el.classList.add('active');
 }
 
 const markersDiv = document.querySelectorAll('.marker-click');
@@ -142,8 +157,7 @@ const countMarker = markersDiv.length - 1;
 // all marker-click classes from html
 markersDiv.forEach((marker, index) => {
   marker.addEventListener('click', (e) => {
-
-    const element = e.target;
+    e.preventDefault();
 
     // remove active menu
     removeActiveMenu(e.target);
@@ -160,6 +174,8 @@ markersDiv.forEach((marker, index) => {
 // click on prev, next
 buttonControls.forEach(button => {
   button.addEventListener('click', (e) => {
+    e.preventDefault();
+
     const btn = e.target.classList[1];
 
     let index = Array.from(markersDiv).findIndex(x => x.classList.contains('active'));
@@ -175,3 +191,4 @@ buttonControls.forEach(button => {
     activeControls(index);
   })
 })
+
