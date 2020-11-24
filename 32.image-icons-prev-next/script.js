@@ -162,9 +162,7 @@ buttonControls.forEach(button => {
   button.addEventListener('click', (e) => {
     const btn = e.target.classList[1];
 
-    let index = Array.from(markersDiv).findIndex(x => {
-      return x.classList.contains('active');
-    });
+    let index = Array.from(markersDiv).findIndex(x => x.classList.contains('active'));
 
     index = btn === 'prev'
       ? index - 1
