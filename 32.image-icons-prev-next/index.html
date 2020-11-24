@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlling the map from outside the map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../static/global.css">
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <div class="container image-controls">
+      <div class="button-controls prev disabled">&#8592;</div>
+      <div class="city">
+        <a id="Lviv" class="marker-click" href="#">Lviv</a>
+        <a id="China" class="marker-click" href="#">China</a>
+        <a id="Morocco" class="marker-click" href="#">Morocco</a>
+        <a id="Israel" class="marker-click" href="#">Israel</a>
+      </div>
+      <div class="button-controls next">&#8594;</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>

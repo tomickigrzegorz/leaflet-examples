@@ -128,5 +128,9 @@
     "link": "31.Leaflet.awesome-markers",
     "text": "awesome-markers plugin",
     "info": "<a href='https://github.com/lvoogdt/Leaflet.awesome-markers' target='_blank'>the example uses the awesome-markers plugin</a>"
+  },
+  {
+    "link": "32.image-icons-prev-next",
+    "text": "image-icons-prev-next"
   }
 ]

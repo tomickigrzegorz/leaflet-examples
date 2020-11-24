@@ -41,3 +41,4 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 29. [linked-view](https://tomik23.github.io/leaflet-examples/#29.linked-view)
 30. [mini-map](https://tomik23.github.io/leaflet-examples/#30.mini-map)
 31. [awesome-markers](https://tomik23.github.io/leaflet-examples/#31.Leaflet.awesome-markers)
+32. [image-icons-prev-next](https://tomik23.github.io/leaflet-examples/#32.image-icons-prev-next)

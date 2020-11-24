@@ -330,10 +330,6 @@ small + small {
   padding: 5px;
 }
 
-.container > a + a {
-  padding-left: 20px;
-}
-
 .customPopup .leaflet-popup-content-wrapper,
 .customPopup .leaflet-popup-tip {
   background: #000;
@@ -410,4 +406,57 @@ small + small {
 #voivodeship li {
   cursor: pointer;
   padding: 2px;
+}
+
+.marker-click {
+  text-decoration: none;
+  color: red;
+}
+
+.marker-click:hover {
+  margin-bottom: 3px;
+  border-bottom: 2px solid red;
+}
+
+@media (min-width: 400px) {
+  .marker-click {
+    margin: 5px 10px;
+  }
+}
+
+.image-controls {
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.button-controls {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background: #000;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 150%;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 3px;
+  transition: background 500ms ease-in-out;
+}
+
+.button-controls:hover {
+  background: rgb(255, 0, 0);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.active {
+  margin-bottom: 3px;
+  border-bottom: 2px solid red;
 }
