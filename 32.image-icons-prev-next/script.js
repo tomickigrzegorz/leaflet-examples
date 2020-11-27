@@ -120,7 +120,7 @@ function centerOnMarker(e) {
   removeActiveMenu(element);
 
   // find element in array
-  const indexActivePopup = points.map((x, index) => index === el);
+  const indexActivePopup = points.findIndex((x, index) => index === el);
 
   // active pre/next menu
   activeControls(indexActivePopup)
