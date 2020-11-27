@@ -57,6 +57,7 @@ const featureGroups = [];
 for (let i = 0; i < points.length; i++) {
   const { lat, lng, title, image } = points[i];
 
+  // create specific icon
   const myIcon = L.icon({
     iconUrl: image,
     className: 'image-icon',
@@ -65,66 +66,69 @@ for (let i = 0; i < points.length; i++) {
     popupAnchor: [0, -40]
   });
 
-  let markers = L.marker([lat, lng], { title: title, icon: myIcon });
+  // create marker width specific id
+  let markers = L.marker([lat, lng], { title: title, icon: myIcon, id: i });
 
-  featureGroups.push(markers.bindPopup(`
-    <div style="text-align: center;">
-      <div style="text-transform: uppercase; font-weight: bold;">${title}<div>
-    </div>
-  `).on('click', centerOnMarker));
+  // add to marker popup
+  markers.bindPopup(`
+      <div style="text-align: center;">
+        <div style="text-transform: uppercase; font-weight: bold;">${title} id: ${i}<div>
+      </div>
+    `);
 
-  // generate menu
-  generateMenu(title);
-}
+  // click on marker center marker on map
+  markers.on('click', centerOnMarker);
 
-// we add markers to the map
-for (let i = 0; i < featureGroups.length; i++) {
-  featureGroups[i].addTo(map);
+  // add marker to map
+  markers.addTo(map);
+
+  // generate bottom menu with markers
+  generateMenu(i, title);
 }
 
 // generate menu
-function generateMenu(title) {
+function generateMenu(id, title) {
   const city = document.querySelector('.city');
-  const hrefElement = `<a id="${title}" class="marker-click" href="#">${title}</a>`;
+  const hrefElement = `<a id="${id}" title="${title} ID:${id}" class="marker-click" href="#">${title}</a>`;
   city.insertAdjacentHTML('beforeend', hrefElement);
 }
 
-// function that opens a popup with text at the marker
-// and transfers latLng coordinates of the opened marker
-// to the centering function
+// function get layer id
 function markerOpen(id) {
-  // console.log(id);
-  for (let i in featureGroups) {
-    const markerId = featureGroups[i].options.title;
-    if (markerId === id) {
-      featureGroups[i].openPopup();
-      centerMarker(featureGroups[i].getLatLng());
+  map.eachLayer(function (layer) {
+    if (layer.options) {
+      if (layer.options.id === id) {
+        centerMarker(layer);
+      }
     }
-  }
+  });
 }
 
-// function centering the map on the marker
-function centerMarker(latlng) {
-  const marker = L.marker([latlng.lat, latlng.lng]);
-  let group = new L.featureGroup([marker]);
-  map.fitBounds(group.getBounds());
+// function open popup and centering
+// the map on the marker
+function centerMarker(layer) {
+  layer.openPopup();
+  map.panTo(L.latLng(layer.getLatLng()));
 }
 
 // center on marker when click
 function centerOnMarker(e) {
-  const el = e.target.options.title;
+  const el = e.target.options.id;
 
   const element = document.getElementById(el);
+  // remove active menu
   removeActiveMenu(element);
 
-  const indexActivePopup = points.findIndex(x => x.title === el);
+  // find element in array
+  const indexActivePopup = points.map((x, index) => index === el);
 
+  // active pre/next menu
   activeControls(indexActivePopup)
 
   map.setView(e.target.getLatLng(), zoom);
 }
 
-// active bottom menu
+// active bottom menu arrow
 function activeControls(index) {
   next.classList.add('disabled');
   prev.classList.remove('disabled');
@@ -162,12 +166,12 @@ markersDiv.forEach((marker, index) => {
     // remove active menu
     removeActiveMenu(e.target);
 
-    // active pre
+    // active pre/next menu
     activeControls(index);
 
     // the click event transfers to the function
     // id = title of the marker
-    markerOpen(marker.id);
+    markerOpen(Number(e.target.id));
   });
 });
 
@@ -187,7 +191,10 @@ buttonControls.forEach(button => {
     const element = Array.from(markersDiv)[index];
     removeActiveMenu(element);
 
-    markerOpen(element.id);
+    // open specific marker
+    markerOpen(Number(element.id));
+
+    // active pre/next menu
     activeControls(index);
   })
 })
