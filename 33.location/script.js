@@ -28,7 +28,6 @@ map
   .locate({
     // https://leafletjs.com/reference-1.7.1.html#locate-options-option
     setView: true,
-    watch: true,
     enableHighAccuracy: true,
   })
   // if location found show marker and circle
