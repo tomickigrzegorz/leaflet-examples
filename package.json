@@ -1,0 +1,16 @@
+{
+  "name": "leaflet-examples",
+  "version": "1.0.0",
+  "repository": "https://github.com/tomik23/leaflet-examples.git",
+  "author": "Grzegorz Tomicki",
+  "license": "MIT",
+  "keywords": [
+    "leaflet-examples",
+    "leaflet-maps"
+  ],
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.14.0",
+    "prettier": "^2.1.2"
+  }
+}
