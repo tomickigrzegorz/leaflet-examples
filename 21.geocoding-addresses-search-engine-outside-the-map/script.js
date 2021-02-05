@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /**
  * geocoding addresses search engine outside the map
  */
@@ -10,10 +9,8 @@ window.addEventListener('DOMContentLoaded', function () {
     clearButton: true,
     selectFirst: true,
     howManyCharacters: 2,
-    onSearch: function (input) {
-      const api = `https://nominatim.openstreetmap.org/search?format=geojson&limit=5&q=${encodeURI(
-        input
-      )}`;
+    onSearch: function ({ currentValue }) {
+      const api = `https://nominatim.openstreetmap.org/search?format=geojson&limit=5&q=${encodeURI(currentValue)}`;
 
       // You can also use static files
       // const api = './search.json'
@@ -68,35 +65,34 @@ window.addEventListener('DOMContentLoaded', function () {
       });
     },
     // nominatim
-    onResults: (matches, input) => {
-      const regex = new RegExp(input, 'i');
-      return matches
-        .map((element) => {
-          return `
+    onResults: ({ currentValue, matches, template }) => {
+      const regex = new RegExp(currentValue, 'i');
+      // checking if we have results if we don't
+      // take data from the noResults method
+      return matches === 0
+        ? template
+        : matches
+          .map((element) => {
+            return `
           <li class="autocomplete-item loupe" role="option" aria-selected="false">
             <p>
-              ${element.properties.display_name.replace(
-            regex,
-            (str) => `<b>${str}</b>`
-          )}
+              ${element.properties.display_name.replace(regex, (str) => `<b>${str}</b>`)}
             </p>
           </li> `;
-        })
-        .join('');
+          }).join('');
     },
-    onSubmit: (matches, input) => {
-      console.log(matches);
-      const { display_name } = matches.properties;
-      const cord = matches.geometry.coordinates;
+    onSubmit: ({ object }) => {
+      const { display_name } = object.properties;
+      const cord = object.geometry.coordinates;
       // custom id for marker
       const customId = Math.random();
 
       const marker = L.marker([cord[1], cord[0]], {
         title: display_name,
         id: customId,
-      })
-        .addTo(map)
-        .bindPopup(display_name);
+      });
+
+      marker.addTo(map).bindPopup(display_name);
 
       map.setView([cord[1], cord[0]], 8);
 
@@ -108,6 +104,17 @@ window.addEventListener('DOMContentLoaded', function () {
         }
       });
     },
+
+    // get index and data from li element after
+    // hovering over li with the mouse or using
+    // arrow keys ↓ | ↑
+    onSelectedItem: ({ index, element, object }) => {
+      console.log('onSelectedItem:', index, element, object);
+    },
+
+    // the method presents no results
+    noResults: ({ currentValue, template }) =>
+      template(`<li>No results found: "${currentValue}"</li>`),
   });
 
   // MAP

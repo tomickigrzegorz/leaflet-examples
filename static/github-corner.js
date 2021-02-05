@@ -12,7 +12,7 @@ const githubConrner = `
 </svg></a>
 `;
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
   // adding github-corner
   document.body.insertAdjacentHTML('beforeend', githubConrner);
 });

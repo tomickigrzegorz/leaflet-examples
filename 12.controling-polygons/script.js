@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * Controling polygons
  */
@@ -19,10 +20,11 @@ const map = L.map('map', config).setView([lat, lon], zoom);
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-// 
+//
 const River = L.polygon([
   [52.261433597272294, 21.01272583007813],
   [52.259857564663236, 21.008262634277347],
@@ -34,18 +36,21 @@ const River = L.polygon([
   [52.2249603686772, 21.047916412353516],
   [52.23600009974023, 21.042766571044925],
   [52.24966453484508, 21.023368835449222],
-  [52.26132853017426, 21.01272583007813]
-])
+  [52.26132853017426, 21.01272583007813],
+]);
 
-const Place = L.polygon([
-  [52.23295130556395, 20.998821258544925],
-  [52.230007443518716, 20.98474502563477],
-  [52.224750061441355, 20.98920822143555],
-  [52.22769427210073, 21.002597808837894]
-], {
-  color: 'red',
-  className: 'place'
-});
+const Place = L.polygon(
+  [
+    [52.23295130556395, 20.998821258544925],
+    [52.230007443518716, 20.98474502563477],
+    [52.224750061441355, 20.98920822143555],
+    [52.22769427210073, 21.002597808837894],
+  ],
+  {
+    color: 'red',
+    className: 'place',
+  }
+);
 
 // Extended `LayerGroup` that makes it easy
 // to do the same for all layers of its members
@@ -59,26 +64,29 @@ place.addLayer(Place);
 
 // object with layers
 const overlayMaps = {
-  'River': river,
-  'Place': place,
-  'Remove all polygons': allPolygons
+  River: river,
+  Place: place,
+  'Remove all polygons': allPolygons,
 };
 
 // The layers control gives users the ability to switch
 // between different base layers and switch overlays on/off
-L.control.layers(null, overlayMaps, {
-  collapsed: false
-}).addTo(map);
+L.control
+  .layers(null, overlayMaps, {
+    collapsed: false,
+  })
+  .addTo(map);
 
-// centering a group of polygon 
+// centering a group of polygon
 map.on('overlayadd', function (e) {
-  const lastCheckboxs = document.querySelectorAll('.leaflet-control-layers-selector');
+  const lastCheckboxs = document.querySelectorAll(
+    '.leaflet-control-layers-selector'
+  );
   e.layer.eachLayer(function (pol) {
     // console.log(pol)
     map.fitBounds(pol.getBounds());
     lastCheckboxs[lastCheckboxs.length - 1].checked = false;
   });
-
 });
 
 // Remove all layer from map when click
@@ -86,9 +94,9 @@ map.on('overlayadd', function (e) {
 overlayMaps['Remove all polygons'].on('add', function (e) {
   const allOverlay = Object.keys(overlayMaps).reduce((obj, key) => {
     if (key !== 'Remove all polygons') {
-      obj[key] = overlayMaps[key]
+      obj[key] = overlayMaps[key];
     }
-    return obj
+    return obj;
   }, {});
 
   setTimeout(function () {

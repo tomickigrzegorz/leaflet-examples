@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * Marker grouping width markercluster plugin
  */
@@ -26,7 +27,7 @@ let points = [
   [51.23440735163461, 17.578125000000004, 'point 9'],
   [50.84757295365389, 17.753906250000004, 'point 10'],
   [50.90303283111257, 18.061523437500004, 'point 11'],
-  [51.04139389812637, 17.446289062500004, 'point 12']
+  [51.04139389812637, 17.446289062500004, 'point 12'],
 ];
 
 // calling map
@@ -35,7 +36,8 @@ const map = L.map('map', config).setView([lat, lon], zoom);
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
 // L.MarkerClusterGroup extends L.FeatureGroup
@@ -46,8 +48,7 @@ let markers = L.markerClusterGroup();
 for (let i = 0; i < points.length; i++) {
   const [lat, lng, title] = points[i];
 
-  let marker = L.marker(new L.LatLng(lat, lng))
-    .bindPopup(title);
+  let marker = L.marker(new L.LatLng(lat, lng)).bindPopup(title);
   markers.addLayer(marker);
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * svg markers width legends
  */
@@ -19,23 +20,23 @@ const map = L.map('map', config).setView([lat, lon], zoom);
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
-
 
 // LEGENDS
 
 // the control element is placed in the bottom right corner
 const legend = L.control({
-  position: "bottomright"
+  position: 'bottomright',
 });
 
 // we create a div with a legend class
-const div = L.DomUtil.create("div", "legend");
+const div = L.DomUtil.create('div', 'legend');
 // color table
-const color = ["F7FADA", "B6E1C9", "72C7D4", "64A1CC", "5F6CB3"];
+const color = ['F7FADA', 'B6E1C9', '72C7D4', '64A1CC', '5F6CB3'];
 // table of texts that will appear in the popup and legend
-const label = ["2-12.5", "12.6-16.8", "16.9-20.9", "21-25.9", "26-plus"];
+const label = ['2-12.5', '12.6-16.8', '16.9-20.9', '21-25.9', '26-plus'];
 
 // we add records to the L.control method
 const rows = [];
@@ -47,13 +48,12 @@ legend.onAdd = function () {
         </div>  
     `);
   });
-  div.innerHTML = rows.join("");
+  div.innerHTML = rows.join('');
   return div;
 };
 
 // we are adding a legend to the map
 legend.addTo(map);
-
 
 // MARKERS
 const markers = [
@@ -61,7 +61,7 @@ const markers = [
   [52.258071, 20.986805],
   [52.242728, 21.041565],
   [52.234213, 21.029034],
-  [52.251661, 21.003456]
+  [52.251661, 21.003456],
 ];
 
 // the function creates colorful svg
@@ -73,11 +73,11 @@ function colorMarker(color) {
     </svg>`;
 
   const icon = L.divIcon({
-    className: "marker",
+    className: 'marker',
     html: svgTemplate,
     iconSize: [40, 40],
     iconAnchor: [12, 24],
-    popupAnchor: [7, -16]
+    popupAnchor: [7, -16],
   });
 
   return icon;
@@ -88,7 +88,7 @@ markers.map((marker, index) => {
   const lat = marker[0];
   const lng = marker[1];
   L.marker([lat, lng], {
-    icon: colorMarker(color[index])
+    icon: colorMarker(color[index]),
   })
     .bindPopup(`color: #${color[index]}<br>${label[index]}`)
     .addTo(map);

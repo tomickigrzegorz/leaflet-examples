@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * Multiple layers of markers
  * Adding the ability to show several layers of
@@ -13,15 +14,15 @@ let config = {
 // magnification with which the map will start
 const zoom = 18;
 // coordinates
-const lat = 52.2297700;
-const lon = 21.0117800;
+const lat = 52.22977;
+const lon = 21.01178;
 
 // coordinate array with popup text
 const pointsA = [
   [52.230020586193795, 21.01083755493164, 'point A1'],
   [52.22924516170657, 21.011320352554325, 'point A2'],
   [52.229511304688444, 21.01270973682404, 'point A3'],
-  [52.23040500771883, 21.012146472930908, 'point A4']
+  [52.23040500771883, 21.012146472930908, 'point A4'],
 ];
 
 const pointsB = [
@@ -32,7 +33,7 @@ const pointsB = [
   [52.2299680154701, 21.01164758205414, 'point B5'],
   [52.23012572745442, 21.011583209037784, 'point B6'],
   [52.230276867580336, 21.01143836975098, 'point B7'],
-  [52.23046414919644, 21.011341810226444, 'point B8']
+  [52.23046414919644, 21.011341810226444, 'point B8'],
 ];
 
 // calling map
@@ -41,7 +42,8 @@ const map = L.map('map', config).setView([lat, lon], zoom);
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
 // Extended `LayerGroup` that makes it easy
@@ -65,16 +67,18 @@ for (let i = 0; i < pointsB.length; i++) {
 const overlayMaps = {
   'point A': pA,
   'point B': pB,
-  'Remove all layers': allMarkers
+  'Remove all layers': allMarkers,
 };
 
 // The layers control gives users the ability to switch
 // between different base layers and switch overlays on/off
-L.control.layers(null, overlayMaps, {
-  collapsed: false
-}).addTo(map);
+L.control
+  .layers(null, overlayMaps, {
+    collapsed: false,
+  })
+  .addTo(map);
 
-// centering a group of markers 
+// centering a group of markers
 map.on('layeradd layerremove', function () {
   // Create new empty bounds
   var bounds = new L.LatLngBounds();
@@ -88,7 +92,9 @@ map.on('layeradd layerremove', function () {
   });
 
   // Set last checkbox in control to false
-  const lastCheckboxs = document.querySelectorAll('.leaflet-control-layers-selector');
+  const lastCheckboxs = document.querySelectorAll(
+    '.leaflet-control-layers-selector'
+  );
   lastCheckboxs[lastCheckboxs.length - 1].checked = false;
 
   // Check if bounds are valid (could be empty)
@@ -106,9 +112,9 @@ map.on('layeradd layerremove', function () {
 overlayMaps['Remove all layers'].on('add', function (e) {
   const allOverlay = Object.keys(overlayMaps).reduce((obj, key) => {
     if (key !== 'Remove all layers') {
-      obj[key] = overlayMaps[key]
+      obj[key] = overlayMaps[key];
     }
-    return obj
+    return obj;
   }, {});
 
   setTimeout(function () {

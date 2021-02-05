@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * Image icons prev/next
  */
@@ -11,34 +12,34 @@ let config = {
 const zoom = 17;
 // coordinates
 const lat = 52.2294;
-const lon = 21.010;
+const lon = 21.01;
 
 // coordinate array with popup text
 const points = [
   {
-    'lat': 52.228785157729114,
-    'lng': 21.006867885589603,
-    'title': 'Lviv',
-    'image': 'https://grzegorztomicki.pl/images/lwow/576/IMG_0202.jpg'
+    lat: 52.228785157729114,
+    lng: 21.006867885589603,
+    title: 'Lviv',
+    image: 'https://grzegorztomicki.pl/images/lwow/576/IMG_0202.jpg',
   },
   {
-    'lat': 52.22923201880194,
-    'lng': 21.00897073745728,
-    'title': 'China',
-    'image': 'https://grzegorztomicki.pl/images/chiny/576/IMG_8413.jpg'
+    lat: 52.22923201880194,
+    lng: 21.00897073745728,
+    title: 'China',
+    image: 'https://grzegorztomicki.pl/images/chiny/576/IMG_8413.jpg',
   },
   {
-    'lat': 52.22963944703663,
-    'lng': 21.01091265678406,
-    'title': 'Morocco',
-    'image': 'https://grzegorztomicki.pl/images/maroko/576/IMG_0738.jpg'
+    lat: 52.22963944703663,
+    lng: 21.01091265678406,
+    title: 'Morocco',
+    image: 'https://grzegorztomicki.pl/images/maroko/576/IMG_0738.jpg',
   },
   {
-    'lat': 52.229928587386496,
-    'lng': 21.01218938827515,
-    'title': 'Israel',
-    'image': 'https://grzegorztomicki.pl/images/izrael/576/IMG_2071.jpg'
-  }
+    lat: 52.229928587386496,
+    lng: 21.01218938827515,
+    title: 'Israel',
+    image: 'https://grzegorztomicki.pl/images/izrael/576/IMG_2071.jpg',
+  },
 ];
 
 // calling map
@@ -47,13 +48,13 @@ const map = L.map('map', config).setView([lat, lon], zoom);
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
 // we create an array of markers
 // each marker has a unique title
 // of course this could be another parameter
-const featureGroups = [];
 for (let i = 0; i < points.length; i++) {
   const { lat, lng, title, image } = points[i];
 
@@ -63,7 +64,7 @@ for (let i = 0; i < points.length; i++) {
     className: 'image-icon',
     iconSize: [100, 60],
     iconAnchor: [50, 50],
-    popupAnchor: [0, -40]
+    popupAnchor: [0, -40],
   });
 
   // create marker width specific id
@@ -123,7 +124,7 @@ function centerOnMarker(e) {
   const indexActivePopup = points.findIndex((x, index) => index === el);
 
   // active pre/next menu
-  activeControls(indexActivePopup)
+  activeControls(indexActivePopup);
 
   map.setView(e.target.getLatLng(), zoom);
 }
@@ -153,7 +154,6 @@ function removeActiveMenu(el) {
 
 const markersDiv = document.querySelectorAll('.marker-click');
 const buttonControls = document.querySelectorAll('.button-controls');
-const disabled = document.querySelector('.disabled');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 const countMarker = markersDiv.length - 1;
@@ -176,17 +176,17 @@ markersDiv.forEach((marker, index) => {
 });
 
 // click on prev, next
-buttonControls.forEach(button => {
+buttonControls.forEach((button) => {
   button.addEventListener('click', (e) => {
     e.preventDefault();
 
     const btn = e.target.classList[1];
 
-    let index = Array.from(markersDiv).findIndex(x => x.classList.contains('active'));
+    let index = Array.from(markersDiv).findIndex((x) =>
+      x.classList.contains('active')
+    );
 
-    index = btn === 'prev'
-      ? index - 1
-      : index + 1
+    index = btn === 'prev' ? index - 1 : index + 1;
 
     const element = Array.from(markersDiv)[index];
     removeActiveMenu(element);
@@ -196,6 +196,5 @@ buttonControls.forEach(button => {
 
     // active pre/next menu
     activeControls(index);
-  })
-})
-
+  });
+});

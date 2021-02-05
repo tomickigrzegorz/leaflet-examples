@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * geoJSON extended action
  */
@@ -19,7 +20,8 @@ const map = L.map('map', config).setView([lat, lon], zoom);
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
 // adding the province name to the visible div
@@ -42,7 +44,7 @@ fetch('../static/wojewodztwa-medium.geojson')
     return response.json();
   })
   .then(function (data) {
-    var layer = new L.GeoJSON(data, {
+    let layer = new L.GeoJSON(data, {
       // A Function that will be called once for each
       // created Feature, after it has been created and styled
       onEachFeature: function (feature, layer) {
@@ -54,28 +56,26 @@ fetch('../static/wojewodztwa-medium.geojson')
           this.openPopup();
           // style
           this.setStyle({
-            'fillColor': '#eb4034',
-            'weight': 2,
-            'color': '#eb4034',
-            'fillOpacity': 0.7
+            fillColor: '#eb4034',
+            weight: 2,
+            color: '#eb4034',
+            fillOpacity: 0.7,
           });
         });
         layer.on('mouseout', function () {
           this.closePopup();
           // style
           this.setStyle({
-            'fillColor': '#3388ff',
-            'weight': 2,
-            'color': '#3388ff',
-            'fillOpacity': 0.2
+            fillColor: '#3388ff',
+            weight: 2,
+            color: '#3388ff',
+            fillOpacity: 0.2,
           });
         });
         layer.on('click', function () {
           // adding the province name to the visible div
           addTextToDiv(feature.properties.nazwa);
         });
-      }
+      },
     }).addTo(map);
   });
-
-

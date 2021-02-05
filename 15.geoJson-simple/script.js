@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * geoJSON simple
  */
@@ -19,9 +20,9 @@ const map = L.map('map', config).setView([lat, lon], zoom);
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
-
 
 function onEachFeature(feature, layer) {
   layer.bindPopup(feature.properties.nazwa);
@@ -36,10 +37,6 @@ fetch('../static/wojewodztwa-medium.geojson')
   .then(function (data) {
     // use geoJSON
     L.geoJSON(data, {
-
       onEachFeature: onEachFeature,
-
     }).addTo(map);
   });
-
-

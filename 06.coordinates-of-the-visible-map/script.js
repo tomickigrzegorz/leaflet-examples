@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * Obtaining coordinates of the visible map
  */
@@ -10,8 +11,8 @@ let config = {
 // magnification with which the map will start
 const zoom = 18;
 // co-ordinates
-const lat = 52.2297700;
-const lon = 21.0117800;
+const lat = 52.22977;
+const lon = 21.01178;
 
 // calling map
 const map = L.map('map', config).setView([lat, lon], zoom);
@@ -19,9 +20,9 @@ const map = L.map('map', config).setView([lat, lon], zoom);
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
-
 
 const markerPlace = document.querySelector('.marker-position');
 
@@ -49,7 +50,9 @@ function setRentacle() {
 
   // set rentacle
   L.rectangle(bounds, {
-    color: randomColor(), weight: 20, fillOpacity: 0.1
+    color: randomColor(),
+    weight: 20,
+    fillOpacity: 0.1,
   }).addTo(map);
 
   // set map
@@ -62,8 +65,8 @@ function randomColor() {
 }
 
 function updateInfo(north, south) {
-
-  markerPlace.textContent = (south === undefined)
-    ? 'We are moving the map...'
-    : `SouthWest: ${north}, NorthEast: ${south}`;
+  markerPlace.textContent =
+    south === undefined
+      ? 'We are moving the map...'
+      : `SouthWest: ${north}, NorthEast: ${south}`;
 }

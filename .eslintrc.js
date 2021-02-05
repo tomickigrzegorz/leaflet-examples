@@ -19,11 +19,7 @@ module.exports = {
     ],
     'comma-dangle': ['error', 'only-multiline'],
     'linebreak-style': ['error', 'windows'],
-    'no-param-reassign': [
-      2,
-      {
-        props: false,
-      },
-    ],
-  }
+    'no-param-reassign': [2, { props: false }],
+  },
+  parser: '@babel/eslint-parser',
 };

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * Matching all markers to the map view
  */
@@ -10,15 +11,15 @@ let config = {
 // magnification with which the map will start
 const zoom = 18;
 // coordinates
-const lat = 52.2297700;
-const lon = 21.0117800;
+const lat = 52.22977;
+const lon = 21.01178;
 
 // coordinate array with popup text
 const points = [
   [52.22966244690615, 21.011084318161014, 'point 1'],
   [52.234616998160874, 21.008858084678653, 'point 2'],
   [52.22998444382795, 21.012511253356937, 'point 3'],
-  [52.22858801170828, 21.00593984127045, 'point 4']
+  [52.22858801170828, 21.00593984127045, 'point 4'],
 ];
 
 // calling map
@@ -27,7 +28,8 @@ const map = L.map('map', config).setView([lat, lon], zoom);
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
 // adding all markers to the featureGroups array
@@ -49,5 +51,5 @@ let group = new L.featureGroup(featureGroups);
 // method fitBounds sets a map view that
 // contains the given geographical bounds
 map.fitBounds(group.getBounds(), {
-  padding: [50, 50] // adding padding to map
+  padding: [50, 50], // adding padding to map
 });
