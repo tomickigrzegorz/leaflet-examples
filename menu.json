@@ -140,5 +140,9 @@
   {
     "link": "34.multiple-tile-layers",
     "text": "multiple tile layers"
+  },
+  {
+    "link": "35.marker-draggable-on-a-click",
+    "text": "marker draggable on a click"
   }
 ]
