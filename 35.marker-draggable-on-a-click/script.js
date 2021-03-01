@@ -30,5 +30,6 @@ marker.addTo(map).bindPopup('Center Warsaw');
 
 // turn on dragging markers
 marker.on('click', (e) => {
+  e.target.dragging.enable();
   console.log(e);
 });
