@@ -42,10 +42,6 @@ img {
   height: auto;
 }
 
-p {
-  margin: 10px auto;
-}
-
 @-webkit-keyframes spinner {
   to {
     -webkit-transform: rotate(1turn);
@@ -521,4 +517,8 @@ small + small {
 
 .story img {
   margin-top: 10px;
+}
+
+.story p {
+  margin: 10px auto;
 }
