@@ -144,5 +144,10 @@
   {
     "link": "35.marker-draggable-on-a-click",
     "text": "marker draggable on a click"
+  },
+  {
+    "link": "36.story-maps-IntersectionObserver",
+    "text": "story map with IntersectionObserver",
+    "info": "All texts and photos come from <a href='https://warsawtour.pl/warszawa-w-3-dni/' target='_blank'>warsawtour.pl</a>"
   }
 ]

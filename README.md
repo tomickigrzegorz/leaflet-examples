@@ -45,3 +45,4 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 33. [location](https://tomik23.github.io/leaflet-examples/#33.location)
 34. [multiple-tile-layers](https://tomik23.github.io/leaflet-examples/#34.multiple-tile-layers)
 35. [marker-draggable-on-a-click](https://tomik23.github.io/leaflet-examples/#35.marker-draggable-on-a-click)
+36. [story-maps-IntersectionObserver](https://tomik23.github.io/leaflet-examples/#36.story-maps-IntersectionObserver)
