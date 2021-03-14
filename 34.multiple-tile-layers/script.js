@@ -7,7 +7,7 @@
 const zoom = 18;
 // co-ordinates
 const lat = 52.22977;
-const lon = 21.01178;
+const lng = 21.01178;
 
 const osmLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
 const cartoDB = '<a href="http://cartodb.com/attributions">CartoDB</a>';
@@ -28,7 +28,7 @@ let config = {
 };
 
 // calling map
-const map = L.map('map', config).setView([lat, lon], zoom);
+const map = L.map('map', config).setView([lat, lng], zoom);
 
 var baseLayers = {
   'OSM Mapnik': osmMap,

@@ -12,6 +12,7 @@ html {
 
 body {
   justify-content: normal;
+  counter-reset: number;
 }
 
 section {
@@ -157,4 +158,9 @@ a.active-menu {
 
 .icon:hover {
   fill: #f40303;
+}
+
+.item:before {
+  counter-increment: number;
+  content: counter(number) ". ";
 }

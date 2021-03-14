@@ -12,10 +12,10 @@ let config = {
 const zoom = 18;
 // co-ordinates
 const lat = 52.22977;
-const lon = 21.01178;
+const lng = 21.01178;
 
 // calling map
-const map = L.map('map', config).setView([lat, lon], zoom);
+const map = L.map('map', config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
@@ -33,11 +33,11 @@ map
   // if location found show marker and circle
   .on('locationfound', (e) => {
     // marker
-    const marker = L.marker([e.latitude, e.longitude]).bindPopup(
+    const marker = L.marker([e.latitude, e.lnggitude]).bindPopup(
       'Your are here :)'
     );
     // circle
-    const circle = L.circle([e.latitude, e.longitude], e.accuracy / 2, {
+    const circle = L.circle([e.latitude, e.lnggitude], e.accuracy / 2, {
       weight: 2,
       color: 'red',
       fillColor: 'red',

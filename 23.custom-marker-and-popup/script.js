@@ -12,10 +12,10 @@ let config = {
 const zoom = 18;
 // co-ordinates
 const lat = 50.0619474;
-const lon = 19.9368564;
+const lng = 19.9368564;
 
 // calling map
-const map = L.map('map', config).setView([lat, lon], zoom);
+const map = L.map('map', config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
@@ -42,7 +42,7 @@ const customOptions = {
 };
 
 // create marker object, pass custom icon as option, pass content and options to popup, add to map
-L.marker([lat, lon], {
+L.marker([lat, lng], {
   icon: funny,
 })
   .bindPopup(customPopup, customOptions)
