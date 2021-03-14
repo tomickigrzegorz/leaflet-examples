@@ -12,10 +12,10 @@ let config = {
 const zoom = 18;
 // co-ordinates
 const lat = 52.22999;
-const lon = 21.01258;
+const lng = 21.01258;
 
 // calling map
-const map = L.map('map', config).setView([lat, lon], zoom);
+const map = L.map('map', config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
