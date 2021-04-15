@@ -10,6 +10,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+37 [enlarge-a-polygon-box-by-5%](https://tomik23.github.io/leaflet-examples/#37.enlarge-a-polygon-box-by-5-percent)  
 36 [story-maps-IntersectionObserver](https://tomik23.github.io/leaflet-examples/#36.story-maps-IntersectionObserver)  
 35 [marker-draggable-on-a-click](https://tomik23.github.io/leaflet-examples/#35.marker-draggable-on-a-click)  
 34 [multiple-tile-layers](https://tomik23.github.io/leaflet-examples/#34.multiple-tile-layers)  
