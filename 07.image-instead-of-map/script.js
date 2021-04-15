@@ -20,10 +20,7 @@ let map = L.map('map', {
 
 // Used to load and display a single image over
 // specific bounds of the map. Extends `Layer`.
-L.imageOverlay(
-  'http://kody.wig.pl/wp-content/uploads/factory_UML.png',
-  bounds
-).addTo(map);
+L.imageOverlay('../static/factory_UML.png', bounds).addTo(map);
 
 // method fitBounds sets a map view
 // that contains the given geographical bounds with the

@@ -54,7 +54,7 @@ function centerMap([lat, lng], target, title) {
 }
 
 // helper function to intersectionObserver
-function onChange(changes, observer) {
+function onChange(changes) {
   changes.forEach(function (change) {
     // get data from html coordinates element
     const data = change.target.dataset.coordinates;
@@ -75,7 +75,7 @@ if ('IntersectionObserver' in window) {
   const config = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.5,
+    threshold: [0, 0.25, 0.5, 0.75, 1],
   };
 
   let observer = new IntersectionObserver(onChange, config);
