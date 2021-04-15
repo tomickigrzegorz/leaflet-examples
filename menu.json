@@ -82,7 +82,7 @@
   {
     "link": "21.geocoding-addresses-search-engine-outside-the-map",
     "text": "geocoding addresses search engine outside the map",
-    "info": "<a href='https://github.com/tomik23/autosuggest' target='_blank'>the example uses the autosuggest</a>"
+    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
   },
   {
     "link": "22.center-map-when-click-marker",
@@ -149,5 +149,10 @@
     "link": "36.story-maps-IntersectionObserver",
     "text": "story map with IntersectionObserver",
     "info": "All texts and photos come from <a href='https://warsawtour.pl/warszawa-w-3-dni/' target='_blank'>warsawtour.pl</a>"
+  },
+  {
+    "link": "37.enlarge-a-polygon-box-by-5-percent",
+    "text": "enlarge a polygon box by 5%",
+    "info": "Advanced geospatial analysis for browsers and Node.js <a href='https://turfjs.org/' target='_blank'>turfjs</a>"
   }
 ]

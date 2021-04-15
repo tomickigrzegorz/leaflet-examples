@@ -1,6 +1,6 @@
 {
   "name": "leaflet-examples",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "repository": "https://github.com/tomik23/leaflet-examples.git",
   "author": "Grzegorz Tomicki",
   "license": "MIT",
@@ -21,12 +21,12 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/eslint-parser": "^7.12.1",
-    "@babel/preset-env": "^7.12.11",
-    "eslint": "^7.18.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.3.1",
+    "@babel/core": "^7.13.15",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/preset-env": "^7.13.15",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.2.1"
   }
 }

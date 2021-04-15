@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', function () {
   // Autocomplete
   new Autocomplete('search', {
     delay: 1000,
-    clearButton: true,
     selectFirst: true,
     howManyCharacters: 2,
     onSearch: function ({ currentValue }) {
