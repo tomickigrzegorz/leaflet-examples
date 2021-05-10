@@ -538,3 +538,51 @@ small + small {
   height: 100%;
   font-size: 4rem;
 }
+
+.cities {
+  display: flex;
+  margin: auto;
+}
+
+.cities .search {
+  max-width: 250px;
+}
+
+.cities label {
+  display: block;
+  margin-bottom: -20px;
+  padding: 15px 3px 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 70%;
+}
+
+.cities > * {
+  margin-left: 10px;
+}
+
+.clear-distance {
+  border: 0;
+  background: #d3d3d3;
+  color: #000;
+  font-weight: 600;
+  max-height: 48px;
+  padding: 0 20px;
+  border-radius: 5px;
+  margin-top: 33px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.clear-distance:hover {
+  background: #000;
+  color: #d3d3d3;
+}
+
+.length {
+  position: absolute;
+  padding: 4px 10px;
+  background: #fff;
+  bottom: 0;
+  z-index: 999;
+}
