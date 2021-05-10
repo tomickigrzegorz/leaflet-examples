@@ -163,5 +163,10 @@
   {
     "link": "39.coordinates-of-the-center-of-the-visible-map",
     "text": "coordinates of the center of the visible map"
+  },
+  {
+    "link": "40.distance-between-cities-on-map",
+    "text": "distance between cities on map",
+    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
   }
 ]

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance between cities on map</title>
+    <link rel="stylesheet" href="../static/global.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.0.39/docs/css/autocomplete.css">
+    <script src="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@master/docs/js/autocomplete.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
+  </head>
+
+  <body>
+    <div class="cities">
+      <div class="city">
+        <label for="cityA">Distance from</label>
+        <div class="search">
+          <input type="text" autocomplete="off" id="cityA" placeholder="City distance from">
+        </div>
+      </div>
+      <div class="city">
+        <label for="cityB">Distance to</label>
+        <div class="search">
+          <input type="text" autocomplete="off" id="cityB" placeholder="City distance to">
+        </div>
+      </div>
+      <button class="clear-distance">CLEAR</button>
+    </div>
+    <div class="length">Select cities</div>
+    <div id="map"></div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
