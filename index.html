@@ -19,12 +19,8 @@
       </header>
 
       <main id="section-example">
-        <h2>simple map</h2>
-        <div class="iframe-wrapper">
-          <iframe src="./01.simple-map/index.html" frameborder="0" width="100%" height="550px" ;></iframe>
-        </div>
-        <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/01.simple-map/script.js"
-            target="_blank">source</a></small>
+        <h2></h2>
+        <div class="iframe-wrapper"></div>
       </main>
     </div>
 
@@ -60,12 +56,12 @@
               })
             })
 
-
             const hash = location.hash;
             if (hash) {
               renderIframe(hash.replace('#', ''));
+            } else {
+              renderIframe('01.simple-map');
             }
-
           });
 
         function renderIframe(example) {
