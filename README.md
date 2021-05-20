@@ -10,9 +10,9 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
-40 [distance-between-cities-on-map](https://tomik23.github.io/leaflet-examples/40.distance-between-cities-on-map)  
-39 [coordinates-of-the-center-of-the-visible-map](https://tomik23.github.io/leaflet-examples/39.coordinates-of-the-center-of-the-visible-map)  
-38 [part-of-the-common](https://tomik23.github.io/leaflet-examples/38.part-of-the-common)  
+40 [distance-between-cities-on-map](https://tomik23.github.io/leaflet-examples/#40.distance-between-cities-on-map)  
+39 [coordinates-of-the-center-of-the-visible-map](https://tomik23.github.io/leaflet-examples/#39.coordinates-of-the-center-of-the-visible-map)  
+38 [part-of-the-common](https://tomik23.github.io/leaflet-examples/#38.part-of-the-common)  
 37 [enlarge-a-polygon-box-by-5%](https://tomik23.github.io/leaflet-examples/#37.enlarge-a-polygon-box-by-5-percent)  
 36 [story-maps-IntersectionObserver](https://tomik23.github.io/leaflet-examples/#36.story-maps-IntersectionObserver)  
 35 [marker-draggable-on-a-click](https://tomik23.github.io/leaflet-examples/#35.marker-draggable-on-a-click)  
