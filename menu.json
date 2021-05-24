@@ -168,5 +168,9 @@
     "link": "40.distance-between-cities-on-map",
     "text": "distance between cities on map",
     "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
+  },
+  {
+    "link": "41.back-to-home-button",
+    "text": "back to home button"
   }
 ]
