@@ -144,10 +144,11 @@ function clearData() {
 }
 
 function distanceBetweenMarkers() {
-  let from = turf.point(markers[0]);
-  let to = turf.point(markers[1]);
-  let option = { units: 'kilometers' };
-  let distance = turf.distance(from, to, option);
+  const from = L.marker(markers[0]).getLatLng();
+  const to = L.marker(markers[1]).getLatLng();
+
+  // in km
+  const distance = from.distanceTo(to) / 1000;
 
   length.textContent = `Length (in kilometers): ${distance.toFixed(5)}`;
 }
@@ -159,17 +160,11 @@ window.addEventListener('DOMContentLoaded', function () {
       clearButton: false,
       howManyCharacters: 2,
 
-      onSearch: ({ currentValue }) => {
-        return nominatim(currentValue)
-      },
+      onSearch: ({ currentValue }) => nominatim(currentValue),
 
-      onResults: (object) => {
-        return results(object);
-      },
+      onResults: (object) => results(object),
 
-      onSubmit: ({ object }) => {
-        return addMarkerToMap(object);
-      },
+      onSubmit: ({ object }) => addMarkerToMap(object),
 
       // the method presents no results
       noResults: ({ currentValue, template }) =>
