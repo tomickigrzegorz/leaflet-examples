@@ -115,10 +115,6 @@ function clearData() {
   // back to default coordinate
   map.panTo([lat, lng]);
 
-  // cleat input search
-  cityA.value = '';
-  cityB.value = '';
-
   // set info ;)
   length.textContent = 'Markers and plines have been removed';
 
@@ -155,7 +151,7 @@ function distanceBetweenMarkers() {
 
 window.addEventListener('DOMContentLoaded', function () {
   ['cityA', 'cityB'].forEach(city => {
-    new Autocomplete(city, {
+    const auto = new Autocomplete(city, {
 
       clearButton: false,
       howManyCharacters: 2,
@@ -174,6 +170,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
     clearButton.addEventListener('click', () => {
       clearData();
+
+      // destroy method
+      auto.destroy();
 
       // remove li from ul
       document.querySelector('#cityA-list').innerHTML = '';
