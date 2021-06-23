@@ -6,9 +6,11 @@
 ## Demo
 Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
-![Screenshot1](https://github.com/tomik23/leaflet-examples/blob/master/static/leaflet.png)
+<img src="static/leaflet.png">
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
+
+> The react version can be found at this link [react-leaflet-examples](https://github.com/tomik23/react-leaflet-examples).
 
 41 [back-to-home-button](https://tomik23.github.io/leaflet-examples/#41.back-to-home-button)  
 40 [distance-between-cities-on-map](https://tomik23.github.io/leaflet-examples/#40.distance-between-cities-on-map)  
