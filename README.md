@@ -3,14 +3,13 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+> The react version can be found at this link [react-leaflet-examples](https://github.com/tomik23/react-leaflet-examples).
 ## Demo
 Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 <img src="static/leaflet.png">
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
-
-> The react version can be found at this link [react-leaflet-examples](https://github.com/tomik23/react-leaflet-examples).
 
 41 [back-to-home-button](https://tomik23.github.io/leaflet-examples/#41.back-to-home-button)  
 40 [distance-between-cities-on-map](https://tomik23.github.io/leaflet-examples/#40.distance-between-cities-on-map)  
