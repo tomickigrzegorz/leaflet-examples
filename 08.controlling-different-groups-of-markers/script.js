@@ -100,7 +100,7 @@ map.on('layeradd layerremove', function () {
   // Check if bounds are valid (could be empty)
   if (bounds.isValid()) {
     // Valid, fit bounds
-    map.fitBounds(bounds);
+    map.flyToBounds(bounds);
   } else {
     // Invalid, fit world
     // map.fitWorld();

@@ -53,7 +53,8 @@ function arrayCheckAndClick(array) {
 
   // clicking on home-back set default view and zoom
   button.addEventListener('click', function () {
-    map.setView([lat, lng], zoom);
+    // more fancy back to previous place
+    map.flyTo([lat, lng], zoom);
     button.style.display = 'none';
   });
 }
