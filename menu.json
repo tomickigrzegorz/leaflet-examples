@@ -172,5 +172,9 @@
   {
     "link": "41.back-to-home-button",
     "text": "back to home button"
+  },
+  {
+    "link": "42.scale",
+    "text": "scale"
   }
 ]
