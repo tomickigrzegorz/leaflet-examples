@@ -15,41 +15,46 @@ const lat = 52.22977;
 const lng = 21.01178;
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-
-const length = document.querySelector('.length');
-const cityA = document.querySelector('#cityA');
-const cityB = document.querySelector('#cityB');
-const clearButton = document.querySelector('.clear-distance');
+const length = document.querySelector(".length");
+const cityA = document.querySelector("#cityA");
+const cityB = document.querySelector("#cityB");
+const clearButton = document.querySelector(".clear-distance");
 
 let markers = [];
 let featureGroups = [];
 
 function results({ currentValue, matches, template }) {
-  const regex = new RegExp(currentValue, 'i');
+  const regex = new RegExp(currentValue, "i");
   // checking if we have results if we don't
   // take data from the noResults method
   return matches === 0
     ? template
     : matches
-      .map((element) => {
-        return `
+        .map((element) => {
+          return `
           <li class="autocomplete-item" role="option" aria-selected="false">
-            <p>${element.properties.display_name.replace(regex, (str) => `<b>${str}</b>`)}</p>
+            <p>${element.properties.display_name.replace(
+              regex,
+              (str) => `<b>${str}</b>`
+            )}</p>
           </li> `;
-      }).join('');
+        })
+        .join("");
 }
 
 function nominatim(currentValue) {
-  const api = `https://nominatim.openstreetmap.org/search?format=geojson&limit=5&q=${encodeURI(currentValue)}`;
+  const api = `https://nominatim.openstreetmap.org/search?format=geojson&limit=5&q=${encodeURI(
+    currentValue
+  )}`;
 
   return new Promise((resolve) => {
     fetch(api)
@@ -71,14 +76,13 @@ function addMarkerToMap(object) {
 
   const marker = L.marker(arr, {
     title: display_name,
-    id: customId
+    id: customId,
   });
 
   // add marker to map
   marker.addTo(map).bindPopup(display_name);
 
   map.setView(arr, 8);
-
 
   // add marker to array markers
   markers.push(arr);
@@ -89,7 +93,7 @@ function addMarkerToMap(object) {
   if (markers.length == 2) {
     // add polyline between cities
     L.polyline(markers, {
-      color: 'red'
+      color: "red",
     }).addTo(map);
 
     // matching all markers to the map view
@@ -103,9 +107,8 @@ function addMarkerToMap(object) {
   }
 
   if (markers.length > 2) {
-    clearData()
+    clearData();
   }
-
 }
 
 function clearData() {
@@ -116,15 +119,14 @@ function clearData() {
   map.panTo([lat, lng]);
 
   // set info ;)
-  length.textContent = 'Markers and plines have been removed';
+  length.textContent = "Markers and plines have been removed";
 
   // remove polyline
   for (i in map._layers) {
     if (map._layers[i]._path != undefined) {
       try {
         map.removeLayer(map._layers[i]);
-      }
-      catch (e) {
+      } catch (e) {
         console.log("problem with " + e + map._layers[i]);
       }
     }
@@ -132,11 +134,10 @@ function clearData() {
 
   // remove markers
   map.eachLayer((layer) => {
-    if (layer.options && layer.options.pane === 'markerPane') {
+    if (layer.options && layer.options.pane === "markerPane") {
       map.removeLayer(layer);
     }
   });
-
 }
 
 function distanceBetweenMarkers() {
@@ -149,10 +150,9 @@ function distanceBetweenMarkers() {
   length.textContent = `Length (in kilometers): ${distance.toFixed(5)}`;
 }
 
-window.addEventListener('DOMContentLoaded', function () {
-  ['cityA', 'cityB'].forEach(city => {
+window.addEventListener("DOMContentLoaded", function () {
+  ["cityA", "cityB"].forEach((city) => {
     const auto = new Autocomplete(city, {
-
       clearButton: false,
       howManyCharacters: 2,
 
@@ -167,20 +167,14 @@ window.addEventListener('DOMContentLoaded', function () {
         template(`<li>No results found: "${currentValue}"</li>`),
     });
 
-
-    clearButton.addEventListener('click', () => {
+    clearButton.addEventListener("click", () => {
       clearData();
 
       // destroy method
       auto.destroy();
 
-      // remove li from ul
-      document.querySelector('#cityA-list').innerHTML = '';
-      document.querySelector('#cityB-list').innerHTML = '';
-    })
-
+      // focus on first input
+      document.querySelector("#cityA").focus();
+    });
   });
-
-
-
 });
