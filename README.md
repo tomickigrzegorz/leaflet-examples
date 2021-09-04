@@ -1,16 +1,20 @@
 # :maple_leaf: leaflet-examples
+
 **leaflet-examples** a collection of examples of leaflet map usage
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 > The react version can be found at this link [react-leaflet-examples](https://github.com/tomik23/react-leaflet-examples).
+
 ## Demo
+
 Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 <img src="static/leaflet.png">
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+42 [scale](https://tomik23.github.io/leaflet-examples/#42.scale)  
 41 [back-to-home-button](https://tomik23.github.io/leaflet-examples/#41.back-to-home-button)  
 40 [distance-between-cities-on-map](https://tomik23.github.io/leaflet-examples/#40.distance-between-cities-on-map)  
 39 [coordinates-of-the-center-of-the-visible-map](https://tomik23.github.io/leaflet-examples/#39.coordinates-of-the-center-of-the-visible-map)  
@@ -51,4 +55,4 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 04 [many-markers](https://tomik23.github.io/leaflet-examples/#04.many-markers)  
 03 [adding-one-marker](https://tomik23.github.io/leaflet-examples/#03.adding-one-marker)  
 02 [changing-locate-zoom-control](https://tomik23.github.io/leaflet-examples/#02.changing-locate-zoom-control)  
-01 [simple-map](https://tomik23.github.io/leaflet-examples/#01.simple-map)  
+01 [simple-map](https://tomik23.github.io/leaflet-examples/#01.simple-map)
