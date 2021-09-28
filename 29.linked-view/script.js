@@ -15,11 +15,11 @@ const lat = 51.918904;
 const lng = 19.1343786;
 
 // calling map
-const map = L.map('map-linked', config).setView([lat, lng], zoom);
+const map = L.map("map-linked", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
@@ -27,11 +27,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // adding geojson by fetch
 // of course you can use jquery, axios etc.
 
-let html = '';
+let html = "";
 // GeoJSON layer
 let geoJson;
 
-fetch('../static/wojewodztwa-medium.geojson')
+fetch("../static/wojewodztwa-medium.geojson")
   .then(function (response) {
     return response.json();
   })
@@ -48,25 +48,25 @@ fetch('../static/wojewodztwa-medium.geojson')
     );
 
     // Intert list HTML
-    document.getElementById('voivodeship').innerHTML = html;
+    document.getElementById("voivodeship").innerHTML = html;
 
     // Bind event listeners to list items
-    let el = document.querySelectorAll('#voivodeship li');
+    let el = document.querySelectorAll("#voivodeship li");
     for (let i = 0; i < el.length; i++) {
-      el[i].addEventListener('mouseover', function (e) {
+      el[i].addEventListener("mouseover", function (e) {
         const hoveredItem = e.target;
         const layer = geoJson.getLayers();
 
         layer[i].setStyle(highlightStyle);
 
-        hoveredItem.classList.add('highlight');
+        hoveredItem.classList.add("highlight");
       });
-      el[i].addEventListener('mouseout', function (e) {
+      el[i].addEventListener("mouseout", function (e) {
         const hoveredItem = e.target;
         const hoveredId = hoveredItem.id;
 
         geoJson.resetStyle(geoJson.getLayer(hoveredId));
-        hoveredItem.classList.remove('highlight');
+        hoveredItem.classList.remove("highlight");
       });
     }
   });
@@ -77,10 +77,10 @@ const highlightStyle = {
 };
 
 const normalStyle = {
-  fillColor: '#ffeb3b',
+  fillColor: "#ffeb3b",
   weight: 1,
   opacity: 1,
-  color: '#e91e63',
+  color: "#e91e63",
   fillOpacity: 0.15,
 };
 
@@ -91,7 +91,7 @@ function onEachFeature(feature, layer) {
   html += `<li id="${id}">${nazwa}</li>`;
   layer.leafletId = id;
 
-  layer.addEventListener('mouseover', function (e) {
+  layer.addEventListener("mouseover", function (e) {
     let hoveredFeature = e.target;
 
     hoveredFeature.setStyle(highlightStyle);
@@ -101,18 +101,18 @@ function onEachFeature(feature, layer) {
     let el = document.getElementById(hoveredFeature.leafletId);
 
     el.scrollIntoView({
-      behavior: 'auto',
-      block: 'center',
-      inline: 'center',
+      behavior: "auto",
+      block: "center",
+      inline: "center",
     });
-    el.classList.add('highlight');
+    el.classList.add("highlight");
   });
-  layer.addEventListener('mouseout', function (e) {
+  layer.addEventListener("mouseout", function (e) {
     let hoveredFeature = e.target;
 
     geoJson.resetStyle(hoveredFeature);
 
     let el = document.getElementById(hoveredFeature.leafletId);
-    el.classList.remove('highlight');
+    el.classList.remove("highlight");
   });
 }

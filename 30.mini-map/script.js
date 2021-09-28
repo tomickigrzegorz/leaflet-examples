@@ -16,14 +16,14 @@ const lat = 52.22977;
 const lng = 21.01178;
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 
 const attribution =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-const osmURL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const osmURL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 const orm = L.tileLayer(osmURL, { attribution }).addTo(map);
 
 //Plugin magic goes here! Note that you cannot use the same layer object again, as that will confuse the two map controls

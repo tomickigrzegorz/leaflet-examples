@@ -12,9 +12,10 @@ const lng = 21.01178;
 const osmLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
 const cartoDB = '<a href="http://cartodb.com/attributions">CartoDB</a>';
 
-const osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const osmUrl = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 const osmAttrib = `&copy; ${osmLink} Contributors`;
-const landUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png';
+const landUrl =
+  "https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png";
 const cartoAttrib = `&copy; ${osmLink} Contributors & ${cartoDB}`;
 
 const osmMap = L.tileLayer(osmUrl, { attribution: osmAttrib });
@@ -28,10 +29,10 @@ let config = {
 };
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 var baseLayers = {
-  'OSM Mapnik': osmMap,
+  "OSM Mapnik": osmMap,
   CartoDB: landMap,
 };
 

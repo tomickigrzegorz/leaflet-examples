@@ -15,28 +15,28 @@ const lat = 52.22977;
 const lng = 21.01178;
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-const markerPlace = document.querySelector('.marker-position');
+const markerPlace = document.querySelector(".marker-position");
 
 // on drag end
-map.on('dragend', setRentacle);
+map.on("dragend", setRentacle);
 
 // second option, by dragging the map
-map.on('dragstart', updateInfo);
+map.on("dragstart", updateInfo);
 
 // on zoom end
-map.on('zoomend', setRentacle);
+map.on("zoomend", setRentacle);
 
 // update info about bounds when site loaded
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   const bounds = map.getBounds();
   updateInfo(bounds._northEast, bounds._southWest);
 });
@@ -67,6 +67,6 @@ function randomColor() {
 function updateInfo(north, south) {
   markerPlace.textContent =
     south === undefined
-      ? 'We are moving the map...'
+      ? "We are moving the map..."
       : `SouthWest: ${north}, NorthEast: ${south}`;
 }

@@ -15,11 +15,11 @@ const lat = 52.237049;
 const lng = 21.017532;
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
@@ -28,15 +28,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // the control element is placed in the bottom right corner
 const legend = L.control({
-  position: 'bottomright',
+  position: "bottomright",
 });
 
 // we create a div with a legend class
-const div = L.DomUtil.create('div', 'legend');
+const div = L.DomUtil.create("div", "legend");
 // color table
-const color = ['F7FADA', 'B6E1C9', '72C7D4', '64A1CC', '5F6CB3'];
+const color = ["F7FADA", "B6E1C9", "72C7D4", "64A1CC", "5F6CB3"];
 // table of texts that will appear in the popup and legend
-const label = ['2-12.5', '12.6-16.8', '16.9-20.9', '21-25.9', '26-plus'];
+const label = ["2-12.5", "12.6-16.8", "16.9-20.9", "21-25.9", "26-plus"];
 
 // we add records to the L.control method
 const rows = [];
@@ -48,7 +48,7 @@ legend.onAdd = function () {
         </div>  
     `);
   });
-  div.innerHTML = rows.join('');
+  div.innerHTML = rows.join("");
   return div;
 };
 
@@ -73,7 +73,7 @@ function colorMarker(color) {
     </svg>`;
 
   const icon = L.divIcon({
-    className: 'marker',
+    className: "marker",
     html: svgTemplate,
     iconSize: [40, 40],
     iconAnchor: [12, 24],

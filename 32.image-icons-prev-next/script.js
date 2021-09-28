@@ -19,35 +19,35 @@ const points = [
   {
     lat: 52.228785157729114,
     lng: 21.006867885589603,
-    title: 'Lviv',
-    image: 'https://grzegorztomicki.pl/images/lwow/576/IMG_0202.jpg',
+    title: "Lviv",
+    image: "https://grzegorztomicki.pl/images/lwow/576/IMG_0202.jpg",
   },
   {
     lat: 52.22923201880194,
     lng: 21.00897073745728,
-    title: 'China',
-    image: 'https://grzegorztomicki.pl/images/chiny/576/IMG_8413.jpg',
+    title: "China",
+    image: "https://grzegorztomicki.pl/images/chiny/576/IMG_8413.jpg",
   },
   {
     lat: 52.22963944703663,
     lng: 21.01091265678406,
-    title: 'Morocco',
-    image: 'https://grzegorztomicki.pl/images/maroko/576/IMG_0738.jpg',
+    title: "Morocco",
+    image: "https://grzegorztomicki.pl/images/maroko/576/IMG_0738.jpg",
   },
   {
     lat: 52.229928587386496,
     lng: 21.01218938827515,
-    title: 'Israel',
-    image: 'https://grzegorztomicki.pl/images/izrael/576/IMG_2071.jpg',
+    title: "Israel",
+    image: "https://grzegorztomicki.pl/images/izrael/576/IMG_2071.jpg",
   },
 ];
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
@@ -61,7 +61,7 @@ for (let i = 0; i < points.length; i++) {
   // create specific icon
   const myIcon = L.icon({
     iconUrl: image,
-    className: 'image-icon',
+    className: "image-icon",
     iconSize: [100, 60],
     iconAnchor: [50, 50],
     popupAnchor: [0, -40],
@@ -78,7 +78,7 @@ for (let i = 0; i < points.length; i++) {
     `);
 
   // click on marker center marker on map
-  markers.on('click', centerOnMarker);
+  markers.on("click", centerOnMarker);
 
   // add marker to map
   markers.addTo(map);
@@ -89,9 +89,9 @@ for (let i = 0; i < points.length; i++) {
 
 // generate menu
 function generateMenu(id, title) {
-  const city = document.querySelector('.city');
+  const city = document.querySelector(".city");
   const hrefElement = `<a id="${id}" title="${title} ID:${id}" class="marker-click" href="#">${title}</a>`;
-  city.insertAdjacentHTML('beforeend', hrefElement);
+  city.insertAdjacentHTML("beforeend", hrefElement);
 }
 
 // function get layer id
@@ -131,36 +131,36 @@ function centerOnMarker(e) {
 
 // active bottom menu arrow
 function activeControls(index) {
-  next.classList.add('disabled');
-  prev.classList.remove('disabled');
+  next.classList.add("disabled");
+  prev.classList.remove("disabled");
 
   if (index > 0 && index < countMarker) {
-    next.classList.remove('disabled');
-    prev.classList.remove('disabled');
+    next.classList.remove("disabled");
+    prev.classList.remove("disabled");
   } else if (index === 0) {
-    prev.classList.add('disabled');
-    next.classList.remove('disabled');
+    prev.classList.add("disabled");
+    next.classList.remove("disabled");
   }
 }
 
 // remove active menu
 function removeActiveMenu(el) {
-  const active = document.querySelector('.active');
+  const active = document.querySelector(".active");
   if (active) {
-    active.classList.remove('active');
+    active.classList.remove("active");
   }
-  el.classList.add('active');
+  el.classList.add("active");
 }
 
-const markersDiv = document.querySelectorAll('.marker-click');
-const buttonControls = document.querySelectorAll('.button-controls');
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
+const markersDiv = document.querySelectorAll(".marker-click");
+const buttonControls = document.querySelectorAll(".button-controls");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 const countMarker = markersDiv.length - 1;
 
 // all marker-click classes from html
 markersDiv.forEach((marker, index) => {
-  marker.addEventListener('click', (e) => {
+  marker.addEventListener("click", (e) => {
     e.preventDefault();
 
     // remove active menu
@@ -177,16 +177,16 @@ markersDiv.forEach((marker, index) => {
 
 // click on prev, next
 buttonControls.forEach((button) => {
-  button.addEventListener('click', (e) => {
+  button.addEventListener("click", (e) => {
     e.preventDefault();
 
     const btn = e.target.classList[1];
 
     let index = Array.from(markersDiv).findIndex((x) =>
-      x.classList.contains('active')
+      x.classList.contains("active")
     );
 
-    index = btn === 'prev' ? index - 1 : index + 1;
+    index = btn === "prev" ? index - 1 : index + 1;
 
     const element = Array.from(markersDiv)[index];
     removeActiveMenu(element);
