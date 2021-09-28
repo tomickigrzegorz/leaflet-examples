@@ -111,11 +111,9 @@
           const flex = document.createElement('div');
           flex.className = 'flex';
 
-          const template = `
-              <small><a href="https://github.com/tomik23/leaflet-examples/blob/master/${dataIframe}/script.js"
-          target="_blank">source</a></small>
-                ${dataInfoTeamplte}
-              </div>`;
+
+          const file = `${dataIframe}/script.js`;
+          const template = `<small><a href="${detectUrl(file)}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M18 8l-4-4H0v26h32V8H18zm-2 19l-7-7h5v-8h4v8h5l-7 7z"/></svg> source</a></small>${dataInfoTeamplte}`;
 
           flex.innerHTML = template;
 
@@ -124,6 +122,13 @@
           place.insertAdjacentElement('afterbegin', title);
           place.insertAdjacentElement('beforeend', iframe);
           iframe.insertAdjacentElement('afterend', flex);
+        }
+
+        function detectUrl(file) {
+          let url = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+            ? file
+            : `https://github.com/tomik23/leaflet-examples/blob/master/${file}`;
+          return url;
         }
 
       });
