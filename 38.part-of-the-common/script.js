@@ -15,11 +15,11 @@ const lat = 52.22977;
 const lng = 21.01178;
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
@@ -28,15 +28,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const centers = [
   { lat: 52.22990558765487, lng: 21.01168513298035 },
   { lat: 52.22962958994604, lng: 21.011593937873844 },
-  { lat: 52.2297445891999, lng: 21.012012362480167 }
-]
+  { lat: 52.2297445891999, lng: 21.012012362480167 },
+];
 
 // turf.circle option
 const options = {
   steps: 64,
-  units: 'meters',
-  options: {}
-}
+  units: "meters",
+  options: {},
+};
 
 // circle radius
 const radius = 30;
@@ -44,7 +44,7 @@ const radius = 30;
 // array polygons
 let polygons = [];
 
-// set marker, add 
+// set marker, add
 centers.map(({ lat, lng }) => {
   const polygon = turf.circle([lng, lat], radius, options);
 
@@ -53,7 +53,7 @@ centers.map(({ lat, lng }) => {
 
   // add object to array
   polygons.push(polygon);
-})
+});
 
 // get intersection
 const intersection = turf.intersect(...polygons);
@@ -64,7 +64,7 @@ const intersectionColor = {
   weight: 2,
   opacity: 1,
   fillColor: "yellow",
-  fillOpacity: 0.7
+  fillOpacity: 0.7,
 };
 
 // adding an intersection to the map

@@ -16,11 +16,11 @@ const lat = 0;
 const lng = 0;
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
@@ -32,7 +32,7 @@ let markers = L.markerClusterGroup();
 for (let i = 0; i < 60000; i += 1) {
   // circleMarker are canvas markers
   let marker = L.circleMarker(getRandomLatLng());
-  markers.bindPopup('marker ' + i);
+  markers.bindPopup("marker " + i);
   markers.addLayer(marker);
 }
 

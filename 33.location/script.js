@@ -15,11 +15,11 @@ const lat = 52.22977;
 const lng = 21.01178;
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
@@ -31,17 +31,17 @@ map
     enableHighAccuracy: true,
   })
   // if location found show marker and circle
-  .on('locationfound', (e) => {
+  .on("locationfound", (e) => {
     console.log(e);
     // marker
     const marker = L.marker([e.latitude, e.longitude]).bindPopup(
-      'Your are here :)'
+      "Your are here :)"
     );
     // circle
     const circle = L.circle([e.latitude, e.longitude], e.accuracy / 2, {
       weight: 2,
-      color: 'red',
-      fillColor: 'red',
+      color: "red",
+      fillColor: "red",
       fillOpacity: 0.1,
     });
     // add marker
@@ -50,7 +50,7 @@ map
     map.addLayer(circle);
   })
   // if error show alert
-  .on('locationerror', (e) => {
+  .on("locationerror", (e) => {
     console.log(e);
-    alert('Location access denied.');
+    alert("Location access denied.");
   });

@@ -16,18 +16,18 @@ const lng = 21.01178;
 
 // coordinate array with popup text
 const points = [
-  [52.228785157729114, 21.006867885589603, 'A', 'point 1'],
-  [52.22923201880194, 21.00897073745728, 'B', 'point 2'],
-  [52.22963944703663, 21.01091265678406, 'C', 'point 3'],
-  [52.229928587386496, 21.01218938827515, 'D', 'point 4'],
+  [52.228785157729114, 21.006867885589603, "A", "point 1"],
+  [52.22923201880194, 21.00897073745728, "B", "point 2"],
+  [52.22963944703663, 21.01091265678406, "C", "point 3"],
+  [52.229928587386496, 21.01218938827515, "D", "point 4"],
 ];
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
@@ -67,11 +67,11 @@ function centerMarker(latlng) {
 }
 
 // all marker-click classes from html
-document.addEventListener('DOMContentLoaded', () => {
-  const markersDiv = document.querySelectorAll('.marker-click');
+document.addEventListener("DOMContentLoaded", () => {
+  const markersDiv = document.querySelectorAll(".marker-click");
 
   markersDiv.forEach((marker) => {
-    marker.addEventListener('click', () => {
+    marker.addEventListener("click", () => {
       // the click event transfers to the function
       // id = title of the marker
       markerOpen(marker.id);

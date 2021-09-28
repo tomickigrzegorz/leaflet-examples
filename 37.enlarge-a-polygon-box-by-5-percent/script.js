@@ -15,11 +15,11 @@ const lat = 52.308478623663355;
 const lng = 19.281005859375004;
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
@@ -35,12 +35,12 @@ const poland = [
   [52.86912972768522, 23.741455078125],
   [54.29729354239267, 22.928466796875004],
   [54.29729354239267, 19.489746093750004],
-  [54.80068486732236, 18.292236328125004]
+  [54.80068486732236, 18.292236328125004],
 ];
 
 // let's add a red polygon to the map
 L.polygon(poland, {
-  color: 'red',
+  color: "red",
 }).addTo(map);
 
 // let's enlarge the polygon by 5%
@@ -51,5 +51,5 @@ const { coordinates } = scaledPoly.geometry;
 
 // we add the enlarged polygon to the map
 L.polygon(coordinates, {
-  color: 'white',
+  color: "white",
 }).addTo(map);

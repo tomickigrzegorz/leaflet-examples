@@ -15,11 +15,11 @@ const lat = 52.232005085482115;
 const lng = 21.006889343261722;
 
 // calling map
-const map = L.map('map', config).setView([lat, lng], zoom);
+const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
@@ -47,16 +47,15 @@ const Place = L.polygon(
     [52.22769427210073, 21.002597808837894],
   ],
   {
-    color: 'red',
-    className: 'place',
+    color: "red",
+    className: "place",
   }
 );
 
 // Extended `LayerGroup` that makes it easy
 // to do the same for all layers of its members
-const river = new L.LayerGroup();
-const place = new L.LayerGroup();
-const allPolygons = new L.LayerGroup();
+const river = new L.FeatureGroup();
+const place = new L.FeatureGroup();
 
 // adding polugons to the map
 river.addLayer(River);
@@ -66,42 +65,63 @@ place.addLayer(Place);
 const overlayMaps = {
   River: river,
   Place: place,
-  'Remove all polygons': allPolygons,
 };
 
-// The layers control gives users the ability to switch
-// between different base layers and switch overlays on/off
-L.control
-  .layers(null, overlayMaps, {
-    collapsed: false,
-  })
-  .addTo(map);
-
-// centering a group of polygon
-map.on('overlayadd', function (e) {
-  const lastCheckboxs = document.querySelectorAll(
-    '.leaflet-control-layers-selector'
-  );
-  e.layer.eachLayer(function (pol) {
-    // console.log(pol)
-    map.fitBounds(pol.getBounds());
-    lastCheckboxs[lastCheckboxs.length - 1].checked = false;
+// centering a group of markers
+map.on("layeradd", function () {
+  // Create new empty bounds
+  let bounds = new L.LatLngBounds();
+  map.eachLayer(function (layer) {
+    // Check if layer is a featuregroup
+    if (layer instanceof L.FeatureGroup) {
+      // Extend bounds with group's bounds
+      bounds.extend(layer.getBounds());
+    }
   });
+
+  // Check if bounds are valid (could be empty)
+  if (bounds.isValid()) {
+    // Valid, fit bounds
+    map.flyToBounds(bounds);
+  } else {
+    // Invalid, fit world
+    // map.fitWorld();
+  }
 });
 
-// Remove all layer from map when click
-// on 'Remove all polygons' checkbox
-overlayMaps['Remove all polygons'].on('add', function (e) {
-  const allOverlay = Object.keys(overlayMaps).reduce((obj, key) => {
-    if (key !== 'Remove all polygons') {
-      obj[key] = overlayMaps[key];
-    }
-    return obj;
-  }, {});
+L.Control.CustomButtons = L.Control.Layers.extend({
+  onAdd: function () {
+    this._initLayout();
+    this._removePolygons();
+    this._update();
+    return this._container;
+  },
+  _removePolygons: function () {
+    this.createButton("remove", "Remove all polygons");
+  },
+  createButton: function (type, className) {
+    const elements = this._container.getElementsByClassName(
+      "leaflet-control-layers-list"
+    );
+    const button = L.DomUtil.create(
+      "button",
+      `btn-markers ${className}`,
+      elements[0]
+    );
+    button.textContent = className;
 
-  setTimeout(function () {
-    for (let overlay in allOverlay) {
-      map.removeLayer(overlayMaps[overlay]);
-    }
-  }, 0);
+    L.DomEvent.on(button, "click", function (e) {
+      const checkbox = document.querySelectorAll(
+        ".leaflet-control-layers-overlays input[type=checkbox]"
+      );
+
+      // Remove/add all layer from map when click on button
+      [].slice.call(checkbox).map((el) => {
+        el.checked = type === "add" ? false : true;
+        el.click();
+      });
+    });
+  },
 });
+
+new L.Control.CustomButtons(null, overlayMaps, { collapsed: false }).addTo(map);
