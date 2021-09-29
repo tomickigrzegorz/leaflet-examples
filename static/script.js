@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let url =
       location.hostname === "localhost" || location.hostname === "127.0.0.1"
         ? file
-        : `https://github.com/tomik23/leaflet-examples/blob/master/${file}`;
+        : `https://raw.githubusercontent.com/tomik23/leaflet-examples/master/${file}`;
     return url;
   }
 });
