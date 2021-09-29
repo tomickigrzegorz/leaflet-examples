@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXAMPLES</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/atom-one-dark-reasonable.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <script src="./static/github-corner.js"></script>
     <link rel="stylesheet" href="./static/global.css">
     <link rel="stylesheet" href="./static/examples.css">
@@ -24,115 +27,7 @@
       </main>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const place = document.getElementById('section-example');
-        const subTitle = document.querySelector('h2');
-        const nav = document.querySelector('.all-examples');
-
-        fetch('./menu.json')
-          .then(response => response.json())
-          .then(data => {
-            data.forEach(({ link, text, info }, index) => {
-              const element = document.createElement('a');
-              element.className = 'item';
-              if (index == 0) {
-                element.classList.add('active-menu');
-              }
-              element.href = `#${link}`;
-              element.setAttribute('data-iframe', link);
-              if (info) {
-                element.setAttribute('data-info', info);
-              }
-              element.textContent = text;
-              nav.appendChild(element)
-            })
-
-
-            const examples = document.querySelectorAll('.item');
-            examples.forEach(example => {
-              example.addEventListener('click', (event) => {
-                renderIframe(example);
-              })
-            })
-
-            const hash = location.hash;
-            if (hash) {
-              renderIframe(hash.replace('#', ''));
-            } else {
-              renderIframe('01.simple-map');
-            }
-          });
-
-        function renderIframe(example) {
-          // check if object or stirng
-          const check = typeof example === 'object';
-
-
-          const activeMenu = document.querySelector('.active-menu');
-          activeMenu.classList.remove('active-menu')
-
-          const style = check ? example : document.querySelector(`a[data-iframe="${example}"`);
-          style.classList.add('active-menu');
-
-          const dataIframe = check
-            ? example.getAttribute('data-iframe')
-            : example;
-
-          // h2 title
-          const title = document.createElement('h2');
-          title.className = 'title';
-          title.id = dataIframe;
-          const createText = document.createTextNode(check
-            ? example.textContent
-            : document.querySelector(`a[data-iframe="${example}"`).textContent);
-
-          // adding text to h2
-          title.appendChild(createText);
-
-          // create iframe
-          const iframe = document.createElement('iframe');
-          iframe.src = `./${dataIframe}/index.html`;
-          iframe.className = 'iframe-wrapper';
-          if (dataIframe === '25.fitBounds-with-padding') {
-            iframe.classList.add('resize-h');
-          }
-          iframe.frameBorder = 0;
-          iframe.width = '100%';
-          iframe.height = '550px';
-
-          // get data-info
-          const dataInfo = check
-            ? example.getAttribute('data-info')
-            : document.querySelector(`a[data-iframe="${example}"`).getAttribute('data-info');
-
-          const dataInfoTeamplte = dataInfo ? `<small>${dataInfo}</small>` : '';
-
-          const flex = document.createElement('div');
-          flex.className = 'flex';
-
-
-          const file = `${dataIframe}/script.js`;
-          const template = `<small><a href="${detectUrl(file)}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M18 8l-4-4H0v26h32V8H18zm-2 19l-7-7h5v-8h4v8h5l-7 7z"/></svg> source</a></small>${dataInfoTeamplte}`;
-
-          flex.innerHTML = template;
-
-          place.innerHTML = '';
-          subTitle.innerHTML = '';
-          place.insertAdjacentElement('afterbegin', title);
-          place.insertAdjacentElement('beforeend', iframe);
-          iframe.insertAdjacentElement('afterend', flex);
-        }
-
-        function detectUrl(file) {
-          let url = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
-            ? file
-            : `https://github.com/tomik23/leaflet-examples/blob/master/${file}`;
-          return url;
-        }
-
-      });
-    </script>
+    <script src="./static/script.js"></script>
   </body>
 
 </html>
