@@ -55,7 +55,7 @@ iframe {
   grid-template-areas:
     "nav head"
     "nav main";
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 300px 1fr;
   grid-template-rows: 100px;
   gap: 30px;
 }
@@ -111,10 +111,10 @@ a.active-menu {
   color: #e2e2e2;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1280px) {
   .grid {
     grid-template-rows: 70px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-areas:
       "head"
       "nav"
@@ -163,4 +163,48 @@ a.active-menu {
 .item:before {
   counter-increment: number;
   content: counter(number) ". ";
+}
+
+.code-place {
+  font-size: 1rem;
+  margin: 10px auto 50px;
+}
+
+.code-place code {
+  border-radius: 5px;
+  padding: 1.5em;
+}
+
+details {
+  display: flex;
+  align-items: center;
+}
+
+details > summary {
+  list-style-type: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #2094f3;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::before {
+  content: "→ ";
+}
+
+details[open] > summary::before {
+  padding-right: 8px;
+  content: "↓ ";
+}
+
+details[open] > summary {
+  margin-bottom: 0.5rem;
+}
+
+.open-source {
+  white-space: nowrap;
 }

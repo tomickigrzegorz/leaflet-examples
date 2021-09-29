@@ -253,31 +253,20 @@ img {
   display: none;
 }
 
-small svg {
-  fill: #9420f3;
-  width: 21px;
-  margin-top: -3px;
-  margin-right: 10px;
-}
-
-small:first-child a {
+.small:first-child a {
   display: flex;
 }
 
-small {
+.small {
   display: inline-block;
 }
 
-small a {
+.small a {
   text-decoration: none;
   color: #2094f3;
 }
 
-small a:hover {
-  text-decoration: underline;
-}
-
-small + small {
+.small + .small {
   border-left: 1px solid #2094f3;
   margin-left: 10px;
   padding-left: 10px;
