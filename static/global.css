@@ -343,6 +343,15 @@ img {
   color: #fff;
 }
 
+.customPopup a {
+  color: salmon;
+  text-decoration: none;
+}
+
+.customPopup a:hover {
+  text-decoration: underline;
+}
+
 .info {
   position: absolute;
   z-index: 999;
