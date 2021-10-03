@@ -62,6 +62,7 @@ iframe {
 
 header {
   grid-area: head;
+  padding-right: 30px;
 }
 
 nav {
@@ -139,6 +140,9 @@ a.active-menu {
     background: #d6d6d6;
   }
   main {
+    padding: 20px;
+  }
+  header {
     padding: 20px;
   }
 }

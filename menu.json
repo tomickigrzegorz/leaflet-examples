@@ -176,5 +176,9 @@
   {
     "link": "42.scale",
     "text": "scale"
+  },
+  {
+    "link": "43.image-on-map",
+    "text": "image on map"
   }
 ]
