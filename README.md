@@ -14,7 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
-44 [sidebar](https://tomik23.github.io/leaflet-examples/#44.sidebar)  
+44 [sidebar <sup>NEW</sup>](https://tomik23.github.io/leaflet-examples/#44.sidebar)  
 43 [image-on-map](https://tomik23.github.io/leaflet-examples/#43.image-on-map)  
 42 [scale](https://tomik23.github.io/leaflet-examples/#42.scale)  
 41 [back-to-home-button](https://tomik23.github.io/leaflet-examples/#41.back-to-home-button)  
