@@ -600,7 +600,8 @@ img {
   z-index: 999;
 }
 
-.back-to-home {
+.back-to-home,
+.locate {
   position: absolute;
   top: 80px;
   left: 10px;
@@ -616,6 +617,10 @@ img {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
 }
 
+.locate-active {
+  fill: red;
+}
+
 .btn-markers {
   display: block;
   padding: 3px 5px;
@@ -624,4 +629,44 @@ img {
   margin-bottom: 5px;
   width: 110px;
   cursor: pointer;
+}
+
+.mapid {
+  min-height: 100%;
+}
+
+.mapid #map {
+  width: calc(100% - 20%);
+}
+
+#sidebar {
+  width: 20%;
+  background: #fff;
+}
+.sidebar-el {
+  padding: 5px 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.sidebar-el:hover {
+  background: #f1f1f1;
+}
+
+@media (max-width: 800px) {
+  .mapid {
+    flex-direction: column;
+  }
+
+  .mapid #map {
+    width: 100%;
+  }
+
+  #sidebar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 90%;
+  }
 }
