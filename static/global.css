@@ -670,3 +670,12 @@ img {
     font-size: 90%;
   }
 }
+
+.max-height ul {
+  max-height: 420px;
+  overflow: auto;
+}
+
+.row h4 {
+  margin-bottom: 10px;
+}
