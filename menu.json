@@ -187,6 +187,11 @@
   },
   {
     "link": "45.multi-layer-search",
-    "text": "multi layer search"
+    "text": "multi layer search",
+    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
+  },
+  {
+    "link": "46.checking-if-the-marker-is-in-viewport",
+    "text": "checking if the marker is in viewport"
   }
 ]

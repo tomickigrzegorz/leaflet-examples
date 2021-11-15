@@ -85,13 +85,11 @@ new Autocomplete("multi-layer-serch", {
 
     /**
      * Get places from geojson and push them to places array
-     *
-     * @param {string} currentValue
      */
     poiLayers.eachLayer(function (layer) {
       if (layer instanceof L.LayerGroup) {
         layer.eachLayer(function (layer) {
-          if (layer instanceof L.Marker || layer instanceof L.CircleMarker) {
+          if (layer instanceof L.Marker) {
             places.push(layer.feature);
           }
         });
@@ -136,13 +134,23 @@ new Autocomplete("multi-layer-serch", {
     map.flyTo(cord);
 
     // find marker in the layer and open it
-    map.eachLayer(function (layer) {
-      if (layer.options && layer.options.pane === "markerPane") {
-        if (layer.feature.id === object.id) {
-          layer.openPopup();
+    poiLayers.eachLayer(function (layer) {
+      layer.eachLayer(function (layer) {
+        if (layer instanceof L.Marker) {
+          if (layer.feature.id === object.id) {
+            layer.openPopup();
+          }
         }
-      }
+      });
     });
+
+    // map.eachLayer(function (layer) {
+    //   if (layer.options && layer.options.pane === "markerPane") {
+    //     if (layer.feature.id === object.id) {
+    //       layer.openPopup();
+    //     }
+    //   }
+    // });
   },
 
   // no results
@@ -158,9 +166,6 @@ const legend = L.control({
   position: "bottomright",
 });
 
-// we create a div with a legend class
-const div = L.DomUtil.create("div", "legend");
-
 // color table
 const color = ["be4dff", "ff8146", "ff3939"];
 
@@ -169,6 +174,11 @@ const label = ["bar", "pharmacy", "restaurant"];
 
 const rows = [];
 legend.onAdd = function () {
+  // we create a div with a legend class
+  const div = L.DomUtil.create("div", "legend");
+
+  L.DomEvent.disableClickPropagation(div);
+
   color.map((item, index) => {
     rows.push(`
         <div class="row" style="margin: 1px auto;">

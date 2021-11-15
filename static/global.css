@@ -383,6 +383,10 @@ img {
   display: flex;
 }
 
+.color-red {
+  color: #f33;
+}
+
 .description {
   width: 250px;
   font-size: 16px;
@@ -391,6 +395,7 @@ img {
   background-color: hsla(0, 0%, 100%, 0.8);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  line-height: 120%;
   border: 1px solid grey;
 }
 
