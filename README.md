@@ -14,7 +14,8 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
-45 [multi-layer-search <sup style="font-size: 70%; color: red">NEW</sup>](https://tomik23.github.io/leaflet-examples/#45.multi-layer-search)  
+46 [checking-if-the-marker-is-in-viewport](https://tomik23.github.io/leaflet-examples/#46.checking-if-the-marker-is-in-viewport)  
+45 [multi-layer-search](https://tomik23.github.io/leaflet-examples/#45.multi-layer-search)  
 44 [sidebar](https://tomik23.github.io/leaflet-examples/#44.sidebar)  
 43 [image-on-map](https://tomik23.github.io/leaflet-examples/#43.image-on-map)  
 42 [scale](https://tomik23.github.io/leaflet-examples/#42.scale)  
