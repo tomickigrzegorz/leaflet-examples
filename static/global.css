@@ -606,7 +606,7 @@ img {
 }
 
 .back-to-home,
-.locate {
+.locate-button {
   position: absolute;
   top: 80px;
   left: 10px;
@@ -710,14 +710,15 @@ img {
 .located-animation {
   width: 17px;
   height: 17px;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   border-radius: 50%;
+  background: #2a93ee;
   animation: border-pulse 2s infinite;
 }
 
 @keyframes border-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
   }
 
   70% {

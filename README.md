@@ -14,6 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+49 [location-button](https://tomik23.github.io/leaflet-examples/#49.location-button)  
 48 [tiles-gray](https://tomik23.github.io/leaflet-examples/#48.tiles-gray)  
 47 [random-marker-in-map-bounds](https://tomik23.github.io/leaflet-examples/#47.random-marker-in-map-bounds)  
 46 [checking-if-the-marker-is-in-viewport](https://tomik23.github.io/leaflet-examples/#46.checking-if-the-marker-is-in-viewport)  

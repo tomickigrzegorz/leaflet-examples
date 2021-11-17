@@ -201,5 +201,9 @@
   {
     "link": "48.tiles-gray",
     "text": "tiles gray"
+  },
+  {
+    "link": "49.location-button",
+    "text": "location button"
   }
 ]
