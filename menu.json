@@ -197,5 +197,9 @@
   {
     "link": "47.random-marker-in-map-bounds",
     "text": "random marker in map bounds"
+  },
+  {
+    "link": "48.tiles-gray",
+    "text": "tiles gray"
   }
 ]
