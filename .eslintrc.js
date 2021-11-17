@@ -1,16 +1,17 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
-    es6: true,
+    es2021: true,
   },
-  extends: ["eslint:recommended"],
+  extends: "eslint:recommended",
   plugins: ["prettier"],
+  parserOptions: {
+    ecmaVersion: 13,
+  },
   rules: {
     "prettier/prettier": "error",
     "comma-dangle": ["error", "only-multiline"],
     "linebreak-style": ["error", "windows"],
     "no-param-reassign": [2, { props: false }],
   },
-  parser: "@babel/eslint-parser",
 };
