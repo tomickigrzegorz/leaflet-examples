@@ -1,6 +1,6 @@
 {
   "name": "leaflet-examples",
-  "version": "1.0.109",
+  "version": "1.0.18",
   "repository": "https://github.com/tomik23/leaflet-examples.git",
   "description": "A collection of examples of leaflet map usage",
   "author": "Grzegorz Tomicki",
