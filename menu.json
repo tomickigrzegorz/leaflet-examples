@@ -205,5 +205,10 @@
   {
     "link": "49.location-button",
     "text": "location button"
+  },
+  {
+    "link": "50.autocomplete-on-map",
+    "text": "autocomplete on map",
+    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
   }
 ]
