@@ -14,6 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+50 [autocomplete-on-map](https://tomik23.github.io/leaflet-examples/#50.autocomplete-on-map)  
 49 [location-button](https://tomik23.github.io/leaflet-examples/#49.location-button)  
 48 [tiles-gray](https://tomik23.github.io/leaflet-examples/#48.tiles-gray)  
 47 [random-marker-in-map-bounds](https://tomik23.github.io/leaflet-examples/#47.random-marker-in-map-bounds)  
