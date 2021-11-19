@@ -142,10 +142,10 @@ new Autocomplete("marker", {
           .map((element) => {
             return `
               <li role="option">
-                ${element.properties.display_name.replace(
+                <p>${element.properties.display_name.replace(
                   regex,
                   (str) => `<b>${str}</b>`
-                )}
+                )}</p>
               </li> `;
           })
           .join("");
