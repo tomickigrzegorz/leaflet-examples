@@ -379,10 +379,6 @@ img {
   resize: both;
 }
 
-.flex {
-  display: flex;
-}
-
 .color-red {
   color: #f33;
 }
@@ -490,6 +486,7 @@ img {
 .flex {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .story-content {
@@ -728,4 +725,21 @@ img {
   100% {
     box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
   }
+}
+
+/* 51.tabs-in-popup */
+
+.tabs-example {
+  margin-top: -45px !important;
+  position: absolute;
+}
+
+[role="tab"] {
+  background: #fff !important;
+  color: gray !important;
+}
+
+[role="tab"][aria-selected="true"] {
+  color: #0084ff !important;
+  text-decoration: underline;
 }

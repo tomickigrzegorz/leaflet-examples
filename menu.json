@@ -210,5 +210,10 @@
     "link": "50.autocomplete-on-map",
     "text": "autocomplete on map",
     "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
+  },
+  {
+    "link": "51.tabs-in-popup",
+    "text": "tabs in popup",
+    "info": "<a href='http://github.com/cferdinandi/tabby' target='_blank'>the example uses the tabby plugin</a>"
   }
 ]
