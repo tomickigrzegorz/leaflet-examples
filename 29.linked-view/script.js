@@ -6,7 +6,7 @@
 // config map
 let config = {
   minZoom: 2,
-  maxZomm: 18,
+  maxZoom: 18,
 };
 // magnification with which the map will start
 const zoom = 6;

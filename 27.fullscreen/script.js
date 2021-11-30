@@ -6,7 +6,7 @@
 // config map
 let config = {
   minZoom: 7,
-  maxZomm: 18,
+  maxZoom: 18,
   // https://github.com/Leaflet/Leaflet.fullscreen
   fullscreenControl: true,
 };

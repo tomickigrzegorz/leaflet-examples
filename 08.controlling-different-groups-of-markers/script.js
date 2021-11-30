@@ -9,7 +9,7 @@
 // config map
 let config = {
   minZoom: 7,
-  maxZomm: 18,
+  maxZoom: 18,
 };
 // magnification with which the map will start
 const zoom = 18;
@@ -54,13 +54,14 @@ const allMarkers = new L.FeatureGroup();
 
 // adding markers to the layer pointsA
 for (let i = 0; i < pointsA.length; i++) {
-  marker = L.marker([pointsA[i][0], pointsA[i][1]]);
-  pA.addLayer(marker).bindPopup(pointsA[i][2]);
+  marker = L.marker([pointsA[i][0], pointsA[i][1]]).bindPopup(pointsA[i][2]);
+  pA.addLayer(marker);
 }
+
 // adding markers to the layer pointsB
 for (let i = 0; i < pointsB.length; i++) {
-  marker = L.marker([pointsB[i][0], pointsB[i][1]]);
-  pB.addLayer(marker).bindPopup(pointsB[i][2]);
+  marker = L.marker([pointsB[i][0], pointsB[i][1]]).bindPopup(pointsB[i][2]);
+  pB.addLayer(marker);
 }
 
 // object with layers
