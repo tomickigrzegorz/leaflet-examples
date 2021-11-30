@@ -25,7 +25,7 @@ const landMap = L.tileLayer(landUrl, { attribution: cartoAttrib });
 let config = {
   layers: [osmMap],
   minZoom: 7,
-  maxZomm: 18,
+  maxZoom: 18,
 };
 
 // calling map

@@ -6,7 +6,7 @@
 // config map
 let config = {
   minZoom: 7,
-  maxZomm: 18,
+  maxZoom: 18,
 };
 // magnification with which the map will start
 const zoom = 18;
@@ -29,9 +29,9 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 const sidebar = document.getElementById("sidebar");
 
 function createSidebarElements(layer) {
-  const el = `<div class="sidebar-el" data-marker="${
-    layer._leaflet_id
-  }">${layer.getLatLng().toString()}</div>`;
+  const el = `<div class="sidebar-el" data-marker="${layer._leaflet_id}">${layer
+    .getLatLng()
+    .toString()}</div>`;
 
   const temp = document.createElement("div");
   temp.innerHTML = el.trim();

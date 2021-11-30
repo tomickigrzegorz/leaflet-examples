@@ -125,7 +125,7 @@ window.addEventListener("DOMContentLoaded", function () {
   // MAP
   const config = {
     minZoom: 6,
-    maxZomm: 18,
+    maxZoom: 18,
   };
   // magnification with which the map will start
   const zoom = 3;
