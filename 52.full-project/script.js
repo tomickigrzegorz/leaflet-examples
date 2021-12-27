@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /**
- * store plan - full project
+ * store plane - full project
  */
 
 // config map

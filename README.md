@@ -14,7 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
-52 [store-plan-full-project](https://tomik23.github.io/leaflet-examples/#52.store-plan-full-project)  
+52 [full-project](https://tomik23.github.io/leaflet-examples/#52.full-project)  
 51 [tabs-in-popup](https://tomik23.github.io/leaflet-examples/#51.tabs-in-popup)  
 50 [autocomplete-on-map](https://tomik23.github.io/leaflet-examples/#50.autocomplete-on-map)  
 49 [location-button](https://tomik23.github.io/leaflet-examples/#49.location-button)  
