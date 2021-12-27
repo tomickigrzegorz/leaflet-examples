@@ -215,5 +215,10 @@
     "link": "51.tabs-in-popup",
     "text": "tabs in popup",
     "info": "<a href='http://github.com/cferdinandi/tabby' target='_blank'>the example uses the tabby plugin</a>"
+  },
+  {
+    "link": "52.shop-full-project",
+    "text": "shop - full project",
+    "info": "This is an example combining OSM maps with the L.imageOverlay image. It's okay, and it would be even better if it was just a picture without a map for efficiency reasons, as in example 7"
   }
 ]
