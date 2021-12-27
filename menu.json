@@ -219,6 +219,6 @@
   {
     "link": "52.full-project",
     "text": "store plan - full project",
-    "info": "This is an example combining OSM maps with the L.imageOverlay image. It's okay, and it would be even better if it was just a picture without a map for efficiency reasons, as in example 7"
+    "info": "This is an example combining OSM maps with the L.imageOverlay. It's okay, and it would be even better if it was just a picture without a map for efficiency reasons, as in example 7"
   }
 ]
