@@ -1104,7 +1104,7 @@
         "id": 37,
         "info": {
           "name": "KIK",
-          "logo": "./logs/KiK-logo.svg",
+          "logo": "./logs/KiK-Logo.svg",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
