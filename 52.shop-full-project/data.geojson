@@ -1,0 +1,1720 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "info": {
+          "name": "Bytom",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.44366, 51.145244],
+            [23.443534, 51.145219],
+            [23.443575, 51.145132],
+            [23.443617, 51.145139],
+            [23.443603, 51.145168],
+            [23.443691, 51.145183],
+            [23.44366, 51.145244]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "info": {
+          "name": "W.Kruk",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#CEA24A",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#CEA24A"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443527, 51.145218],
+            [23.443554, 51.145161],
+            [23.443451, 51.145141],
+            [23.443431, 51.14518],
+            [23.443443, 51.145189],
+            [23.443459, 51.145197],
+            [23.443473, 51.145202],
+            [23.443487, 51.145207],
+            [23.443506, 51.145213],
+            [23.443527, 51.145218]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "info": {
+          "name": "Vistula",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443557, 51.145157],
+            [23.443453, 51.145137],
+            [23.443494, 51.145052],
+            [23.443622, 51.145076],
+            [23.443595, 51.14513],
+            [23.443571, 51.145126],
+            [23.443557, 51.145157]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "info": {
+          "name": "SIZZER",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#26A748",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#26A748"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443497, 51.145047],
+            [23.443524, 51.144993],
+            [23.443715, 51.145029],
+            [23.443648, 51.145169],
+            [23.443612, 51.145164],
+            [23.443626, 51.145136],
+            [23.443603, 51.145133],
+            [23.443632, 51.145072],
+            [23.443497, 51.145047]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "info": {
+          "name": "DOUGLAS",
+          "logo": "./logs/Douglas.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443524, 51.144988],
+            [23.443559, 51.144917],
+            [23.443837, 51.144968],
+            [23.443821, 51.145002],
+            [23.443904, 51.145018],
+            [23.443886, 51.145056],
+            [23.443524, 51.144988]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "info": {
+          "name": "Świat Książki",
+          "logo": "./logs/swiat-ksiazki.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#E71E54",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#E71E54"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443573, 51.14489],
+            [23.443614, 51.144798],
+            [23.443764, 51.144825],
+            [23.443884, 51.144784],
+            [23.443978, 51.144893],
+            [23.443961, 51.144898],
+            [23.443932, 51.144957],
+            [23.443573, 51.14489]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "info": {
+          "name": "KOLPORTER",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#927DB8",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#927DB8"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443618, 51.144793],
+            [23.443627, 51.144771],
+            [23.443675, 51.144755],
+            [23.443712, 51.144798],
+            [23.443706, 51.144811],
+            [23.443618, 51.144793]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "info": {
+          "name": "ESOTIQ",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443712, 51.144812],
+            [23.443718, 51.144796],
+            [23.443681, 51.144753],
+            [23.443748, 51.14473],
+            [23.443812, 51.144805],
+            [23.443764, 51.144821],
+            [23.443712, 51.144812]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "info": {
+          "name": "TUI",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#927DB8",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#927DB8"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443754, 51.144728],
+            [23.443818, 51.144706],
+            [23.443882, 51.144781],
+            [23.443818, 51.144803],
+            [23.443754, 51.144728]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "info": {
+          "name": "4F",
+          "logo": "./logs/4f.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443825, 51.144704],
+            [23.443971, 51.144655],
+            [23.444131, 51.14484],
+            [23.443985, 51.14489],
+            [23.443825, 51.144704]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "info": {
+          "name": "Diverse",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444138, 51.144838],
+            [23.443978, 51.144652],
+            [23.444089, 51.144615],
+            [23.444248, 51.144801],
+            [23.444138, 51.144838]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "info": {
+          "name": "Apart",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#CEA24A",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#CEA24A"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444179, 51.14467],
+            [23.444122, 51.144604],
+            [23.444195, 51.14458],
+            [23.444212, 51.144599],
+            [23.444277, 51.144577],
+            [23.444317, 51.144623],
+            [23.444179, 51.14467]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "info": {
+          "name": "Godan",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#EE7260",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#EE7260"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444209, 51.144705],
+            [23.444182, 51.144674],
+            [23.44432, 51.144628],
+            [23.444361, 51.144675],
+            [23.444296, 51.144696],
+            [23.444281, 51.14468],
+            [23.444209, 51.144705]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "info": {
+          "name": "Luppo Puppo",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444212, 51.144709],
+            [23.444278, 51.144687],
+            [23.444293, 51.144703],
+            [23.444365, 51.144679],
+            [23.444439, 51.144765],
+            [23.4443, 51.144812],
+            [23.444212, 51.144709]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15,
+        "info": {
+          "name": "Grycan",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#EE7260",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#EE7260"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444343, 51.14456],
+            [23.444319, 51.144532],
+            [23.444393, 51.144508],
+            [23.444416, 51.144535],
+            [23.444343, 51.14456]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 16,
+        "info": {
+          "name": "Briju",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#CEA24A",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#CEA24A"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444508, 51.144559],
+            [23.444468, 51.144512],
+            [23.444536, 51.144489],
+            [23.444519, 51.14447],
+            [23.444592, 51.144445],
+            [23.444649, 51.144512],
+            [23.444508, 51.144559]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 17,
+        "info": {
+          "name": "City Kebab",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#EE7260",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#EE7260"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444553, 51.144611],
+            [23.444512, 51.144563],
+            [23.444652, 51.144516],
+            [23.444693, 51.144563],
+            [23.444553, 51.144611]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 18,
+        "info": {
+          "name": "Olimp",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#EE7260",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#EE7260"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444556, 51.144614],
+            [23.444696, 51.144567],
+            [23.444771, 51.144654],
+            [23.444631, 51.144701],
+            [23.444556, 51.144614]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 19,
+        "info": {
+          "name": "Ziaja",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444629, 51.144432],
+            [23.444676, 51.144417],
+            [23.444834, 51.144601],
+            [23.444788, 51.144617],
+            [23.444629, 51.144432]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 20,
+        "info": {
+          "name": "Big Star",
+          "logo": "./logs/big-star.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444681, 51.144415],
+            [23.444794, 51.144377],
+            [23.444952, 51.144561],
+            [23.444839, 51.1446],
+            [23.444681, 51.144415]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 21,
+        "info": {
+          "name": "KS Sport",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.4448, 51.144375],
+            [23.444894, 51.144343],
+            [23.445016, 51.144486],
+            [23.444922, 51.144518],
+            [23.4448, 51.144375]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 22,
+        "info": {
+          "name": "Telemagic",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#927DB8",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#927DB8"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444901, 51.144341],
+            [23.444961, 51.14432],
+            [23.44504, 51.144411],
+            [23.444979, 51.144432],
+            [23.444901, 51.144341]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 23,
+        "info": {
+          "name": "ARS",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#927DB8",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#927DB8"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444967, 51.144318],
+            [23.445028, 51.144298],
+            [23.445106, 51.144389],
+            [23.445045, 51.144409],
+            [23.444967, 51.144318]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 24,
+        "info": {
+          "name": "Plus",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#927DB8",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#927DB8"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.445034, 51.144296],
+            [23.445079, 51.144281],
+            [23.445157, 51.144372],
+            [23.445112, 51.144387],
+            [23.445034, 51.144296]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 25,
+        "info": {
+          "name": "Vision Express",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#927DB8",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#927DB8"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.445084, 51.144279],
+            [23.445152, 51.144256],
+            [23.44523, 51.144347],
+            [23.445163, 51.14437],
+            [23.445084, 51.144279]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 26,
+        "info": {
+          "name": "Play",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#927DB8",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#927DB8"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.445159, 51.144254],
+            [23.445202, 51.144239],
+            [23.445247, 51.144291],
+            [23.445204, 51.144306],
+            [23.445159, 51.144254]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 27,
+        "info": {
+          "name": "Orange",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#927DB8",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#927DB8"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.445208, 51.144238],
+            [23.445239, 51.144227],
+            [23.445251, 51.144232],
+            [23.445262, 51.144237],
+            [23.445273, 51.144242],
+            [23.445281, 51.144247],
+            [23.445289, 51.144253],
+            [23.445296, 51.144258],
+            [23.445303, 51.144262],
+            [23.445312, 51.144269],
+            [23.445252, 51.14429],
+            [23.445208, 51.144238]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 28,
+        "info": {
+          "name": "Pralnia",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#927DB8",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#927DB8"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.445237, 51.144345],
+            [23.445208, 51.144311],
+            [23.445319, 51.144274],
+            [23.445332, 51.144283],
+            [23.445342, 51.14429],
+            [23.445351, 51.144298],
+            [23.445358, 51.144304],
+            [23.445237, 51.144345]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 29,
+        "info": {
+          "name": "Rossmann",
+          "logo": "./logs/Rossmann.svg",
+          "description": "<b>Rossmann</b> jest liderem rynku drogeryjnego w Polsce. Codziennie zakupy w naszych drogeriach robi ponad 820 tys.",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.445359, 51.144308],
+            [23.445437, 51.144398],
+            [23.444957, 51.14456],
+            [23.444924, 51.144522],
+            [23.445025, 51.144488],
+            [23.444981, 51.144436],
+            [23.445359, 51.144308]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 30,
+        "info": {
+          "name": "Lidl",
+          "logo": "./logs/Lidl-Logo.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#FCC018",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#FCC018"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.445568, 51.144353],
+            [23.44596, 51.144219],
+            [23.445509, 51.143673],
+            [23.445261, 51.143761],
+            [23.445223, 51.143722],
+            [23.445118, 51.143746],
+            [23.445103, 51.143722],
+            [23.445043, 51.143741],
+            [23.445568, 51.144353]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 31,
+        "info": {
+          "name": "RTV EURO AGD",
+          "logo": "./logs/rtv_euro_agd.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#194A9A",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#194A9A"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444839, 51.143809],
+            [23.445036, 51.143742],
+            [23.445354, 51.144112],
+            [23.445157, 51.144179],
+            [23.444839, 51.143809]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 32,
+        "info": {
+          "name": "PEPCO",
+          "logo": "./logs/pepco.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#F49713",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#F49713"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444831, 51.143811],
+            [23.445149, 51.144181],
+            [23.445009, 51.144228],
+            [23.444692, 51.143859],
+            [23.444831, 51.143811]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 33,
+        "info": {
+          "name": "Kantor Promes",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.44536, 51.144185],
+            [23.445377, 51.144179],
+            [23.445346, 51.144145],
+            [23.445329, 51.144151],
+            [23.44536, 51.144185]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 34,
+        "info": {
+          "name": "Neonail",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444917, 51.144302],
+            [23.444972, 51.144284],
+            [23.444963, 51.144274],
+            [23.444907, 51.144291]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 35,
+        "info": {
+          "name": "STUFF Wybory Tytoniowe",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.445146, 51.144225],
+            [23.445137, 51.144214],
+            [23.445081, 51.144233],
+            [23.445091, 51.144243],
+            [23.445146, 51.144225]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 36,
+        "info": {
+          "name": "DEALZ",
+          "logo": "./logs/Dealz.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#F49713",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#F49713"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.445002, 51.144231],
+            [23.444684, 51.143861],
+            [23.444497, 51.143924],
+            [23.444815, 51.144294],
+            [23.445002, 51.144231]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 37,
+        "info": {
+          "name": "KIK",
+          "logo": "./logs/KiK-logo.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#F49713",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#F49713"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444808, 51.144296],
+            [23.444491, 51.143927],
+            [23.44423, 51.144015],
+            [23.44431, 51.144108],
+            [23.444433, 51.144067],
+            [23.444671, 51.144343],
+            [23.444808, 51.144296]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 38,
+        "info": {
+          "name": "home&you",
+          "logo": "./logs/home&you.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#F49713",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#F49713"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444664, 51.144345],
+            [23.444431, 51.144073],
+            [23.444314, 51.144113],
+            [23.444547, 51.144385],
+            [23.444664, 51.144345]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 39,
+        "info": {
+          "name": "MARTES SPORT",
+          "logo": "./logs/martes-sport.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444469, 51.144411],
+            [23.444541, 51.144387],
+            [23.444223, 51.144017],
+            [23.443832, 51.144149],
+            [23.443905, 51.144234],
+            [23.444073, 51.144177],
+            [23.4443, 51.144441],
+            [23.444451, 51.14439],
+            [23.444469, 51.144411]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 40,
+        "info": {
+          "name": "DEICHMANN",
+          "logo": "./logs/Deichmann.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#D9579B",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#D9579B"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444295, 51.144443],
+            [23.444071, 51.144183],
+            [23.443908, 51.144238],
+            [23.444131, 51.144498],
+            [23.444295, 51.144443]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 41,
+        "info": {
+          "name": "CCC",
+          "logo": "./logs/ccc.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#D9579B",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#D9579B"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444143, 51.144521],
+            [23.443836, 51.144166],
+            [23.443592, 51.14425],
+            [23.443898, 51.144604],
+            [23.444143, 51.144521]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 42,
+        "info": {
+          "name": "IOKS Okulary",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443838, 51.144667],
+            [23.443829, 51.144656],
+            [23.443884, 51.144638],
+            [23.443893, 51.144648],
+            [23.443838, 51.144667]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 43,
+        "info": {
+          "name": "SMYK",
+          "logo": "./logs/smyk.png",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#917CB6",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#917CB6"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443892, 51.144606],
+            [23.443748, 51.144654],
+            [23.443444, 51.1443],
+            [23.443587, 51.144253],
+            [23.443892, 51.144606]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 44,
+        "info": {
+          "name": "HOUSE",
+          "logo": "./logs/House.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443709, 51.144668],
+            [23.443528, 51.144458],
+            [23.443229, 51.144559],
+            [23.443212, 51.144602],
+            [23.44302, 51.144566],
+            [23.443002, 51.144606],
+            [23.443275, 51.144659],
+            [23.443269, 51.144677],
+            [23.443533, 51.144728],
+            [23.443709, 51.144668]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 45,
+        "info": {
+          "name": "CROPP",
+          "logo": "./logs/cropp.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.442997, 51.14461],
+            [23.443267, 51.144663],
+            [23.443259, 51.144682],
+            [23.443529, 51.144733],
+            [23.443464, 51.144867],
+            [23.442926, 51.144765],
+            [23.442997, 51.14461]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 46,
+        "info": {
+          "name": "Sinsay",
+          "www": "https://www.sinsay.com",
+          "logo": "./logs/sinsay.svg",
+          "description": "Sinsay to marka dla głośnych, charakternych i ekspresyjnych dziewczyn, które śmiało podążają za najnowszymi trendami.",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.442924, 51.144771],
+            [23.443461, 51.144872],
+            [23.443398, 51.145007],
+            [23.443197, 51.144969],
+            [23.443171, 51.145023],
+            [23.442837, 51.144961],
+            [23.442924, 51.144771]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 47,
+        "info": {
+          "name": "Reserved",
+          "logo": "./logs/RESERVED.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.442834, 51.144966],
+            [23.44317, 51.14503],
+            [23.443163, 51.145042],
+            [23.443363, 51.14508],
+            [23.443231, 51.145346],
+            [23.443079, 51.14536],
+            [23.443128, 51.14555],
+            [23.442822, 51.145578],
+            [23.442726, 51.145198],
+            [23.442834, 51.144966]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 48,
+        "info": {
+          "name": "New Yorker",
+          "logo": "./logs/New_Yorker.svg",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#89C9AF",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#89C9AF"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443136, 51.14555],
+            [23.443089, 51.145364],
+            [23.443237, 51.145351],
+            [23.443274, 51.145282],
+            [23.443797, 51.145381],
+            [23.443743, 51.145495],
+            [23.443136, 51.14555]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 51,
+        "info": {
+          "name": "Kubenz",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443173, 51.145039],
+            [23.443203, 51.144975],
+            [23.443396, 51.145011],
+            [23.443365, 51.145075],
+            [23.443173, 51.145039]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 52,
+        "info": {
+          "name": "IQOS",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443418, 51.145072],
+            [23.443436, 51.145075],
+            [23.443454, 51.145038],
+            [23.443436, 51.145034],
+            [23.443418, 51.145072]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 54,
+        "info": {
+          "name": "Restaurant",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.444423, 51.144681],
+            [23.444384, 51.14464],
+            [23.444483, 51.144605],
+            [23.44452, 51.144648],
+            [23.444423, 51.144681]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 55,
+        "info": {
+          "name": "ATM",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.445441, 51.144378],
+            [23.445418, 51.144351],
+            [23.445476, 51.144331],
+            [23.445496, 51.144358],
+            [23.445441, 51.144378]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 56,
+        "info": {
+          "name": "Toilets",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443287, 51.144389],
+            [23.443287, 51.144461],
+            [23.4434, 51.144461],
+            [23.4434, 51.144389],
+            [23.443287, 51.144389]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 57,
+        "info": {
+          "name": "Administracja",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443143, 51.144446],
+            [23.443143, 51.144511],
+            [23.443245, 51.144511],
+            [23.443245, 51.144446],
+            [23.443143, 51.144446]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 58,
+        "info": {
+          "name": "ATM",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443775, 51.145361],
+            [23.44372, 51.14535],
+            [23.443742, 51.145306],
+            [23.443793, 51.145315],
+            [23.443775, 51.145361]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 59,
+        "info": {
+          "name": "Hebe",
+          "www": "https://www.hebe.pl",
+          "logo": "./logs/hebe.svg",
+          "description": "Drogerie Hebe to sieć wyjątkowych sklepów, oferujących produkty dla zdrowia i piękna każdej kobiety.",
+          "button": "show more"
+        },
+        "color": "#28BBED",
+        "style": {
+          "fillOpacity": 0,
+          "weight": 0,
+          "fill": "#28BBED"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [23.443669, 51.145245],
+            [23.443784, 51.145267],
+            [23.443883, 51.145061],
+            [23.443724, 51.14503],
+            [23.443654, 51.145172],
+            [23.443699, 51.14518],
+            [23.443669, 51.145245]
+          ]
+        ]
+      }
+    }
+  ]
+}
