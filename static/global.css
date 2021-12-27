@@ -743,3 +743,22 @@ img {
   color: #0084ff !important;
   text-decoration: underline;
 }
+
+.show-code {
+  position: relative;
+  padding-left: 19px;
+  margin-top: 5px;
+}
+
+.show-code::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+}
+
+.show-code-iframe .show-code::before {
+  position: absolute;
+  content: "↓";
+  left: 4px;
+  top: -2px;
+}

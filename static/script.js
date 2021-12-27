@@ -95,12 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
       : "";
 
     const flex = document.createElement("div");
-    flex.className = "flex";
+    flex.className += "flex info-description";
 
     const file = `${dataIframe}/script.js`;
-    const template = `<div class="small open-source"><a href="${detectUrl(
-      file
-    )}" target="_blank">→ open source</a></div>${dataInfoTeamplte}`;
+    const template = `
+      <div class="small open-source">
+        <a href="${detectUrl(file)}" target="_blank">→ open source</a>
+        <a href="#" class="show-code">show code</a>
+      </div>${dataInfoTeamplte}`;
 
     flex.innerHTML = template;
 
@@ -110,18 +112,14 @@ document.addEventListener("DOMContentLoaded", () => {
     place.insertAdjacentElement("beforeend", iframe);
     iframe.insertAdjacentElement("afterend", flex);
 
-    const details = document.createElement("details");
-    const summary = document.createElement("summary");
-    summary.textContent = "show code";
-    details.appendChild(summary);
+    const infoDescription = document.querySelector(".info-description");
     const pre = document.createElement("pre");
+    pre.className = "code-place hidden";
     const code = document.createElement("code");
-    const codePlace = flex.cloneNode();
-    details.insertAdjacentElement("beforeend", pre);
-    codePlace.className = "code-place";
+
     pre.appendChild(code);
-    codePlace.appendChild(details);
-    flex.insertAdjacentElement("afterend", codePlace);
+
+    infoDescription.insertAdjacentElement("afterend", pre);
 
     fetchData(detectUrl(`${file}`), "text")
       .then((data) => {
@@ -131,6 +129,14 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(() => {
         document.querySelectorAll("pre code").forEach((el) => {
           hljs.highlightElement(el);
+        });
+      })
+      .then(() => {
+        const showCode = document.querySelector(".show-code");
+        showCode.addEventListener("click", (e) => {
+          e.preventDefault();
+          pre.classList.toggle("hidden");
+          document.body.classList.toggle("show-code-iframe");
         });
       });
   }
