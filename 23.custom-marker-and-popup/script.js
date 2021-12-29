@@ -48,7 +48,7 @@ L.marker([lat, lng], {
   .bindPopup(customPopup, customOptions)
   .addTo(map);
 
-// styles are in global.css
+// styles are in style.css
 // .customPopup .leaflet-popup-content-wrapper,
 // .customPopup .leaflet-popup-tip {
 //   background: #000;
