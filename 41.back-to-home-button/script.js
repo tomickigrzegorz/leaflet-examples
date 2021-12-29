@@ -41,10 +41,10 @@ const customControl = L.Control.extend({
     const btn = L.DomUtil.create("button");
     btn.title = "back to home";
     btn.innerHTML = htmlTemplate;
-    btn.className = "back-to-home";
+    btn.className += "leaflet-bar back-to-home";
     btn.setAttribute(
       "style",
-      "width: 26px; height: 26px; margin-top: 0; border: none; left: 0; display: none; cursor: pointer; justify-content: center; font-size: 2rem;"
+      "margin-top: 0; left: 0; display: none; cursor: pointer; justify-content: center;"
     );
 
     return btn;

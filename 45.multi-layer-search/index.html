@@ -5,78 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>multi-layer serch</title>
-    <link rel="stylesheet" href="../static/global.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.7.2/dist/css/autocomplete.min.css">
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.7.2/dist/js/autocomplete.min.js"></script>
-    <style>
-      .leaflet-marker-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        line-height: 1;
-        color: #fff;
-        font-size: 11px;
-        line-height: 16px;
-        box-shadow: 0px 0px 10px rgba(0, 132, 255, 1);
-        border-radius: 100%;
-        border: 1px solid #fff;
-        padding: 10px;
-      }
-
-      .row {
-        width: 100%;
-      }
-
-      .search-tip b {
-        color: #fff;
-      }
-
-      .bar,
-      .bar.search-tip b,
-      .bar.leaflet-marker-icon {
-        background: #be4dff
-      }
-
-      .pharmacy,
-      .pharmacy.search-tip b,
-      .pharmacy.leaflet-marker-icon {
-        background: #ff8146
-      }
-
-      .restaurant,
-      .restaurant.search-tip b,
-      .restaurant.leaflet-marker-icon {
-        background: #ff3939
-      }
-
-      .search-tip {
-        white-space: nowrap;
-      }
-
-      .search-tip b {
-        display: inline-block;
-        padding: 0 4px;
-        margin-left: 4px;
-      }
-
-      .place {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        border-bottom: 1px solid #eee;
-      }
-
-      .place-item {
-        color: #fff;
-        padding: 5px;
-        font-size: 70%;
-        border-radius: 3px;
-        text-transform: uppercase;
-      }
-    </style>
   </head>
 
   <body>

@@ -1,0 +1,88 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+html,
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+.story-content {
+  width: 100%;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.story {
+  background: #fff;
+  width: 550px;
+  overflow-y: auto;
+}
+
+.story .active {
+  background: #f1f1f1;
+  border: none;
+  margin-bottom: 0;
+}
+
+.story article {
+  padding: 30px 10px;
+  min-height: 500px;
+}
+
+.active {
+  margin-bottom: 3px;
+  border-bottom: 2px solid red;
+}
+
+.story h2 {
+  text-align: center;
+  line-height: 1.1;
+  font-size: 1.4rem;
+}
+
+.story small {
+  display: block;
+  text-align: center;
+}
+
+.story img {
+  margin-top: 10px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.story p {
+  margin: 10px auto;
+}
