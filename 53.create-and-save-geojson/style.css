@@ -1,0 +1,82 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+html,
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+.link-button label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 110%;
+}
+
+.leaflet-touch .link-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.link-button:hover {
+  background-color: #f4f4f4;
+  fill: #a200ff;
+}
+
+.link-button:hover:after {
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  content: attr(title);
+  right: 40px;
+  width: auto;
+  white-space: nowrap;
+  background: #fff;
+  padding: 5px;
+}
+
+.geojson {
+  display: none;
+}
+
+input[type="file"] {
+  font-size: 0;
+}
+::file-selector-button {
+  font-size: initial;
+}
+
+.icon-geojson {
+  width: 25px;
+  height: 25px;
+}
