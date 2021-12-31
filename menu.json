@@ -220,5 +220,10 @@
     "link": "52.full-project",
     "text": "store plan - full project",
     "info": "This is an example combining OSM maps with the L.imageOverlay. It's okay, and it would be even better if it was just a picture without a map for efficiency reasons, as in example 7"
+  },
+  {
+    "link": "53.create-and-save-geojson",
+    "text": "create and save geojson",
+    "info": "This is an example of creating a geojson file from a map based on <a href='https://leaflet.github.io/Leaflet.draw/docs/leaflet-draw-latest.html' target='_blank'>leaflet.draw plugin</a>. First you need to draw all the objects and then export it using the button in the upper right corner. You can also save or delete data in localstorage. This is a poorer version of this site - <a href='https://geojson.io/' target='_blank'>geojson.io</a> ;). This plugin was used to create an example - <i>store plan - full project</i>"
   }
 ]
