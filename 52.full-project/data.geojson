@@ -5,6 +5,7 @@
       "type": "Feature",
       "properties": {
         "id": 1,
+        "category": "odzież i dodatki",
         "info": {
           "name": "Bytom",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -36,6 +37,7 @@
       "type": "Feature",
       "properties": {
         "id": 2,
+        "category": "biżuteria",
         "info": {
           "name": "W.Kruk",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -45,7 +47,7 @@
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#CEA24A"
+          "fill": "#CEA24Ai"
         }
       },
       "geometry": {
@@ -70,6 +72,7 @@
       "type": "Feature",
       "properties": {
         "id": 3,
+        "category": "odzież i dodatki",
         "info": {
           "name": "Vistula",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -101,16 +104,17 @@
       "type": "Feature",
       "properties": {
         "id": 4,
+        "category": "sport i rekreacja",
         "info": {
-          "name": "SIZZER",
+          "name": "SIZEER",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#26A748",
+        "color": "#28A747",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#26A748"
+          "fill": "#28A747"
         }
       },
       "geometry": {
@@ -134,6 +138,7 @@
       "type": "Feature",
       "properties": {
         "id": 5,
+        "category": "zdrowie i uroda",
         "info": {
           "name": "DOUGLAS",
           "logo": "./logs/Douglas.svg",
@@ -166,17 +171,18 @@
       "type": "Feature",
       "properties": {
         "id": 6,
+        "category": "księgarnia",
         "info": {
           "name": "Świat Książki",
           "logo": "./logs/swiat-ksiazki.svg",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#E71E54",
+        "color": "#E62055",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#E71E54"
+          "fill": "#E62055"
         }
       },
       "geometry": {
@@ -199,6 +205,7 @@
       "type": "Feature",
       "properties": {
         "id": 7,
+        "category": "usługi",
         "info": {
           "name": "KOLPORTER",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -229,6 +236,7 @@
       "type": "Feature",
       "properties": {
         "id": 8,
+        "category": "odzież i dodatki",
         "info": {
           "name": "ESOTIQ",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -260,6 +268,7 @@
       "type": "Feature",
       "properties": {
         "id": 9,
+        "category": "usługi",
         "info": {
           "name": "TUI",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -289,17 +298,18 @@
       "type": "Feature",
       "properties": {
         "id": 10,
+        "category": "sport i rekreacja",
         "info": {
           "name": "4F",
           "logo": "./logs/4f.svg",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#28BBED",
+        "color": "#28A747",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#28BBED"
+          "fill": "#28A747"
         }
       },
       "geometry": {
@@ -319,6 +329,7 @@
       "type": "Feature",
       "properties": {
         "id": 11,
+        "category": "odzież i dodatki",
         "info": {
           "name": "Diverse",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -348,6 +359,7 @@
       "type": "Feature",
       "properties": {
         "id": 12,
+        "category": "biżuteria",
         "info": {
           "name": "Apart",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -379,16 +391,17 @@
       "type": "Feature",
       "properties": {
         "id": 13,
+        "category": "usługi",
         "info": {
           "name": "Godan",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#EE7260",
+        "color": "#927DB8",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#EE7260"
+          "fill": "#927DB8"
         }
       },
       "geometry": {
@@ -410,16 +423,17 @@
       "type": "Feature",
       "properties": {
         "id": 14,
+        "category": "usługi",
         "info": {
           "name": "Luppo Puppo",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#89C9AF",
+        "color": "#927DB8",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#89C9AF"
+          "fill": "#927DB8"
         }
       },
       "geometry": {
@@ -441,6 +455,7 @@
       "type": "Feature",
       "properties": {
         "id": 15,
+        "category": "gastronomia",
         "info": {
           "name": "Grycan",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -470,6 +485,7 @@
       "type": "Feature",
       "properties": {
         "id": 16,
+        "category": "biżuteria",
         "info": {
           "name": "Briju",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -501,6 +517,7 @@
       "type": "Feature",
       "properties": {
         "id": 17,
+        "category": "gastronomia",
         "info": {
           "name": "City Kebab",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -530,6 +547,7 @@
       "type": "Feature",
       "properties": {
         "id": 18,
+        "category": "gastronomia",
         "info": {
           "name": "Olimp",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -559,6 +577,7 @@
       "type": "Feature",
       "properties": {
         "id": 19,
+        "category": "zdrowie i uroda",
         "info": {
           "name": "Ziaja",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -588,6 +607,7 @@
       "type": "Feature",
       "properties": {
         "id": 20,
+        "category": "odzież i dodatki",
         "info": {
           "name": "Big Star",
           "logo": "./logs/big-star.svg",
@@ -618,16 +638,17 @@
       "type": "Feature",
       "properties": {
         "id": 21,
+        "category": "sport i rekreacja",
         "info": {
           "name": "KS Sport",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#28BBED",
+        "color": "#28A747",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#28BBED"
+          "fill": "#28A747"
         }
       },
       "geometry": {
@@ -647,6 +668,7 @@
       "type": "Feature",
       "properties": {
         "id": 22,
+        "category": "usługi",
         "info": {
           "name": "Telemagic",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -676,6 +698,7 @@
       "type": "Feature",
       "properties": {
         "id": 23,
+        "category": "usługi",
         "info": {
           "name": "ARS",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -705,6 +728,7 @@
       "type": "Feature",
       "properties": {
         "id": 24,
+        "category": "usługi",
         "info": {
           "name": "Plus",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -734,6 +758,7 @@
       "type": "Feature",
       "properties": {
         "id": 25,
+        "category": "usługi",
         "info": {
           "name": "Vision Express",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -763,6 +788,7 @@
       "type": "Feature",
       "properties": {
         "id": 26,
+        "category": "usługi",
         "info": {
           "name": "Play",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -792,6 +818,7 @@
       "type": "Feature",
       "properties": {
         "id": 27,
+        "category": "usługi",
         "info": {
           "name": "Orange",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -828,6 +855,7 @@
       "type": "Feature",
       "properties": {
         "id": 28,
+        "category": "usługi",
         "info": {
           "name": "Pralnia",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
@@ -860,6 +888,7 @@
       "type": "Feature",
       "properties": {
         "id": 29,
+        "category": "zdrowie i uroda",
         "info": {
           "name": "Rossmann",
           "logo": "./logs/Rossmann.svg",
@@ -892,17 +921,18 @@
       "type": "Feature",
       "properties": {
         "id": 30,
+        "category": "art. spożywcze",
         "info": {
           "name": "Lidl",
           "logo": "./logs/Lidl-Logo.svg",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#FCC018",
+        "color": "#FBBF18",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#FCC018"
+          "fill": "#FBBF18"
         }
       },
       "geometry": {
@@ -926,6 +956,7 @@
       "type": "Feature",
       "properties": {
         "id": 31,
+        "category": "elektronika",
         "info": {
           "name": "RTV EURO AGD",
           "logo": "./logs/rtv_euro_agd.svg",
@@ -956,6 +987,7 @@
       "type": "Feature",
       "properties": {
         "id": 32,
+        "category": "dla domu",
         "info": {
           "name": "PEPCO",
           "logo": "./logs/pepco.svg",
@@ -986,16 +1018,17 @@
       "type": "Feature",
       "properties": {
         "id": 33,
+        "category": "usługi",
         "info": {
           "name": "Kantor Promes",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#89C9AF",
+        "color": "#927DB8",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#89C9AF"
+          "fill": "#927DB8"
         }
       },
       "geometry": {
@@ -1015,16 +1048,17 @@
       "type": "Feature",
       "properties": {
         "id": 34,
+        "category": "usługi",
         "info": {
           "name": "Neonail",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#89C9AF",
+        "color": "#927DB8",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#89C9AF"
+          "fill": "#927DB8"
         }
       },
       "geometry": {
@@ -1043,16 +1077,17 @@
       "type": "Feature",
       "properties": {
         "id": 35,
+        "category": "usługi",
         "info": {
           "name": "STUFF Wybory Tytoniowe",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#89C9AF",
+        "color": "#927DB8",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#89C9AF"
+          "fill": "#927DB8"
         }
       },
       "geometry": {
@@ -1072,6 +1107,7 @@
       "type": "Feature",
       "properties": {
         "id": 36,
+        "category": "dla domu",
         "info": {
           "name": "DEALZ",
           "logo": "./logs/Dealz.svg",
@@ -1102,6 +1138,7 @@
       "type": "Feature",
       "properties": {
         "id": 37,
+        "category": "dla domu",
         "info": {
           "name": "KIK",
           "logo": "./logs/KiK-Logo.svg",
@@ -1134,6 +1171,7 @@
       "type": "Feature",
       "properties": {
         "id": 38,
+        "category": "dla domu",
         "info": {
           "name": "home&you",
           "logo": "./logs/home&you.svg",
@@ -1164,17 +1202,18 @@
       "type": "Feature",
       "properties": {
         "id": 39,
+        "category": "sport i rekreacja",
         "info": {
           "name": "MARTES SPORT",
           "logo": "./logs/martes-sport.svg",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#28BBED",
+        "color": "#28A747",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#28BBED"
+          "fill": "#28A747"
         }
       },
       "geometry": {
@@ -1198,17 +1237,18 @@
       "type": "Feature",
       "properties": {
         "id": 40,
+        "category": "obuwie",
         "info": {
           "name": "DEICHMANN",
           "logo": "./logs/Deichmann.svg",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#D9579B",
+        "color": "#D7569A",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#D9579B"
+          "fill": "#D7569A"
         }
       },
       "geometry": {
@@ -1228,17 +1268,18 @@
       "type": "Feature",
       "properties": {
         "id": 41,
+        "category": "obuwie",
         "info": {
           "name": "CCC",
           "logo": "./logs/ccc.svg",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#D9579B",
+        "color": "#D7569A",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#D9579B"
+          "fill": "#D7569A"
         }
       },
       "geometry": {
@@ -1258,16 +1299,17 @@
       "type": "Feature",
       "properties": {
         "id": 42,
+        "category": "usługi",
         "info": {
           "name": "IOKS Okulary",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#89C9AF",
+        "color": "#927DB8",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#89C9AF"
+          "fill": "#927DB8"
         }
       },
       "geometry": {
@@ -1287,17 +1329,18 @@
       "type": "Feature",
       "properties": {
         "id": 43,
+        "category": "elektronika",
         "info": {
           "name": "SMYK",
           "logo": "./logs/smyk.png",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#917CB6",
+        "color": "#138874",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#917CB6"
+          "fill": "#138874"
         }
       },
       "geometry": {
@@ -1317,6 +1360,7 @@
       "type": "Feature",
       "properties": {
         "id": 44,
+        "category": "odzież i dodatki",
         "info": {
           "name": "HOUSE",
           "logo": "./logs/House.svg",
@@ -1352,6 +1396,7 @@
       "type": "Feature",
       "properties": {
         "id": 45,
+        "category": "odzież i dodatki",
         "info": {
           "name": "CROPP",
           "logo": "./logs/cropp.svg",
@@ -1384,6 +1429,7 @@
       "type": "Feature",
       "properties": {
         "id": 46,
+        "category": "odzież i dodatki",
         "info": {
           "name": "Sinsay",
           "www": "https://www.sinsay.com",
@@ -1417,6 +1463,7 @@
       "type": "Feature",
       "properties": {
         "id": 47,
+        "category": "odzież i dodatki",
         "info": {
           "name": "Reserved",
           "logo": "./logs/RESERVED.svg",
@@ -1452,6 +1499,7 @@
       "type": "Feature",
       "properties": {
         "id": 48,
+        "category": "odzież i dodatki",
         "info": {
           "name": "New Yorker",
           "logo": "./logs/New_Yorker.svg",
@@ -1484,16 +1532,17 @@
       "type": "Feature",
       "properties": {
         "id": 51,
+        "category": "odzież i dodatki",
         "info": {
           "name": "Kubenz",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#28BBED",
+        "color": "#89C9AF",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#28BBED"
+          "fill": "#89C9AF"
         }
       },
       "geometry": {
@@ -1513,16 +1562,17 @@
       "type": "Feature",
       "properties": {
         "id": 52,
+        "category": "usługi",
         "info": {
           "name": "IQOS",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#28BBED",
+        "color": "#927DB8",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#28BBED"
+          "fill": "#927DB8"
         }
       },
       "geometry": {
@@ -1542,16 +1592,17 @@
       "type": "Feature",
       "properties": {
         "id": 54,
+        "category": "gastronomia",
         "info": {
           "name": "Restaurant",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#28BBED",
+        "color": "#000",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#28BBED"
+          "fill": "#000"
         }
       },
       "geometry": {
@@ -1571,16 +1622,15 @@
       "type": "Feature",
       "properties": {
         "id": 55,
+        "category": "bankomaty",
         "info": {
-          "name": "ATM",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+          "name": "bankomat"
         },
-        "color": "#28BBED",
+        "color": "#000",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#28BBED"
+          "fill": "#000"
         }
       },
       "geometry": {
@@ -1600,10 +1650,10 @@
       "type": "Feature",
       "properties": {
         "id": 56,
+        "category": "toilets",
         "info": {
           "name": "Toilets",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!"
         },
         "color": "#28BBED",
         "style": {
@@ -1629,16 +1679,17 @@
       "type": "Feature",
       "properties": {
         "id": 57,
+        "category": "administracja",
         "info": {
           "name": "Administracja",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
           "button": "show more"
         },
-        "color": "#28BBED",
+        "color": "#000",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#28BBED"
+          "fill": "#000"
         }
       },
       "geometry": {
@@ -1658,16 +1709,15 @@
       "type": "Feature",
       "properties": {
         "id": 58,
+        "category": "bankomaty",
         "info": {
-          "name": "ATM",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+          "name": "bankomat"
         },
-        "color": "#28BBED",
+        "color": "#000",
         "style": {
           "fillOpacity": 0,
           "weight": 0,
-          "fill": "#28BBED"
+          "fill": "#000"
         }
       },
       "geometry": {
@@ -1687,6 +1737,7 @@
       "type": "Feature",
       "properties": {
         "id": 59,
+        "category": "zdrowie i uroda",
         "info": {
           "name": "Hebe",
           "www": "https://www.hebe.pl",

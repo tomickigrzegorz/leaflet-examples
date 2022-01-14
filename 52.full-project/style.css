@@ -147,6 +147,21 @@ img {
   background: #f3f3f3;
 }
 
+.shop-item .name,
+.info-name {
+  text-transform: uppercase;
+}
+
+.shop-category {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding-left: 3px;
+  font-size: 90%;
+  color: #ff4800;
+}
+
 .shop-color {
   width: 10px;
   height: 10px;

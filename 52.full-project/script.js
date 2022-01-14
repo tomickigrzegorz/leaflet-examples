@@ -108,20 +108,29 @@ const shopsList = document.querySelector(".shops-list");
 fetch("data.geojson")
   .then((response) => response.json())
   .then((data) => {
-    return data.features.sort((a, b) =>
-      a.properties.info.name.localeCompare(b.properties.info.name)
-    );
-  })
-  .then((result) => {
-    return result.forEach((item, index) => {
-      const template = `
-        <li class="shop-item" data-shop-id="${item.properties.id}">
-          <div class="name">${item.properties.info.name}</div>
-          <div class="shop-color" style="background: ${item.properties.color}"></div>
-        </li>
-      `;
-      shopsList.insertAdjacentHTML("beforeend", template);
-    });
+    return data.features
+      .sort(
+        (a, b) =>
+          a.properties.category.localeCompare(b.properties.category) ||
+          a.properties.info.name.localeCompare(b.properties.info.name)
+      )
+      .map((item, index, array) => {
+        // console.log(el, index, array);
+        const category =
+          item.properties.category !== array[index - 1]?.properties.category
+            ? `<li><h3 class="shop-category">${item.properties.category}</h3></li>`
+            : "";
+
+        const template = `
+          ${category}
+          <li class="shop-item" data-shop-id="${item.properties.id}">
+            <div class="name">${item.properties.info.name}</div>
+            <div class="shop-color" style="background: ${item.properties.color}"></div>
+          </li>
+        `;
+
+        return shopsList.insertAdjacentHTML("beforeend", template);
+      });
   })
   .then(() => {
     clickOnItem();
@@ -145,13 +154,21 @@ function zoomToFeature(e, type) {
     ? `<div class="info-logo"><img src="${logo}"></div>`
     : "";
 
+  const descriptionText = description
+    ? `<div class="info-description">${description}</div>`
+    : "";
+
+  const infoButton = button
+    ? `<div class="info-button"><button>${button}</button></div>`
+    : "";
+
   const template = `
     <div class="info-shop">
       ${logoImg}
       <div>
         <h1 class="info-name">${name}</h1>
-        <div class="info-description">${description}</div>
-        <div class="info-button"><button>${button}</button></div>
+        ${descriptionText}
+        ${infoButton}
       </div>
     </div>`;
 
@@ -181,14 +198,26 @@ function searchText() {
   const input = document.getElementById("search-shop");
   const filter = input.value.toUpperCase();
   const lists = document.querySelectorAll(".shops-list > li");
+  const category = document.querySelectorAll(".shop-category");
+
+  console.log("filter", filter.length);
 
   for (i = 0; i < lists.length; i++) {
     item = lists[i].textContent;
+    className = lists[i].className;
+
     if (item.toUpperCase().indexOf(filter) > -1) {
       lists[i].style.display = "";
     } else {
       lists[i].style.display = "none";
     }
+  }
+
+  // hide category when value is more than 1
+  if (filter.length >= 1) {
+    category.forEach((el) => {
+      el.parentNode.style.display = "none";
+    });
   }
 }
 
