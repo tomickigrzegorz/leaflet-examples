@@ -24,8 +24,10 @@ section {
 
 h1 {
   width: 100%;
-  font-size: 60px;
+  margin-top: 30px;
+  line-height: 1;
   text-align: center;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 3.5rem);
 }
 
 h2 {
@@ -114,7 +116,6 @@ a.active-menu {
 
 @media (max-width: 1280px) {
   .grid {
-    grid-template-rows: 70px;
     grid-template-columns: 100%;
     grid-template-areas:
       "head"
