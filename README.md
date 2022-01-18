@@ -14,7 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
-54 [contexmenu](https://tomik23.github.io/leaflet-examples/#54.contexmenu)  
+54 [contextmenu](https://tomik23.github.io/leaflet-examples/#54.contextmenu)  
 53 [create-and-save-geojson](https://tomik23.github.io/leaflet-examples/#53.create-and-save-geojson)  
 52 [full-project](https://tomik23.github.io/leaflet-examples/#52.full-project)  
 51 [tabs-in-popup](https://tomik23.github.io/leaflet-examples/#51.tabs-in-popup)  
