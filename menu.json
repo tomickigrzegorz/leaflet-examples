@@ -229,6 +229,6 @@
   {
     "link": "54.contextmenu",
     "text": "contextmenu",
-    "info": "About contextmenu on <a src='https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event' target='_blank'>MDN Web Docs</a>"
+    "info": "About contextmenu on <a href='https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event' target='_blank'>MDN Web Docs</a>"
   }
 ]
