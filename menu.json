@@ -225,5 +225,10 @@
     "link": "53.create-and-save-geojson",
     "text": "create and save geojson",
     "info": "This is an example of creating a geojson file from a map based on <a href='https://leaflet.github.io/Leaflet.draw/docs/leaflet-draw-latest.html' target='_blank'>leaflet.draw plugin</a>. First you need to draw all the objects and then export it using the button in the upper right corner. You can also save or delete data in localstorage. This is a poorer version of this site - <a href='https://geojson.io/' target='_blank'>geojson.io</a> ;). This plugin was used to create an example - <i>store plan - full project</i>"
+  },
+  {
+    "link": "54.contextmenu",
+    "text": "contextmenu",
+    "info": "About contextmenu on <a src='https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event' target='_blank'>MDN Web Docs</a>"
   }
 ]
