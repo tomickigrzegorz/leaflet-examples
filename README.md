@@ -10,7 +10,7 @@
 
 Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
-<img src="static/leaflet.png">
+<img src="docs/static/leaflet.png">
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
