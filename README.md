@@ -14,6 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+56 [sidebar](https://tomik23.github.io/leaflet-examples/#56.sidebar)  
 55 [follow-mouse](https://tomik23.github.io/leaflet-examples/#55.follow-mouse)  
 54 [contextmenu](https://tomik23.github.io/leaflet-examples/#54.contextmenu)  
 53 [create-and-save-geojson](https://tomik23.github.io/leaflet-examples/#53.create-and-save-geojson)  
