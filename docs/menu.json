@@ -234,5 +234,9 @@
   {
     "link": "55.follow-mouse",
     "text": "follow mouse"
+  },
+  {
+    "link": "56.sidebar",
+    "text": "sidebar"
   }
 ]
