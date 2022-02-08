@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const place = document.getElementById("section-example");
   const subTitle = document.querySelector("h2");
-  const nav = document.querySelector(".all-examples");
+  const nav = document.querySelector(".menu-examples");
 
   async function fetchData(url, type) {
     try {
@@ -139,6 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
           document.body.classList.toggle("show-code-iframe");
         });
       });
+
+    document.body.classList.remove("show-menu-examples");
   }
 
   function detectUrl(file) {
@@ -148,4 +150,34 @@ document.addEventListener("DOMContentLoaded", () => {
         : `https://raw.githubusercontent.com/tomik23/leaflet-examples/master/docs/${file}`;
     return url;
   }
+});
+
+// ------------------------------------------------------------
+// scroll shadow
+const menu = document.querySelector(".menu-examples");
+
+menu.addEventListener("scroll", addShadow);
+
+function addShadow(e) {
+  const el = e.target;
+  if (el.scrollTop >= 52) {
+    addRemoveClass(el, "add", "center-shadow");
+    addRemoveClass(el, "remove", "top-shadow");
+  } else {
+    addRemoveClass(el, "add", "top-shadow");
+    addRemoveClass(el, "remove", "center-shadow");
+  }
+}
+
+function addRemoveClass(el, type, className) {
+  return el.classList[type](className);
+}
+
+// ------------------------------------------------------------
+// show menu
+
+const showMenu = document.querySelector(".show-menu");
+showMenu.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.body.classList.toggle("show-menu-examples");
 });
