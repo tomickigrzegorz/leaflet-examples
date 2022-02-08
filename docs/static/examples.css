@@ -77,6 +77,7 @@ main {
   width: 100%;
   padding-right: 30px;
   margin: 0 auto;
+  overflow: auto;
 }
 
 .title {
@@ -114,32 +115,49 @@ a.active-menu {
   color: #e2e2e2;
 }
 
-@media (max-width: 1280px) {
+.show-menu {
+  display: none;
+  cursor: pointer;
+  border: 0;
+}
+
+@media (max-width: 900px) {
   .grid {
     grid-template-columns: 100%;
     grid-template-areas:
       "head"
-      "nav"
       "main";
+    gap: 0;
+  }
+
+  .show-menu {
+    position: fixed;
+    display: block;
+    bottom: 30px;
+    right: 0;
+    padding: 10px 15px;
+    background: #333;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    z-index: 10;
   }
 
   nav {
-    height: auto;
-    text-align: center;
-    padding: 0 20px;
-    background-color: #f1f1f1;
+    position: fixed;
+    z-index: 9;
+    max-width: 320px;
+    min-height: 100%;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    transform: translateX(-400px);
+    transition: transform 0.5s ease-in-out;
   }
 
-  nav a {
-    display: inline-block;
-    width: auto;
-    padding: 2px 5px;
-    border-radius: 5px;
-    margin: 1px 2px;
+  .show-menu-examples nav {
+    transform: translateX(0);
   }
-  nav a:hover {
-    background: #d6d6d6;
-  }
+
   main {
     padding: 20px;
   }
