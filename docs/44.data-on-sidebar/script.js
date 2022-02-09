@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /**
- * Sidebar data
+ * data on sidebar
  */
 
 // config map
