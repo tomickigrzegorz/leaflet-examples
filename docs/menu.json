@@ -207,8 +207,8 @@
     "text": "location button"
   },
   {
-    "link": "50.autocomplete-on-map",
-    "text": "autocomplete on map",
+    "link": "50.autocomplete-on-map-button",
+    "text": "autocomplete on map - button",
     "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
   },
   {
@@ -238,5 +238,9 @@
   {
     "link": "56.sidebar",
     "text": "sidebar"
+  },
+  {
+    "link": "57.create-additional-control-placeholders",
+    "text": "create additional control placeholders"
   }
 ]
