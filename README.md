@@ -14,13 +14,14 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+57 [create-additional-control-placeholders](https://tomik23.github.io/leaflet-examples/#57.create-additional-control-placeholders)  
 56 [sidebar](https://tomik23.github.io/leaflet-examples/#56.sidebar)  
 55 [follow-mouse](https://tomik23.github.io/leaflet-examples/#55.follow-mouse)  
 54 [contextmenu](https://tomik23.github.io/leaflet-examples/#54.contextmenu)  
 53 [create-and-save-geojson](https://tomik23.github.io/leaflet-examples/#53.create-and-save-geojson)  
 52 [full-project](https://tomik23.github.io/leaflet-examples/#52.full-project)  
 51 [tabs-in-popup](https://tomik23.github.io/leaflet-examples/#51.tabs-in-popup)  
-50 [autocomplete-on-map](https://tomik23.github.io/leaflet-examples/#50.autocomplete-on-map)  
+50 [autocomplete-on-map-button](https://tomik23.github.io/leaflet-examples/#50.autocomplete-on-map-button))  
 49 [location-button](https://tomik23.github.io/leaflet-examples/#49.location-button)  
 48 [tiles-gray](https://tomik23.github.io/leaflet-examples/#48.tiles-gray)  
 47 [random-marker-in-map-bounds](https://tomik23.github.io/leaflet-examples/#47.random-marker-in-map-bounds)  
