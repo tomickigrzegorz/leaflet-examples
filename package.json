@@ -1,6 +1,6 @@
 {
   "name": "leaflet-examples",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "repository": "https://github.com/tomik23/leaflet-examples.git",
   "description": "A collection of examples of leaflet map usage",
   "author": "Grzegorz Tomicki",
@@ -13,7 +13,7 @@
     "start": "http-server docs/ -o -p 3000"
   },
   "devDependencies": {
-    "eslint": "^8.5.0",
+    "eslint": "^8.9.0",
     "http-server": "^14.1.0",
     "prettier": "^2.5.1"
   }
