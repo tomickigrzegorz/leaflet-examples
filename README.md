@@ -14,6 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+58 [control-layers-outside-the-map](https://tomik23.github.io/leaflet-examples/#58.control-layers-outside-the-map)  
 57 [create-additional-control-placeholders](https://tomik23.github.io/leaflet-examples/#57.create-additional-control-placeholders)  
 56 [sidebar](https://tomik23.github.io/leaflet-examples/#56.sidebar)  
 55 [follow-mouse](https://tomik23.github.io/leaflet-examples/#55.follow-mouse)  

@@ -1,0 +1,242 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2015-08-08T19:03:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/500129236",
+      "properties": {
+        "@id": "node/500129236",
+        "amenity": "bar",
+        "name": "la Bottega del caffe'"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.011191606521606, 52.22967230398941]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/560446888",
+      "properties": {
+        "@id": "node/560446888",
+        "amenity": "bar",
+        "name": "Marani"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.011824607849125, 52.22938644768574]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/574326909",
+      "properties": {
+        "@id": "node/574326909",
+        "amenity": "bar",
+        "name": "Il Faraone"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01296722888947, 52.22922544734814]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1213332726",
+      "properties": {
+        "@id": "node/1213332726",
+        "amenity": "bar",
+        "name": "Snackbar Eugenio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01343393325806, 52.22976430332781]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1660369493",
+      "properties": {
+        "@id": "node/1660369493",
+        "amenity": "bar",
+        "name": "Pretorius Cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012833118438724, 52.230352437450335]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1660404822",
+      "properties": {
+        "@id": "node/1660404822",
+        "amenity": "bar",
+        "name": "Casa Clementina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012055277824405, 52.23070728555448]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1926196463",
+      "properties": {
+        "@id": "node/1926196463",
+        "amenity": "bar",
+        "name": "Twins"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.013519763946537, 52.230894565354845]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2092013187",
+      "properties": {
+        "@id": "node/2092013187",
+        "amenity": "bar",
+        "name": "My Bar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.009603738784794, 52.22869315636167]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2128214065",
+      "properties": {
+        "@id": "node/2128214065",
+        "amenity": "bar",
+        "name": "San Clemente"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.009861230850223, 52.22962958994604]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2244964954",
+      "properties": {
+        "@id": "node/2244964954",
+        "amenity": "bar",
+        "name": "The Yellow Bar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.00965738296509, 52.23019472627141]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2361780469",
+      "properties": {
+        "@id": "node/2361780469",
+        "amenity": "bar",
+        "name": "Er Caffettiere"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.009893417358402, 52.23075328417514]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3217327590",
+      "properties": {
+        "@id": "node/3217327590",
+        "amenity": "bar",
+        "name": "0,75"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01067662239075, 52.23033600922866]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3320437843",
+      "properties": {
+        "@id": "node/3320437843",
+        "amenity": "bar",
+        "name": "La Follia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.014115214347843, 52.22892973092131]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3403821230",
+      "properties": {
+        "@id": "node/3403821230",
+        "amenity": "bar",
+        "name": "Snack bar peter bar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01343393325806, 52.22939959054468]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3485963126",
+      "properties": {
+        "@id": "node/3485963126",
+        "amenity": "bar",
+        "name": "Buffet Roma Termini"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012001633644108, 52.22905787494812]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3551307620",
+      "properties": {
+        "@id": "node/3551307620",
+        "amenity": "bar",
+        "name": "Bar Ludovisi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012033820152286, 52.229422590538434]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3578353919",
+      "properties": {
+        "@id": "node/3578353919",
+        "amenity": "bar",
+        "name": "Il Pasticciaccio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01146519184113, 52.23004358586586]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3607603463",
+      "properties": {
+        "@id": "node/3607603463",
+        "amenity": "bar",
+        "name": "Buddha Bar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01117014884949, 52.22938316197042]
+      }
+    }
+  ]
+}

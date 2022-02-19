@@ -242,5 +242,10 @@
   {
     "link": "57.create-additional-control-placeholders",
     "text": "create additional control placeholders"
+  },
+  {
+    "link": "58.control-layers-outside-the-map",
+    "text": "control layers outside the map",
+    "info": "In this example, we have three data layers (3 separate files). We control the visibility of layers from the external div not from the map."
   }
 ]

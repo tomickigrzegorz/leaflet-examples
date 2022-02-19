@@ -1,0 +1,111 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f1f1f1;
+}
+
+ul {
+  margin: 10px;
+  padding: 0;
+  list-style-type: none;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.layers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.leaflet-marker-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+  font-size: 11px;
+  line-height: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 132, 255, 1);
+  border-radius: 100%;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.bar,
+.bar.search-tip b,
+.bar.leaflet-marker-icon {
+  background: #be4dff;
+}
+
+.pharmacy,
+.pharmacy.search-tip b,
+.pharmacy.leaflet-marker-icon {
+  background: #ff8146;
+}
+
+.restaurant,
+.restaurant.search-tip b,
+.restaurant.leaflet-marker-icon {
+  background: #ff3939;
+}
+
+/* checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555555;
+  background-clip: content-box;
+  padding: 3px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #525252;
+}
+
+.layer-element > span {
+  border: 1px soslid red;
+}

@@ -1,0 +1,476 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2015-08-08T19:02:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/252601050",
+      "properties": {
+        "@id": "node/252601050",
+        "amenity": "restaurant",
+        "name": "Hang Zhou"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01244151592255, 52.22987273087473]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1479450328",
+      "properties": {
+        "@id": "node/1479450328",
+        "amenity": "restaurant",
+        "name": "Est Est Est !"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012538075447086, 52.23022101150678]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1530298843",
+      "properties": {
+        "@id": "node/1530298843",
+        "amenity": "restaurant",
+        "name": "KFC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012387871742252, 52.23075328417514]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1536870110",
+      "properties": {
+        "@id": "node/1536870110",
+        "amenity": "restaurant",
+        "name": "Angelino ai Fori"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.010880470275882, 52.22890344492138]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1536870121",
+      "properties": {
+        "@id": "node/1536870121",
+        "amenity": "restaurant",
+        "name": "Pizzeria Imperiale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01091802120209, 52.22924187598077]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1542760517",
+      "properties": {
+        "@id": "node/1542760517",
+        "amenity": "restaurant",
+        "name": "Made in Sud"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.011631488800052, 52.228818015314104]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1589901714",
+      "properties": {
+        "@id": "node/1589901714",
+        "amenity": "restaurant",
+        "name": "Kabir Fast Food"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012795567512516, 52.228808158041176]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1609106628",
+      "properties": {
+        "@id": "node/1609106628",
+        "amenity": "restaurant",
+        "name": "Pretoriana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.013734340667728, 52.22923859025474]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1660404815",
+      "properties": {
+        "@id": "node/1660404815",
+        "amenity": "restaurant",
+        "name": "Al Vino al Vino"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01380944252014, 52.22959673296167]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1660404843",
+      "properties": {
+        "@id": "node/1660404843",
+        "amenity": "restaurant",
+        "name": "Taverna Romana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.013053059577945, 52.230102727824956]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1660412593",
+      "properties": {
+        "@id": "node/1660412593",
+        "amenity": "restaurant",
+        "name": "Enoteca Cavour 313"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01391673088074, 52.23047072046686]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1688847325",
+      "properties": {
+        "@id": "node/1688847325",
+        "amenity": "restaurant",
+        "name": "Gran Caffe Martini & Rossi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01268827915192, 52.230677714987486]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1688847351",
+      "properties": {
+        "@id": "node/1688847351",
+        "amenity": "restaurant",
+        "name": "Al Gladiatore"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012264490127567, 52.23047072046686]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1688847355",
+      "properties": {
+        "@id": "node/1688847355",
+        "amenity": "restaurant",
+        "name": "Royal art cafĂŠ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01041376590729, 52.23091427897209]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1731734008",
+      "properties": {
+        "@id": "node/1731734008",
+        "amenity": "restaurant",
+        "name": "Asian Delight"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.009491086006168, 52.23104898845556]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1923912448",
+      "properties": {
+        "@id": "node/1923912448",
+        "amenity": "restaurant",
+        "name": "L'archetto di Cavour"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.009013652801517, 52.22993187306146]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1926196447",
+      "properties": {
+        "@id": "node/1926196447",
+        "amenity": "restaurant",
+        "name": "Fantasy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.00898683071137, 52.22913016115904]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1952358265",
+      "properties": {
+        "@id": "node/1952358265",
+        "amenity": "restaurant",
+        "name": "Pizzeria L'Economica"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.00919604301453, 52.228446723188185]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2612010515",
+      "properties": {
+        "@id": "node/2612010515",
+        "amenity": "restaurant",
+        "name": "Santa Cristina al Quirinale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01116478443146, 52.22841386532836]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2735002326",
+      "properties": {
+        "@id": "node/2735002326",
+        "amenity": "restaurant",
+        "name": "Baires Imperiale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01343929767609, 52.22841715111544]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2735002356",
+      "properties": {
+        "@id": "node/2735002356",
+        "amenity": "restaurant",
+        "name": "Tomoko Tudini"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01365387439728, 52.22921230443768]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2925136606",
+      "properties": {
+        "@id": "node/2925136606",
+        "amenity": "restaurant",
+        "name": "La Fontana di Venere"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.0124683380127, 52.22995487277945]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2939415080",
+      "properties": {
+        "@id": "node/2939415080",
+        "amenity": "restaurant",
+        "name": "La Taverna Italiana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012570261955265, 52.23035572309396]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3052495271",
+      "properties": {
+        "@id": "node/3052495271",
+        "amenity": "restaurant",
+        "name": "Li Rioni"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012999415397648, 52.22989573062338]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3061568272",
+      "properties": {
+        "@id": "node/3061568272",
+        "amenity": "restaurant",
+        "name": "Al Presidente"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012044548988346, 52.2291991615233]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3061568276",
+      "properties": {
+        "@id": "node/3061568276",
+        "amenity": "restaurant",
+        "name": "Birreria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.0122162103653, 52.22989244494575]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3061568277",
+      "properties": {
+        "@id": "node/3061568277",
+        "amenity": "restaurant",
+        "name": "Da Cecere"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01167440414429, 52.23056600377878]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3101353149",
+      "properties": {
+        "@id": "node/3101353149",
+        "amenity": "restaurant",
+        "name": "La Taverna dei Fori Imperiali"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.011744141578678, 52.2309175645741]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3152274226",
+      "properties": {
+        "@id": "node/3152274226",
+        "amenity": "restaurant",
+        "name": "Trattoria il Gallo Nero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012639999389652, 52.22897573138374]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3190236550",
+      "properties": {
+        "@id": "node/3190236550",
+        "amenity": "restaurant",
+        "name": "Piccolo Buco"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.010124087333683, 52.22956716165493]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3379569487",
+      "properties": {
+        "@id": "node/3379569487",
+        "amenity": "restaurant",
+        "name": "Meid in Nepols"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01069271564484, 52.230267010631295]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3548494475",
+      "properties": {
+        "@id": "node/3548494475",
+        "amenity": "restaurant",
+        "name": "La Forchetta di Oro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.011111140251163, 52.22976430332781]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3554601726",
+      "properties": {
+        "@id": "node/3554601726",
+        "amenity": "restaurant",
+        "name": "Ristorante-Pizzeria Gallo Matto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.010848283767704, 52.22920573298098]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3554607395",
+      "properties": {
+        "@id": "node/3554607395",
+        "amenity": "restaurant",
+        "name": "Ristorante Ragno d'Oro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.011041402816776, 52.22860444057678]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3575003304",
+      "properties": {
+        "@id": "node/3575003304",
+        "amenity": "restaurant",
+        "name": "Hokkaido"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.0132247209549, 52.22870629942582]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3658239261",
+      "properties": {
+        "@id": "node/3658239261",
+        "amenity": "restaurant",
+        "name": "Bibo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.011813879013065, 52.22974787488851]
+      }
+    }
+  ]
+}

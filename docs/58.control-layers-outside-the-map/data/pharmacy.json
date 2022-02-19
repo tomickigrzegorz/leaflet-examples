@@ -1,0 +1,190 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2015-08-08T19:03:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/256572195",
+      "properties": {
+        "@id": "node/256572195",
+        "amenity": "pharmacy",
+        "name": "Farmacia Ricci"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.0106498003006, 52.229951587106186]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/256592933",
+      "properties": {
+        "@id": "node/256592933",
+        "amenity": "pharmacy",
+        "name": "P. Eugenio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01141691207886, 52.230378722592356]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/256592935",
+      "properties": {
+        "@id": "node/256592935",
+        "amenity": "pharmacy",
+        "name": "Parafarmaciapiu'"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.011272072792053, 52.23073685610181]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/256752359",
+      "properties": {
+        "@id": "node/256752359",
+        "amenity": "pharmacy",
+        "name": "De Sanctis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012795567512516, 52.23077956907984]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/256752364",
+      "properties": {
+        "@id": "node/256752364",
+        "amenity": "pharmacy",
+        "name": "Trecca Mastrangeli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012269854545597, 52.22948173332481]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/256752379",
+      "properties": {
+        "@id": "node/256752379",
+        "amenity": "pharmacy",
+        "name": "Longo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.012838482856754, 52.22954416173605]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1166982158",
+      "properties": {
+        "@id": "node/1166982158",
+        "amenity": "pharmacy",
+        "name": "Farmacia Merulana Snc"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.014340519905094, 52.22859786903011]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1166983851",
+      "properties": {
+        "@id": "node/1166983851",
+        "amenity": "pharmacy",
+        "name": "Farmacia Cuzzocrea Dottor Antonino"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01416349411011, 52.22978073176103]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1166984396",
+      "properties": {
+        "@id": "node/1166984396",
+        "amenity": "pharmacy",
+        "name": "Farmacia Allo Statuto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.011143326759342, 52.228742442832214]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1324437899",
+      "properties": {
+        "@id": "node/1324437899",
+        "amenity": "pharmacy",
+        "name": "Farmacia Internazionale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01042449474335, 52.22911701822036]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1662148782",
+      "properties": {
+        "@id": "node/1662148782",
+        "amenity": "pharmacy",
+        "name": "Farmacia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.01069271564484, 52.22958359016112]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1979465981",
+      "properties": {
+        "@id": "node/1979465981",
+        "amenity": "pharmacy",
+        "name": "Farmacrimi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.009834408760074, 52.22989573062338]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2116655793",
+      "properties": {
+        "@id": "node/2116655793",
+        "amenity": "pharmacy",
+        "name": "Farmacia Viminale"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.00972175598145, 52.230345866162416]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3061568281",
+      "properties": {
+        "@id": "node/3061568281",
+        "amenity": "pharmacy",
+        "name": "Farmacia Pesci"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.009335517883304, 52.22851901039419]
+      }
+    }
+  ]
+}
