@@ -76,6 +76,7 @@ main {
   max-width: 1000px;
   width: 100%;
   padding-right: 30px;
+  padding-left: 30px;
   margin: 0 auto;
   overflow: auto;
 }
