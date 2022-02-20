@@ -109,3 +109,21 @@ body {
   border-radius: 3px;
   text-transform: uppercase;
 }
+
+.legend {
+  background: #fff;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.legend .row {
+  display: flex;
+  line-height: 30px;
+}
+
+.legend i {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
