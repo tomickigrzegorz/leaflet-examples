@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   fetchData("./menu.json", "json").then((data) => {
-    data.forEach(({ link, text, info }, index) => {
+    data.forEach(({ link, text, info, position }, index) => {
       const element = document.createElement("a");
       element.className = "item";
       if (index == 0) {
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       element.href = `#${link}`;
       element.setAttribute("data-iframe", link);
+      element.setAttribute("data-position", position);
       if (info) {
         element.setAttribute("data-info", info);
       }
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const examples = document.querySelectorAll(".item");
     examples.forEach((example) => {
-      example.addEventListener("click", (event) => {
+      example.addEventListener("click", () => {
         renderIframe(example);
       });
     });
@@ -58,6 +59,18 @@ document.addEventListener("DOMContentLoaded", () => {
     style.classList.add("active-menu");
 
     const dataIframe = check ? example.getAttribute("data-iframe") : example;
+
+    // --------------------------------------------------
+    // set proper position
+    const isActive = document.querySelector(".active-menu");
+    document.documentElement.removeAttribute("style");
+    const positions = isActive.dataset.position.split(",");
+
+    positions.map((position) => {
+      position = position.trim().split(":");
+      document.documentElement.style.setProperty(position[0], position[1]);
+    });
+    // --------------------------------------------------
 
     // h2 title
     const title = document.createElement("h2");
@@ -101,7 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const template = `
       <div class="small open-source">
         <a href="${detectUrl(file)}" target="_blank">→ open source</a>
-        <a href="#" class="show-code">show code</a>
+        <a href="#" class="full-screen arrow">full screen example</a>
+        <a href="#" class="show-code arrow">show code</a>
       </div>${dataInfoTeamplte}`;
 
     flex.innerHTML = template;
@@ -137,6 +151,18 @@ document.addEventListener("DOMContentLoaded", () => {
           e.preventDefault();
           pre.classList.toggle("hidden");
           document.body.classList.toggle("show-code-iframe");
+        });
+
+        const fullScreen = document.querySelector(".full-screen");
+        fullScreen.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.body.classList.add("show-code-full-screen");
+        });
+
+        const closeFullScreen = document.querySelector(".hide-iframe");
+        closeFullScreen.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.body.classList.remove("show-code-full-screen");
         });
       });
 
@@ -180,4 +206,12 @@ const showMenu = document.querySelector(".show-menu");
 showMenu.addEventListener("click", (e) => {
   e.preventDefault();
   document.body.classList.toggle("show-menu-examples");
+});
+
+// close when click esc
+window.addEventListener("keydown", function (event) {
+  // close sidebar when press esc
+  if (event.key === "Escape") {
+    document.body.classList.remove("show-code-full-screen");
+  }
 });

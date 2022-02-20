@@ -1,251 +1,315 @@
 [
   {
     "link": "01.simple-map",
-    "text": "simple map"
+    "text": "simple map",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "02.changing-locate-zoom-control",
-    "text": "changing locate zoom control"
+    "text": "changing locate zoom control",
+    "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
     "link": "03.adding-one-marker",
-    "text": "adding one marker"
+    "text": "adding one marker",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "04.many-markers",
-    "text": "many markers"
+    "text": "many markers",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "05.coordinates-after-clicking-on-the-map",
-    "text": "coordinates after clicking on the map"
+    "text": "coordinates after clicking on the map",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "06.coordinates-of-the-visible-map",
-    "text": "coordinates of the visible map"
+    "text": "coordinates of the visible map",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "07.image-instead-of-map",
-    "text": "image instead of map"
+    "text": "image instead of map",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "08.controlling-different-groups-of-markers",
-    "text": "controlling different groups of markers"
+    "text": "controlling different groups of markers",
+    "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
     "link": "09.marker-grouping-markercluster-plugin",
-    "text": "marker grouping markercluster plugin"
+    "text": "marker grouping markercluster plugin",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "10.matching-all-markers-to-the-map-view",
-    "text": "matching all markers to the map view"
+    "text": "matching all markers to the map view",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "11.controlling-the-map-from-outside-the-map",
-    "text": "controlling the map from outside the map"
+    "text": "controlling the map from outside the map",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "12.controling-polygons",
-    "text": "controling polygons"
+    "text": "controling polygons",
+    "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
     "link": "13.svg-markers-width-legends",
-    "text": "svg markers width legends"
+    "text": "svg markers width legends",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "14.dragable-markers",
-    "text": "dragable markers"
+    "text": "dragable markers",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "15.geoJson-simple",
-    "text": "geoJson simple"
+    "text": "geoJson simple",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "16.geoJson-extended-action",
-    "text": "geoJson extended action"
+    "text": "geoJson extended action",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "17.TileLayer",
-    "text": "tileLayer"
+    "text": "tileLayer",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "18.add-move-and-delete-marker",
-    "text": "add move and delete marker"
+    "text": "add move and delete marker",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "19.custom-button",
-    "text": "custom button"
+    "text": "custom button",
+    "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
     "link": "20.maxBound-map-restricts-the-view",
-    "text": "maxBound map restricts the view"
+    "text": "maxBound map restricts the view",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "21.geocoding-addresses-search-engine-outside-the-map",
     "text": "geocoding addresses search engine outside the map",
-    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
+    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>",
+    "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
     "link": "22.center-map-when-click-marker",
-    "text": "center map when click marker"
+    "text": "center map when click marker",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "23.custom-marker-and-popup",
-    "text": "custom marker and popup"
+    "text": "custom marker and popup",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "24.polyline",
-    "text": "polyline"
+    "text": "polyline",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "25.fitBounds-with-padding",
     "text": "fitBounds with padding",
-    "info": "Grab the bottom right corner and change the size of the frame or change the window size"
+    "info": "Grab the bottom right corner and change the size of the frame or change the window size",
+    "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
     "link": "26.markers-60K",
     "text": "markers 60K",
-    "info": "60 thousand markers. For better optimization change the map to canvas + use markerCluster plugin + and change the marker to circleMarker (canvas)"
+    "info": "60 thousand markers. For better optimization change the map to canvas + use markerCluster plugin + and change the marker to circleMarker (canvas)",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "27.fullscreen",
     "text": "fullscreen",
-    "info": "<a href='https://github.com/Leaflet/Leaflet.fullscreen' target='_blank'>the example uses the fullscreen plugin</a>"
+    "info": "<a href='https://github.com/Leaflet/Leaflet.fullscreen' target='_blank'>the example uses the fullscreen plugin</a>",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "28.adding-map-description",
-    "text": "adding map description"
+    "text": "adding map description",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "29.linked-view",
-    "text": "linked view"
+    "text": "linked view",
+    "position": "--pos-left: 10px, --pos-bottom: 10px"
   },
   {
     "link": "30.mini-map",
     "text": "miniMap plugin",
-    "info": "<a href='https://github.com/Norkart/Leaflet-MiniMap' target='_blank'>the example uses the minimap plugin</a>"
+    "info": "<a href='https://github.com/Norkart/Leaflet-MiniMap' target='_blank'>the example uses the minimap plugin</a>",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "31.Leaflet.awesome-markers",
     "text": "awesome markers plugin",
-    "info": "<a href='https://github.com/lvoogdt/Leaflet.awesome-markers' target='_blank'>the example uses the awesome-markers plugin</a>"
+    "info": "<a href='https://github.com/lvoogdt/Leaflet.awesome-markers' target='_blank'>the example uses the awesome-markers plugin</a>",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "32.image-icons-prev-next",
-    "text": "image icons prev next"
+    "text": "image icons prev next",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "33.location",
-    "text": "location"
+    "text": "location",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "34.multiple-tile-layers",
-    "text": "multiple tile layers"
+    "text": "multiple tile layers",
+    "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
     "link": "35.marker-draggable-on-a-click",
-    "text": "marker draggable on a click"
+    "text": "marker draggable on a click",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "36.story-maps-IntersectionObserver",
     "text": "story map with IntersectionObserver",
-    "info": "All texts and photos come from <a href='https://warsawtour.pl/warszawa-w-3-dni/' target='_blank'>warsawtour.pl</a>"
+    "info": "All texts and photos come from <a href='https://warsawtour.pl/warszawa-w-3-dni/' target='_blank'>warsawtour.pl</a>",
+    "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
     "link": "37.enlarge-a-polygon-box-by-5-percent",
     "text": "enlarge a polygon box by 5% [turfjs]",
-    "info": "Advanced geospatial analysis for browsers and Node.js <a href='https://turfjs.org/' target='_blank'>turfjs</a>"
+    "info": "Advanced geospatial analysis for browsers and Node.js <a href='https://turfjs.org/' target='_blank'>turfjs</a>",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "38.part-of-the-common",
     "text": "part of the common [turfjs]",
-    "info": "Advanced geospatial analysis for browsers and Node.js <a href='https://turfjs.org/' target='_blank'>turfjs</a>"
+    "info": "Advanced geospatial analysis for browsers and Node.js <a href='https://turfjs.org/' target='_blank'>turfjs</a>",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "39.coordinates-of-the-center-of-the-visible-map",
-    "text": "coordinates of the center of the visible map"
+    "text": "coordinates of the center of the visible map",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "40.distance-between-cities-on-map",
     "text": "distance between cities on map",
-    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
+    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>",
+    "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
     "link": "41.back-to-home-button",
-    "text": "back to home button"
+    "text": "back to home button",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "42.scale",
-    "text": "scale"
+    "text": "scale",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "43.image-on-map",
-    "text": "image on map"
+    "text": "image on map",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "44.data-on-sidebar",
-    "text": "data on sidebar"
+    "text": "data on sidebar",
+    "position": "--pos-left: 10px, --pos-bottom: 10px"
   },
   {
     "link": "45.multi-layer-search",
     "text": "multi layer search",
-    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
+    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>",
+    "position": "--pos-right: 20px, --pos-top: 150px"
   },
   {
     "link": "46.checking-if-the-marker-is-in-viewport",
-    "text": "checking if the marker is in viewport"
+    "text": "checking if the marker is in viewport",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "47.random-marker-in-map-bounds",
-    "text": "random marker in map bounds"
+    "text": "random marker in map bounds",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "48.tiles-gray",
-    "text": "tiles gray"
+    "text": "tiles gray",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "49.location-button",
-    "text": "location button"
+    "text": "location button",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "50.autocomplete-on-map-button",
     "text": "autocomplete on map - button",
-    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>"
+    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "51.tabs-in-popup",
     "text": "tabs in popup",
-    "info": "<a href='http://github.com/cferdinandi/tabby' target='_blank'>the example uses the tabby plugin</a>"
+    "info": "<a href='http://github.com/cferdinandi/tabby' target='_blank'>the example uses the tabby plugin</a>",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "52.full-project",
     "text": "store plan - full project",
-    "info": "This is an example combining OSM maps with the L.imageOverlay. It's okay, and it would be even better if it was just a picture without a map for efficiency reasons, as in example 7"
+    "info": "This is an example combining OSM maps with the L.imageOverlay. It's okay, and it would be even better if it was just a picture without a map for efficiency reasons, as in example 7",
+    "position": "--pos-left: 10px, --pos-bottom: 10px"
   },
   {
     "link": "53.create-and-save-geojson",
     "text": "create and save geojson",
-    "info": "This is an example of creating a geojson file from a map based on <a href='https://leaflet.github.io/Leaflet.draw/docs/leaflet-draw-latest.html' target='_blank'>leaflet.draw plugin</a>. First you need to draw all the objects and then export it using the button in the upper right corner. You can also save or delete data in localstorage. This is a poorer version of this site - <a href='https://geojson.io/' target='_blank'>geojson.io</a> ;). This plugin was used to create an example - <i>store plan - full project</i>"
+    "info": "This is an example of creating a geojson file from a map based on <a href='https://leaflet.github.io/Leaflet.draw/docs/leaflet-draw-latest.html' target='_blank'>leaflet.draw plugin</a>. First you need to draw all the objects and then export it using the button in the upper right corner. You can also save or delete data in localstorage. This is a poorer version of this site - <a href='https://geojson.io/' target='_blank'>geojson.io</a> ;). This plugin was used to create an example - <i>store plan - full project</i>",
+    "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
     "link": "54.contextmenu",
     "text": "contextmenu",
-    "info": "About contextmenu on <a href='https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event' target='_blank'>MDN Web Docs</a>"
+    "info": "About contextmenu on <a href='https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event' target='_blank'>MDN Web Docs</a>",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "55.follow-mouse",
-    "text": "follow mouse"
+    "text": "follow mouse",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "56.sidebar",
-    "text": "sidebar"
+    "text": "sidebar",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "57.create-additional-control-placeholders",
-    "text": "create additional control placeholders"
+    "text": "create additional control placeholders",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
     "link": "58.control-layers-outside-the-map",
     "text": "control layers outside the map",
-    "info": "In this example, we have three data layers (3 separate files). We control the visibility of layers from the external div not from the map."
+    "info": "In this example, we have three data layers (3 separate files). We control the visibility of layers from the external div not from the map.",
+    "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "59.sidebar-replacing-popup",
+    "text": "sidebar replacing popup",
+    "info": "All texts and photos come from <a href='https://warsawtour.pl/warszawa-w-3-dni/' target='_blank'>warsawtour.pl</a>",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]

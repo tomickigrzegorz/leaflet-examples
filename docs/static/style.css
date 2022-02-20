@@ -54,13 +54,13 @@ img {
   padding-left: 10px;
 }
 
-.show-code::before {
+.arrow::before {
   content: "→";
   position: absolute;
   left: 0;
 }
 
-.show-code {
+.arrow {
   position: relative;
   padding-left: 19px;
   margin-top: 5px;
@@ -82,4 +82,51 @@ img {
 
 .hidden {
   display: none;
+}
+
+.show-code-full-screen iframe {
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  z-index: 1;
+  border: 0;
+}
+
+.open-source > * {
+  margin-top: 5px;
+}
+
+.hide-iframe {
+  position: absolute;
+  display: none;
+  top: var(--pos-top);
+  left: var(--pos-left);
+  right: var(--pos-right);
+  bottom: var(--pos-bottom);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: #ff4800;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.7;
+  line-height: 1;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hide-iframe:hover {
+  opacity: 1;
+}
+
+.show-code-full-screen .hide-iframe {
+  display: block;
 }
