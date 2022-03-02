@@ -311,5 +311,11 @@
     "text": "sidebar replacing popup",
     "info": "All texts and photos come from <a href='https://warsawtour.pl/warszawa-w-3-dni/' target='_blank'>warsawtour.pl</a>",
     "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "60.great-circle",
+    "text": "great circle [turfjs]",
+    "info": "This example is based on the plugin <a href='https://www.npmjs.com/package/@turf/great-circle' target='_blank'>@turf/great-circle</a>. You can also use the <a href='https://www.npmjs.com/package/@elfalem/leaflet-curve' target='_blank'>leaflet-curve</a> package",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]

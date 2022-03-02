@@ -14,6 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+60 [great-circle](https://tomik23.github.io/leaflet-examples/#60.great-circle)  
 59 [sidebar-replacing-popup](https://tomik23.github.io/leaflet-examples/#59.sidebar-replacing-popup)  
 58 [control-layers-outside-the-map](https://tomik23.github.io/leaflet-examples/#58.control-layers-outside-the-map)  
 57 [create-additional-control-placeholders](https://tomik23.github.io/leaflet-examples/#57.create-additional-control-placeholders)  
