@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const markersDiv = document.querySelectorAll(".marker-click");
 
   markersDiv.forEach((marker) => {
-    marker.addEventListener("click", (e) => {
+    marker.addEventListener("click", () => {
       // the click event transfers to the function
       // id = title of the marker
       // convert id to number
