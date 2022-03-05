@@ -57,8 +57,8 @@ for (let i = 0; i < points.length; i++) {
 // set center map
 function clickZoom(e) {
   map.setView(e.target.getLatLng(), zoom);
-  // pantTo version
-  // map.panTo(e.target.getLatLng());
+
+  setActive(e.target._leaflet_id);
 }
 
 // function that opens a popup with text at the marker
@@ -68,8 +68,20 @@ function markerOpen(id) {
   map.eachLayer(function (layer) {
     if (layer.options && layer._leaflet_id === id) {
       centerMarker(layer);
+
+      setActive(id);
     }
   });
+}
+
+// set active class
+function setActive(id) {
+  const active = document.querySelector(".active");
+  if (active) {
+    active.classList.remove("active");
+  }
+  const el = document.getElementById(id);
+  el.classList.add("active");
 }
 
 // function open popup and centering
@@ -84,10 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const markersDiv = document.querySelectorAll(".marker-click");
 
   markersDiv.forEach((marker) => {
-    marker.addEventListener("click", () => {
+    marker.addEventListener("click", (e) => {
       // the click event transfers to the function
       // id = title of the marker
       // convert id to number
+
       markerOpen(+marker.id);
     });
   });
