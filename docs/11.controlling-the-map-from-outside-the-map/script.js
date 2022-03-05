@@ -39,38 +39,44 @@ const container = document.querySelector(".container");
 const featureGroups = [];
 for (let i = 0; i < points.length; i++) {
   const [lat, lng, title] = points[i];
-  featureGroups.push(L.marker([lat, lng], { title: title }).bindPopup(title));
+
+  const marker = L.marker([lat, lng], { title });
+  marker
+    .bindPopup(`${title}, ${marker.toString()}`)
+    .addTo(map)
+    .on("click", clickZoom);
+
   const el = document.createElement("a");
-  el.id = title;
+  el.id = marker._leaflet_id;
   el.className = "marker-click";
   el.href = "#";
   el.textContent = `Marker ${title}`;
   container.appendChild(el);
 }
 
-// we add markers to the map
-for (let i = 0; i < featureGroups.length; i++) {
-  featureGroups[i].addTo(map);
+// set center map
+function clickZoom(e) {
+  map.setView(e.target.getLatLng(), zoom);
+  // pantTo version
+  // map.panTo(e.target.getLatLng());
 }
 
 // function that opens a popup with text at the marker
 // and transfers latLng coordinates of the opened marker
 // to the centering function
 function markerOpen(id) {
-  for (let i in featureGroups) {
-    const markerId = featureGroups[i].options.title;
-    if (markerId === id) {
-      featureGroups[i].openPopup();
-      centerMarker(featureGroups[i].getLatLng());
+  map.eachLayer(function (layer) {
+    if (layer.options && layer._leaflet_id === id) {
+      centerMarker(layer);
     }
-  }
+  });
 }
 
-// function centering the map on the marker
-function centerMarker(latlng) {
-  const marker = L.marker([latlng.lat, latlng.lng]);
-  let group = new L.featureGroup([marker]);
-  map.fitBounds(group.getBounds());
+// function open popup and centering
+// the map on the marker
+function centerMarker(layer) {
+  layer.openPopup();
+  map.panTo(L.latLng(layer.getLatLng()));
 }
 
 // all marker-click classes from html
@@ -81,7 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
     marker.addEventListener("click", () => {
       // the click event transfers to the function
       // id = title of the marker
-      markerOpen(marker.id);
+      // convert id to number
+      markerOpen(+marker.id);
     });
   });
 });
