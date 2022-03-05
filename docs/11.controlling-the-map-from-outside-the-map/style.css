@@ -57,3 +57,7 @@ body {
     margin: 5px 10px;
   }
 }
+
+.active {
+  text-decoration: underline;
+}

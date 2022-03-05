@@ -52,6 +52,8 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
+// --------------------------------------------------
+
 // we create an array of markers
 // each marker has a unique title
 // of course this could be another parameter
@@ -67,30 +69,29 @@ for (let i = 0; i < points.length; i++) {
     popupAnchor: [0, -40],
   });
 
-  // create marker width specific id
-  let markers = L.marker([lat, lng], { title: title, icon: myIcon, id: i });
+  // create marker and add to map
+  let marker = L.marker([lat, lng], { icon: myIcon }).addTo(map);
+
+  const idMarker = marker._leaflet_id;
 
   // add to marker popup
-  markers.bindPopup(`
+  marker.bindPopup(`
       <div style="text-align: center;">
-        <div style="text-transform: uppercase; font-weight: bold;">${title} id: ${i}<div>
+        <div style="text-transform: uppercase; font-weight: bold;">${title} id: ${idMarker}<div>
       </div>
     `);
 
   // click on marker center marker on map
-  markers.on("click", centerOnMarker);
-
-  // add marker to map
-  markers.addTo(map);
+  marker.on("click", centerOnMarker);
 
   // generate bottom menu with markers
-  generateMenu(i, title);
+  generateMenu(idMarker, title);
 }
 
 // generate menu
 function generateMenu(id, title) {
   const city = document.querySelector(".city");
-  const hrefElement = `<a id="${id}" title="${title} ID:${id}" class="marker-click" href="#">${title}</a>`;
+  const hrefElement = `<a id="${id}" title="${title} MARKER-ID:${id}" class="marker-click" href="#">${title}</a>`;
   city.insertAdjacentHTML("beforeend", hrefElement);
 }
 
@@ -98,7 +99,7 @@ function generateMenu(id, title) {
 function markerOpen(id) {
   map.eachLayer(function (layer) {
     if (layer.options) {
-      if (layer.options.id === id) {
+      if (layer._leaflet_id === id) {
         centerMarker(layer);
       }
     }
@@ -114,7 +115,7 @@ function centerMarker(layer) {
 
 // center on marker when click
 function centerOnMarker(e) {
-  const el = e.target.options.id;
+  const el = e.target._leaflet_id;
 
   const element = document.getElementById(el);
   // remove active menu
@@ -146,6 +147,7 @@ function activeControls(index) {
 // remove active menu
 function removeActiveMenu(el) {
   const active = document.querySelector(".active");
+
   if (active) {
     active.classList.remove("active");
   }
