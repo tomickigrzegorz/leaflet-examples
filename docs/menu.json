@@ -317,5 +317,11 @@
     "text": "great circle [turfjs]",
     "info": "This example is based on the plugin <a href='https://www.npmjs.com/package/@turf/great-circle' target='_blank'>@turf/great-circle</a>. You can also use the <a href='https://www.npmjs.com/package/@elfalem/leaflet-curve' target='_blank'>leaflet-curve</a> package",
     "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "61.bind-more-popups-to-the-same-marker",
+    "text": "bind more popups to the same marker",
+    "info": "This example shows how to insert a lot of information from the same place in one popup without using the markercluster plugin",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]
