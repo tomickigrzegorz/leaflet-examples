@@ -14,6 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+61 [bind-more-popups-to-the-same-marker](https://tomik23.github.io/leaflet-examples/#61.bind-more-popups-to-the-same-marker)  
 60 [great-circle](https://tomik23.github.io/leaflet-examples/#60.great-circle)  
 59 [sidebar-replacing-popup](https://tomik23.github.io/leaflet-examples/#59.sidebar-replacing-popup)  
 58 [control-layers-outside-the-map](https://tomik23.github.io/leaflet-examples/#58.control-layers-outside-the-map)  
