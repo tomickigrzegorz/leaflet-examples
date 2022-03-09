@@ -30,7 +30,7 @@ body {
   min-height: 100%;
   padding: 0;
   margin: 0;
-  background-color: #f1f1f1;
+  background-color: #fff;
 }
 
 img {
@@ -129,4 +129,20 @@ img {
 
 .show-code-full-screen .hide-iframe {
   display: block;
+}
+
+.file-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2094f3;
+}
+
+.icon-file {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }

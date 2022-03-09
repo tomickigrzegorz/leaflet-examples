@@ -110,12 +110,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const flex = document.createElement("div");
     flex.className += "flex info-description";
 
-    const file = `${dataIframe}/script.js`;
+    const fileJS = `${dataIframe}/script.js`;
+    const fileCSS = `${dataIframe}/style.css`;
     const template = `
       <div class="small open-source">
-        <a href="${detectUrl(file)}" target="_blank">→ open source</a>
+        <a href="${detectUrl(fileJS)}" target="_blank">→ open JS file</a> 
         <a href="#" class="full-screen arrow">full screen example</a>
-        <a href="#" class="show-code arrow">show code</a>
+        <a href="#" class="show-code arrow">show JS code</a>
       </div>${dataInfoTeamplte}`;
 
     flex.innerHTML = template;
@@ -135,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     infoDescription.insertAdjacentElement("afterend", pre);
 
-    fetchData(detectUrl(`${file}`), "text")
+    fetchData(detectUrl(`${fileJS}`), "text")
       .then((data) => {
         code.className = "language-js";
         code.textContent = data;
