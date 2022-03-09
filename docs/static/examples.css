@@ -13,6 +13,7 @@ html {
 body {
   justify-content: normal;
   counter-reset: number;
+  color: #333;
 }
 
 section {
@@ -23,31 +24,78 @@ section {
 }
 
 h1 {
+  position: relative;
   width: 100%;
   margin-top: 30px;
   line-height: 1;
-  text-align: center;
-  font-size: clamp(2rem, -0.875rem + 8.333vw, 3.5rem);
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 3.3rem);
 }
 
 h2 {
   position: relative;
-  font-size: 32px;
-  text-align: center;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
   line-height: 100%;
-  padding: 0 30px;
-}
-
-.iframe-wrapper {
-  margin: 30px auto;
-  border: 2px solid #333;
-  overflow: hidden;
+  padding: 0 30px 0 0;
 }
 
 iframe {
   display: block;
   width: 100%;
   border: 0;
+}
+
+.title-link {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+}
+
+.title-link span {
+  position: relative;
+  display: inline-block;
+}
+
+.title-link img {
+  transition: filter 0.5s ease-in-out;
+}
+
+.title-link:hover img {
+  transition: filter 1s ease-in-out;
+  filter: invert(1);
+}
+
+.logo-leaflet {
+  position: absolute;
+  top: -3px;
+  z-index: -1;
+  right: -70px;
+  width: 140px;
+}
+
+@media (max-width: 750px) {
+  .logo-leaflet {
+    top: 5px;
+    right: -50px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-leaflet {
+    top: 10px;
+    right: -30px;
+    width: 60px;
+  }
+}
+
+.logo-leaflet svg {
+  pointer-events: painted;
+}
+
+.iframe-wrapper {
+  margin: 30px auto;
+  border: 2px solid #333;
+  overflow: hidden;
 }
 
 .grid {
@@ -58,7 +106,8 @@ iframe {
     "nav main";
   grid-template-columns: 300px 1fr;
   grid-template-rows: 100px;
-  gap: 30px;
+  gap: 0 30px;
+  max-width: 1350px;
 }
 
 header {
@@ -72,15 +121,10 @@ nav {
 
 main {
   grid-area: main;
-  max-width: 1000px;
   width: 100%;
   padding-right: 30px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   overflow: auto;
-}
-
-.title {
-  text-align: center;
 }
 
 nav {

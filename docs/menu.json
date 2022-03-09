@@ -323,5 +323,10 @@
     "text": "bind more popups to the same marker",
     "info": "This example shows how to insert a lot of information from the same place in one popup without using the markercluster plugin",
     "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "62.count-markers",
+    "text": "count markers",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]
