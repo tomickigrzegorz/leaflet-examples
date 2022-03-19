@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>leaflet routing machine</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="map">
+      <img class="screen" src="routing.png" alt="" />
+      <button type="button" class="btn-active">
+        before activet real map read description
+      </button>
+    </div>
+
+    <script>
+      function addScript(src, type) {
+        const s = document.createElement(type);
+        s.setAttribute("src", src);
+
+        if (type === "script") {
+          // s.setAttribute("defer", true);
+          document.body.appendChild(s);
+        } else {
+          s.setAttribute("rel", "stylesheet");
+          document.head.appendChild(s);
+        }
+      }
+
+      const btnActive = document.querySelector(".btn-active");
+      const mapContainer = document.querySelector("#map");
+      btnActive.addEventListener("click", () => {
+        // remove elements from map container
+        mapContainer.textContent = "";
+        addScript(
+          "https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.min.js",
+          "script"
+        );
+        setTimeout(() => {
+          addScript("./script.js", "script");
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
