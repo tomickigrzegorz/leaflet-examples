@@ -328,5 +328,11 @@
     "link": "62.count-markers",
     "text": "count markers",
     "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "63.leaflet-routing-machine",
+    "text": "leaflet routing machine",
+    "info": "You are using OSRM's demo server. Please note that it is <strong>**NOT SUITABLE FOR PRODUCTION USE**</strong>.<br>Refer to the demo server's usage policy: https://github.com/Project-OSRM/osrm-backend/wiki/Api-usage-policy<br><br>To change, set the serviceUrl option.<br><br>Please do not report issues with this server to neither Leaflet Routing Machine or OSRM - it's for demo only, and will sometimes not be available, or work in unexpected ways.<br><br>Please set up your own OSRM server, or use a paid service provider for production.<br><br>You can find more examples of using this library at <a href='https://www.liedman.net/leaflet-routing-machine/' target='_blank'>leaflet-routing-machine</a>",
+    "position": "--pos-right: 10px, --pos-bottom: 80px"
   }
 ]
