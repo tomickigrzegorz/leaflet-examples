@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>autocomplete with geojson</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.8.3/dist/css/autocomplete.min.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.8.3/dist/js/autocomplete.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="icon-marker" viewBox="0 0 32 32">
+        <path
+          d="M16 0c-5.523 0-10 4.477-10 10 0 10 10 22 10 22s10-12 10-22c0-5.523-4.477-10-10-10zM16 16c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"
+        />
+      </symbol>
+      <symbol
+        id="icon-circlemarker"
+        style="
+          fill-rule: evenodd;
+          clip-rule: evenodd;
+          stroke-linejoin: round;
+          stroke-miterlimit: 2;
+        "
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="M16 .258C24.688.258 31.742 7.312 31.742 16S24.688 31.742 16 31.742.258 24.688.258 16 7.312.258 16 .258Zm0 .926c8.177 0 14.816 6.639 14.816 14.816S24.177 30.816 16 30.816 1.184 24.177 1.184 16 7.823 1.184 16 1.184Z"
+        />
+        <circle cx="17" cy="17" r="2" transform="translate(-1 -1)" />
+      </symbol>
+      <symbol
+        id="icon-polygon"
+        style="
+          fill-rule: evenodd;
+          clip-rule: evenodd;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-miterlimit: 1.5;
+        "
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="m45 88 160-56"
+          style="fill: none; stroke: #000; stroke-width: 15.43px"
+          transform="matrix(.07157 .00412 .00412 .0819 1.386 -.148)"
+        />
+        <path
+          d="m253 42 91 154"
+          style="fill: none; stroke: #000; stroke-width: 16.66px"
+          transform="matrix(.08104 -.0039 -.0039 .07676 1.458 2.295)"
+        />
+        <path
+          d="m25 133 34 197"
+          style="fill: none; stroke: #000; stroke-width: 16.5px"
+          transform="matrix(.083 -.00195 -.00195 .07204 .716 2.949)"
+        />
+        <path
+          d="M333 234 95 344"
+          style="fill: none; stroke: #000; stroke-width: 15.2px"
+          transform="matrix(.0754 .00367 .00367 .08165 .888 -.045)"
+        />
+        <path
+          d="M19.775.6a1.352 1.352 0 1 1-.001 2.704 1.352 1.352 0 0 1 0-2.704Zm0 .676a.676.676 0 1 1-.001 1.352.676.676 0 0 1 0-1.352ZM30.287 17.42a1.352 1.352 0 1 1 0 2.704 1.352 1.352 0 0 1 0-2.704Zm0 .676a.676.676 0 1 1 0 1.352.676.676 0 0 1 0-1.352ZM5.822 28.697a1.352 1.352 0 1 1-.001 2.704 1.352 1.352 0 0 1 0-2.704Zm0 .676a.676.676 0 1 1 0 1.352.676.676 0 0 1 0-1.352ZM1.713 7.577a1.352 1.352 0 1 1-.001 2.703 1.352 1.352 0 0 1 0-2.703Zm0 .675a.676.676 0 1 1-.001 1.352.676.676 0 0 1 0-1.352Z"
+        />
+      </symbol>
+      <symbol
+        id="icon-polyline"
+        style="
+          fill-rule: evenodd;
+          clip-rule: evenodd;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-miterlimit: 1.5;
+        "
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="m251 132 56-59M139 56l67 73M54 330l45-66M117 65v143"
+          style="fill: none; stroke: #000; stroke-width: 13.85px"
+          transform="matrix(.09313 0 0 .08734 -.981 -1.108)"
+        />
+        <path
+          d="M29.498 1.792c.833 0 1.51.634 1.51 1.416 0 .781-.677 1.416-1.51 1.416s-1.51-.635-1.51-1.416c0-.782.677-1.416 1.51-1.416Zm0 .708c.417 0 .755.317.755.708 0 .39-.338.708-.755.708s-.755-.318-.755-.708c0-.391.338-.708.755-.708ZM9.86 18.283c.833 0 1.51.634 1.51 1.415 0 .782-.677 1.417-1.51 1.417-.834 0-1.51-.635-1.51-1.417 0-.78.676-1.415 1.51-1.415Zm0 .707c.416 0 .754.318.754.708 0 .391-.338.709-.755.709-.416 0-.754-.318-.754-.709 0-.39.338-.708.754-.708ZM2.502 28.589c.833 0 1.51.634 1.51 1.416 0 .781-.677 1.416-1.51 1.416s-1.51-.635-1.51-1.416c0-.782.677-1.416 1.51-1.416Zm0 .708c.417 0 .755.317.755.708 0 .39-.338.708-.755.708s-.755-.318-.755-.708c0-.391.338-.708.755-.708ZM9.902.58c.833 0 1.51.634 1.51 1.415 0 .782-.677 1.416-1.51 1.416-.834 0-1.51-.634-1.51-1.416 0-.781.676-1.416 1.51-1.416Zm0 .707c.416 0 .755.318.755.708 0 .391-.339.708-.755.708-.417 0-.755-.317-.755-.708 0-.39.338-.708.755-.708ZM20.21 10.675c.834 0 1.51.634 1.51 1.416 0 .781-.676 1.416-1.51 1.416-.832 0-1.509-.635-1.509-1.416 0-.782.677-1.416 1.51-1.416Zm0 .708c.417 0 .756.317.756.708 0 .39-.339.708-.755.708-.417 0-.755-.318-.755-.708 0-.391.338-.708.755-.708Z"
+        />
+      </symbol>
+    </svg>
+    <div id="map"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

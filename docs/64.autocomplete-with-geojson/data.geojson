@@ -1,0 +1,90 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "color": "",
+        "type": "rectangle",
+        "title": "Polygon 1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [20.87883, 52.245671],
+            [20.87883, 52.263115],
+            [20.907326, 52.263115],
+            [20.907326, 52.245671],
+            [20.87883, 52.245671]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "color": "red",
+        "type": "circlemarker",
+        "title": "Circle 1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.077957, 52.199611]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "color": "blue",
+        "type": "marker",
+        "title": "Marker 1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.977707, 52.205292]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "color": "green",
+        "type": "polygon",
+        "title": "Polygon 2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [21.093407, 52.258912],
+            [21.095123, 52.237682],
+            [21.168938, 52.232426],
+            [21.105766, 52.241887],
+            [21.093407, 52.258912]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "color": "orange",
+        "type": "polyline",
+        "title": "Polyline 1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [20.882263, 52.186142],
+          [20.976677, 52.237262],
+          [21.033669, 52.178564]
+        ]
+      }
+    }
+  ]
+}
