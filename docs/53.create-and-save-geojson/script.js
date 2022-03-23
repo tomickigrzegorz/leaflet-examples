@@ -204,11 +204,11 @@ function setGeojsonToMap(geojson) {
     },
     pointToLayer: (feature, latlng) => {
       if (feature.properties.type === "circle") {
-        return new L.circle(feature.geometry.coordinates.reverse(), {
+        return new L.circle(latlng, {
           radius: feature.properties.radius,
         });
       } else if (feature.properties.type === "circlemarker") {
-        return new L.circleMarker(feature.geometry.coordinates.reverse(), {
+        return new L.circleMarker(latlng, {
           radius: 10,
         });
       } else {
