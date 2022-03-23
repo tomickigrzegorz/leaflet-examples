@@ -14,6 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+64 [autocomplete-with-geojson](https://tomik23.github.io/leaflet-examples/#64.autocomplete-with-geojson)  
 63 [leaflet-routing-machine](https://tomik23.github.io/leaflet-examples/#63.leaflet-routing-machine)  
 62 [count-markers](https://tomik23.github.io/leaflet-examples/#62.count-markers)  
 61 [bind-more-popups-to-the-same-marker](https://tomik23.github.io/leaflet-examples/#61.bind-more-popups-to-the-same-marker)  
