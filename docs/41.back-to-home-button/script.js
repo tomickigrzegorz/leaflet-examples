@@ -41,11 +41,7 @@ const customControl = L.Control.extend({
     const btn = L.DomUtil.create("button");
     btn.title = "back to home";
     btn.innerHTML = htmlTemplate;
-    btn.className += "leaflet-bar back-to-home";
-    btn.setAttribute(
-      "style",
-      "margin-top: 0; left: 0; display: none; cursor: pointer; justify-content: center;"
-    );
+    btn.className += "leaflet-bar back-to-home hidden";
 
     return btn;
   },
@@ -54,33 +50,32 @@ const customControl = L.Control.extend({
 // adding new button to map controll
 map.addControl(new customControl());
 
-const button = document.querySelector(".back-to-home");
-
 // on drag end
-map.on("dragend", getCenterOfMap);
+map.on("moveend", getCenterOfMap);
 
-// on zoom end
-map.on("zoomend", getCenterOfMap);
+const buttonBackToHome = document.querySelector(".back-to-home");
 
 function getCenterOfMap() {
-  const { lat, lng } = map.getCenter();
-  const latDZ = lat.toFixed(5) * 1;
-  const lngDZ = lng.toFixed(5) * 1;
+  buttonBackToHome.classList.remove("hidden");
 
-  arrayCheckAndClick([latDZ, lngDZ]);
-}
-
-// compare two arrays, if arrays diffrent show button home-back
-function arrayCheckAndClick(array) {
-  const IfTheDefaultLocationIsDifferent =
-    [lat, lng].sort().join(",") !== array.sort().join(",");
-
-  button.style.display = IfTheDefaultLocationIsDifferent ? "flex" : "none";
-
-  // clicking on home-back set default view and zoom
-  button.addEventListener("click", function () {
-    // more fancy back to previous place
+  buttonBackToHome.addEventListener("click", () => {
     map.flyTo([lat, lng], zoom);
-    button.style.display = "none";
+  });
+
+  map.on("moveend", () => {
+    const { lat: latCenter, lng: lngCenter } = map.getCenter();
+
+    const latC = latCenter.toFixed(3) * 1;
+    const lngC = lngCenter.toFixed(3) * 1;
+
+    const defaultCoordinate = [+lat.toFixed(3), +lng.toFixed(3)];
+
+    const centerCoordinate = [latC, lngC];
+
+    if (compareToArrays(centerCoordinate, defaultCoordinate)) {
+      buttonBackToHome.classList.add("hidden");
+    }
   });
 }
+
+const compareToArrays = (a, b) => JSON.stringify(a) === JSON.stringify(b);

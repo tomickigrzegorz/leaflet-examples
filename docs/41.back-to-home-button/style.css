@@ -41,21 +41,17 @@ body {
 }
 
 .back-to-home {
-  position: absolute;
-  top: 80px;
-  left: 10px;
-  width: 26px;
-  height: 26px;
-  z-index: 999;
   cursor: pointer;
-  display: none;
   padding: 5px;
   background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 1px 5px rgb(0 0 0 / 65%);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 65%);
 }
 
 .leaflet-touch .back-to-home {
   width: 34px;
   height: 34px;
+}
+
+.hidden {
+  display: none;
 }
