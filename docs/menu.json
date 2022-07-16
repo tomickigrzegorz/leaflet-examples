@@ -340,5 +340,11 @@
     "text": "autocomplete with geojson",
     "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>",
     "position": "--pos-right: 10px, --pos-bottom: 80px"
+  },
+  {
+    "link": "65.marker-slide-to",
+    "text": "marker slide to",
+    "info": "<a href='https://www.npmjs.com/package/leaflet.marker.slideto' target='_blank'>the example uses the plugin Leaflet.Marker.SlideTo</a>",
+    "position": "--pos-right: 10px, --pos-bottom: 80px"
   }
 ]
