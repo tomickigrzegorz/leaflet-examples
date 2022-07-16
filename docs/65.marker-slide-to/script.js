@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /**
- * XXXXXXXXXXXX
+ * Marker slide to
  */
 
 // config map
