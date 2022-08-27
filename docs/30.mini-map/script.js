@@ -23,7 +23,7 @@ const map = L.map("map", config).setView([lat, lng], zoom);
 
 const attribution =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-const osmURL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+const osmURL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 const orm = L.tileLayer(osmURL, { attribution }).addTo(map);
 
 //Plugin magic goes here! Note that you cannot use the same layer object again, as that will confuse the two map controls
