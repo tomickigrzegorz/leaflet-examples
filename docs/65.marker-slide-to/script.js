@@ -32,28 +32,46 @@ const markerPosition = [
   {
     lat: 52.229721589372964,
     lng: 21.011298894882206,
+    color: "red",
   },
   {
     lat: 52.22954744743949,
     lng: 21.01188898086548,
+    color: "blue",
   },
   {
     lat: 52.22970516091786,
     lng: 21.012243032455448,
+    color: "green",
   },
   {
     lat: 52.22997787248553,
     lng: 21.011261343955997,
+    color: "black",
   },
   {
     lat: 52.22993187306146,
     lng: 21.01217329502106,
+    color: "orange",
   },
 ];
 
 // change position of marker
-markerPosition.forEach(({ lat, lng }, index) => {
+markerPosition.forEach(({ lat, lng, color }, index) => {
   setTimeout(() => {
     marker.slideTo([lat, lng], { duration: 1000 });
-  }, index * 2000);
+
+    let markerBefore =
+      index === 0
+        ? [52.22983, 21.011728]
+        : [markerPosition[index - 1].lat, markerPosition[index - 1].lng];
+
+    console.log(markerBefore);
+
+    L.polyline([markerBefore, [lat, lng]], {
+      color,
+      weight: 5,
+      dashArray: 10,
+    }).addTo(map);
+  }, index * 1000);
 });

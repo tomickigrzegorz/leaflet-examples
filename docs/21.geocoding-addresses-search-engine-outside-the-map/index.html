@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geocoding addresses search engine outside the map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.7.2/dist/css/autocomplete.min.css">
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.7.2/dist/js/autocomplete.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.8.6/dist/css/autocomplete.min.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.8.6/dist/js/autocomplete.min.js"></script>
   </head>
 
   <body>
     <!-- search container -->
     <div class="container">
       <div class="auto-search-wrapper loupe">
-        <input type="text" autocomplete="off" id="search" placeholder="enter the city name">
+        <input
+          type="text"
+          autocomplete="off"
+          id="search"
+          placeholder="enter the city name"
+        />
       </div>
     </div>
 
@@ -25,7 +35,5 @@
 
     <script src="script.js"></script>
     <!-- https://github.com/tomik23/autosuggest -->
-
   </body>
-
 </html>
