@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Distance between cities on map</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.7.2/dist/css/autocomplete.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.7.2/dist/js/autocomplete.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.8.6/dist/css/autocomplete.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/tomik23/autocomplete@1.8.6/dist/js/autocomplete.min.js"></script>
   </head>
 
   <body>
@@ -17,13 +22,23 @@
       <div class="city">
         <label for="cityA">Distance from</label>
         <div class="auto-search-wrapper">
-          <input type="text" autocomplete="off" id="cityA" placeholder="City distance from">
+          <input
+            type="text"
+            autocomplete="off"
+            id="cityA"
+            placeholder="City distance from"
+          />
         </div>
       </div>
       <div class="city">
         <label for="cityB">Distance to</label>
         <div class="auto-search-wrapper">
-          <input type="text" autocomplete="off" id="cityB" placeholder="City distance to">
+          <input
+            type="text"
+            autocomplete="off"
+            id="cityB"
+            placeholder="City distance to"
+          />
         </div>
       </div>
       <button class="clear-distance">CLEAR</button>
@@ -32,5 +47,4 @@
     <div id="map"></div>
     <script src="script.js"></script>
   </body>
-
 </html>
