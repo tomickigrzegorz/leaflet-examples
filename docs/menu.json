@@ -346,5 +346,11 @@
     "text": "marker slide to",
     "info": "<a href='https://www.npmjs.com/package/leaflet.marker.slideto' target='_blank'>the example uses the plugin Leaflet.Marker.SlideTo</a>",
     "position": "--pos-right: 10px, --pos-bottom: 80px"
+  },
+  {
+    "link": "66.leaflet-geoman",
+    "text": "leaflet-geoman",
+    "info": "<a href='https://geoman.io/leaflet-geoman' target='_blank'>Leaflet-Geoman - the best geometry editing for Leaflet Maps</a>",
+    "position": "--pos-right: 10px, --pos-bottom: 80px"
   }
 ]
