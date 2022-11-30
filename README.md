@@ -14,6 +14,7 @@ Here is a working live demo : https://tomik23.github.io/leaflet-examples/
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+66 [leaflet-geoman](https://tomik23.github.io/leaflet-examples/#66.leaflet-geoman)  
 65 [marker-slide-to](https://tomik23.github.io/leaflet-examples/#65.marker-slide-to)  
 64 [autocomplete-with-geojson](https://tomik23.github.io/leaflet-examples/#64.autocomplete-with-geojson)  
 63 [leaflet-routing-machine](https://tomik23.github.io/leaflet-examples/#63.leaflet-routing-machine)  
