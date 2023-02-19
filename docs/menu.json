@@ -102,7 +102,7 @@
   {
     "link": "21.geocoding-addresses-search-engine-outside-the-map",
     "text": "geocoding addresses search engine outside the map",
-    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>",
+    "info": "<a href='https://github.com/tomickigrzegorz/autocomplete' target='_blank'>the example uses the autocomplete</a>",
     "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
@@ -206,7 +206,7 @@
   {
     "link": "40.distance-between-cities-on-map",
     "text": "distance between cities on map",
-    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>",
+    "info": "<a href='https://github.com/tomickigrzegorz/autocomplete' target='_blank'>the example uses the autocomplete</a>",
     "position": "--pos-right: 10px, --pos-bottom: 25px"
   },
   {
@@ -232,7 +232,7 @@
   {
     "link": "45.multi-layer-search",
     "text": "multi layer search",
-    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>",
+    "info": "<a href='https://github.com/tomickigrzegorz/autocomplete' target='_blank'>the example uses the autocomplete</a>",
     "position": "--pos-right: 20px, --pos-top: 150px"
   },
   {
@@ -258,7 +258,7 @@
   {
     "link": "50.autocomplete-on-map-button",
     "text": "autocomplete on map - button",
-    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>",
+    "info": "<a href='https://github.com/tomickigrzegorz/autocomplete' target='_blank'>the example uses the autocomplete</a>",
     "position": "--pos-right: 10px, --pos-top: 10px"
   },
   {
@@ -338,7 +338,7 @@
   {
     "link": "64.autocomplete-with-geojson",
     "text": "autocomplete with geojson",
-    "info": "<a href='https://github.com/tomik23/autocomplete' target='_blank'>the example uses the autocomplete</a>",
+    "info": "<a href='https://github.com/tomickigrzegorz/autocomplete' target='_blank'>the example uses the autocomplete</a>",
     "position": "--pos-right: 10px, --pos-bottom: 80px"
   },
   {

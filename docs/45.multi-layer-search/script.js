@@ -73,7 +73,7 @@ const poiLayers = L.layerGroup().addTo(map);
 });
 
 // Autocomplete
-// configurate https://github.com/tomik23/autocomplete#configuration-of-the-plugin
+// configurate https://github.com/tomickigrzegorz/autocomplete#configuration-of-the-plugin
 // --------------------------------------------------
 
 new Autocomplete("multi-layer-serch", {

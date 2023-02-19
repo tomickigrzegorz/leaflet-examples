@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /**
  * autocomplete on map
- * https://github.com/tomik23/autocomplete
+ * https://github.com/tomickigrzegorz/autocomplete
  *
  */
 
@@ -104,7 +104,7 @@ map.on("click", () => {
 });
 
 // autocomplete section
-// more config find in https://github.com/tomik23/autocomplete
+// more config find in https://github.com/tomickigrzegorz/autocomplete
 // --------------------------------------------------------------
 
 new Autocomplete("marker", {
