@@ -82,14 +82,9 @@ function addClassToParent() {
     // focus on input
     root.focus();
 
-    // click on clear button
-    clickOnClearButton();
+    // use destroy method
+    autocomplete.destroy();
   });
-}
-
-// function click on clear button
-function clickOnClearButton() {
-  document.querySelector(".auto-clear").click();
 }
 
 addClassToParent();
@@ -107,7 +102,7 @@ map.on("click", () => {
 // more config find in https://github.com/tomickigrzegorz/autocomplete
 // --------------------------------------------------------------
 
-new Autocomplete("marker", {
+const autocomplete = new Autocomplete("marker", {
   delay: 1000,
   selectFirst: true,
   howManyCharacters: 2,
