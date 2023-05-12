@@ -14,6 +14,7 @@ Here is a working live demo : https://tomickigrzegorz.github.io/leaflet-examples
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+68 [popup-in-a-fixed-position](https://tomickigrzegorz.github.io/leaflet-examples/#68.popup-in-a-fixed-position)  
 67 [add-data-attribute-to-marker](https://tomickigrzegorz.github.io/leaflet-examples/#67.add-data-attribute-to-marker)  
 66 [leaflet-geoman](https://tomickigrzegorz.github.io/leaflet-examples/#66.leaflet-geoman)  
 65 [marker-slide-to](https://tomickigrzegorz.github.io/leaflet-examples/#65.marker-slide-to)  

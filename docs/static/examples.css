@@ -96,6 +96,7 @@ iframe {
   margin: 30px auto;
   border: 2px solid #333;
   overflow: hidden;
+  resize: both;
 }
 
 .grid {
