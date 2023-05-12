@@ -358,5 +358,11 @@
     "text": "add data attribute to the marker",
     "info": "open devtools and check that we have added two \"data-attribute\" elements to the marker <i>[data-first-example=\"First example\", data-second-example=\"Second example\"]</i>",
     "position": "--pos-right: 10px, --pos-bottom: 80px"
+  },
+  {
+    "link": "68.popup-in-a-fixed-position",
+    "text": "popup in a fixed position",
+    "info": "Resize the map (<= 700px) to see how the position of the popup and the behavior of the map change.",
+    "position": "--pos-right: 10px, --pos-bottom: 80px"
   }
 ]
