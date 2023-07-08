@@ -1,0 +1,82 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+html,
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+/* jump animation from marker, shadow and popup */
+
+.marker-icon-jump {
+  position: relative;
+  animation: jumpMarker 0.5s infinite alternate;
+}
+
+@keyframes jumpMarker {
+  from {
+    transform: translate3d(var(--position-x), var(--position-y), 0);
+  }
+  to {
+    transform: translate3d(
+      var(--position-x),
+      calc(var(--position-y) - 10px),
+      0
+    );
+  }
+}
+
+.marker-shadow-jump {
+  animation: jumpShadow 0.5s infinite alternate;
+}
+
+@keyframes jumpShadow {
+  from {
+    transform: translate3d(var(--position-x), var(--position-y), 0);
+  }
+  to {
+    transform: translate3d(
+      calc(var(--position-x) + 10px),
+      calc(var(--position-y) - 10px),
+      0
+    );
+  }
+}
+
+.popup-element-jump {
+  animation: jumpPopup 0.5s infinite alternate;
+  top: -100px;
+}
+
+@keyframes jumpPopup {
+ from {
+    transform: translate3d(var(--position-x), var(--position-y), 0);
+  }
+  to {
+    transform: translate3d(
+      var(--position-x),
+      calc(var(--position-y) - 10px),
+      0
+    );
+  }
+  }
+}

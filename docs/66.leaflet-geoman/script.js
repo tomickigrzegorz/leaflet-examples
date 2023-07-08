@@ -58,7 +58,7 @@ map.on("pm:drawend", function (e) {
 
 // listen to when a new layer is created
 map.on("pm:create", function (e) {
-  console.log(e);
+  console.log(e.layer.getLatLngs());
 
   // listen to changes on the new layer
   e.layer.on("pm:edit", function (x) {

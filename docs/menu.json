@@ -364,5 +364,11 @@
     "text": "popup in a fixed position",
     "info": "Resize the map (<= 700px) to see how the position of the popup and the behavior of the map change.",
     "position": "--pos-right: 10px, --pos-bottom: 80px"
+  },
+  {
+    "link": "69.simple-jump-marker",
+    "text": "simple animation of jumping marker",
+    "info": "See style.css from this example",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]
