@@ -13,8 +13,9 @@
     "start": "http-server docs/ -o -p 3000"
   },
   "devDependencies": {
-    "eslint": "^8.27.0",
+    "eslint": "^8.50.0",
     "http-server": "^14.1.1",
-    "prettier": "^2.7.1"
+    "leaflet": "^1.9.4",
+    "prettier": "^3.0.3"
   }
 }
