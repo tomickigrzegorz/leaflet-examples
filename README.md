@@ -14,6 +14,7 @@ Here is a working live demo : https://tomickigrzegorz.github.io/leaflet-examples
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+70 [polygon-with-gradien](https://tomickigrzegorz.github.io/leaflet-examples/#70.polygon-with-gradien)  
 69 [simple-jump-marker](https://tomickigrzegorz.github.io/leaflet-examples/#69.simple-jump-marker)  
 68 [popup-in-a-fixed-position](https://tomickigrzegorz.github.io/leaflet-examples/#68.popup-in-a-fixed-position)  
 67 [add-data-attribute-to-marker](https://tomickigrzegorz.github.io/leaflet-examples/#67.add-data-attribute-to-marker)  
