@@ -370,5 +370,11 @@
     "text": "simple animation of jumping marker",
     "info": "See style.css from this example",
     "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "70.polygon-with-gradien",
+    "text": "how to create a polygon with a gradient",
+    "info": "Create simple plugin to create a polygon with a gradient",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]
