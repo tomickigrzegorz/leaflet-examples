@@ -22,12 +22,14 @@
   {
     "link": "05.coordinates-after-clicking-on-the-map",
     "text": "coordinates after clicking on the map",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "06.coordinates-of-the-visible-map",
     "text": "coordinates of the visible map",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "07.image-instead-of-map",
@@ -37,7 +39,8 @@
   {
     "link": "08.controlling-different-groups-of-markers",
     "text": "controlling different groups of markers",
-    "position": "--pos-right: 10px, --pos-bottom: 25px"
+    "position": "--pos-right: 10px, --pos-bottom: 25px",
+    "style": true
   },
   {
     "link": "09.marker-grouping-markercluster-plugin",
@@ -52,32 +55,38 @@
   {
     "link": "11.controlling-the-map-from-outside-the-map",
     "text": "controlling the map from outside the map",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "12.controling-polygons",
     "text": "controling polygons",
-    "position": "--pos-right: 10px, --pos-bottom: 25px"
+    "position": "--pos-right: 10px, --pos-bottom: 25px",
+    "style": true
   },
   {
     "link": "13.svg-markers-width-legends",
     "text": "svg markers width legends",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "14.dragable-markers",
     "text": "dragable markers",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "15.geoJson-simple",
     "text": "geoJson simple",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "16.geoJson-extended-action",
     "text": "geoJson extended action",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "17.TileLayer",
@@ -87,23 +96,27 @@
   {
     "link": "18.add-move-and-delete-marker",
     "text": "add move and delete marker",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "19.custom-button",
     "text": "custom button",
-    "position": "--pos-right: 10px, --pos-bottom: 25px"
+    "position": "--pos-right: 10px, --pos-bottom: 25px",
+    "style": true
   },
   {
     "link": "20.maxBound-map-restricts-the-view",
     "text": "maxBound map restricts the view",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "21.geocoding-addresses-search-engine-outside-the-map",
     "text": "geocoding addresses search engine outside the map",
     "info": "<a href='https://github.com/tomickigrzegorz/autocomplete' target='_blank'>the example uses the autocomplete</a>",
-    "position": "--pos-right: 10px, --pos-bottom: 25px"
+    "position": "--pos-right: 10px, --pos-bottom: 25px",
+    "style": true
   },
   {
     "link": "22.center-map-when-click-marker",
@@ -113,7 +126,8 @@
   {
     "link": "23.custom-marker-and-popup",
     "text": "custom marker and popup",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "24.polyline",
@@ -124,7 +138,8 @@
     "link": "25.fitBounds-with-padding",
     "text": "fitBounds with padding",
     "info": "Grab the bottom right corner and change the size of the frame or change the window size",
-    "position": "--pos-right: 10px, --pos-bottom: 25px"
+    "position": "--pos-right: 10px, --pos-bottom: 25px",
+    "style": true
   },
   {
     "link": "26.markers-60K",
@@ -141,12 +156,14 @@
   {
     "link": "28.adding-map-description",
     "text": "adding map description",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "29.linked-view",
     "text": "linked view",
-    "position": "--pos-left: 10px, --pos-bottom: 10px"
+    "position": "--pos-left: 10px, --pos-bottom: 10px",
+    "style": true
   },
   {
     "link": "30.mini-map",
@@ -163,7 +180,8 @@
   {
     "link": "32.image-icons-prev-next",
     "text": "image icons prev next",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "33.location",
@@ -184,7 +202,8 @@
     "link": "36.story-maps-IntersectionObserver",
     "text": "story map with IntersectionObserver",
     "info": "All texts and photos come from <a href='https://warsawtour.pl/warszawa-w-3-dni/' target='_blank'>warsawtour.pl</a>",
-    "position": "--pos-right: 10px, --pos-bottom: 25px"
+    "position": "--pos-right: 10px, --pos-bottom: 25px",
+    "style": true
   },
   {
     "link": "37.enlarge-a-polygon-box-by-5-percent",
@@ -201,18 +220,21 @@
   {
     "link": "39.coordinates-of-the-center-of-the-visible-map",
     "text": "coordinates of the center of the visible map",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "40.distance-between-cities-on-map",
     "text": "distance between cities on map",
     "info": "<a href='https://github.com/tomickigrzegorz/autocomplete' target='_blank'>the example uses the autocomplete</a>",
-    "position": "--pos-right: 10px, --pos-bottom: 25px"
+    "position": "--pos-right: 10px, --pos-bottom: 25px",
+    "style": true
   },
   {
     "link": "41.back-to-home-button",
     "text": "back to home button",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "42.scale",
@@ -227,23 +249,27 @@
   {
     "link": "44.data-on-sidebar",
     "text": "data on sidebar",
-    "position": "--pos-left: 10px, --pos-bottom: 10px"
+    "position": "--pos-left: 10px, --pos-bottom: 10px",
+    "style": true
   },
   {
     "link": "45.multi-layer-search",
     "text": "multi layer search",
     "info": "<a href='https://github.com/tomickigrzegorz/autocomplete' target='_blank'>the example uses the autocomplete</a>",
-    "position": "--pos-right: 20px, --pos-top: 150px"
+    "position": "--pos-right: 20px, --pos-top: 150px",
+    "style": true
   },
   {
     "link": "46.checking-if-the-marker-is-in-viewport",
     "text": "checking if the marker is in viewport",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "47.random-marker-in-map-bounds",
     "text": "random marker in map bounds",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "48.tiles-gray",
@@ -253,64 +279,75 @@
   {
     "link": "49.location-button",
     "text": "location button",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "50.autocomplete-on-map-button",
     "text": "autocomplete on map - button",
     "info": "<a href='https://github.com/tomickigrzegorz/autocomplete' target='_blank'>the example uses the autocomplete</a>",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "51.tabs-in-popup",
     "text": "tabs in popup",
     "info": "<a href='http://github.com/cferdinandi/tabby' target='_blank'>the example uses the tabby plugin</a>",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "52.full-project",
     "text": "store plan - full project",
     "info": "This is an example combining OSM maps with the L.imageOverlay. It's okay, and it would be even better if it was just a picture without a map for efficiency reasons, as in example 7",
-    "position": "--pos-left: 10px, --pos-bottom: 10px"
+    "position": "--pos-left: 10px, --pos-bottom: 10px",
+    "style": true
   },
   {
     "link": "53.create-and-save-geojson",
     "text": "create and save geojson",
     "info": "This is an example of creating a geojson file from a map based on <a href='https://leaflet.github.io/Leaflet.draw/docs/leaflet-draw-latest.html' target='_blank'>leaflet.draw plugin</a>. First you need to draw all the objects and then export it using the button in the upper right corner. You can also save or delete data in localstorage. This is a poorer version of this site - <a href='https://geojson.io/' target='_blank'>geojson.io</a> ;). This plugin was used to create an example - <i>store plan - full project</i>",
-    "position": "--pos-right: 10px, --pos-bottom: 25px"
+    "position": "--pos-right: 10px, --pos-bottom: 25px",
+    "style": true
   },
   {
     "link": "54.contextmenu",
     "text": "contextmenu",
     "info": "About contextmenu on <a href='https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event' target='_blank'>MDN Web Docs</a>",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "55.follow-mouse",
     "text": "follow mouse",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "56.sidebar",
     "text": "sidebar",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "57.create-additional-control-placeholders",
     "text": "create additional control placeholders",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "58.control-layers-outside-the-map",
     "text": "control layers outside the map",
     "info": "In this example, we have three data layers (3 separate files). We control the visibility of layers from the external div not from the map.",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "59.sidebar-replacing-popup",
     "text": "sidebar replacing popup",
     "info": "All texts and photos come from <a href='https://warsawtour.pl/warszawa-w-3-dni/' target='_blank'>warsawtour.pl</a>",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "60.great-circle",
@@ -327,19 +364,22 @@
   {
     "link": "62.count-markers",
     "text": "count markers",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "63.leaflet-routing-machine",
     "text": "leaflet routing machine",
     "info": "You are using OSRM's demo server. Please note that it is <strong>**NOT SUITABLE FOR PRODUCTION USE**</strong>.<br>Refer to the demo server's usage policy: https://github.com/Project-OSRM/osrm-backend/wiki/Api-usage-policy<br><br>To change, set the serviceUrl option.<br><br>Please do not report issues with this server to neither Leaflet Routing Machine or OSRM - it's for demo only, and will sometimes not be available, or work in unexpected ways.<br><br>Please set up your own OSRM server, or use a paid service provider for production.<br><br>You can find more examples of using this library at <a href='https://www.liedman.net/leaflet-routing-machine/' target='_blank'>leaflet-routing-machine</a>",
-    "position": "--pos-right: 10px, --pos-bottom: 80px"
+    "position": "--pos-right: 10px, --pos-bottom: 80px",
+    "style": true
   },
   {
     "link": "64.autocomplete-with-geojson",
     "text": "autocomplete with geojson",
     "info": "<a href='https://github.com/tomickigrzegorz/autocomplete' target='_blank'>the example uses the autocomplete</a>",
-    "position": "--pos-right: 10px, --pos-bottom: 80px"
+    "position": "--pos-right: 10px, --pos-bottom: 80px",
+    "style": true
   },
   {
     "link": "65.marker-slide-to",
@@ -363,18 +403,27 @@
     "link": "68.popup-in-a-fixed-position",
     "text": "popup in a fixed position",
     "info": "Resize the map (<= 700px) to see how the position of the popup and the behavior of the map change.",
-    "position": "--pos-right: 10px, --pos-bottom: 80px"
+    "position": "--pos-right: 10px, --pos-bottom: 80px",
+    "style": true
   },
   {
     "link": "69.simple-jump-marker",
     "text": "simple animation of jumping marker",
     "info": "See style.css from this example",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   },
   {
     "link": "70.polygon-with-gradien",
     "text": "how to create a polygon with a gradient",
     "info": "Create simple plugin to create a polygon with a gradient",
     "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "71.text-below-a-marker",
+    "text": "add text below a marker",
+    "info": "Example based on: <a href='https://stackoverflow.com/questions/59419337/how-to-add-text-below-a-marker-in-leaflet' target='_blank'>How to add text below a marker in leaflet?</a>, of course, also take a look at the styles",
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "style": true
   }
 ]
