@@ -239,12 +239,14 @@ a.active-menu {
   left: 12px;
 }
 
-.code-place {
+.code-place-js,
+.code-place-css {
   font-size: 1rem;
   margin: 10px auto 50px;
 }
 
-.code-place code {
+.code-place-js code,
+.code-place-css code {
   border-radius: 5px;
   padding: 1.5em;
 }

@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   fetchData("./menu.json", "json").then((data) => {
-    data.forEach(({ link, text, info, position }, index) => {
+    data.forEach(({ link, text, info, position, style }, index) => {
       const element = document.createElement("a");
       element.className = "item";
       if (index == 0) {
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       element.href = `#${link}`;
       element.setAttribute("data-iframe", link);
+      element.setAttribute("data-css", style ? style : false);
       element.setAttribute("data-position", position);
       if (info) {
         element.setAttribute("data-info", info);
@@ -108,15 +109,22 @@ document.addEventListener("DOMContentLoaded", () => {
       : "";
 
     const flex = document.createElement("div");
-    flex.className += "flex info-description";
+    flex.className += "flex flex-direction-column info-description";
 
-    const fileJS = `${dataIframe}/script.js`;
-    const fileCSS = `${dataIframe}/style.css`;
+    const setHidden = isActive.dataset.css == "false" ? "hidden" : "";
+
+    const showCssELement = isActive.dataset.css == "false" ? false : true;
+
+    const filejs = `${dataIframe}/script.js`;
+    const filecss = `${dataIframe}/style.css`;
     const template = `
-      <div class="small open-source">
-        <a href="${detectUrl(fileJS)}" target="_blank">→ open JS file</a> 
-        <a href="#" class="full-screen arrow">full screen example</a>
-        <a href="#" class="show-code arrow">show JS code</a>
+      <div class="flex open-source">
+        <a type="button" href="${detectUrl(
+          filejs
+        )}" target="_blank">open JS file</a> 
+        <a type="button" href="#" class="full-screen">full screen example</a>
+        <a type="button" href="#" class="show-code-js">show JS code</a>
+        <a type="button" href="#" class="show-code-css ${setHidden}">show CSS code</a>
       </div>${dataInfoTeamplte}`;
 
     flex.innerHTML = template;
@@ -127,45 +135,29 @@ document.addEventListener("DOMContentLoaded", () => {
     place.insertAdjacentElement("beforeend", iframe);
     iframe.insertAdjacentElement("afterend", flex);
 
-    const infoDescription = document.querySelector(".info-description");
-    const pre = document.createElement("pre");
-    pre.className = "code-place hidden";
-    const code = document.createElement("code");
+    // --------------------------------------------------
+    // create css/js code to show
 
-    pre.appendChild(code);
+    const typeCode = [
+      { type: "js", file: filejs, show: true },
+      { type: "css", file: filecss, show: showCssELement },
+    ];
 
-    infoDescription.insertAdjacentElement("afterend", pre);
+    typeCode.forEach((obj) => {
+      createPlaceWidthCodeCssAndJs(obj);
+    });
 
-    fetchData(detectUrl(`${fileJS}`), "text")
-      .then((data) => {
-        code.className = "language-js";
-        code.textContent = data;
-      })
-      .then(() => {
-        document.querySelectorAll("pre code").forEach((el) => {
-          hljs.highlightElement(el);
-        });
-      })
-      .then(() => {
-        const showCode = document.querySelector(".show-code");
-        showCode.addEventListener("click", (e) => {
-          e.preventDefault();
-          pre.classList.toggle("hidden");
-          document.body.classList.toggle("show-code-iframe");
-        });
+    const fullScreen = document.querySelector(".full-screen");
+    fullScreen.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.body.classList.add("show-code-full-screen");
+    });
 
-        const fullScreen = document.querySelector(".full-screen");
-        fullScreen.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.body.classList.add("show-code-full-screen");
-        });
-
-        const closeFullScreen = document.querySelector(".hide-iframe");
-        closeFullScreen.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.body.classList.remove("show-code-full-screen");
-        });
-      });
+    const closeFullScreen = document.querySelector(".hide-iframe");
+    closeFullScreen.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.body.classList.remove("show-code-full-screen");
+    });
 
     document.body.classList.remove("show-menu-examples");
   }
@@ -177,6 +169,59 @@ document.addEventListener("DOMContentLoaded", () => {
         : `https://raw.githubusercontent.com/tomickigrzegorz/leaflet-examples/master/docs/${file}`;
     return url;
   }
+
+  function createPlaceWidthCodeCssAndJs(obj) {
+    const { type, file, show } = obj;
+
+    if (!show) return;
+    const infoDescription = document.querySelector(".info-description");
+    const pre = document.createElement("pre");
+    pre.className = `code-place-${type} hidden`;
+    pre.id = `code-place-${type}`;
+    const code = document.createElement("code");
+
+    pre.appendChild(code);
+
+    infoDescription.insertAdjacentElement("afterend", pre);
+
+    fetchData(detectUrl(`${file}`), "text")
+      .then((data) => {
+        code.className = `language-${type}`;
+        code.textContent = data;
+      })
+      .then(() => {
+        document.querySelectorAll("pre code").forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+  }
+
+  document.addEventListener("click", (e) => {
+    const target = e.target;
+    if (target.classList.contains("show-code-js")) {
+      target.classList.toggle("show-code");
+      const cssElementCss = document.querySelector(`.show-code-css`);
+      cssElementCss.classList.remove("show-code");
+
+      const jsElement = document.querySelector(`#code-place-js`);
+      jsElement.classList.toggle("hidden");
+
+      const cssElement = document.querySelector(`#code-place-css`);
+      cssElement.classList.add("hidden");
+    }
+
+    if (target.classList.contains("show-code-css")) {
+      target.classList.toggle("show-code");
+      const jsElementJs = document.querySelector(`.show-code-js`);
+      jsElementJs.classList.remove("show-code");
+
+      const cssElement = document.querySelector(`#code-place-css`);
+      cssElement.classList.toggle("hidden");
+
+      const jsElement = document.querySelector(`#code-place-js`);
+      jsElement.classList.add("hidden");
+    }
+  });
 });
 
 // ------------------------------------------------------------

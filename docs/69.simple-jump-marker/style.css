@@ -68,7 +68,7 @@ body {
 }
 
 @keyframes jumpPopup {
- from {
+  from {
     transform: translate3d(var(--position-x), var(--position-y), 0);
   }
   to {
@@ -77,6 +77,5 @@ body {
       calc(var(--position-y) - 10px),
       0
     );
-  }
   }
 }
