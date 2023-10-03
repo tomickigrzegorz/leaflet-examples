@@ -144,21 +144,22 @@ nav a {
   display: block;
   text-decoration: none;
   color: #000;
-  padding: 10px 20px 10px 40px;
+  padding: 10px 10px 10px 40px;
   font-size: 16px;
 }
 
 nav a:hover {
-  background: #d6d6d6;
+  background: #343434;
+  color: #fff;
   text-decoration: none;
 }
 
 .active-menu {
-  background: #333 !important;
+  background: #3e3e3e;
 }
 
 a.active-menu {
-  color: #e2e2e2;
+  color: #fff;
 }
 
 .show-menu {
@@ -230,13 +231,40 @@ a.active-menu {
 }
 
 .item {
-  counter-increment: counter;
+  position: relative;
+  border-bottom: 1px solid rgba(58, 58, 58, 0.268);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .item:before {
-  content: counters(counter, ".", decimal-leading-zero) ". ";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: attr(rel);
   position: absolute;
-  left: 12px;
+  left: 0;
+  line-height: 120%;
+  background-color: #fff;
+  border-radius: 0 30% 30% 0;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.active-menu.item:before {
+  background-color: #0095ff;
+  color: #fff;
+}
+.active-menu.item:hover:before {
+  color: #fff;
+}
+
+.item:before,
+.item:hover:before {
+  color: #000;
 }
 
 .code-place-js,
@@ -248,7 +276,43 @@ a.active-menu {
 .code-place-js code,
 .code-place-css code {
   border-radius: 5px;
-  padding: 1.5em;
+  padding: 3rem 1.5em 1.5rem;
+}
+
+.language {
+  position: relative;
+}
+
+[data-lang="js"]::before,
+[data-lang="css"]::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #fff;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 5px 0 0 0;
+  text-transform: uppercase;
+}
+
+.copy-code {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #fff;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 0 5px 0 0;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.copy-code:hover {
+  color: #000;
+  background-color: #fff;
 }
 
 details {

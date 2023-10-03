@@ -88,6 +88,10 @@ img {
   display: none !important;
 }
 
+.show-code-full-screen {
+  overflow: hidden;
+}
+
 .show-code-full-screen iframe {
   position: fixed;
   display: flex;

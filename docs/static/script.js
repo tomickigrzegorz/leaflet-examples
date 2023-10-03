@@ -15,20 +15,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   fetchData("./menu.json", "json").then((data) => {
-    data.forEach(({ link, text, info, position, style }, index) => {
+    const reverseArray = [...data].reverse();
+
+    reverseArray.forEach(({ link, text, info, position, style }, index) => {
+      const reversIndex = reverseArray.length - index;
+      // add zero to index
+      const zerofill =
+        (reversIndex < 10 && reversIndex > -1 ? "0" : "") + reversIndex;
+
       const element = document.createElement("a");
       element.className = "item";
       if (index == 0) {
         element.classList.add("active-menu");
       }
       element.href = `#${link}`;
+      element.rel = zerofill;
       element.setAttribute("data-iframe", link);
       element.setAttribute("data-css", style ? style : false);
       element.setAttribute("data-position", position);
       if (info) {
         element.setAttribute("data-info", info);
       }
-      element.textContent = text;
+      element.textContent = text.charAt(0).toUpperCase() + text.slice(1);
+
       nav.appendChild(element);
     });
 
@@ -42,8 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const hash = location.hash;
     if (hash) {
       renderIframe(hash.replace("#", ""));
+
+      document.querySelector(".active-menu").scrollIntoView();
     } else {
-      renderIframe("01.simple-map");
+      renderIframe("71.text-below-a-marker");
     }
   });
 
@@ -147,18 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
       createPlaceWidthCodeCssAndJs(obj);
     });
 
-    const fullScreen = document.querySelector(".full-screen");
-    fullScreen.addEventListener("click", (e) => {
-      e.preventDefault();
-      document.body.classList.add("show-code-full-screen");
-    });
-
-    const closeFullScreen = document.querySelector(".hide-iframe");
-    closeFullScreen.addEventListener("click", (e) => {
-      e.preventDefault();
-      document.body.classList.remove("show-code-full-screen");
-    });
-
     document.body.classList.remove("show-menu-examples");
   }
 
@@ -174,12 +173,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const { type, file, show } = obj;
 
     if (!show) return;
-    const infoDescription = document.querySelector(".info-description");
-    const pre = document.createElement("pre");
-    pre.className = `code-place-${type} hidden`;
-    pre.id = `code-place-${type}`;
-    const code = document.createElement("code");
 
+    const infoDescription = document.querySelector(".info-description");
+
+    const buttonCopy = document.createElement("button");
+    buttonCopy.className = "copy-code";
+    buttonCopy.textContent = "copy";
+
+    const pre = document.createElement("pre");
+    pre.className = `code-place-${type} language hidden`;
+    pre.id = `code-place-${type}`;
+    pre.dataset.lang = type;
+    const code = document.createElement("code");
+    // pre.appendChild(buttonCopy);
     pre.appendChild(code);
 
     infoDescription.insertAdjacentElement("afterend", pre);
@@ -220,6 +226,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const jsElement = document.querySelector(`#code-place-js`);
       jsElement.classList.add("hidden");
+    }
+
+    if (target.classList.contains("full-screen")) {
+      document.body.classList.add("show-code-full-screen");
+    }
+
+    if (target.classList.contains("hide-iframe")) {
+      document.body.classList.remove("show-code-full-screen");
     }
   });
 });
