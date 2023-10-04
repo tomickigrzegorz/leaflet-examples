@@ -14,10 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  let firstLink = "";
+
   fetchData("./menu.json", "json").then((data) => {
     const reverseArray = [...data].reverse();
 
     reverseArray.forEach(({ link, text, info, position, style }, index) => {
+      if (index === 0) {
+        firstLink = link;
+      }
+
       const reversIndex = reverseArray.length - index;
       // add zero to index
       const zerofill =
@@ -54,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.querySelector(".active-menu").scrollIntoView();
     } else {
-      renderIframe("71.text-below-a-marker");
+      renderIframe(firstLink);
     }
   });
 
