@@ -139,9 +139,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <a type="button" href="${detectUrl(
           filejs
         )}" target="_blank">open JS file</a> 
-        <a type="button" href="#" class="full-screen">full screen example</a>
         <a type="button" href="#" class="show-code-js">show JS code</a>
         <a type="button" href="#" class="show-code-css ${setHidden}">show CSS code</a>
+        <a type="button" href="#" class="full-screen">full screen example</a>
       </div>${dataInfoTeamplte}`;
 
     flex.innerHTML = template;
@@ -209,6 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.addEventListener("click", (e) => {
+    e.stopPropagation();
     const target = e.target;
     if (target.classList.contains("show-code-js")) {
       target.classList.toggle("show-code");
@@ -219,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
       jsElement.classList.toggle("hidden");
 
       const cssElement = document.querySelector(`#code-place-css`);
-      cssElement.classList.add("hidden");
+      cssElement?.classList.add("hidden");
     }
 
     if (target.classList.contains("show-code-css")) {
