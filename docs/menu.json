@@ -425,5 +425,15 @@
     "info": "Example based on: <a href='https://stackoverflow.com/questions/59419337/how-to-add-text-below-a-marker-in-leaflet' target='_blank'>How to add text below a marker in leaflet?</a>, of course, also take a look at the styles",
     "position": "--pos-right: 10px, --pos-top: 10px",
     "style": true
+  },
+  {
+    "link": "72.add-rectangle-over-click-tiles",
+    "text": "add rectangle over click tiles",
+    "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "73.change-tile-style-when-click",
+    "text": "change tile style when click",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]

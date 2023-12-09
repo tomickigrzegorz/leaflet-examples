@@ -14,6 +14,8 @@ Here is a working live demo : https://tomickigrzegorz.github.io/leaflet-examples
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+73 [change-tile-style-when-click](https://tomickigrzegorz.github.io/leaflet-examples/#73.change-tile-style-when-click)  
+72 [add-rectangle-over-click-tiles](https://tomickigrzegorz.github.io/leaflet-examples/#72.add-rectangle-over-click-tiles)  
 71 [text-below-a-marker](https://tomickigrzegorz.github.io/leaflet-examples/#71.text-below-a-marker)  
 70 [polygon-with-gradien](https://tomickigrzegorz.github.io/leaflet-examples/#70.polygon-with-gradien)  
 69 [simple-jump-marker](https://tomickigrzegorz.github.io/leaflet-examples/#69.simple-jump-marker)  
