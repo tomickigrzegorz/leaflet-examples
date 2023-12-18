@@ -16,6 +16,6 @@
     "eslint": "^8.50.0",
     "http-server": "^14.1.1",
     "leaflet": "^1.9.4",
-    "prettier": "^3.0.3"
+    "prettier": "^3.1.1"
   }
 }
