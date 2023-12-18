@@ -435,5 +435,10 @@
     "link": "73.change-tile-style-when-click",
     "text": "change tile style when click",
     "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "74.open-popup-markercluster-from-outside",
+    "text": "Open popup markercluster from outside",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]
