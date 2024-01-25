@@ -118,7 +118,7 @@ function showHideLayer(target) {
   const checkedBoxes = document.querySelectorAll("input[name=item]:checked");
 
   document.querySelector("#all-layers").checked =
-    checkedBoxes.length <= 3 ? false : true;
+    checkedBoxes.length - (document.querySelector("#all-layers").checked === true ? 1 : 0) < 3 ? false : true;
 }
 
 function checkedType(id, type) {
