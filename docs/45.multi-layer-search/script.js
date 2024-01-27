@@ -128,10 +128,10 @@ new Autocomplete("multi-layer-serch", {
 
   // fly to the place and open popup
   onSubmit: ({ object }) => {
-    const cord = object.geometry.coordinates.reverse();
+    const [lat, lng] = object.geometry.coordinates;
 
     // fly to coordinates
-    map.flyTo(cord);
+    map.flyTo([lng, lat]);
 
     // find marker in the layer and open it
     poiLayers.eachLayer(function (layer) {
@@ -143,14 +143,6 @@ new Autocomplete("multi-layer-serch", {
         }
       });
     });
-
-    // map.eachLayer(function (layer) {
-    //   if (layer.options && layer.options.pane === "markerPane") {
-    //     if (layer.feature.id === object.id) {
-    //       layer.openPopup();
-    //     }
-    //   }
-    // });
   },
 
   // no results

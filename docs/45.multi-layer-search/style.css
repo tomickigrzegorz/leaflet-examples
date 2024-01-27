@@ -127,3 +127,8 @@ body {
   height: 30px;
   margin-right: 5px;
 }
+
+.max-height ul {
+  max-height: 350px;
+  overflow: auto;
+}
