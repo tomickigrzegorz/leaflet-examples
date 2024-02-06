@@ -23,11 +23,6 @@ let points = [
   [52.22998444382795, 21.012511253356937, "point 5"],
   [52.230188154960125, 21.013487577438358, "point 6"],
   [52.230299867119605, 21.01395428180695, "point 7"],
-  [51.26191485308451, 17.753906250000004, "point 8"],
-  [51.23440735163461, 17.578125000000004, "point 9"],
-  [50.84757295365389, 17.753906250000004, "point 10"],
-  [50.90303283111257, 18.061523437500004, "point 11"],
-  [51.04139389812637, 17.446289062500004, "point 12"],
 ];
 
 // calling map
@@ -50,7 +45,7 @@ for (let i = 0; i < points.length; i++) {
   const [lat, lng, title] = points[i];
 
   let marker = L.marker(new L.LatLng(lat, lng)).bindPopup(title);
-  markerList.push(marker);  
+  markerList.push(marker);
   markers.addLayer(marker);
 }
 
@@ -70,19 +65,16 @@ points.map((point, index) => {
 });
 
 // add event listener to list of markers
-document.querySelectorAll(".markercluster ul li a").forEach((a,idx) => {
-  a.addEventListener("click", (e) => {
-    e.preventDefault();
 
-    // get index of marker
-    const index = e.target.dataset.index;
+document.addEventListener("click", (e) => {
+  const target = e.target;
 
-    const m = markerList[index];
+  if (!target.closest(".markercluster ul li a")) return;
 
-    // zoom to marker and open popup
-    markers.zoomToShowLayer(m, () => { 
-      m.openPopup();
-    });
+  e.preventDefault();
+  const index = target.dataset.index;
+  const marker = markerList[index];
+  markers.zoomToShowLayer(marker, () => {
+    marker.openPopup();
   });
 });
-
