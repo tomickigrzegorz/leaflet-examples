@@ -249,5 +249,6 @@ function openFile(event) {
     setGeojsonToMap(geojson);
   };
   reader.readAsText(input.files[0]);
-  event.target.value = null;
+
+  input.value = "";
 }
