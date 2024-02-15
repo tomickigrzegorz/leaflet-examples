@@ -5,7 +5,7 @@
 
 // config map
 let config = {
-  minZoom: 7,
+  minZoom: 5,
   maxZoom: 18,
   fullscreenControl: true,
 };
@@ -62,7 +62,7 @@ const customControl = L.Control.extend({
         className: "remove link-button leaflet-bar",
       },
       {
-        title: "load gejson from file",
+        title: "load geojson from file",
         html: "<input type='file' id='geojson' class='geojson' accept='text/plain, text/json, .geojson' onchange='openFile(event)' /><label for='geojson'><svg class='icon-geojson'><use xlink:href='#icon-import'></use></svg></label>",
         className: "load link-button leaflet-bar",
       },
@@ -249,4 +249,6 @@ function openFile(event) {
     setGeojsonToMap(geojson);
   };
   reader.readAsText(input.files[0]);
+
+  input.value = "";
 }
