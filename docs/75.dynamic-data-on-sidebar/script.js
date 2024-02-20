@@ -81,7 +81,7 @@ function listMarkers() {
   });
 }
 
-//Fired when user stopped dragging the map
+//Event fired when user stopped dragging the map
 map.on('moveend', function (e) {
   sidebar.innerHTML = '';
   listMarkers();

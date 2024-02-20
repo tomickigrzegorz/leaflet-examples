@@ -58,6 +58,7 @@ body {
   background: #f1f1f1;
 }
 
+/* Small Screen*/
 @media (max-width: 450px) {
   .flex {
     display: flex;
