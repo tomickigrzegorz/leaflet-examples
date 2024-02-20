@@ -440,5 +440,10 @@
     "link": "74.open-popup-markercluster-from-outside",
     "text": "Open popup markercluster from outside",
     "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "75.dynamic-data-on-sidebar",
+    "text": "Dynamic data on sidebar",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]
