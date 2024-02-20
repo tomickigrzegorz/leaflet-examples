@@ -14,6 +14,7 @@ Here is a working live demo : https://tomickigrzegorz.github.io/leaflet-examples
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+75 [dynamic-data-on-sidebar](https://tomickigrzegorz.github.io/leaflet-examples/#75.dynamic-data-on-sidebar) 
 74 [open-popup-markercluster-from-outside](https://tomickigrzegorz.github.io/leaflet-examples/#74.open-popup-markercluster-from-outside)  
 73 [change-tile-style-when-click](https://tomickigrzegorz.github.io/leaflet-examples/#73.change-tile-style-when-click)  
 72 [add-rectangle-over-click-tiles](https://tomickigrzegorz.github.io/leaflet-examples/#72.add-rectangle-over-click-tiles)  
