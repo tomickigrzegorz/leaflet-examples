@@ -445,5 +445,10 @@
     "link": "75.dynamic-data-on-sidebar",
     "text": "Dynamic data on sidebar",
     "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "76.move-marker",
+    "text": "move marker",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]

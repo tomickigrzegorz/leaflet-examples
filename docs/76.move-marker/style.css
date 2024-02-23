@@ -1,0 +1,61 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+html,
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+.move-marker-wrapper {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  top: 10px;
+  right: 10px;
+  z-index: 99999999;
+  max-width: 150px;
+  gap: 5px 10px;
+}
+
+.move-marker-wrapper > * {
+  flex: 0 45%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-size: 1.4rem;
+}
+
+.move-marker-wrapper > *:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.leaflet-marker-pane > *,
+.leaflet-shadow-pane > * {
+  transition: transform 0.3s ease-in;
+}
