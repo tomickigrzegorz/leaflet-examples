@@ -449,6 +449,6 @@
   {
     "link": "76.move-marker",
     "text": "move marker",
-    "position": "--pos-right: 10px, --pos-top: 10px"
+    "position": "--pos-right: 10px, --pos-bottom: 10px"
   }
 ]
