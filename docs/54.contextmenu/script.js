@@ -98,11 +98,13 @@ function showCoordinates(e) {
 
 function centerMap(e) {
   map.flyTo([moonCord.lat, moonCord.lng], 17, { animate: true, duration: 10 });
-  setTimeout(() => {
+
+  map.on("moveend", function () {
     marker.openPopup();
     showCoordinatesLabel.innerHTML =
       "<a href='https://en.wikipedia.org/wiki/Statue_of_Frank_Sinatra' target='_blank'>Open wiki: Statue of Frank Sinatra</a>";
-  }, 10000);
+  });
+
   hideMenu();
 }
 
