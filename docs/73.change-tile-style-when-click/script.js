@@ -35,11 +35,20 @@ map.on("click", (e) => {
     `img[src="https://tile.openstreetmap.org/${getTileNumber(lat, lng)}.png"]`
   );
 
-  img.style.filter = "grayscale(100%)";
-  img.style.border = "1px solid #000";
-  img.style.borderRadius = "10px";
-  img.style.padding = "5px";
-  img.style.backgroundColor = "white";
+  if (img.style.backgroundColor == "") {
+    img.style.filter = "grayscale(100%)";
+    img.style.border = "1px solid #000";
+    img.style.borderRadius = "10px";
+    img.style.padding = "5px";
+    img.style.backgroundColor = "white";
+  }
+  else {
+    img.style.filter = "";
+    img.style.border = "";
+    img.style.borderRadius = "";
+    img.style.padding = "";
+    img.style.backgroundColor = "";
+  }
 });
 
 // convert lat, lng to tile number
@@ -53,9 +62,9 @@ function getTileNumber(lat, lng) {
         Math.log(
           Math.tan((lat * Math.PI) / 180) + 1 / Math.cos((lat * Math.PI) / 180)
         ) /
-          Math.PI) /
+        Math.PI) /
         2) *
-        (1 << currentZoom)
+      (1 << currentZoom)
     )
   );
   return `${currentZoom}/${xtile}/${ytile}`;
