@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /**
- * XXXXXXXXXXXX
+ * move marker
  */
 
 // config map
