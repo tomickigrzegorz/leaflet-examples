@@ -7,6 +7,7 @@
 let config = {
   minZoom: 7,
   maxZoom: 18,
+  keyboard: false,
 };
 // magnification with which the map will start
 const zoom = 18;
@@ -29,11 +30,35 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // one marker
 L.marker([52.22983, 21.011728]).addTo(map).bindPopup("Center Warsaw");
 
-document.addEventListener("click", (e) => {
-  if (e.target.className !== "move") return;
+/**
+ * Move marker by click button
+ */
+["click", "keydown"].forEach((eventType) => {
+  document.addEventListener(eventType, (e) => {
+    const eventType = e.type;
 
+    let moveType;
+    if (eventType === "click") {
+      if (e.target.className !== "move") return;
+      moveType = e.target.id.split("-")[1];
+    }
+
+    if (eventType === "keydown") {
+      moveType = e.key;
+    }
+
+    moveMarker(moveType, eventType);
+  });
+});
+
+/**
+ * Move marker
+ *
+ * @param {string} moveType
+ * @param {string} evnetType
+ */
+function moveMarker(moveType, evnetType) {
   const offset = 100;
-  const moveType = e.target.id.split("-")[1];
 
   // get marker latlng from marker
   map.eachLayer((layer) => {
@@ -45,7 +70,12 @@ document.addEventListener("click", (e) => {
       const latLng = map.latLngToContainerPoint(latlngMarker);
 
       // move marker to new place
-      const moveToNewPlace = changePostion(latLng, moveType, offset);
+      const moveToNewPlace = changePostionByClickButton(
+        latLng,
+        offset,
+        evnetType,
+        moveType,
+      );
 
       // convert container point to latlng
       const newLatLng = map.containerPointToLatLng(moveToNewPlace);
@@ -57,25 +87,25 @@ document.addEventListener("click", (e) => {
       map.panTo([newLatLng.lat, newLatLng.lng]);
     }
   });
-});
+}
 
 /**
- * Change position of latlng
+ * Change position of latlng by click button
  *
  * @param {Object} latLng
  * @param {String} positionType
  * @param {Number} offset
- * @returns {Object}
+ * @returns object
  */
-function changePostion(latLng, positionType, offset) {
+function changePostionByClickButton(latLng, offset, eventType, positionType) {
   switch (positionType) {
-    case "up":
+    case eventType === "click" ? "up" : "ArrowUp":
       return { x: latLng.x, y: latLng.y - offset };
-    case "down":
+    case eventType === "click" ? "down" : "ArrowDown":
       return { x: latLng.x, y: latLng.y + offset };
-    case "left":
+    case eventType === "click" ? "left" : "ArrowLeft":
       return { x: latLng.x - offset, y: latLng.y };
-    case "right":
+    case eventType === "click" ? "right" : "ArrowRight":
       return { x: latLng.x + offset, y: latLng.y };
     default:
       return latLng;
