@@ -24,3 +24,11 @@ body {
   padding: 0;
   background-color: #f1f1f1;
 }
+
+.active-tiles {
+  filter: grayscale(100%);
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px !important;
+  background-color: white;
+}
