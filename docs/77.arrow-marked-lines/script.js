@@ -72,3 +72,22 @@ L.polylineDecorator(multiCoords1, {
     })
   }]
 }).addTo(map);
+
+// --- Example with a rotated marker ---
+var pathPattern = L.polylineDecorator(
+  [[22.9, 75], [22.18, 75.1], [22.61, 76.4]],
+  {
+    patterns: [
+      {
+        offset: '0%', repeat: 20, symbol: L.Symbol.marker({
+          rotate: true, markerOptions: {
+            icon: L.icon({
+              iconUrl: 'arrow.gif',
+              iconSize: [30, 30]
+            })
+          }
+        })
+      }
+    ]
+  }
+).addTo(map);
