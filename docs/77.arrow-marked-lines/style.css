@@ -19,13 +19,29 @@ html,
 
 body {
   position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   min-height: 100%;
   margin: 0;
   padding: 0;
   background-color: #f1f1f1;
+}
+
+.arrow-marker {
+  background-color: transparent;
+  border: 0;
+}
+
+.arrow-marker svg {
+  animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

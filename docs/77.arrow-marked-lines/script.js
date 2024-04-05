@@ -28,66 +28,98 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // ----------------------------------------------------------
 
 // --- Simple arrow ---
-var arrow = L.polyline([
-  [22.719568, 75.857727],
-  [22.962267, 76.050797]
-], {}).addTo(map);
-var arrowHead = L.polylineDecorator(arrow, {
-  patterns: [{
-    offset: '100%',
-    repeat: 0,
-    symbol: L.Symbol.arrowHead({
-      pixelSize: 15,
-      polygon: false,
-      pathOptions: {
-        stroke: true
-      }
-    })
-  }]
+const arrow = L.polyline(
+  [
+    [22.719568, 75.857727],
+    [22.962267, 76.050797],
+  ],
+  {},
+).addTo(map);
+const arrowHead = L.polylineDecorator(arrow, {
+  patterns: [
+    {
+      offset: "100%",
+      repeat: 0,
+      symbol: L.Symbol.arrowHead({
+        pixelSize: 15,
+        polygon: false,
+        pathOptions: {
+          stroke: true,
+        },
+      }),
+    },
+  ],
 }).addTo(map);
 
 // --- Expanded view arrow ---
-var multiCoords1 = [
+const multiCoords1 = [
   [
     [23.180491, 75.784121],
     [23.456516, 75.421467],
-    [23.333126, 75.034023]
+    [23.333126, 75.034023],
   ],
-
 ];
-var plArray = [];
-for (var i = 0; i < multiCoords1.length; i++) {
+let plArray = [];
+for (let i = 0; i < multiCoords1.length; i++) {
   plArray.push(L.polyline(multiCoords1[i]).addTo(map));
 }
 L.polylineDecorator(multiCoords1, {
-  patterns: [{
-    offset: 25,
-    repeat: 50,
-    symbol: L.Symbol.arrowHead({
-      pixelSize: 15,
-      pathOptions: {
-        fillOpacity: 1,
-        weight: 0
-      }
-    })
-  }]
+  patterns: [
+    {
+      offset: 25,
+      repeat: 50,
+      symbol: L.Symbol.arrowHead({
+        pixelSize: 15,
+        pathOptions: {
+          fillOpacity: 1,
+          weight: 0,
+        },
+      }),
+    },
+  ],
 }).addTo(map);
 
 // --- Example with a rotated marker ---
-var pathPattern = L.polylineDecorator(
-  [[22.9, 75], [22.18, 75.1], [22.61, 76.4]],
-  {
-    patterns: [
-      {
-        offset: '0%', repeat: 20, symbol: L.Symbol.marker({
-          rotate: true, markerOptions: {
-            icon: L.icon({
-              iconUrl: 'arrow.gif',
-              iconSize: [30, 30]
-            })
-          }
-        })
-      }
-    ]
-  }
-).addTo(map);
+
+const cords = [
+  [22.9, 75],
+  [22.18, 75.1],
+  [22.61, 76.4],
+];
+
+const pathPattern = L.polylineDecorator(cords, {
+  patterns: [
+    {
+      offset: "0",
+      repeat: map.getZoom() * 4,
+      symbol: L.Symbol.marker({
+        rotate: true,
+        markerOptions: {
+          icon: L.divIcon({
+            html: '<div class="arrow-single"><svg width="25" height="25" xmlns="http://www.w3.org/2000/svg"><path stroke="#5f6368" stroke-width="3.232" d="M12.5 2.976v18.936m-5.686-7.125 5.686 7.125m5.686-7.124L12.5 21.912"/></svg></div>',
+            iconSize: [30, 30],
+          }),
+        },
+      }),
+    },
+  ],
+}).addTo(map);
+
+// ----------------------------------------------
+// add class to marker icon
+
+map.eachLayer(function () {
+  addClassNameToMarker();
+});
+
+map.on("zoomend", function () {
+  addClassNameToMarker();
+});
+
+function addClassNameToMarker() {
+  map.eachLayer(function (layer) {
+    if (layer instanceof L.Marker) {
+      layer._icon.classList.add("arrow-marker");
+    }
+  });
+}
