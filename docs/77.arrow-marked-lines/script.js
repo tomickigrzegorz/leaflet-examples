@@ -10,7 +10,7 @@ let config = {
   keyboard: false,
 };
 // magnification with which the map will start
-const zoom = 9;
+const zoom = 8;
 // co-ordinates
 const lat = 23.010683;
 const lng = 75.660862;

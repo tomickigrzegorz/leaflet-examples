@@ -451,5 +451,10 @@
     "text": "move marker",
     "position": "--pos-right: 10px, --pos-bottom: 10px",
     "info": "Move marker by buttons or presing a keybord arrows"
+  },
+  {
+    "link": "77.arrow-marked-lines",
+    "text": "arrow marked lines",
+    "position": "--pos-right: 10px, --pos-bottom: 10px"
   }
 ]
