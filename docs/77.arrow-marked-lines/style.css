@@ -1,0 +1,58 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+html,
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+.arrow-single {
+  stroke: var(--arrow-color, #000);
+}
+
+.arrow-marker {
+  background-color: transparent;
+  border: 0;
+}
+
+.arrow-marker svg {
+  animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.color {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
