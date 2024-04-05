@@ -96,7 +96,7 @@ const pathPattern = L.polylineDecorator(cords, {
         rotate: true,
         markerOptions: {
           icon: L.divIcon({
-            html: '<div class="arrow-single"><svg width="25" height="25" xmlns="http://www.w3.org/2000/svg"><path stroke="#5f6368" stroke-width="3.232" d="M12.5 2.976v18.936m-5.686-7.125 5.686 7.125m5.686-7.124L12.5 21.912"/></svg></div>',
+            html: '<div class="arrow-single"><svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg"><path stroke-width="3.232" d="M12.5 2.976v18.936m-5.686-7.125 5.686 7.125m5.686-7.124L12.5 21.912"/></svg></div>',
             iconSize: [30, 30],
           }),
         },
@@ -123,3 +123,13 @@ function addClassNameToMarker() {
     }
   });
 }
+
+const getColor = document.querySelector(".color");
+
+getColor.addEventListener("input", (e) => {
+  const color = e.target.value;
+  const svg = document.querySelectorAll(".arrow-single svg");
+  svg.forEach((el) => {
+    el.querySelector("path").style.stroke = color;
+  });
+});

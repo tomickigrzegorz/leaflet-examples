@@ -25,6 +25,10 @@ body {
   background-color: #f1f1f1;
 }
 
+.arrow-single {
+  stroke: var(--arrow-color, #000);
+}
+
 .arrow-marker {
   background-color: transparent;
   border: 0;
@@ -44,4 +48,11 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+.color {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
 }
