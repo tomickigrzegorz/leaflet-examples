@@ -456,5 +456,10 @@
     "link": "77.arrow-marked-lines",
     "text": "arrow marked lines",
     "position": "--pos-right: 10px, --pos-bottom: 10px"
+  },
+  {
+    "link": "78.calculate-area",
+    "text": "Calculate area",
+    "position": "--pos-right: 10px, --pos-bottom: 10px"
   }
 ]
