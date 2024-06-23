@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const createText = document.createTextNode(
       check
         ? example.textContent
-        : document.querySelector(`a[data-iframe="${example}"`).textContent
+        : document.querySelector(`a[data-iframe="${example}"`).textContent,
     );
 
     // adding text to h2
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const template = `
       <div class="flex open-source">
         <a type="button" href="${detectUrl(
-          filejs
+          filejs,
         )}" target="_blank">open JS file</a> 
         <a type="button" href="#" class="show-code-js">show JS code</a>
         <a type="button" href="#" class="show-code-css ${setHidden}">show CSS code</a>
@@ -280,5 +280,20 @@ window.addEventListener("keydown", function (event) {
   // close sidebar when press esc
   if (event.key === "Escape") {
     document.body.classList.remove("show-code-full-screen");
+  }
+});
+
+// use arrow keys to navigate active-menu
+document.addEventListener("keydown", (e) => {
+  const activeMenu = document.querySelector(".active-menu");
+  if (e.key === "ArrowDown") {
+    // scrollIntoView minus li height
+    activeMenu.nextElementSibling?.click();
+    activeMenu.nextElementSibling?.scrollIntoView();
+  }
+
+  if (e.key === "ArrowUp") {
+    activeMenu.previousElementSibling?.click();
+    activeMenu.previousElementSibling?.scrollIntoView();
   }
 });
