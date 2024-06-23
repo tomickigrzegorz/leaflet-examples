@@ -14,6 +14,7 @@ Here is a working live demo : https://tomickigrzegorz.github.io/leaflet-examples
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+78 [calculate-area](https://tomickigrzegorz.github.io/leaflet-examples/#78.calculate-area)  
 77 [arrow-marked-lines](https://tomickigrzegorz.github.io/leaflet-examples/#77.arrow-marked-lines)  
 76 [move-marker](https://tomickigrzegorz.github.io/leaflet-examples/#76.move-marker)  
 75 [dynamic-data-on-sidebar](https://tomickigrzegorz.github.io/leaflet-examples/#75.dynamic-data-on-sidebar)  
