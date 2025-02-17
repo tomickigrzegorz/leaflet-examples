@@ -289,7 +289,11 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowDown") {
     // scrollIntoView minus li height
     activeMenu.nextElementSibling?.click();
-    activeMenu.nextElementSibling?.scrollIntoView();
+    activeMenu.nextElementSibling?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
   }
 
   if (e.key === "ArrowUp") {
