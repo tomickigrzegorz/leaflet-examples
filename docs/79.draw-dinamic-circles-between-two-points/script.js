@@ -18,7 +18,6 @@ const lng = 21.01178;
 const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
-// Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -39,13 +38,18 @@ const points = [
 let circleMarkers = [];
 
 function addInterpolatedMarkers(map, points) {
-  // We remove previous circleMarkers
+  // Remove previous circleMarkers
   circleMarkers.forEach((marker) => map.removeLayer(marker));
   circleMarkers = [];
 
   const [start, end] = points.map((p) => L.latLng(p[0], p[1]));
   const totalDistance = start.distanceTo(end);
-  const stepDistance = 10; // Distance between markers in meters
+  const zoomLevel = map.getZoom();
+
+  // Base step distance
+  const baseStepDistance = 6;
+  // Adjust step distance based on zoom level (higher zoom -> denser markers)
+  const stepDistance = baseStepDistance / Math.pow(1.7, zoomLevel - 20);
   const numMarkers = Math.max(1, Math.floor(totalDistance / stepDistance));
 
   for (let i = 1; i <= numMarkers; i++) {
@@ -68,14 +72,17 @@ const draggableMarkers = points.map((point, index) => {
   const marker = L.marker(point, { draggable: true }).addTo(map);
 
   marker.on("drag", () => {
-    // We update the coordinates of the points
+    // Update the coordinates of the points
     points[index] = [marker.getLatLng().lat, marker.getLatLng().lng];
-    // We refresh circleMarkers
+    // Refresh circleMarkers
     addInterpolatedMarkers(map, points);
   });
 
   return marker;
 });
+
+// Update markers when zooming
+map.on("zoomend", () => addInterpolatedMarkers(map, points));
 
 // Initial drawing of circleMarkers
 addInterpolatedMarkers(map, points);
