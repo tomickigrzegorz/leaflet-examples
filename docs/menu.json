@@ -390,7 +390,7 @@
   {
     "link": "66.leaflet-geoman",
     "text": "leaflet-geoman",
-    "info": "<a href='https://geoman.io/leaflet-geoman' target='_blank'>Leaflet-Geoman - the best geometry editing for Leaflet Maps</a>",
+    "info": "<a href='https://geoman.io' target='_blank'>Leaflet-Geoman - the best geometry editing for Leaflet Maps</a>",
     "position": "--pos-right: 10px, --pos-bottom: 80px"
   },
   {
@@ -461,5 +461,11 @@
     "link": "78.calculate-area",
     "text": "Calculate area",
     "position": "--pos-right: 10px, --pos-bottom: 10px"
+  },
+  {
+    "link": "79.draw-dinamic-circles-between-two-points",
+    "text": "Draw dinamic circles marker between two points",
+    "position": "--pos-right: 10px, --pos-top: 10px",
+    "info": "Move markers to see changes."
   }
 ]
