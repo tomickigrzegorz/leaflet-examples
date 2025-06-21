@@ -301,9 +301,9 @@ window.addEventListener("keydown", function (event) {
   }
 
   // open full screen when press f if not already open else close
-  if (event.key === "f") {
-    document.body.classList.toggle("show-code-full-screen");
-  }
+  // if (event.key === "f") {
+  //   document.body.classList.toggle("show-code-full-screen");
+  // }
 });
 
 // use arrow keys to navigate active-menu
