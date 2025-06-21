@@ -19,33 +19,36 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchData("./menu.json", "json").then((data) => {
     const reverseArray = [...data].reverse();
 
-    reverseArray.forEach(({ link, text, info, position, style }, index) => {
-      if (index === 0) {
-        firstLink = link;
-      }
+    reverseArray.forEach(
+      ({ link, text, info, position, style, extend }, index) => {
+        if (index === 0) {
+          firstLink = link;
+        }
 
-      const reversIndex = reverseArray.length - index;
-      // add zero to index
-      const zerofill =
-        (reversIndex < 10 && reversIndex > -1 ? "0" : "") + reversIndex;
+        const reversIndex = reverseArray.length - index;
+        // add zero to index
+        const zerofill =
+          (reversIndex < 10 && reversIndex > -1 ? "0" : "") + reversIndex;
 
-      const element = document.createElement("a");
-      element.className = "item";
-      if (index == 0) {
-        element.classList.add("active-menu");
-      }
-      element.href = `#${link}`;
-      element.rel = zerofill;
-      element.setAttribute("data-iframe", link);
-      element.setAttribute("data-css", style ? style : false);
-      element.setAttribute("data-position", position);
-      if (info) {
-        element.setAttribute("data-info", info);
-      }
-      element.textContent = text.charAt(0).toUpperCase() + text.slice(1);
+        const element = document.createElement("a");
+        element.className = "item";
+        if (index == 0) {
+          element.classList.add("active-menu");
+        }
+        element.href = `#${link}`;
+        element.rel = zerofill;
+        element.setAttribute("data-iframe", link);
+        element.setAttribute("data-css", style ? style : false);
+        element.setAttribute("data-extend", extend?.length ? extend : false);
+        element.setAttribute("data-position", position);
+        if (info) {
+          element.setAttribute("data-info", info);
+        }
+        element.textContent = text.charAt(0).toUpperCase() + text.slice(1);
 
-      nav.appendChild(element);
-    });
+        nav.appendChild(element);
+      },
+    );
 
     const examples = document.querySelectorAll(".item");
     examples.forEach((example) => {
@@ -132,15 +135,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const showCssELement = isActive.dataset.css == "false" ? false : true;
 
+    const extendExists = isActive.dataset.extend == "false" ? false : true;
+
+    // create button to show extend code
+    let extendTemplate = "";
+    if (extendExists) {
+      const extendExistsFile = isActive.dataset.extend.split(",");
+      extendTemplate = extendExistsFile
+        .map((item) => {
+          // remove extenstion from file name js, css, html
+          return `<a type="button" href="${dataIframe}/${item}" target="_blank">open <b>${item.replace(/\.(js|css|html)$/, "")}</b> file</a>`;
+        })
+        .join(" ");
+    }
+
     const filejs = `${dataIframe}/script.js`;
     const filecss = `${dataIframe}/style.css`;
     const template = `
       <div class="flex open-source">
-        <a type="button" href="${detectUrl(
-          filejs,
-        )}" target="_blank">open JS file</a> 
         <a type="button" href="#" class="show-code-js">show JS code</a>
         <a type="button" href="#" class="show-code-css ${setHidden}">show CSS code</a>
+        <a type="button" href="${detectUrl(
+          filejs,
+        )}" target="_blank">open <b>SCRIPT</b> JS file</a> 
+        ${extendTemplate ? extendTemplate : ""}
         <a type="button" href="#" class="full-screen">full screen example</a>
       </div>${dataInfoTeamplte}`;
 
@@ -280,6 +298,11 @@ window.addEventListener("keydown", function (event) {
   // close sidebar when press esc
   if (event.key === "Escape") {
     document.body.classList.remove("show-code-full-screen");
+  }
+
+  // open full screen when press f if not already open else close
+  if (event.key === "f") {
+    document.body.classList.toggle("show-code-full-screen");
   }
 });
 
