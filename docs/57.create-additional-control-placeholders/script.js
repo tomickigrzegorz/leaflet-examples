@@ -62,7 +62,9 @@ configs.forEach((item) => {
 
       L.DomEvent.disableClickPropagation(container);
 
-      container.insertAdjacentHTML("beforeend", item.description);
+      // Sanitize the description before inserting it into the DOM
+      const sanitizedDescription = DOMPurify.sanitize(item.description);
+      container.insertAdjacentHTML("beforeend", sanitizedDescription);
 
       return container;
     },
