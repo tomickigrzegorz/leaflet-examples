@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -28,8 +28,8 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // ------------------------------
 const legend = L.control({ position: "bottomleft" });
 
-legend.onAdd = function () {
-  let div = L.DomUtil.create("div", "description");
+legend.onAdd = () => {
+  const div = L.DomUtil.create("div", "description");
   L.DomEvent.disableClickPropagation(div);
   const text = "Try to move one of the markers";
   div.insertAdjacentHTML("beforeend", text);

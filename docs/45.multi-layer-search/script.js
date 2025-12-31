@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -42,9 +42,9 @@ function clickZoom(e) {
   map.setView(e.target.getLatLng(), zoom);
 }
 
-let geojsonOpts = {
-  pointToLayer: function (feature, latlng) {
-    return L.marker(latlng, {
+const geojsonOpts = {
+  pointToLayer: (feature, latlng) =>
+    L.marker(latlng, {
       icon: L.divIcon({
         className: feature.properties.amenity,
         iconSize: L.point(16, 16),
@@ -53,13 +53,9 @@ let geojsonOpts = {
       }),
     })
       .bindPopup(
-        feature.properties.amenity +
-          "<br><b>" +
-          feature.properties.name +
-          "</b>"
+        `${feature.properties.amenity}<br><b>${feature.properties.name}</b>`
       )
-      .on("click", clickZoom);
-  },
+      .on("click", clickZoom),
 };
 
 // fetching data from geojson
@@ -81,14 +77,14 @@ new Autocomplete("multi-layer-serch", {
   selectFirst: true,
 
   onSearch: ({ currentValue }) => {
-    let places = []; // array of places
+    const places = []; // array of places
 
     /**
      * Get places from geojson and push them to places array
      */
-    poiLayers.eachLayer(function (layer) {
+    poiLayers.eachLayer((layer) => {
       if (layer instanceof L.LayerGroup) {
-        layer.eachLayer(function (layer) {
+        layer.eachLayer((layer) => {
           if (layer instanceof L.Marker) {
             places.push(layer.feature);
           }
@@ -119,8 +115,8 @@ new Autocomplete("multi-layer-serch", {
                   (str) => `<mark>${str}</mark>`
                 )}</div>
                 <div class="place-item ${element.properties.amenity}">${
-              element.properties.amenity
-            }</div>
+                  element.properties.amenity
+                }</div>
               </li> `;
           })
           .join("");
@@ -134,8 +130,8 @@ new Autocomplete("multi-layer-serch", {
     map.flyTo([lng, lat]);
 
     // find marker in the layer and open it
-    poiLayers.eachLayer(function (layer) {
-      layer.eachLayer(function (layer) {
+    poiLayers.eachLayer((layer) => {
+      layer.eachLayer((layer) => {
         if (layer instanceof L.Marker) {
           if (layer.feature.id === object.id) {
             layer.openPopup();
@@ -165,7 +161,7 @@ const color = ["be4dff", "ff8146", "ff3939"];
 const label = ["bar", "pharmacy", "restaurant"];
 
 const rows = [];
-legend.onAdd = function () {
+legend.onAdd = () => {
   // we create a div with a legend class
   const div = L.DomUtil.create("div", "legend");
 

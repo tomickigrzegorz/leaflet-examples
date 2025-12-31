@@ -6,7 +6,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -31,7 +31,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const legend = L.control({ position: "bottomleft" });
 
-legend.onAdd = function () {
+legend.onAdd = () => {
   const div = L.DomUtil.create("div", "description");
   L.DomEvent.disableClickPropagation(div);
 
@@ -104,7 +104,7 @@ markers.forEach(([lat, lng], index) => {
   L.marker([lat, lng], {
     icon: L.divIcon({
       className: "leaflet-marker-icon",
-      html: `<span></span>`,
+      html: "<span></span>",
       popupAnchor: [10, -7],
     }),
   }).addTo(fg);
@@ -183,6 +183,6 @@ markersInView();
 // ------------------------------------------
 // count markers in view when map is moved
 
-map.on("moveend", function () {
+map.on("moveend", () => {
   markersInView();
 });

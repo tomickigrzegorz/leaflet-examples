@@ -123,9 +123,7 @@ img {
   border-radius: 50px;
   text-transform: uppercase;
   color: #000;
-  transition:
-    background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 

@@ -9,7 +9,7 @@ const moonCord = {
 };
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -99,7 +99,7 @@ function showCoordinates(e) {
 function centerMap(e) {
   map.flyTo([moonCord.lat, moonCord.lng], 17, { animate: true, duration: 10 });
 
-  map.on("moveend", function () {
+  map.on("moveend", () => {
     marker.openPopup();
     showCoordinatesLabel.innerHTML =
       "<a href='https://en.wikipedia.org/wiki/Statue_of_Frank_Sinatra' target='_blank'>Open wiki: Statue of Frank Sinatra</a>";
@@ -162,8 +162,8 @@ function removeTextFromLabel() {
 }
 
 // Add context menu to the map
-var menu = document.querySelector("#map");
-document.addEventListener("contextmenu", function (e) {
+const menu = document.querySelector("#map");
+document.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 
   // show context menu
@@ -189,7 +189,7 @@ function show(e) {
 
 // ------------------------------------------
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("wheel", hideMenu);
 
   ["zoomstart", "resize", "click", "move"].forEach((eventType) => {

@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -29,12 +29,12 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // stackoverflow.com/a/33621034/10424385
 
 (function addControlPlaceholders(map) {
-  let corners = map._controlCorners;
-  let l = "leaflet-";
-  let container = map._controlContainer;
+  const corners = map._controlCorners;
+  const l = "leaflet-";
+  const container = map._controlContainer;
 
   function createCorner(vSide, hSide) {
-    let className = l + vSide + " " + l + hSide;
+    const className = `${l + vSide} ${l}${hSide}`;
     corners[vSide + hSide] = L.DomUtil.create("div", className, container);
   }
 
@@ -57,7 +57,7 @@ configs.forEach((item) => {
     options: {
       position: item.position,
     },
-    onAdd: function () {
+    onAdd: () => {
       const container = L.DomUtil.create("div", "description");
 
       L.DomEvent.disableClickPropagation(container);

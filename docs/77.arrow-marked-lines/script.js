@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
   keyboard: false,
@@ -33,7 +33,7 @@ const arrow = L.polyline(
     [22.719568, 75.857727],
     [22.962267, 76.050797],
   ],
-  {},
+  {}
 ).addTo(map);
 const arrowHead = L.polylineDecorator(arrow, {
   patterns: [
@@ -59,7 +59,7 @@ const multiCoords1 = [
     [23.333126, 75.034023],
   ],
 ];
-let plArray = [];
+const plArray = [];
 for (let i = 0; i < multiCoords1.length; i++) {
   plArray.push(L.polyline(multiCoords1[i]).addTo(map));
 }
@@ -108,16 +108,16 @@ const pathPattern = L.polylineDecorator(cords, {
 // ----------------------------------------------
 // add class to marker icon
 
-map.eachLayer(function () {
+map.eachLayer(() => {
   addClassNameToMarker();
 });
 
-map.on("zoomend", function () {
+map.on("zoomend", () => {
   addClassNameToMarker();
 });
 
 function addClassNameToMarker() {
-  map.eachLayer(function (layer) {
+  map.eachLayer((layer) => {
     if (layer instanceof L.Marker) {
       layer._icon.classList.add("arrow-marker");
     }

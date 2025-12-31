@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 6,
   maxZoom: 18,
 };
@@ -15,7 +15,7 @@ const lat = 51.9189046;
 const lng = 19.1343786;
 
 // coordinate array with popup text
-let points = [
+const points = [
   [52.22922544734814, 21.008997559547428, "point 1"],
   [52.22941930482576, 21.009861230850223, "point 2"],
   [52.22966244690615, 21.011084318161014, "point 3"],
@@ -37,14 +37,14 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 // L.MarkerClusterGroup extends L.FeatureGroup
 // by clustering the markers contained within
-let markers = L.markerClusterGroup();
-let markerList = [];
+const markers = L.markerClusterGroup();
+const markerList = [];
 
 // Add markers to the layer
 for (let i = 0; i < points.length; i++) {
   const [lat, lng, title] = points[i];
 
-  let marker = L.marker(new L.LatLng(lat, lng)).bindPopup(title);
+  const marker = L.marker(new L.LatLng(lat, lng)).bindPopup(title);
   markerList.push(marker);
   markers.addLayer(marker);
 }

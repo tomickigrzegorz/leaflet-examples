@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -32,7 +32,7 @@ const customControl = L.Control.extend({
   },
 
   // method
-  onAdd: function (map) {
+  onAdd: (map) => {
     // create button
     const btn = L.DomUtil.create("button");
     btn.title = "pooooooooooooop rotation";
@@ -54,7 +54,7 @@ const customControl = L.Control.extend({
     };
 
     // action when clik on button
-    btn.onclick = function () {
+    btn.onclick = () => {
       // add class rotate
       document.body.classList.add("rotate");
       // remove class after 4s

@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -90,7 +90,7 @@ class MarkerTracker {
           iconAnchor: [12, 41],
           popupAnchor: [1, -34],
           shadowSize: [41, 41],
-        }),
+        })
       );
     }
 
@@ -107,7 +107,7 @@ class MarkerTracker {
         iconAnchor: [12, 41],
         popupAnchor: [1, -34],
         shadowSize: [41, 41],
-      }),
+      })
     );
 
     this.updateDirectionIndicator();
@@ -128,7 +128,7 @@ class MarkerTracker {
     const bounds = this.map.getBounds();
     const markerLatLng = L.latLng(
       this.selectedMarker.lat,
-      this.selectedMarker.lng,
+      this.selectedMarker.lng
     );
 
     // Check if marker is in viewport
@@ -141,9 +141,6 @@ class MarkerTracker {
     const mapCenter = this.map.getCenter();
     const angle = this.calculateBearing(mapCenter, markerLatLng);
     const distance = mapCenter.distanceTo(markerLatLng);
-
-    // Store reference to tracker instance for use in control
-    const tracker = this;
     const markerData = this.selectedMarker;
 
     // Create direction indicator
@@ -158,10 +155,10 @@ class MarkerTracker {
         const mapHeight = mapContainer.clientHeight;
 
         // Get padding from tracker instance
-        const paddingTop = tracker.padding.top;
-        const paddingRight = tracker.padding.right;
-        const paddingBottom = tracker.padding.bottom;
-        const paddingLeft = tracker.padding.left;
+        const paddingTop = this.padding.top;
+        const paddingRight = this.padding.right;
+        const paddingBottom = this.padding.bottom;
+        const paddingLeft = this.padding.left;
 
         // Get marker position in pixels relative to map container
         const markerPoint = map.latLngToContainerPoint(markerLatLng);
@@ -173,22 +170,29 @@ class MarkerTracker {
         const dy = markerPoint.y - centerY;
 
         // Calculate intersection with viewport edge
-        let x, y;
+        let x;
+        let y;
 
         // Calculate scale factors to reach each edge (with individual padding)
         const scaleRight =
-          dx > 0 ? (mapWidth - paddingRight - centerX) / dx : Infinity;
-        const scaleLeft = dx < 0 ? (paddingLeft - centerX) / dx : Infinity;
+          dx > 0
+            ? (mapWidth - paddingRight - centerX) / dx
+            : Number.POSITIVE_INFINITY;
+        const scaleLeft =
+          dx < 0 ? (paddingLeft - centerX) / dx : Number.POSITIVE_INFINITY;
         const scaleBottom =
-          dy > 0 ? (mapHeight - paddingBottom - centerY) / dy : Infinity;
-        const scaleTop = dy < 0 ? (paddingTop - centerY) / dy : Infinity;
+          dy > 0
+            ? (mapHeight - paddingBottom - centerY) / dy
+            : Number.POSITIVE_INFINITY;
+        const scaleTop =
+          dy < 0 ? (paddingTop - centerY) / dy : Number.POSITIVE_INFINITY;
 
         // Find minimum positive scale (first edge hit)
         const scale = Math.min(
-          scaleRight > 0 ? scaleRight : Infinity,
-          scaleLeft > 0 ? scaleLeft : Infinity,
-          scaleBottom > 0 ? scaleBottom : Infinity,
-          scaleTop > 0 ? scaleTop : Infinity,
+          scaleRight > 0 ? scaleRight : Number.POSITIVE_INFINITY,
+          scaleLeft > 0 ? scaleLeft : Number.POSITIVE_INFINITY,
+          scaleBottom > 0 ? scaleBottom : Number.POSITIVE_INFINITY,
+          scaleTop > 0 ? scaleTop : Number.POSITIVE_INFINITY
         );
 
         // Calculate position on edge
@@ -298,7 +302,7 @@ class MarkerTracker {
 
         // Click to smoothly fly to marker
         L.DomEvent.on(container, "click", () => {
-          tracker.map.flyTo([markerData.lat, markerData.lng], 16, {
+          this.map.flyTo([markerData.lat, markerData.lng], 16, {
             duration: 0.8,
             easeLinearity: 0.2,
             noMoveStart: true,

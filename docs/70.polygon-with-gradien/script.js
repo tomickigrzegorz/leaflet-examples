@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -45,7 +45,7 @@ L.Polygon.Gradient = L.Polygon.extend({
     this._renderer._container.appendChild(svgGradient);
 
     // set gradient on polygon
-    this._path.setAttribute("fill", "url(#" + this.options.gradient.id + ")");
+    this._path.setAttribute("fill", `url(#${this.options.gradient.id})`);
 
     // add shadow
     this._addShadow();
@@ -62,8 +62,8 @@ L.Polygon.Gradient = L.Polygon.extend({
     this._setRotation(gradient);
 
     for (let i = 0; i < colors.length; i++) {
-      let stopInfo = colors[i];
-      let stop = document.createElementNS(svgNS, "stop");
+      const stopInfo = colors[i];
+      const stop = document.createElementNS(svgNS, "stop");
       // stop.setAttribute("offset", (i / (colors.length - 1)) * 100 + "%");
       stop.setAttribute("offset", stopInfo.offset);
       stop.setAttribute("stop-color", stopInfo.color);
@@ -85,10 +85,10 @@ L.Polygon.Gradient = L.Polygon.extend({
   _addShadow: function () {
     const { offsetX, offsetY, blur, color } = this.options.shadow;
 
-    let shadowStyle = `
+    const shadowStyle = `
       filter: drop-shadow(${offsetX}px ${offsetY}px ${blur}px ${color})`;
 
-    this._path.style = this._path.style.cssText + ";" + shadowStyle;
+    this._path.style = `${this._path.style.cssText};${shadowStyle}`;
   },
 
   // convert degrees to radians
@@ -107,10 +107,10 @@ L.Polygon.Gradient = L.Polygon.extend({
     const x2 = Math.cos(rotation) * 100;
     const y2 = Math.sin(rotation) * 100;
 
-    linearGradient.setAttribute("x1", x1 + "%");
-    linearGradient.setAttribute("y1", y1 + "%");
-    linearGradient.setAttribute("x2", x2 + "%");
-    linearGradient.setAttribute("y2", y2 + "%");
+    linearGradient.setAttribute("x1", `${x1}%`);
+    linearGradient.setAttribute("y1", `${y1}%`);
+    linearGradient.setAttribute("x2", `${x2}%`);
+    linearGradient.setAttribute("y2", `${y2}%`);
   },
 });
 

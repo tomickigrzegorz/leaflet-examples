@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -58,7 +58,7 @@ const groupedData = markersData.reduce((acc, value) => {
 
 // set marker on map
 // add popup to marker
-for (let key in groupedData) {
+for (const key in groupedData) {
   const items = groupedData[key];
 
   // coordinates of first item, all items of

@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("node:fs");
 
 // 🔧 Configuration
 const markerCount = 100_000; // How many markers to generate

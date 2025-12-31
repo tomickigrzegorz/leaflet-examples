@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 2,
   maxZoom: 18,
 };
@@ -31,10 +31,8 @@ function onEachFeature(feature, layer) {
 // adding geojson by fetch
 // of course you can use jquery, axios etc.
 fetch("../static/wojewodztwa-medium.geojson")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
+  .then((response) => response.json())
+  .then((data) => {
     // use geoJSON
     L.geoJSON(data, {
       onEachFeature: onEachFeature,

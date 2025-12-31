@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 1,
   maxZoom: 5,
   preferCanvas: true,
@@ -26,13 +26,13 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 // we assign a marker layer to the variable
-let markers = L.markerClusterGroup();
+const markers = L.markerClusterGroup();
 
 // we create markers that we add to the layer
 for (let i = 0; i < 60000; i += 1) {
   // circleMarker are canvas markers
-  let marker = L.circleMarker(getRandomLatLng());
-  markers.bindPopup("marker " + i);
+  const marker = L.circleMarker(getRandomLatLng());
+  markers.bindPopup(`marker ${i}`);
   markers.addLayer(marker);
 }
 

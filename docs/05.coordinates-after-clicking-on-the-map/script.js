@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -25,7 +25,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 // obtaining coordinates after clicking on the map
-map.on("click", function (e) {
+map.on("click", (e) => {
   const markerPlace = document.querySelector(".marker-position");
   markerPlace.textContent = e.latlng;
 });

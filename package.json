@@ -5,15 +5,15 @@
   "description": "A collection of examples of leaflet map usage",
   "author": "Grzegorz Tomicki",
   "license": "MIT",
-  "keywords": [
-    "leaflet-examples",
-    "leaflet-maps"
-  ],
+  "keywords": ["leaflet-examples", "leaflet-maps"],
   "scripts": {
-    "start": "http-server docs/ -o -p 3000"
+    "start": "http-server docs/ -o -p 3000",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write ."
   },
   "devDependencies": {
-    "http-server": "^14.1.1",
-    "prettier": "^3.3.2"
+    "@biomejs/biome": "^1.9.4",
+    "http-server": "^14.1.1"
   }
 }

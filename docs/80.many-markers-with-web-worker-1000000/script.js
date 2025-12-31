@@ -35,23 +35,25 @@ function updateStatusBar(count, duration = null) {
 const CustomControl = L.Control.extend({
   options: { position: "topleft" },
 
-  onAdd: function (map) {
+  onAdd: (map) => {
     const container = L.DomUtil.create(
       "div",
-      "leaflet-bar leaflet-control leaflet-control-custom",
+      "leaflet-bar leaflet-control leaflet-control-custom"
     );
 
     const btnLoad = L.DomUtil.create("a", "", container);
     btnLoad.href = "#";
     btnLoad.title = "Load markers";
     btnLoad.innerHTML = "+";
-    btnLoad.style.cssText = `font-size:2rem;text-align:center;line-height:100%;cursor:pointer;user-select:none;background-color:#3080f8;color:#fff;border-bottom:1px solid #484848;`;
+    btnLoad.style.cssText =
+      "font-size:2rem;text-align:center;line-height:100%;cursor:pointer;user-select:none;background-color:#3080f8;color:#fff;border-bottom:1px solid #484848;";
 
     const btnClear = L.DomUtil.create("a", "", container);
     btnClear.href = "#";
     btnClear.title = "Delete database";
     btnClear.innerHTML = "-";
-    btnClear.style.cssText = `font-size:2rem;text-align:center;line-height:82%;cursor:pointer;user-select:none;background-color:#ff0000;color:#fff;`;
+    btnClear.style.cssText =
+      "font-size:2rem;text-align:center;line-height:82%;cursor:pointer;user-select:none;background-color:#ff0000;color:#fff;";
 
     L.DomEvent.disableClickPropagation(container);
     L.DomEvent.disableScrollPropagation(container);
@@ -189,8 +191,8 @@ worker.onmessage = (e) => {
     markerClusterGroup.clearLayers();
     const leafletMarkers = markers.map(({ minX: lng, minY: lat, id }) =>
       L.marker([lat, lng], { title: `Marker ${id}` }).bindPopup(
-        `🧷 Marker ID: ${id}`,
-      ),
+        `🧷 Marker ID: ${id}`
+      )
     );
     markerClusterGroup.addLayers(leafletMarkers);
 
@@ -204,11 +206,11 @@ worker.onmessage = (e) => {
 
 map.on(
   "moveend",
-  throttle(() => markersLoaded && updateVisibleMarkers(), 200),
+  throttle(() => markersLoaded && updateVisibleMarkers(), 200)
 );
 map.on(
   "zoomend",
-  throttle(() => markersLoaded && updateVisibleMarkers(), 200),
+  throttle(() => markersLoaded && updateVisibleMarkers(), 200)
 );
 
 function updateVisibleMarkers() {

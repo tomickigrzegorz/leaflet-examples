@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -35,5 +35,5 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // Or -----------------------------------------
 
 const style = document.createElement("style");
-style.textContent = `.leaflet-tile-container { filter: grayscale(1)}`;
+style.textContent = ".leaflet-tile-container { filter: grayscale(1)}";
 document.head.appendChild(style);

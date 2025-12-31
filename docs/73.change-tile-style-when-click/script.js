@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -32,7 +32,7 @@ map.on("click", (e) => {
 
   // find image with specific src
   let img = document.querySelector(
-    `img[src="https://tile.openstreetmap.org/${getTileNumber(lat, lng)}.png"]`,
+    `img[src="https://tile.openstreetmap.org/${getTileNumber(lat, lng)}.png"]`
   );
 
   // add/remove class active-tiles
@@ -45,17 +45,19 @@ map.on("click", (e) => {
 function getTileNumber(lat, lng) {
   const currentZoom = map.getZoom();
 
-  const xtile = parseInt(Math.floor(((lng + 180) / 360) * (1 << currentZoom)));
-  const ytile = parseInt(
+  const xtile = Number.parseInt(
+    Math.floor(((lng + 180) / 360) * (1 << currentZoom))
+  );
+  const ytile = Number.parseInt(
     Math.floor(
       ((1 -
         Math.log(
-          Math.tan((lat * Math.PI) / 180) + 1 / Math.cos((lat * Math.PI) / 180),
+          Math.tan((lat * Math.PI) / 180) + 1 / Math.cos((lat * Math.PI) / 180)
         ) /
           Math.PI) /
         2) *
-        (1 << currentZoom),
-    ),
+        (1 << currentZoom)
+    )
   );
   return `${currentZoom}/${xtile}/${ytile}`;
 }

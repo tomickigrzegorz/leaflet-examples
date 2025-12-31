@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -68,10 +68,10 @@ const overlayMaps = {
 };
 
 // centering a group of markers
-map.on("layeradd", function () {
+map.on("layeradd", () => {
   // Create new empty bounds
-  let bounds = new L.LatLngBounds();
-  map.eachLayer(function (layer) {
+  const bounds = new L.LatLngBounds();
+  map.eachLayer((layer) => {
     // Check if layer is a featuregroup
     if (layer instanceof L.FeatureGroup) {
       // Extend bounds with group's bounds
@@ -110,14 +110,14 @@ L.Control.CustomButtons = L.Control.Layers.extend({
     );
     button.textContent = className;
 
-    L.DomEvent.on(button, "click", function (e) {
+    L.DomEvent.on(button, "click", (e) => {
       const checkbox = document.querySelectorAll(
         ".leaflet-control-layers-overlays input[type=checkbox]"
       );
 
       // Remove/add all layer from map when click on button
       [].slice.call(checkbox).map((el) => {
-        el.checked = type === "add" ? false : true;
+        el.checked = type !== "add";
         el.click();
       });
     });

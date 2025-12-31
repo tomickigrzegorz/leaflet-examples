@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 2,
   maxZoom: 18,
 };
@@ -32,7 +32,7 @@ function addTextToDiv(text) {
 
 // showing the name of the province
 function getVoivodeshipName(feature, layer) {
-  if (feature.properties && feature.properties.nazwa) {
+  if (feature.properties?.nazwa) {
     layer.bindPopup(feature.properties.nazwa);
   }
 }
@@ -40,14 +40,12 @@ function getVoivodeshipName(feature, layer) {
 // adding geojson by fetch
 // of course you can use jquery, axios etc.
 fetch("../static/wojewodztwa-medium.geojson")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    let layer = new L.GeoJSON(data, {
+  .then((response) => response.json())
+  .then((data) => {
+    const layer = new L.GeoJSON(data, {
       // A Function that will be called once for each
       // created Feature, after it has been created and styled
-      onEachFeature: function (feature, layer) {
+      onEachFeature: (feature, layer) => {
         layer.on("mouseover", function (e) {
           // bindPopup
           getVoivodeshipName(feature, layer);
@@ -72,7 +70,7 @@ fetch("../static/wojewodztwa-medium.geojson")
             fillOpacity: 0.2,
           });
         });
-        layer.on("click", function () {
+        layer.on("click", () => {
           // adding the province name to the visible div
           addTextToDiv(feature.properties.nazwa);
         });

@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -15,7 +15,7 @@ const lat = 52.22977;
 const lng = 21.01178;
 
 // coordinate array with popup text
-let points = [
+const points = [
   {
     lat: 52.230020586193795,
     lng: 21.01083755493164,

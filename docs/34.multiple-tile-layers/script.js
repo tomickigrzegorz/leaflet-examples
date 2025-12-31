@@ -22,7 +22,7 @@ const osmMap = L.tileLayer(osmUrl, { attribution: osmAttrib });
 const landMap = L.tileLayer(landUrl, { attribution: cartoAttrib });
 
 // config map
-let config = {
+const config = {
   layers: [osmMap],
   minZoom: 7,
   maxZoom: 18,
@@ -31,7 +31,7 @@ let config = {
 // calling map
 const map = L.map("map", config).setView([lat, lng], zoom);
 
-var baseLayers = {
+const baseLayers = {
   "OSM Mapnik": osmMap,
   CartoDB: landMap,
 };

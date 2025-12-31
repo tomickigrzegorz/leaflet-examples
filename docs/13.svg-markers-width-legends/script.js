@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -40,7 +40,7 @@ const label = ["2-12.5", "12.6-16.8", "16.9-20.9", "21-25.9", "26-plus"];
 
 // we add records to the L.control method
 const rows = [];
-legend.onAdd = function () {
+legend.onAdd = () => {
   color.map((item, index) => {
     rows.push(`
         <div class="row">

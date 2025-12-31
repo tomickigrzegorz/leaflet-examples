@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
   zoomControl: false, // zoom control off
@@ -55,7 +55,7 @@ function centerMap([lat, lng], target, title) {
 
 // helper function to intersectionObserver
 function onChange(changes) {
-  changes.forEach(function (change) {
+  changes.forEach((change) => {
     // get data from html coordinates element
     const data = change.target.dataset.coordinates;
     // get title from html
@@ -78,8 +78,8 @@ if ("IntersectionObserver" in window) {
     threshold: [0, 0.25, 0.5, 0.75, 1],
   };
 
-  let observer = new IntersectionObserver(onChange, config);
-  articles.forEach(function (article) {
+  const observer = new IntersectionObserver(onChange, config);
+  articles.forEach((article) => {
     observer.observe(article);
   });
 }

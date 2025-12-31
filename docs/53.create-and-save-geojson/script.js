@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 5,
   maxZoom: 18,
   fullscreenControl: true,
@@ -44,7 +44,7 @@ const customControl = L.Control.extend({
   },
 
   // method
-  onAdd: function () {
+  onAdd: () => {
     const array = [
       {
         title: "export features geojson",
@@ -94,7 +94,7 @@ map.addControl(new customControl());
 // Drow polygon, circle, rectangle, polyline
 // --------------------------------------------------
 
-let drawnItems = L.featureGroup().addTo(map);
+const drawnItems = L.featureGroup().addTo(map);
 
 map.addControl(
   new L.Control.Draw({
@@ -113,13 +113,13 @@ map.addControl(
   })
 );
 
-map.on(L.Draw.Event.CREATED, function (event) {
-  let layer = event.layer;
-  let feature = (layer.feature = layer.feature || {});
-  let type = event.layerType;
+map.on(L.Draw.Event.CREATED, (event) => {
+  const layer = event.layer;
+  const feature = (layer.feature = layer.feature || {});
+  const type = event.layerType;
 
   feature.type = feature.type || "Feature";
-  let props = (feature.properties = feature.properties || {});
+  const props = (feature.properties = feature.properties || {});
 
   props.type = type;
 
@@ -142,15 +142,13 @@ exportJSON.addEventListener("click", () => {
   if (data.features.length === 0) {
     Notiflix.Notify.failure("You must have some data to save a geojson file");
     return;
-  } else {
-    Notiflix.Notify.info("You can save the data to a geojson");
   }
+  Notiflix.Notify.info("You can save the data to a geojson");
 
   // Stringify the GeoJson
-  const convertedData =
-    "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data));
+  const convertedData = `text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(data))}`;
 
-  exportJSON.setAttribute("href", "data:" + convertedData);
+  exportJSON.setAttribute("href", `data:${convertedData}`);
   exportJSON.setAttribute("download", "data.geojson");
 });
 
@@ -166,9 +164,8 @@ saveJSON.addEventListener("click", (e) => {
   if (data.features.length === 0) {
     Notiflix.Notify.failure("You must have some data to save it");
     return;
-  } else {
-    Notiflix.Notify.success("The data has been saved to localstorage");
   }
+  Notiflix.Notify.success("The data has been saved to localstorage");
 
   localStorage.setItem("geojson", JSON.stringify(data));
 });
@@ -184,7 +181,7 @@ removeJSON.addEventListener("click", (e) => {
 
   Notiflix.Notify.info("All layers have been deleted");
 
-  drawnItems.eachLayer(function (layer) {
+  drawnItems.eachLayer((layer) => {
     drawnItems.removeLayer(layer);
   });
 });
@@ -196,33 +193,29 @@ const geojsonFromLocalStorage = JSON.parse(localStorage.getItem("geojson"));
 
 function setGeojsonToMap(geojson) {
   const feature = L.geoJSON(geojson, {
-    style: function (feature) {
-      return {
-        color: "red",
-        weight: 2,
-      };
-    },
+    style: (feature) => ({
+      color: "red",
+      weight: 2,
+    }),
     pointToLayer: (feature, latlng) => {
       if (feature.properties.type === "circle") {
         return new L.circle(latlng, {
           radius: feature.properties.radius,
         });
-      } else if (feature.properties.type === "circlemarker") {
+      }
+      if (feature.properties.type === "circlemarker") {
         return new L.circleMarker(latlng, {
           radius: 10,
         });
-      } else {
-        return new L.Marker(latlng);
       }
+      return new L.Marker(latlng);
     },
-    onEachFeature: function (feature, layer) {
+    onEachFeature: (feature, layer) => {
       drawnItems.addLayer(layer);
       const coordinates = feature.geometry.coordinates.toString();
       const result = coordinates.match(/[^,]+,[^,]+/g);
 
-      layer.bindPopup(
-        "<span>Coordinates:<br>" + result.join("<br>") + "</span>"
-      );
+      layer.bindPopup(`<span>Coordinates:<br>${result.join("<br>")}</span>`);
     },
   }).addTo(map);
 
@@ -240,7 +233,7 @@ function openFile(event) {
   const input = event.target;
 
   const reader = new FileReader();
-  reader.onload = function () {
+  reader.onload = () => {
     const result = reader.result;
     const geojson = JSON.parse(result);
 

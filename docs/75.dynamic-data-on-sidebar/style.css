@@ -36,7 +36,7 @@ body {
 
 .flex {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
 }
 
 .mapid #map {
@@ -62,14 +62,14 @@ body {
 @media (max-width: 450px) {
   .flex {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
   }
 
   .mapid #map {
     height: calc(100% - 20%);
     width: auto;
   }
-  
+
   #sidebar {
     height: 20%;
     width: auto;

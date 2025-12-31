@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -36,7 +36,10 @@ map.on("click", (e) => {
   const rectangle = L.rectangle(
     [
       [tile2lat(y, zoom), tile2lon(x, zoom)],
-      [tile2lat(parseInt(y) + 1, zoom), tile2lon(parseInt(x) + 1, zoom)],
+      [
+        tile2lat(Number.parseInt(y) + 1, zoom),
+        tile2lon(Number.parseInt(x) + 1, zoom),
+      ],
     ],
     {
       color: "#ff7800",
@@ -47,19 +50,19 @@ map.on("click", (e) => {
 
 // convert lat lng to tile lon
 function tile2lon(x, z) {
-  return (x / Math.pow(2, z)) * 360 - 180;
+  return (x / 2 ** z) * 360 - 180;
 }
 
 // convert lat lng to tile lat
 function tile2lat(y, z) {
-  const n = Math.PI - (2 * Math.PI * y) / Math.pow(2, z);
+  const n = Math.PI - (2 * Math.PI * y) / 2 ** z;
   return (180 / Math.PI) * Math.atan(0.5 * (Math.exp(n) - Math.exp(-n)));
 }
 
 // generate tile lat, lng
 function getTileNumber(lat, lng, zoom) {
-  const xtile = parseInt(Math.floor(((lng + 180) / 360) * (1 << zoom)));
-  const ytile = parseInt(
+  const xtile = Number.parseInt(Math.floor(((lng + 180) / 360) * (1 << zoom)));
+  const ytile = Number.parseInt(
     Math.floor(
       ((1 -
         Math.log(

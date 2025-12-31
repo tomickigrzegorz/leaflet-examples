@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -28,8 +28,8 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // ------------------------------
 const legend = L.control({ position: "bottomleft" });
 
-legend.onAdd = function () {
-  let div = L.DomUtil.create("div", "description");
+legend.onAdd = () => {
+  const div = L.DomUtil.create("div", "description");
   L.DomEvent.disableClickPropagation(div);
   const text = "Dynamic generation of 30 markers in the map view";
   div.insertAdjacentHTML("beforeend", text);
@@ -63,7 +63,7 @@ const customControl = L.Control.extend({
     // create button
     const container = L.DomUtil.create(
       "div",
-      "leaflet-bar " + this.options.className
+      `leaflet-bar ${this.options.className}`
     );
     this._container = container;
 
@@ -103,16 +103,16 @@ function randomMarker() {
   // get bounds of map
   const bounds = map.getBounds();
 
-  let southWest = bounds.getSouthWest();
-  let northEast = bounds.getNorthEast();
-  let lngSpan = northEast.lng - southWest.lng;
-  let latSpan = northEast.lat - southWest.lat;
+  const southWest = bounds.getSouthWest();
+  const northEast = bounds.getNorthEast();
+  const lngSpan = northEast.lng - southWest.lng;
+  const latSpan = northEast.lat - southWest.lat;
 
-  let allPoints = [];
+  const allPoints = [];
 
   // generate random points and add to array 'allPoints'
   for (let i = 0; i < 30; i++) {
-    let points = [
+    const points = [
       southWest.lat + latSpan * Math.random(),
       southWest.lng + lngSpan * Math.random(),
     ];

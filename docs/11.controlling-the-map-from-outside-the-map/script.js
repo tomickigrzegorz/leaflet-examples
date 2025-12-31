@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -65,7 +65,7 @@ function clickZoom(e) {
 // and transfers latLng coordinates of the opened marker
 // to the centering function
 function markerOpen(id) {
-  map.eachLayer(function (layer) {
+  map.eachLayer((layer) => {
     if (layer.options && layer._leaflet_id === id) {
       centerMarker(layer);
 

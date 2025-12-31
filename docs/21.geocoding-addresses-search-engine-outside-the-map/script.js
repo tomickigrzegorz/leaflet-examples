@@ -2,14 +2,14 @@
  * geocoding addresses search engine outside the map
  */
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", () => {
   // Autocomplete
   new Autocomplete("search", {
     delay: 1000,
     selectFirst: true,
     howManyCharacters: 2,
 
-    onSearch: function ({ currentValue }) {
+    onSearch: ({ currentValue }) => {
       const api = `https://nominatim.openstreetmap.org/search?format=geojson&limit=5&q=${encodeURI(
         currentValue
       )}`;
@@ -101,7 +101,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
       map.setView([cord[1], cord[0]], 8);
 
-      map.eachLayer(function (layer) {
+      map.eachLayer((layer) => {
         if (layer.options && layer.options.pane === "markerPane") {
           if (layer.options.id !== customId) {
             map.removeLayer(layer);

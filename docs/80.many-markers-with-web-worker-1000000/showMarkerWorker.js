@@ -3,7 +3,7 @@ importScripts("rbush.min.js");
 
 const tree = new RBush();
 
-self.onmessage = function (e) {
+self.onmessage = (e) => {
   const { type, data, bounds } = e.data;
 
   if (type === "init") {

@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -52,11 +52,10 @@ const markerPlace = document.querySelector(".marker-position");
 
 // remove marker
 function removeMarker() {
-  const marker = this;
   const btn = document.querySelector(".remove");
-  btn.addEventListener("click", function () {
+  btn.addEventListener("click", () => {
     markerPlace.textContent = "goodbye marker 💩";
-    map.removeLayer(marker);
+    map.removeLayer(this);
   });
 }
 

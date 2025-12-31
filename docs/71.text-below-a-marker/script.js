@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -29,7 +29,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // https://stackoverflow.com/questions/59419337/how-to-add-text-below-a-marker-in-leaflet
 
 // coordinate with popup text
-let points = [
+const points = [
   [52.230020586193795, 21.01083755493164, "point 1 first example"],
   [52.22924516170657, 21.011320352554325, "point 2 second example"],
   [52.229511304688444, 21.01270973682404, "point 3 third example"],
@@ -40,7 +40,7 @@ for (let i = 0; i < points.length; i++) {
   const [lat, lng, popupText] = points[i];
 
   // first example
-  if (i == 0) {
+  if (i === 0) {
     // add marker to map
     const marker1 = L.marker([lat, lng]).addTo(map);
 
@@ -58,7 +58,7 @@ for (let i = 0; i < points.length; i++) {
   }
 
   // second example
-  if (i == 1) {
+  if (i === 1) {
     const marker2 = L.marker([lat, lng]).addTo(map);
     marker2.bindTooltip(popupText, {
       permanent: true,
@@ -69,7 +69,7 @@ for (let i = 0; i < points.length; i++) {
   }
 
   // third example
-  if (i == 2) {
+  if (i === 2) {
     const marker3 = L.marker([lat, lng]).addTo(map);
     createLabel(marker3, popupText);
   }

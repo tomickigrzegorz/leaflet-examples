@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -29,8 +29,8 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 const legend = L.control({ position: "bottomleft" });
 
-legend.onAdd = function () {
-  let div = L.DomUtil.create("div", "description");
+legend.onAdd = () => {
+  const div = L.DomUtil.create("div", "description");
   L.DomEvent.disableClickPropagation(div);
   const text = `We check if the marker is in the page view. Move the marker so that it is outside the map.<br>Marker in view: <b class="checkMarker">true</b>`;
   div.insertAdjacentHTML("beforeend", text);
@@ -63,6 +63,6 @@ function markerInMapView() {
 }
 
 // check if marker is in viewport on moveend map
-map.on("moveend", function () {
+map.on("moveend", () => {
   markerInMapView();
 });

@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -27,8 +27,8 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // create legend
 const legend = L.control({ position: "bottomleft" });
 
-legend.onAdd = function () {
-  let div = L.DomUtil.create("div", "description");
+legend.onAdd = () => {
+  const div = L.DomUtil.create("div", "description");
   L.DomEvent.disableClickPropagation(div);
   const text =
     "<b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...";
