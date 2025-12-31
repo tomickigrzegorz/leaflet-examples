@@ -296,9 +296,13 @@ class MarkerTracker {
         `;
         container.appendChild(distanceText);
 
-        // Click to zoom to marker
+        // Click to smoothly fly to marker
         L.DomEvent.on(container, "click", () => {
-          tracker.map.setView([markerData.lat, markerData.lng], 16);
+          tracker.map.flyTo([markerData.lat, markerData.lng], 16, {
+            duration: 0.8,
+            easeLinearity: 0.2,
+            noMoveStart: true,
+          });
         });
 
         // Hover effect
