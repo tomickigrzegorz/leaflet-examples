@@ -14,6 +14,7 @@ Here is a working live demo : https://tomickigrzegorz.github.io/leaflet-examples
 
 > Work in progress :smiley: Suggestions welcome :bulb:.
 
+81 [marker-tracking-with-direction-indicator](https://tomickigrzegorz.github.io/leaflet-examples/#81.marker-tracking-with-direction-indicator)
 80 [many-markers-with-web-worker-1000000](https://tomickigrzegorz.github.io/leaflet-examples/#80.many-markers-with-web-worker-1000000)  
 79 [draw-dinamic-circles-between-two-points](https://tomickigrzegorz.github.io/leaflet-examples/#79.draw-dinamic-circles-between-two-points)  
 78 [calculate-area](https://tomickigrzegorz.github.io/leaflet-examples/#78.calculate-area)  
