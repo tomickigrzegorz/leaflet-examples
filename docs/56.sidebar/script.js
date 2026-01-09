@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -70,7 +70,7 @@ function showContent(dataContent) {
 
 // --------------------------------------------------
 // close when click esc
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeSidebar();
   }

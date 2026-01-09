@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -35,7 +35,7 @@ const customControl = L.Control.extend({
   },
 
   // method
-  onAdd: function (map) {
+  onAdd: (map) => {
     console.log(map.getCenter());
     // create button
     const btn = L.DomUtil.create("button");

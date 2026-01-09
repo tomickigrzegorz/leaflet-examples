@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 1,
   maxZoom: 18,
 };

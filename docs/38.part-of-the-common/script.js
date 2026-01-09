@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -42,7 +42,7 @@ const options = {
 const radius = 30;
 
 // array polygons
-let polygons = [];
+const polygons = [];
 
 // set marker, add
 centers.map(({ lat, lng }) => {

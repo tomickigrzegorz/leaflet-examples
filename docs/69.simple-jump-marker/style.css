@@ -37,11 +37,7 @@ body {
     transform: translate3d(var(--position-x), var(--position-y), 0);
   }
   to {
-    transform: translate3d(
-      var(--position-x),
-      calc(var(--position-y) - 10px),
-      0
-    );
+    transform: translate3d(var(--position-x), calc(var(--position-y) - 10px), 0);
   }
 }
 
@@ -72,10 +68,6 @@ body {
     transform: translate3d(var(--position-x), var(--position-y), 0);
   }
   to {
-    transform: translate3d(
-      var(--position-x),
-      calc(var(--position-y) - 10px),
-      0
-    );
+    transform: translate3d(var(--position-x), calc(var(--position-y) - 10px), 0);
   }
 }

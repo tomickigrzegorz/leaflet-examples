@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -24,7 +24,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-var pane = map.createPane("fixed", document.getElementById("map"));
+const pane = map.createPane("fixed", document.getElementById("map"));
 
 // ------------------------------------------------
 
@@ -74,7 +74,7 @@ points.map(({ lat, lng, text }) => {
 });
 
 // remove all animation class when popupclose
-map.on("popupclose", function (e) {
+map.on("popupclose", (e) => {
   removeAllAnimationClassFromMap();
 });
 

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const element = document.createElement("a");
         element.className = "item";
-        if (index == 0) {
+        if (index === 0) {
           element.classList.add("active-menu");
         }
         element.href = `#${link}`;
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         element.textContent = text.charAt(0).toUpperCase() + text.slice(1);
 
         nav.appendChild(element);
-      },
+      }
     );
 
     const examples = document.querySelectorAll(".item");
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const createText = document.createTextNode(
       check
         ? example.textContent
-        : document.querySelector(`a[data-iframe="${example}"`).textContent,
+        : document.querySelector(`a[data-iframe="${example}"`).textContent
     );
 
     // adding text to h2
@@ -131,11 +131,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const flex = document.createElement("div");
     flex.className += "flex flex-direction-column info-description";
 
-    const setHidden = isActive.dataset.css == "false" ? "hidden" : "";
+    const setHidden = isActive.dataset.css === "false" ? "hidden" : "";
 
-    const showCssELement = isActive.dataset.css == "false" ? false : true;
+    const showCssELement = isActive.dataset.css !== "false";
 
-    const extendExists = isActive.dataset.extend == "false" ? false : true;
+    const extendExists = isActive.dataset.extend !== "false";
 
     // create button to show extend code
     let extendTemplate = "";
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <a type="button" href="#" class="show-code-js">show JS code</a>
         <a type="button" href="#" class="show-code-css ${setHidden}">show CSS code</a>
         <a type="button" href="${detectUrl(
-          filejs,
+          filejs
         )}" target="_blank">open <b>SCRIPT</b> JS file</a> 
         ${extendTemplate ? extendTemplate : ""}
         <a type="button" href="#" class="full-screen">full screen example</a>
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function detectUrl(file) {
-    let url =
+    const url =
       location.hostname === "localhost" || location.hostname === "127.0.0.1"
         ? file
         : `https://raw.githubusercontent.com/tomickigrzegorz/leaflet-examples/master/docs/${file}`;
@@ -231,25 +231,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const target = e.target;
     if (target.classList.contains("show-code-js")) {
       target.classList.toggle("show-code");
-      const cssElementCss = document.querySelector(`.show-code-css`);
+      const cssElementCss = document.querySelector(".show-code-css");
       cssElementCss.classList.remove("show-code");
 
-      const jsElement = document.querySelector(`#code-place-js`);
+      const jsElement = document.querySelector("#code-place-js");
       jsElement.classList.toggle("hidden");
 
-      const cssElement = document.querySelector(`#code-place-css`);
+      const cssElement = document.querySelector("#code-place-css");
       cssElement?.classList.add("hidden");
     }
 
     if (target.classList.contains("show-code-css")) {
       target.classList.toggle("show-code");
-      const jsElementJs = document.querySelector(`.show-code-js`);
+      const jsElementJs = document.querySelector(".show-code-js");
       jsElementJs.classList.remove("show-code");
 
-      const cssElement = document.querySelector(`#code-place-css`);
+      const cssElement = document.querySelector("#code-place-css");
       cssElement.classList.toggle("hidden");
 
-      const jsElement = document.querySelector(`#code-place-js`);
+      const jsElement = document.querySelector("#code-place-js");
       jsElement.classList.add("hidden");
     }
 
@@ -294,7 +294,7 @@ showMenu.addEventListener("click", (e) => {
 });
 
 // close when click esc
-window.addEventListener("keydown", function (event) {
+window.addEventListener("keydown", (event) => {
   // close sidebar when press esc
   if (event.key === "Escape") {
     document.body.classList.remove("show-code-full-screen");

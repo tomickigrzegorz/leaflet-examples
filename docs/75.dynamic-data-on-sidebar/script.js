@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -52,7 +52,7 @@ function zoomToMarker(e) {
 
 // coordinate array points
 const points = [
-  [23.45610, 75.42270],
+  [23.4561, 75.4227],
   [22.72299, 75.864716],
   [22.962187, 76.05011],
   [23.187076, 75.769958],
@@ -65,16 +65,15 @@ points.forEach((point) => {
   const marker = L.marker(point).addTo(fg);
   const getLatLong = marker.getLatLng();
   marker.bindPopup(getLatLong.toString());
-
 });
 
 listMarkers();
 
 //Create Elements for markers in bound
 function listMarkers() {
-  map.eachLayer(function (layer) {
+  map.eachLayer((layer) => {
     if (layer instanceof L.Marker) {
-      if (map.getBounds().contains(layer.getLatLng()) == true) {
+      if (map.getBounds().contains(layer.getLatLng()) === true) {
         createSidebarElements(layer);
       }
     }
@@ -82,8 +81,7 @@ function listMarkers() {
 }
 
 //Event fired when user stopped dragging the map
-map.on('moveend', function (e) {
-  sidebar.innerHTML = '';
+map.on("moveend", (e) => {
+  sidebar.innerHTML = "";
   listMarkers();
 });
-

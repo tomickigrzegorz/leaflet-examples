@@ -6,7 +6,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -49,7 +49,7 @@ const customControl = L.Control.extend({
     // create button
     const container = L.DomUtil.create(
       "div",
-      "leaflet-bar " + this.options.className
+      `leaflet-bar ${this.options.className}`
     );
 
     L.DomEvent.disableClickPropagation(container);
@@ -107,7 +107,7 @@ const autocomplete = new Autocomplete("marker", {
   selectFirst: true,
   howManyCharacters: 2,
 
-  onSearch: function ({ currentValue }) {
+  onSearch: ({ currentValue }) => {
     const api = `https://nominatim.openstreetmap.org/search?format=geojson&limit=5&q=${encodeURI(
       currentValue
     )}`;
@@ -153,7 +153,7 @@ const autocomplete = new Autocomplete("marker", {
     // const customId = Math.random();
 
     // remove last marker
-    map.eachLayer(function (layer) {
+    map.eachLayer((layer) => {
       if (layer.options && layer.options.pane === "markerPane") {
         if (layer._icon.classList.contains("leaflet-marker-locate")) {
           map.removeLayer(layer);

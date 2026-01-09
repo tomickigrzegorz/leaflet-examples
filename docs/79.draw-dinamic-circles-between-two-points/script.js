@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -23,7 +23,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-map.on("click", function (e) {
+map.on("click", (e) => {
   console.log(e.latlng);
 });
 
@@ -49,7 +49,7 @@ function addInterpolatedMarkers(map, points) {
   // Base step distance
   const baseStepDistance = 6;
   // Adjust step distance based on zoom level (higher zoom -> denser markers)
-  const stepDistance = baseStepDistance / Math.pow(1.7, zoomLevel - 20);
+  const stepDistance = baseStepDistance / 1.7 ** (zoomLevel - 20);
   const numMarkers = Math.max(1, Math.floor(totalDistance / stepDistance));
 
   for (let i = 1; i <= numMarkers; i++) {

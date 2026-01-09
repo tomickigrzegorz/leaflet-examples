@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -42,13 +42,13 @@ function calculatePolygonArea(latlngs) {
   let area = 0;
 
   for (let i = 0; i < pointsCount; i++) {
-    let p1 = latlngs[i];
-    let p2 = latlngs[(i + 1) % pointsCount];
+    const p1 = latlngs[i];
+    const p2 = latlngs[(i + 1) % pointsCount];
 
-    let lat1 = toRadians(p1.lat);
-    let lon1 = toRadians(p1.lng);
-    let lat2 = toRadians(p2.lat);
-    let lon2 = toRadians(p2.lng);
+    const lat1 = toRadians(p1.lat);
+    const lon1 = toRadians(p1.lng);
+    const lat2 = toRadians(p2.lat);
+    const lon2 = toRadians(p2.lng);
 
     area += (lon2 - lon1) * (2 + Math.sin(lat1) + Math.sin(lat2));
   }
@@ -61,7 +61,7 @@ function calculatePolygonArea(latlngs) {
 // ---------------------------------------------
 
 // layer group
-let layers = L.layerGroup().addTo(map);
+const layers = L.layerGroup().addTo(map);
 
 // polygon
 const polygonsArea = [
@@ -82,7 +82,7 @@ const marker = L.marker(center).addTo(map);
 const polygonArea = calculatePolygonArea(polygon.getLatLngs()[0]);
 
 // add tooltip to marker
-marker.bindTooltip("Area: " + polygonArea.toFixed(5) + " m²", {
+marker.bindTooltip(`Area: ${polygonArea.toFixed(5)} m²`, {
   permanent: true,
   direction: "bottom",
   className: "area",
@@ -96,10 +96,10 @@ const circleMarker = L.circle(markerCircle, {
 }).addTo(layers);
 
 // calculate area of circle
-const circleArea = Math.PI * Math.pow(50, 2);
+const circleArea = Math.PI * 50 ** 2;
 
 // add tooltip to circle marker
-circleMarker.bindTooltip("Area: " + circleArea.toFixed(5) + " m²", {
+circleMarker.bindTooltip(`Area: ${circleArea.toFixed(5)} m²`, {
   permanent: true,
   direction: "bottom",
   className: "area",

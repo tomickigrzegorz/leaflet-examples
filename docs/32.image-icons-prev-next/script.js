@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -70,7 +70,7 @@ for (let i = 0; i < points.length; i++) {
   });
 
   // create marker and add to map
-  let marker = L.marker([lat, lng], { icon: myIcon }).addTo(map);
+  const marker = L.marker([lat, lng], { icon: myIcon }).addTo(map);
 
   const idMarker = marker._leaflet_id;
 
@@ -97,7 +97,7 @@ function generateMenu(id, title) {
 
 // function get layer id
 function markerOpen(id) {
-  map.eachLayer(function (layer) {
+  map.eachLayer((layer) => {
     if (layer.options) {
       if (layer._leaflet_id === id) {
         centerMarker(layer);

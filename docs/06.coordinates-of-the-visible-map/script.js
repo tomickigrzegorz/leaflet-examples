@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -36,7 +36,7 @@ map.on("dragstart", updateInfo);
 map.on("zoomend", setRentacle);
 
 // update info about bounds when site loaded
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const bounds = map.getBounds();
   updateInfo(bounds._northEast, bounds._southWest);
 });

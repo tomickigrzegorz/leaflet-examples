@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -30,9 +30,9 @@ const marker = L.marker([52.22983, 21.011728])
 
 // --------------------------------------------
 
-let root = document.documentElement;
+const root = document.documentElement;
 
-marker.on("click", function (e) {
+marker.on("click", (e) => {
   const target = e.target;
 
   // get icon
@@ -61,7 +61,7 @@ marker.on("click", function (e) {
 });
 
 map.on("click", (e) => {
-  map.eachLayer(function (layer) {
+  map.eachLayer((layer) => {
     if (layer instanceof L.Marker) {
       layer._shadow.classList.remove("marker-shadow-jump");
       layer._icon.classList.remove("marker-icon-jump");
@@ -85,9 +85,9 @@ function addRemoveRootStyleProperty(type, x, y, markerHeight) {
 
   if (type === "add") {
     // add style to html - root element
-    root.style.setProperty(posX, x + "px");
-    root.style.setProperty(posY, y + "px");
-    root.style.setProperty(mHeight, markerHeight + "px");
+    root.style.setProperty(posX, `${x}px`);
+    root.style.setProperty(posY, `${y}px`);
+    root.style.setProperty(mHeight, `${markerHeight}px`);
   } else {
     // remove all style
     root.style.removeProperty(posX);

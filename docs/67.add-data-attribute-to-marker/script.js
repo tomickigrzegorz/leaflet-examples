@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -29,10 +29,10 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 L.DataDivIcon = L.DivIcon.extend({
   createIcon: function (oldIcon) {
-    let divElement = L.DivIcon.prototype.createIcon.call(this, oldIcon);
+    const divElement = L.DivIcon.prototype.createIcon.call(this, oldIcon);
 
     if (this.options.data) {
-      for (let key in this.options.data) {
+      for (const key in this.options.data) {
         divElement.dataset[key] = this.options.data[key];
       }
     }

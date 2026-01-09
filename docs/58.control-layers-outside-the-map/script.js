@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -45,9 +45,9 @@ function clickZoom(e) {
   map.setView(e.target.getLatLng(), zoom);
 }
 
-let geojsonOpts = {
-  pointToLayer: function (feature, latlng) {
-    return L.marker(latlng, {
+const geojsonOpts = {
+  pointToLayer: (feature, latlng) =>
+    L.marker(latlng, {
       icon: L.divIcon({
         className: feature.properties.amenity,
         iconSize: L.point(16, 16),
@@ -56,13 +56,9 @@ let geojsonOpts = {
       }),
     })
       .bindPopup(
-        feature.properties.amenity +
-          "<br><b>" +
-          feature.properties.name +
-          "</b>"
+        `${feature.properties.amenity}<br><b>${feature.properties.name}</b>`
       )
-      .on("click", clickZoom);
-  },
+      .on("click", clickZoom),
 };
 
 const layersContainer = document.querySelector(".layers");
@@ -92,7 +88,7 @@ const arrayLayers = ["bar", "pharmacy", "restaurant"];
 arrayLayers.map((json) => {
   generateButton(json);
   fetchData(`./data/${json}.json`).then((data) => {
-    window["layer_" + json] = L.geoJSON(data, geojsonOpts).addTo(map);
+    window[`layer_${json}`] = L.geoJSON(data, geojsonOpts).addTo(map);
   });
 });
 
@@ -117,14 +113,17 @@ function showHideLayer(target) {
 
   const checkedBoxes = document.querySelectorAll("input[name=item]:checked");
 
-  document.querySelector("#all-layers").checked =
-    checkedBoxes.length - (document.querySelector("#all-layers").checked === true ? 1 : 0) < 3 ? false : true;
+  document.querySelector("#all-layers").checked = !(
+    checkedBoxes.length -
+      (document.querySelector("#all-layers").checked === true ? 1 : 0) <
+    3
+  );
 }
 
 function checkedType(id, type) {
-  map[type ? "addLayer" : "removeLayer"](window["layer_" + id]);
+  map[type ? "addLayer" : "removeLayer"](window[`layer_${id}`]);
 
-  map.fitBounds(window[["layer_" + id]].getBounds(), { padding: [50, 50] });
+  map.fitBounds(window[[`layer_${id}`]].getBounds(), { padding: [50, 50] });
 
   document.querySelector(`#${id}`).checked = type;
 }

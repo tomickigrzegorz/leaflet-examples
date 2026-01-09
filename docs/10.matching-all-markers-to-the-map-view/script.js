@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -33,7 +33,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 // adding all markers to the featureGroups array
-let featureGroups = [];
+const featureGroups = [];
 for (let i = 0; i < points.length; i++) {
   const [lat, lng, title] = points[i];
   featureGroups.push(L.marker([lat, lng]).bindPopup(title));
@@ -46,7 +46,7 @@ for (let i = 0; i < featureGroups.length; i++) {
 
 // Extended `LayerGroup` that makes it easy
 // to do the same for all layers of its members
-let group = new L.featureGroup(featureGroups);
+const group = new L.featureGroup(featureGroups);
 
 // method fitBounds sets a map view that
 // contains the given geographical bounds

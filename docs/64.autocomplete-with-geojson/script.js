@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
   zoomControl: false, // zoom control off
@@ -33,7 +33,7 @@ L.Control.Search = L.Control.extend({
   options: {
     position: "topleft",
   },
-  onAdd: function () {
+  onAdd: () => {
     const container = L.DomUtil.create("div", "autocomplete-container");
 
     L.DomEvent.disableClickPropagation(container);
@@ -99,34 +99,30 @@ new Autocomplete("local", {
 
   onSubmit: ({ object }) => {
     const geojsonlayer = L.geoJSON(object, {
-      style: function (feature) {
-        return {
-          color: feature.properties.color || "red",
-          weight: 7,
-          opacity: 1,
-          fillOpacity: 0.7,
-        };
-      },
+      style: (feature) => ({
+        color: feature.properties.color || "red",
+        weight: 7,
+        opacity: 1,
+        fillOpacity: 0.7,
+      }),
       pointToLayer: (feature, latlng) => {
         if (feature.properties.type === "circle") {
           return new L.circle(latlng, {
             radius: feature.properties.radius,
           });
-        } else if (feature.properties.type === "circlemarker") {
+        }
+        if (feature.properties.type === "circlemarker") {
           return new L.circleMarker(latlng, {
             radius: 20,
           });
-        } else {
-          return new L.Marker(latlng);
         }
+        return new L.Marker(latlng);
       },
-      onEachFeature: function (feature, layer) {
+      onEachFeature: (feature, layer) => {
         const coordinates = feature.geometry.coordinates.toString();
         const result = coordinates.match(/[^,]+,[^,]+/g);
 
-        layer.bindPopup(
-          "<span>Coordinates:<br>" + result.join("<br>") + "</span>"
-        );
+        layer.bindPopup(`<span>Coordinates:<br>${result.join("<br>")}</span>`);
       },
     });
 
@@ -143,8 +139,8 @@ new Autocomplete("local", {
 
   onReset: () => {
     // remove all layers
-    map.eachLayer(function (layer) {
-      if (!!layer.toGeoJSON) {
+    map.eachLayer((layer) => {
+      if (layer.toGeoJSON) {
         map.removeLayer(layer);
       }
     });

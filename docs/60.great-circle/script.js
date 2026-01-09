@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 2,
   maxZomm: 18,
 };
@@ -53,7 +53,7 @@ L.marker([52.282426, 21.134393], { icon: icon })
   .bindPopup(`mazowieckie<br>${center.toString()}`)
   .addTo(map);
 
-let featureGroups = [];
+const featureGroups = [];
 
 cityCoords.map((city) => {
   // all markers to map
@@ -74,7 +74,7 @@ cityCoords.map((city) => {
 
 // ------------------------------
 // add array to featureGroup
-let group = new L.featureGroup(featureGroups);
+const group = new L.featureGroup(featureGroups);
 
 // set map view to featureGroup
 map.fitBounds(group.getBounds(), {

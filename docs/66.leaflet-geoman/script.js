@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
   zoomControl: false, // zoom control off
@@ -47,21 +47,21 @@ map.pm.Draw.getShapes();
 map.pm.disableDraw("Polygon");
 
 // listen to when drawing mode gets enabled
-map.on("pm:drawstart", function (e) {
+map.on("pm:drawstart", (e) => {
   console.log(e);
 });
 
 // listen to when drawing mode gets disabled
-map.on("pm:drawend", function (e) {
+map.on("pm:drawend", (e) => {
   console.log(e);
 });
 
 // listen to when a new layer is created
-map.on("pm:create", function (e) {
+map.on("pm:create", (e) => {
   console.log(e.layer.getLatLngs());
 
   // listen to changes on the new layer
-  e.layer.on("pm:edit", function (x) {
+  e.layer.on("pm:edit", (x) => {
     console.log("edit", x);
   });
 });

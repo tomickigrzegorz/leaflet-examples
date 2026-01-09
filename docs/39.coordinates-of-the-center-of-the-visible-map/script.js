@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 3,
   maxZoom: 18,
 };
@@ -33,7 +33,7 @@ map.on("zoomend", updateInfo);
 // create legend
 const coordinates = L.control({ position: "bottomleft" });
 
-coordinates.onAdd = function () {
+coordinates.onAdd = () => {
   const div = L.DomUtil.create("div", "center-of-map-description");
   L.DomEvent.disableClickPropagation(div);
   return div;
@@ -42,7 +42,7 @@ coordinates.onAdd = function () {
 coordinates.addTo(map);
 
 // update info about bounds when site loaded
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   updateInfo();
 });
 

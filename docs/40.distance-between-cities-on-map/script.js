@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 2,
   maxZoom: 18,
 };
@@ -30,7 +30,7 @@ const cityB = document.querySelector("#cityB");
 const clearButton = document.querySelector(".clear-distance");
 
 let markers = [];
-let featureGroups = [];
+const featureGroups = [];
 
 function results({ currentValue, matches, template }) {
   const regex = new RegExp(currentValue, "i");
@@ -90,14 +90,14 @@ function addMarkerToMap(object) {
   // add marker to array featureGroup
   featureGroups.push(marker);
 
-  if (markers.length == 2) {
+  if (markers.length === 2) {
     // add polyline between cities
     L.polyline(markers, {
       color: "red",
     }).addTo(map);
 
     // matching all markers to the map view
-    let group = new L.featureGroup(featureGroups);
+    const group = new L.featureGroup(featureGroups);
     map.fitBounds(group.getBounds(), {
       padding: [10, 10], // adding padding to map
     });
@@ -123,11 +123,11 @@ function clearData() {
 
   // remove polyline
   for (i in map._layers) {
-    if (map._layers[i]._path != undefined) {
+    if (map._layers[i]._path !== undefined) {
       try {
         map.removeLayer(map._layers[i]);
       } catch (e) {
-        console.log("problem with " + e + map._layers[i]);
+        console.log(`problem with ${e}${map._layers[i]}`);
       }
     }
   }
@@ -150,7 +150,7 @@ function distanceBetweenMarkers() {
   length.textContent = `Length (in kilometers): ${distance.toFixed(5)}`;
 }
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", () => {
   ["cityA", "cityB"].forEach((city) => {
     const auto = new Autocomplete(city, {
       clearButton: false,

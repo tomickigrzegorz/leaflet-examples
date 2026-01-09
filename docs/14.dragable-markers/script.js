@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -15,7 +15,7 @@ const lat = 52.22977;
 const lng = 21.01178;
 
 // coordinate array with popup text
-let points = [
+const points = [
   [52.230020586193795, 21.01083755493164, "point 1"],
   [52.22924516170657, 21.011320352554325, "point 2"],
   [52.229511304688444, 21.01270973682404, "point 3"],
@@ -48,7 +48,7 @@ for (let i = 0; i < points.length; i++) {
     .addTo(map);
 
   // dragging the marker
-  marker.on("dragend", function (e) {
+  marker.on("dragend", (e) => {
     const markerPlace = document.querySelector(".marker-position");
     markerPlace.textContent = `${marker.getLatLng().lat}, ${
       marker.getLatLng().lng

@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -28,8 +28,8 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // ------------------------------
 const legend = L.control({ position: "bottomleft" });
 
-legend.onAdd = function () {
-  let div = L.DomUtil.create("div", "description");
+legend.onAdd = () => {
+  const div = L.DomUtil.create("div", "description");
   L.DomEvent.disableClickPropagation(div);
   const text = "Move the mouse";
   div.insertAdjacentHTML("beforeend", text);
@@ -46,7 +46,7 @@ document.body.appendChild(followMouse);
 
 const mapCointainer = document.querySelector("#map");
 
-mapCointainer.addEventListener("mousemove", function (e) {
+mapCointainer.addEventListener("mousemove", (e) => {
   const { offsetWidth: mapWidth, offsetHeight: mapHeight } = e.target;
   const { offsetWidth: cordWidth, offsetHeight: cordHeight } = followMouse;
 
@@ -70,11 +70,11 @@ mapCointainer.addEventListener("mousemove", function (e) {
 });
 
 function getCoords(e) {
-  let mouseX = e.clientX;
-  let mouseY = e.clientY;
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
 
   return {
-    xp: parseInt(mouseX),
-    yp: parseInt(mouseY),
+    xp: Number.parseInt(mouseX),
+    yp: Number.parseInt(mouseY),
   };
 }

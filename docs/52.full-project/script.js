@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 17,
   maxZoom: 19,
   zoomSnap: 0,
@@ -21,13 +21,13 @@ const map = L.map("map", config).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
-let osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   maxZoom: 19,
 });
 
-let drawnItems = L.featureGroup().addTo(map);
+const drawnItems = L.featureGroup().addTo(map);
 
 osm.addTo(map);
 
@@ -65,7 +65,7 @@ function style(feature) {
 }
 
 function highlightFeature(e) {
-  var layer = e.target;
+  const layer = e.target;
 
   layer.setStyle({
     weight: 2,
@@ -91,10 +91,8 @@ function onEachFeature(feature, layer) {
 // adding geojson by fetch
 // of course you can use jquery, axios etc.
 fetch("data.geojson")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
+  .then((response) => response.json())
+  .then((data) => {
     geojson = L.geoJSON(data, {
       style: styles,
       onEachFeature,
@@ -182,8 +180,8 @@ function clickOnItem() {
   shopItems.forEach((item) => {
     item.addEventListener("click", (e) => {
       const id = e.target.closest(".shop-item").dataset.shopId;
-      geojson.eachLayer(function (layer) {
-        if (layer.feature.properties.id == id) {
+      geojson.eachLayer((layer) => {
+        if (layer.feature.properties.id === id) {
           zoomToFeature(layer, "lista");
         }
       });
@@ -234,7 +232,7 @@ function setActiveMenuItem(id, where) {
     item.classList.remove("active-shop");
   });
 
-  const item = array.find((item) => item.dataset.shopId == id);
+  const item = array.find((item) => item.dataset.shopId === id);
   item.classList.add("active-shop");
 
   // scroll to element

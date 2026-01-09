@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -61,7 +61,7 @@ markerPosition.forEach(({ lat, lng, color }, index) => {
   setTimeout(() => {
     marker.slideTo([lat, lng], { duration: 1000 });
 
-    let markerBefore =
+    const markerBefore =
       index === 0
         ? [52.22983, 21.011728]
         : [markerPosition[index - 1].lat, markerPosition[index - 1].lng];

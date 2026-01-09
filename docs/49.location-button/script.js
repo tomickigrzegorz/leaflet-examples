@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 2,
   maxZoom: 18,
 };
@@ -99,9 +99,7 @@ const customControl = L.Control.extend({
     this.addLegend("Location access denied.");
   },
   // feature group
-  featureGroup: function () {
-    return new L.FeatureGroup();
-  },
+  featureGroup: () => new L.FeatureGroup(),
   // add legend
   addLegend: function (text) {
     const checkIfDescriotnExist = document.querySelector(".description");
@@ -113,8 +111,8 @@ const customControl = L.Control.extend({
 
     const legend = L.control({ position: "bottomleft" });
 
-    legend.onAdd = function () {
-      let div = L.DomUtil.create("div", "description");
+    legend.onAdd = () => {
+      const div = L.DomUtil.create("div", "description");
       L.DomEvent.disableClickPropagation(div);
       const textInfo = text;
       div.insertAdjacentHTML("beforeend", textInfo);
@@ -122,26 +120,24 @@ const customControl = L.Control.extend({
     };
     legend.addTo(this._map);
   },
-  addCircle: function ({ accuracy, latitude, longitude }) {
-    return L.circle([latitude, longitude], accuracy / 2, {
+  addCircle: ({ accuracy, latitude, longitude }) =>
+    L.circle([latitude, longitude], accuracy / 2, {
       className: "circle-test",
       weight: 2,
       stroke: false,
       fillColor: "#136aec",
       fillOpacity: 0.15,
-    });
-  },
-  addMarker: function ({ latitude, longitude }) {
-    return L.marker([latitude, longitude], {
+    }),
+  addMarker: ({ latitude, longitude }) =>
+    L.marker([latitude, longitude], {
       icon: L.divIcon({
         className: "located-animation",
         iconSize: L.point(17, 17),
         popupAnchor: [0, -15],
       }),
-    }).bindPopup("Your are here :)");
-  },
+    }).bindPopup("Your are here :)"),
   removeLocate: function () {
-    this._map.eachLayer(function (layer) {
+    this._map.eachLayer((layer) => {
       if (layer instanceof L.Marker) {
         const { icon } = layer.options;
         if (icon?.options.className === "located-animation") {

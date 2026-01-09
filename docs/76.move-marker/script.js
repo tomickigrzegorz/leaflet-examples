@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
   keyboard: false,
@@ -74,7 +74,7 @@ function moveMarker(moveType, evnetType) {
         latLng,
         offset,
         evnetType,
-        moveType,
+        moveType
       );
 
       // convert container point to latlng

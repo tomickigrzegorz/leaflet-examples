@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 2,
   maxZoom: 18,
 };
@@ -32,10 +32,8 @@ let html = "";
 let geoJson;
 
 fetch("../static/wojewodztwa-medium.geojson")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
+  .then((response) => response.json())
+  .then((data) => {
     // Load GeoJSON on map & construct list HTML code
     console.log(data);
 
@@ -51,9 +49,9 @@ fetch("../static/wojewodztwa-medium.geojson")
     document.getElementById("voivodeship").innerHTML = html;
 
     // Bind event listeners to list items
-    let el = document.querySelectorAll("#voivodeship li");
+    const el = document.querySelectorAll("#voivodeship li");
     for (let i = 0; i < el.length; i++) {
-      el[i].addEventListener("mouseover", function (e) {
+      el[i].addEventListener("mouseover", (e) => {
         const hoveredItem = e.target;
         const layer = geoJson.getLayers();
 
@@ -61,7 +59,7 @@ fetch("../static/wojewodztwa-medium.geojson")
 
         hoveredItem.classList.add("highlight");
       });
-      el[i].addEventListener("mouseout", function (e) {
+      el[i].addEventListener("mouseout", (e) => {
         const hoveredItem = e.target;
         const hoveredId = hoveredItem.id;
 
@@ -91,14 +89,14 @@ function onEachFeature(feature, layer) {
   html += `<li id="${id}">${nazwa}</li>`;
   layer.leafletId = id;
 
-  layer.addEventListener("mouseover", function (e) {
-    let hoveredFeature = e.target;
+  layer.addEventListener("mouseover", (e) => {
+    const hoveredFeature = e.target;
 
     hoveredFeature.setStyle(highlightStyle);
     hoveredFeature.bringToFront();
 
     // console.log(layer.leafletId);
-    let el = document.getElementById(hoveredFeature.leafletId);
+    const el = document.getElementById(hoveredFeature.leafletId);
 
     el.scrollIntoView({
       behavior: "auto",
@@ -107,12 +105,12 @@ function onEachFeature(feature, layer) {
     });
     el.classList.add("highlight");
   });
-  layer.addEventListener("mouseout", function (e) {
-    let hoveredFeature = e.target;
+  layer.addEventListener("mouseout", (e) => {
+    const hoveredFeature = e.target;
 
     geoJson.resetStyle(hoveredFeature);
 
-    let el = document.getElementById(hoveredFeature.leafletId);
+    const el = document.getElementById(hoveredFeature.leafletId);
     el.classList.remove("highlight");
   });
 }

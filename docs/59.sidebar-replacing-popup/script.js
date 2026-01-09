@@ -4,7 +4,7 @@
  */
 
 // config map
-let config = {
+const config = {
   minZoom: 7,
   maxZoom: 18,
 };
@@ -41,9 +41,9 @@ async function fetchData(url) {
 // button to close sidebar
 const buttonClose = document.querySelector(".close-button");
 
-let featureGroups = [];
+const featureGroups = [];
 let groupBounds;
-let latlngs = [];
+const latlngs = [];
 
 // function to add markers to map
 fetchData("./places.json")
@@ -88,7 +88,7 @@ fetchData("./places.json")
     });
 
     // add event listener to markers to open sidebar
-    groupBounds.on("click", function (e) {
+    groupBounds.on("click", (e) => {
       if (e.layer instanceof L.Marker) {
         showSidebarWidthText(e.layer.options["marker-options-id"]);
       }
@@ -107,7 +107,7 @@ fetchData("./places.json")
 
 // --------------------------------------------------
 // close when click esc
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", (event) => {
   // close sidebar when press esc
   if (event.key === "Escape") {
     closeSidebar();
