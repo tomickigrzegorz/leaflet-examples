@@ -480,5 +480,11 @@
     "text": "Marker tracking with direction indicator",
     "info": "Off-screen marker indicator - Shows a floating bubble indicator on the map edge when a selected marker is outside the visible viewport. The indicator points toward the marker's direction and displays the distance. Clicking the indicator centers the map on the marker.",
     "position": "--pos-right: 10px, --pos-top: 10px"
+  },
+  {
+    "link": "82.map-rotation",
+    "text": "map rotation",
+    "info": "Map rotation based on the <a href='https://github.com/tomickigrzegorz/leaflet-rotation' target='_blank'>leaflet-rotation</a> plugin. Rotate the map with the right mouse button + drag, Shift + scroll wheel, two fingers (pinch-rotate) or the control in the bottom-right corner (it also resets the bearing back to north). The tiles, polylines and polygons rotate with the map, while the marker pins stay upright (only their position follows the rotation).<br><br><b>Note:</b> the pins intentionally do <b>not</b> use the <code>rotateWithView</code> option - on a pin-shaped icon it would tilt the whole pin so the tip stops pointing at its location. Enable <code>rotateWithView</code> only for direction-aware icons (arrows, vehicles, a heading cone).",
+    "position": "--pos-right: 10px, --pos-top: 10px"
   }
 ]
